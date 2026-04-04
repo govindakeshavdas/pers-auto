@@ -1,0 +1,55 @@
+name: meetups
+
+on:
+  schedule:
+    # Monday 13:00 UTC (6am PT)
+    - cron: "0 13 * * 1"
+  workflow_dispatch:
+
+jobs:
+  find-and-email:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run Claude
+        id: claude
+        uses: anthropics/claude-code-base-action@beta
+        with:
+          prompt_file: meetups/prompt.md
+          allowed_tools: "WebSearch,WebFetch"
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Send email via Resend
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          MAIL_FROM: ${{ secrets.MAIL_FROM }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          EXECUTION_FILE: ${{ steps.claude.outputs.execution_file }}
+        run: |
+          # Pull the last assistant text message (the ranked table) out of the
+          # JSONL execution log and POST it to Resend as markdown-rendered HTML.
+          body=$(jq -rs '
+            [.[] | select(.type=="assistant") | .message.content[]?
+             | select(.type=="text") | .text] | last // empty
+          ' "$EXECUTION_FILE")
+
+          if [ -z "$body" ]; then
+            echo "No assistant text found in execution log" >&2
+            cat "$EXECUTION_FILE" >&2
+            exit 1
+          fi
+
+          jq -n \
+            --arg from "$MAIL_FROM" \
+            --arg to "$MAIL_TO" \
+            --arg subject "Bay Area events this week" \
+            --arg text "$body" \
+            '{from:$from, to:[$to], subject:$subject, text:$text}' \
+          | curl -sS -X POST https://api.resend.com/emails \
+              -H "Authorization: Bearer $RESEND_API_KEY" \
+              -H "Content-Type: application/json" \
+              --data-binary @- \
+              --fail-with-body
