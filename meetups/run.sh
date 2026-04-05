@@ -9,9 +9,14 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROMPT_FILE="$SCRIPT_DIR/prompt.md"
 
 jq -n \
-  --arg model "gpt-4.1" \
+  --arg model "o3" \
   --arg input "$(cat "$PROMPT_FILE")" \
-  '{model:$model, input:$input, tools:[{type:"web_search_preview"}]}' \
+  '{
+     model: $model,
+     input: $input,
+     tools: [{type:"web_search_preview"}],
+     reasoning: {effort: "high"}
+   }' \
 | curl -sS https://api.openai.com/v1/responses \
     -H "Authorization: Bearer $OPENAI_API_KEY" \
     -H "Content-Type: application/json" \
