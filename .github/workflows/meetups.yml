@@ -29,12 +29,9 @@ jobs:
           MAIL_TO: ${{ secrets.MAIL_TO }}
           EXECUTION_FILE: ${{ steps.claude.outputs.execution_file }}
         run: |
-          # Pull the last assistant text message (the ranked table) out of the
-          # JSONL execution log and POST it to Resend as markdown-rendered HTML.
-          body=$(jq -rs '
-            [.[] | select(.type=="assistant") | .message.content[]?
-             | select(.type=="text") | .text] | last // empty
-          ' "$EXECUTION_FILE")
+          # claude-code-base-action writes a single JSON object with the
+          # final assistant text at .result.
+          body=$(jq -r '.result // empty' "$EXECUTION_FILE")
 
           if [ -z "$body" ]; then
             echo "No assistant text found in execution log" >&2
