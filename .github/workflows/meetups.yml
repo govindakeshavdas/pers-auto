@@ -29,9 +29,9 @@ jobs:
           MAIL_TO: ${{ secrets.MAIL_TO }}
           EXECUTION_FILE: ${{ steps.claude.outputs.execution_file }}
         run: |
-          # claude-code-base-action writes a single JSON object with the
-          # final assistant text at .result.
-          body=$(jq -r '.result // empty' "$EXECUTION_FILE")
+          # claude-code-base-action writes a JSON array; the final element
+          # carries .result with the assistant's last message.
+          body=$(jq -r '[.[] | .result? // empty] | last // empty' "$EXECUTION_FILE")
 
           if [ -z "$body" ]; then
             echo "No assistant text found in execution log" >&2
