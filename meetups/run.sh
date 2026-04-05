@@ -19,9 +19,12 @@ fi
 
 : "${ANTHROPIC_API_KEY:?ANTHROPIC_API_KEY not set}"
 
+today=$(date +%Y-%m-%d)
+prompt=$(sed "s/{{TODAY}}/$today/g" "$PROMPT_FILE")
+
 response=$(jq -n \
   --arg model "claude-sonnet-4-5" \
-  --arg prompt "$(cat "$PROMPT_FILE")" \
+  --arg prompt "$prompt" \
   '{
      model: $model,
      max_tokens: 4096,

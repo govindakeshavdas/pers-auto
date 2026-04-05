@@ -22,8 +22,14 @@ My profile for matching:
 Every time I ask "what events this week" or "find me events":
 
 1. Search the web fresh using the hints below
-2. Rank what you find using the scoring rubric below
-3. Output a ranked table — top pick is my default, I'll override if I want
+2. **Only include events whose start date is on or after {{TODAY}}.** Do not
+   include anything from the past, even if it was recent. If you are unsure
+   of an event's date after searching, skip it rather than guess.
+3. Rank what you find using the scoring rubric below
+4. Output a ranked table — top pick is my default, I'll override if I want
+
+Treat {{TODAY}} as the authoritative current date. Scope "this week" to the
+7 days starting from {{TODAY}}.
 
 That's it. No files. No memory. Just search and rank.
 
