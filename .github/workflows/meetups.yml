@@ -36,8 +36,8 @@ jobs:
             --arg from "$MAIL_FROM" \
             --arg to "$MAIL_TO" \
             --arg subject "Bay Area events this week" \
-            --arg text "$body" \
-            '{from:$from, to:[$to], subject:$subject, text:$text}' \
+            --arg html "$body" \
+            '{from:$from, to:[$to], subject:$subject, html:$html}' \
           | curl -sS -X POST https://api.resend.com/emails \
               -H "Authorization: Bearer $RESEND_API_KEY" \
               -H "Content-Type: application/json" \

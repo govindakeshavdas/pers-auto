@@ -71,7 +71,20 @@ Score each event on these 5 factors (1-5 each, max 25):
 
 Output format:
 
-| Event | Date | Score /25 | One-line reason | Link |
-|-------|------|-----------|-----------------|------|
+Return a self-contained **HTML fragment** (no `<html>`, `<head>`, or `<body>`
+wrappers — it will be embedded into a Gmail email). Use an inline-styled
+`<table>` with columns: Event | Date | Score /25 | One-line reason | Link.
 
-Always surface minimum 3 options. Top ranked = default pick.
+Requirements:
+- Inline `style="..."` only. No `<style>` blocks. No external CSS.
+- Style the table so it reads well in Gmail: border-collapse, ~8px cell
+  padding, light header background, simple 1px borders.
+- Make links clickable with `<a href="...">` — just show the domain as link
+  text, not the full URL.
+- Sort rows by score descending. Bold the top row.
+- Always surface minimum 3 options.
+- After the table, add a short `<p>` with a one-sentence recommendation of
+  the top pick and why.
+
+Output **only** the HTML fragment. No preamble, no explanation, no code
+fences, no markdown.
