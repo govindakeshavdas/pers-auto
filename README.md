@@ -10,7 +10,7 @@ Personal automation scripts, mostly run on a schedule via GitHub Actions.
 
 Set in repo **Settings → Secrets and variables → Actions**:
 
-- `ANTHROPIC_API_KEY` — for Claude CLI
+- `OPENAI_API_KEY` — for the Responses API (with `web_search_preview` tool)
 - `RESEND_API_KEY` — https://resend.com API key
 - `MAIL_FROM` — sender, e.g. `pers-auto <auto@yourdomain.com>` (domain must be
   verified in Resend, or use `onboarding@resend.dev` for testing)
