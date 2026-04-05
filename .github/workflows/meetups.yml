@@ -2,8 +2,8 @@ name: meetups
 
 on:
   schedule:
-    # Monday 13:00 UTC (6am PT)
-    - cron: "0 13 * * 1"
+    # Sunday 6pm PT = Monday 01:00 UTC (PDT; 02:00 UTC during PST)
+    - cron: "0 1 * * 1"
   workflow_dispatch:
 
 jobs:
