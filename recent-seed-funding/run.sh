@@ -34,7 +34,7 @@ response=$(jq -n \
    }' \
 | curl -sS https://api.anthropic.com/v1/messages \
     -H "x-api-key: $ANTHROPIC_API_KEY" \
-    -H "anthropic-version: 2023-06-01" \
+    -H "anthropic-version: 2025-04-15" \
     -H "Content-Type: application/json" \
     --data-binary @- \
     --fail-with-body)
