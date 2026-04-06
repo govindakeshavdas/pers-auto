@@ -23,12 +23,13 @@ today=$(date +%Y-%m-%d)
 prompt=$(sed "s/{{TODAY}}/$today/g" "$PROMPT_FILE")
 
 response=$(jq -n \
-  --arg model "claude-sonnet-4-5" \
+  --arg model "claude-opus-4-6" \
   --arg prompt "$prompt" \
   '{
      model: $model,
-     max_tokens: 4096,
-     tools: [{type: "web_search_20250305", name: "web_search", max_uses: 10}],
+     max_tokens: 32000,
+     thinking: {type: "enabled", budget_tokens: 50000},
+     tools: [{type: "web_search_20250305", name: "web_search", max_uses: 30}],
      messages: [{role: "user", content: $prompt}]
    }' \
 | curl -sS https://api.anthropic.com/v1/messages \
