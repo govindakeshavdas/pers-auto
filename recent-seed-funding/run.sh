@@ -39,7 +39,7 @@ echo "$payload" | jq '{model, max_tokens, thinking, tools}' >&2
 http_code=$(curl -sS -o /tmp/anthropic_response.json -w "%{http_code}" \
     https://api.anthropic.com/v1/messages \
     -H "x-api-key: $ANTHROPIC_API_KEY" \
-    -H "anthropic-version: 2025-04-15" \
+    -H "anthropic-version: 2023-06-01" \
     -H "Content-Type: application/json" \
     -d "$payload")
 
