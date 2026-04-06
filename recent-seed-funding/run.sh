@@ -22,7 +22,7 @@ fi
 today=$(date +%Y-%m-%d)
 prompt=$(sed "s/{{TODAY}}/$today/g" "$PROMPT_FILE")
 
-response=$(jq -n \
+payload=$(jq -n \
   --arg model "claude-opus-4-6" \
   --arg prompt "$prompt" \
   '{
@@ -31,13 +31,23 @@ response=$(jq -n \
      thinking: {type: "enabled", budget_tokens: 50000},
      tools: [{type: "web_search_20250305", name: "web_search", max_uses: 30}],
      messages: [{role: "user", content: $prompt}]
-   }' \
-| curl -sS https://api.anthropic.com/v1/messages \
+   }')
+
+echo "--- Anthropic request payload (prompt truncated) ---" >&2
+echo "$payload" | jq '{model, max_tokens, thinking, tools}' >&2
+
+http_code=$(curl -sS -o /tmp/anthropic_response.json -w "%{http_code}" \
+    https://api.anthropic.com/v1/messages \
     -H "x-api-key: $ANTHROPIC_API_KEY" \
     -H "anthropic-version: 2025-04-15" \
     -H "Content-Type: application/json" \
-    --data-binary @- \
-    --fail-with-body)
+    -d "$payload")
 
-# Extract final assistant text (concat all text blocks, skip tool_use blocks).
-echo "$response" | jq -r '[.content[]? | select(.type=="text") | .text] | join("\n")'
+if [ "$http_code" -ge 400 ]; then
+  echo "--- Anthropic API error ($http_code) ---" >&2
+  cat /tmp/anthropic_response.json >&2
+  exit 1
+fi
+
+# Extract final assistant text (concat all text blocks, skip thinking blocks).
+jq -r '[.content[]? | select(.type=="text") | .text] | join("\n")' /tmp/anthropic_response.json
