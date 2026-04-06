@@ -27,7 +27,7 @@ response=$(jq -n \
   --arg prompt "$prompt" \
   '{
      model: $model,
-     max_tokens: 32000,
+     max_tokens: 64000,
      thinking: {type: "enabled", budget_tokens: 50000},
      tools: [{type: "web_search_20250305", name: "web_search", max_uses: 30}],
      messages: [{role: "user", content: $prompt}]
