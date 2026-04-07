@@ -76,3 +76,13 @@ Structure the HTML as follows:
 
 Output **only** the HTML fragment. No preamble, no explanation, no code
 fences, no markdown.
+
+---
+
+# PREVIOUSLY COVERED COMPANIES
+
+The following companies were already analyzed in recent runs. **Do not
+re-analyze them.** If you find them again in search results, skip them
+entirely. Focus only on NEW companies not listed below.
+
+{{PREVIOUS_RESULTS}}

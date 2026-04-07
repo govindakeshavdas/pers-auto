@@ -20,7 +20,24 @@ fi
 : "${ANTHROPIC_API_KEY:?ANTHROPIC_API_KEY not set}"
 
 today=$(date +%Y-%m-%d)
+HISTORY_DIR="$SCRIPT_DIR/history"
+mkdir -p "$HISTORY_DIR"
+
+# Build previous results from last 3 history files (newest first).
+previous=""
+if ls "$HISTORY_DIR"/*.html 1>/dev/null 2>&1; then
+  for f in $(ls -t "$HISTORY_DIR"/*.html | head -3); do
+    run_date=$(basename "$f" .html)
+    previous="$previous<h4>Run: $run_date</h4>"$'\n'"$(cat "$f")"$'\n'
+  done
+fi
+
+if [ -z "$previous" ]; then
+  previous="(No previous runs yet — this is the first one.)"
+fi
+
 prompt=$(sed "s/{{TODAY}}/$today/g" "$PROMPT_FILE")
+prompt="${prompt//\{\{PREVIOUS_RESULTS\}\}/$previous}"
 
 payload=$(jq -n \
   --arg model "claude-opus-4-6" \
@@ -50,4 +67,10 @@ if [ "$http_code" -ge 400 ]; then
 fi
 
 # Extract final assistant text (concat all text blocks, skip thinking blocks).
-jq -r '[.content[]? | select(.type=="text") | .text] | join("\n")' /tmp/anthropic_response.json
+output=$(jq -r '[.content[]? | select(.type=="text") | .text] | join("\n")' /tmp/anthropic_response.json)
+
+# Save to history and prune to last 3 runs.
+echo "$output" > "$HISTORY_DIR/$today.html"
+ls -t "$HISTORY_DIR"/*.html | tail -n +4 | xargs rm -f 2>/dev/null || true
+
+echo "$output"
