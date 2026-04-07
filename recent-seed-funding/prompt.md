@@ -26,18 +26,10 @@ Filter criteria:
 * Sector: B2B AI tools, AI automation, AI infrastructure
 * Exclude: consumer apps, crypto, biotech, hardware
 For each startup found, extract these 8 things:
-1. What specific problem they solve
-2. Who the exact customer is (job title + industry — be specific)
-3. Why now — what made this possible in 2024/2025
-4. What the founder's background is
-5. What the revenue model is
-6. How new is the company (newer = better signal)
-7. Moat analysis — show your reasoning, both sides Think through this like a skeptical investor. Structure your answer as: Case FOR a moat: What is the most credible source of defensibility? Is it data accumulation, workflow embedding, feedback loops, domain network, regulatory certification, or network effects? Be specific — not just "they have data" but "they have X type of data that takes Y time to collect and creates Z advantage." Case AGAINST: Could OpenAI, a well-funded competitor, or a large incumbent replicate this in 12–18 months? Is the "moat" actually just a head start? Could the underlying model providers commoditize this feature directly? Is the customer switching cost real or just assumed? Verdict: Give a blunt one-line verdict:
-    * 🟢 Real moat — compounds over time, hard to replicate
-    * 🟡 Soft moat — head start only, needs to deepen fast
-    * 🔴 No moat visible — product is replicable, category will commoditize
-8. Do not default to finding a moat. If you can't identify one that holds up under scrutiny, say so clearly.
-9. Category crowding — Are there other funded startups solving the same problem for the same buyer? Name them. Flag if the category already has a well-funded incumbent at Series A or beyond.
+1. What specific problem they solve ( spend the most space explaining this --- showing example , stick to the technical details )
+2. Very briefly discuss their moat 
+3. Category crowding — Are there other funded startups solving the same problem for the same buyer? Name them. Flag if the category already has a well-funded incumbent at Series A or beyond.
+4. Importantly dont go into the pedigree of the founders etc - i dont care and it puts me off from reading further ... 
 
 Output format:
 
