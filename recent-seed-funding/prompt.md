@@ -24,7 +24,11 @@ Filter criteria:
 * Funding amount: under $5M
 * Stage: pre-seed (preferred) or seed only
 * Sector: B2B AI tools, AI automation, AI infrastructure
+* Preferred sector: anything related to real estate (proptech, property
+  management, real estate transactions, tenant/landlord tools, CRE analytics,
+  etc.) — surface these even if they slightly stretch other filters
 * Exclude: consumer apps, crypto, biotech, hardware
+* Exclude: private equity deal analysis / PE workflow tools — skip entirely
 For each startup found, extract these 8 things:
 1. What specific problem they solve ( spend the most space explaining this --- showing example , stick to the technical details )
 2. Very briefly discuss their moat 
