@@ -30,12 +30,11 @@ jobs:
             exit 1
           fi
 
-          jq -n \
+          printf '%s' "$body" | jq -Rs \
             --arg from "$MAIL_FROM" \
             --arg to "$MAIL_TO" \
             --arg subject "Recent seed funding rounds" \
-            --arg html "$body" \
-            '{from:$from, to:[$to, "satyendramishra.nsit@gmail.com"], subject:$subject, html:$html}' \
+            '{from:$from, to:[$to, "satyendramishra.nsit@gmail.com"], subject:$subject, html:.}' \
           | curl -sS -X POST https://api.resend.com/emails \
               -H "Authorization: Bearer $RESEND_API_KEY" \
               -H "Content-Type: application/json" \

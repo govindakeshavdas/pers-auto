@@ -39,26 +39,25 @@ fi
 prompt=$(sed "s/{{TODAY}}/$today/g" "$PROMPT_FILE")
 prompt="${prompt//\{\{PREVIOUS_RESULTS\}\}/$previous}"
 
-payload=$(jq -n \
+payload=$(printf '%s' "$prompt" | jq -Rs \
   --arg model "claude-opus-4-6" \
-  --arg prompt "$prompt" \
   '{
      model: $model,
      max_tokens: 64000,
      thinking: {type: "enabled", budget_tokens: 50000},
      tools: [{type: "web_search_20250305", name: "web_search", max_uses: 30}],
-     messages: [{role: "user", content: $prompt}]
+     messages: [{role: "user", content: .}]
    }')
 
 echo "--- Anthropic request payload (prompt truncated) ---" >&2
 echo "$payload" | jq '{model, max_tokens, thinking, tools}' >&2
 
-http_code=$(curl -sS -o /tmp/anthropic_response.json -w "%{http_code}" \
+http_code=$(printf '%s' "$payload" | curl -sS -o /tmp/anthropic_response.json -w "%{http_code}" \
     https://api.anthropic.com/v1/messages \
     -H "x-api-key: $ANTHROPIC_API_KEY" \
     -H "anthropic-version: 2023-06-01" \
     -H "Content-Type: application/json" \
-    -d "$payload")
+    -d @-)
 
 if [ "$http_code" -ge 400 ]; then
   echo "--- Anthropic API error ($http_code) ---" >&2
