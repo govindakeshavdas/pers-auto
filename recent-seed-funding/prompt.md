@@ -26,7 +26,8 @@ Filter criteria:
 * Sector: B2B AI tools, AI automation, AI infrastructure
 * Preferred sector: anything related to real estate (proptech, property
   management, real estate transactions, tenant/landlord tools, CRE analytics,
-  etc.) — surface these even if they slightly stretch other filters
+  etc.) — but cap proptech at ~25% of total results. Fill the rest with
+  non-proptech B2B AI companies
 * Exclude: consumer apps, crypto, biotech, hardware
 * Exclude: private equity deal analysis / PE workflow tools — skip entirely
 For each startup found, extract these 8 things:
