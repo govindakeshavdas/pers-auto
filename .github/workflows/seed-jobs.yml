@@ -1,0 +1,51 @@
+name: seed-jobs
+
+on:
+  schedule:
+    # Daily 8am PT = 15:00 UTC (during PDT)
+    - cron: "0 15 * * *"
+  workflow_dispatch:
+
+jobs:
+  find-and-email:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Find seed-stage hiring + email via Resend
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          MAIL_FROM: ${{ secrets.MAIL_FROM }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+        run: |
+          set -euo pipefail
+
+          body=$(./seed-jobs/run.sh)
+
+          if [ -z "$body" ]; then
+            echo "Empty response from run.sh" >&2
+            exit 1
+          fi
+
+          printf '%s' "$body" | jq -Rs \
+            --arg from "$MAIL_FROM" \
+            --arg to "$MAIL_TO" \
+            --arg subject "Seed-stage AI startups hiring founding engineers" \
+            '{from:$from, to:[$to, "satyendramishra.nsit@gmail.com"], subject:$subject, html:.}' \
+          | curl -sS -X POST https://api.resend.com/emails \
+              -H "Authorization: Bearer $RESEND_API_KEY" \
+              -H "Content-Type: application/json" \
+              --data-binary @- \
+              --fail-with-body
+
+      - name: Commit history
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add seed-jobs/history/
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: save seed jobs results $(date +%Y-%m-%d)"
+          git push
