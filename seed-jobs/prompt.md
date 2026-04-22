@@ -1,21 +1,24 @@
-
 Search LinkedIn job postings (via Google site search) and general web search for AI startups at pre-seed or seed stage that are actively hiring founding engineers, founding ML engineers, or first engineers. These companies are too early for the funding news cycle but serious enough to pay someone.
 
 Run searches like:
-- site:linkedin.com/jobs "founding engineer" "pre-seed" AI
-- site:linkedin.com/jobs "founding engineer" "seed" AI
-- site:linkedin.com/jobs "first engineer" AI startup
-- site:linkedin.com/jobs "founding ML engineer" seed
+- site:linkedin.com/jobs "founding engineer" "AI automation"
+- site:linkedin.com/jobs "founding engineer" "AI agent"
+- site:linkedin.com/jobs "founding engineer" "AI coworker"
+- site:linkedin.com/jobs "founding engineer" "AI workflow"
+- site:linkedin.com/jobs "first engineer" "AI automation"
+- site:linkedin.com/jobs "founding ML engineer" "AI agent"
 - General web searches on Jobright, Teal, Wellfound for the same
 
-Filter:
+Cast wide across industries. Pick a handful of different verticals on your own each run and rotate through them so results don't skew toward a single sector or toward the YC/SF infra cluster. Applied/vertical AI companies are as important as horizontal infra — don't let the first pass be all one kind.
+
+Apply stage and recency as a POST-FILTER (not as search keywords). For each company that looks promising, do a follow-up search to confirm:
 - Stage: pre-seed (preferred) or seed only, under $5M if disclosed
-- Sector: B2B AI tools, AI automation, AI infrastructure
+- Sector: B2B AI tools, AI automation, AI infrastructure, or vertical applied AI
 - Company founded 2025 or 2026 (2026 preferred)
 - Job posted in the last 2 months
 - Exclude: consumer apps, crypto, biotech, hardware, PE workflow tools
 
-For each company, do a follow-up search to extract:
+For each company, extract:
 1. What specific problem they solve — spend the most space here, stick to technical details, give a concrete example
 2. Who the customer is (job title, industry)
 3. Why now — what made this possible in 2025/2026 (real capability shift vs. GPT wrapper)
@@ -23,7 +26,7 @@ For each company, do a follow-up search to extract:
 5. Moat — brief for/against reasoning with a 🟢/🟡/🔴 verdict
 6. Category crowding — name other funded startups solving the same problem for the same buyer; flag if there's a well-funded Series A+ incumbent
 
-Do NOT include founder pedigree. Skip companies already in PREVIOUSLY COVERED.
+Do NOT include founder pedigree. Do NOT over-index on YC companies — if the first pass is mostly YC, rerun with different keywords and verticals to balance. Skip companies already in PREVIOUSLY COVERED.
 
 Return exactly 10 companies per run. Before writing output, think through the moat verdict for each, then order the final list from 🟢 at the top to 🔴 at the bottom (🟡 in between).
 
@@ -41,8 +44,6 @@ Output only the HTML fragment. No preamble, no code fences, no markdown.
 
 # PREVIOUSLY COVERED COMPANIES
 
-The following companies were already analyzed in recent runs. **Do not
-re-analyze them.** If you find them again in search results, skip them
-entirely. Focus only on NEW companies not listed below.
+The following companies were already analyzed in recent runs. **Do not re-analyze them.** If you find them again in search results, skip them entirely. Focus only on NEW companies not listed below.
 
 {{PREVIOUS_RESULTS}}
