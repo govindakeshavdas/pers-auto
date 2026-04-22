@@ -2,8 +2,8 @@ name: seed-jobs
 
 on:
   schedule:
-    # Daily 8am PT = 15:00 UTC (during PDT)
-    - cron: "0 15 * * *"
+    # Every 2 days at 8am PT = 15:00 UTC (during PDT)
+    - cron: "0 15 */2 * *"
   workflow_dispatch:
 
 jobs:

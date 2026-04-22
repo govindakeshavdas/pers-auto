@@ -2,8 +2,8 @@ name: recent-seed-funding
 
 on:
   schedule:
-    # Daily 8am PT = 15:00 UTC (during PDT)
-    - cron: "0 15 * * *"
+    # Every 3 days at 8am PT = 15:00 UTC (during PDT)
+    - cron: "0 15 */3 * *"
   workflow_dispatch:
 
 jobs:
