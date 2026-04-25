@@ -9,7 +9,29 @@ Run searches like:
 - site:linkedin.com/jobs "founding ML engineer" "AI agent"
 - General web searches on Jobright, Teal, Wellfound for the same
 
+**Bias toward earlier-stage hiring phrasing.** "Founding engineer" has become a buzzword that already-polished YC-backed companies use. The smaller, earlier companies you actually want use phrases like:
+- site:linkedin.com/jobs "engineer #1" AI
+- site:linkedin.com/jobs "engineer #2" AI
+- site:linkedin.com/jobs "engineer #3" AI
+- site:linkedin.com/jobs "first technical hire" AI
+- site:linkedin.com/jobs "first engineering hire" AI
+
+Run several of these alongside the "founding engineer" searches each run. Companies posting these are usually 1–3 people total — exactly the niche-traction signal we want.
+
+**Prefer tiny companies.** When LinkedIn shows the company size, prefer postings from companies with 1–10 employees. 11–50 is acceptable but lower priority. Anything larger should be deprioritized — they're past the stage we care about.
+
 Cast wide across industries. Pick a handful of different verticals on your own each run and rotate through them so results don't skew toward a single sector or toward the YC/SF infra cluster. Applied/vertical AI companies are as important as horizontal infra — don't let the first pass be all one kind.
+
+**Use the job description itself as the primary traction signal.** This is the highest-signal cue available — much higher than press releases or social posts. When reading a JD, look for and weight heavily:
+- Named design partners or named customers ("design partners include [Fortune 500 name]", "working with 3 named GCs", "shipping with [specific company]")
+- Concrete customer counts in a vertical ("first 10 paying customers in healthcare", "12 mid-market logistics customers")
+- Revenue or contract specifics mentioned casually
+- Founder backgrounds rooted in the **vertical** (ex-construction PM, ex-insurance broker, ex-radiologist) rather than ex-Stripe / ex-OpenAI / ex-FAANG
+- Non-technical founders hiring their first engineer — this is often a domain expert who saw a real problem in their industry and is now building
+
+Companies showing these JD signals should rise to the top of the list, even if their funding/press footprint is small.
+
+**Deprioritize already-hyped companies.** If a company has prominent TechCrunch, VentureBeat, Axios Pro Rata, or Forbes coverage, deprioritize it — the goal here is to find niches *before* they're crowded by hype-followers. The inverse of normal signal: less press = better fit for what we're hunting.
 
 Apply stage and recency as a POST-FILTER (not as search keywords). For each company that looks promising, do a follow-up search to confirm:
 - Stage: pre-seed (preferred) or seed only, under $5M if disclosed
