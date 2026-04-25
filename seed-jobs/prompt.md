@@ -1,5 +1,7 @@
 Search LinkedIn job postings (via Google site search) and general web search for AI startups at pre-seed or seed stage that are actively hiring founding engineers, founding ML engineers, or first engineers. These companies are too early for the funding news cycle but serious enough to pay someone.
 
+**Goal:** I am looking for niches where a solo founder or 2-person team could realistically bootstrap a competitor — ship product, land paying customers on product merit, and reach meaningful revenue without raising. Maybe raise later, but the starting move is bootstrapped. So this is NOT a hunt for venture-scale opportunities. Surface companies operating in spaces where bootstrapping is plausible, and flag the ones operating in spaces where it isn't.
+
 Run searches like:
 - site:linkedin.com/jobs "founding engineer" "AI automation"
 - site:linkedin.com/jobs "founding engineer" "AI agent"
@@ -15,8 +17,10 @@ Run searches like:
 - site:linkedin.com/jobs "engineer #3" AI
 - site:linkedin.com/jobs "first technical hire" AI
 - site:linkedin.com/jobs "first engineering hire" AI
+- site:linkedin.com/jobs "stealth" AI engineer
+- site:linkedin.com/jobs "stealth startup" AI
 
-Run several of these alongside the "founding engineer" searches each run. Companies posting these are usually 1–3 people total — exactly the niche-traction signal we want.
+Run several of these alongside the "founding engineer" searches each run. Companies posting these are usually 1–3 people total — exactly the niche-traction signal we want. The `"stealth"` searches in particular surface slightly underfunded, under-the-radar ideas — exactly the kind of opportunity worth investigating.
 
 **Prefer tiny companies.** When LinkedIn shows the company size, prefer postings from companies with 1–10 employees. 11–50 is acceptable but lower priority. Anything larger should be deprioritized — they're past the stage we care about.
 
@@ -45,20 +49,34 @@ For each company, extract:
 2. Who the customer is (job title, industry)
 3. Why now — what made this possible in 2025/2026 (real capability shift vs. GPT wrapper)
 4. Revenue model
-5. Moat — brief for/against reasoning with a 🟢/🟡/🔴 verdict
-6. Category crowding — name other funded startups solving the same problem for the same buyer; flag if there's a well-funded Series A+ incumbent
+5. **Bootstrap fit** — apply the rubric below and produce a 🟢/🟡/🔴 verdict
+6. Category crowding — who else is in this space, how many, how mature. Skip the "well-funded Series A+ incumbent" framing; that's venture-flavored. Just describe the competitive landscape briefly.
 
-Do NOT include founder pedigree. Do NOT over-index on YC companies — if the first pass is mostly YC, rerun with different keywords and verticals to balance. Skip companies already in PREVIOUSLY COVERED.
+**Bootstrap-fit rubric** (this replaces moat analysis):
 
-Return exactly 10 companies per run. Before writing output, think through the moat verdict for each, then order the final list from 🟢 at the top to 🔴 at the bottom (🟡 in between).
+The question is: *could a solo founder or small bootstrapped team realistically enter and win in this space?* Run two tests:
+
+- **Thin-wrapper test.** Is the product an obvious LLM-as-judge / thin-wrapper play (insurance adjudication, claims review, contract review, "AI grades X")? If yes → bad target. Reason: zero technical depth, the next bootstrapper or the foundation model providers themselves can replicate it trivially. Race to zero.
+- **Insider-access test.** Does selling into this market require relationships an outsider can't build (government procurement, defense, niche regulated buyers where you need to know specific people)? If yes → bad target. Reason: the moat is years of relationship-building that a bootstrapper can't shortcut, regardless of product quality.
+
+Verdict scale:
+- 🟢 = good bootstrap target. Real product depth (not just an LLM wrapper) AND sellable on product merit to outsiders. A small team could plausibly land paying customers.
+- 🟡 = mixed. One real concern (e.g., space is crowded, or there's some insider angle but most sales are still product-led). Worth investigating but with caveats.
+- 🔴 = bad target. Fails either the thin-wrapper test or the insider-access test. Skip as a competitive opportunity.
+
+Write a short for/against under the Bootstrap fit sub-section, then the verdict.
+
+Do NOT include founder pedigree. **Significantly prefer non-YC companies.** YC-backed companies have funding, network, and reputation tailwinds from day one that make them poor competitive targets for a bootstrapper. Include a YC company only if no comparable non-YC equivalent surfaces in this run, and when included, flag it explicitly (e.g., "(YC F25 — included for lack of non-YC equivalent)"). Skip companies already in PREVIOUSLY COVERED.
+
+Return exactly 10 companies per run. Before writing output, think through the bootstrap-fit verdict for each, then order the final list from 🟢 at the top to 🔴 at the bottom (🟡 in between).
 
 Output: self-contained HTML fragment (no <html>/<head>/<body>). Inline styles only. Clean fonts, ~8px padding, light section backgrounds, 1px borders. Clickable <a> links.
 
 Structure:
-1. Numbered company entries as <div> blocks, ordered 🟢 → 🟡 → 🔴 top to bottom. 6–8 sentences covering points 1–4, then a clearly labelled moat sub-section with for/against and 🟢/🟡/🔴 verdict, then the crowding note. No summary table.
+1. Numbered company entries as <div> blocks, ordered 🟢 → 🟡 → 🔴 top to bottom. 6–8 sentences covering points 1–4, then a clearly labelled **Bootstrap fit** sub-section with for/against and 🟢/🟡/🔴 verdict, then the crowding note. No summary table.
 2. <h3> Recurring problems — problems appearing across 2+ startups, name the companies.
 3. <h3> Gaps — specific adjacent problems nobody is solving. Not "AI for X is underserved" but "nobody is solving Y for Z buyer even though X, W, V are solving adjacent problems."
-4. <h3> Opportunity assessment — how worthwhile/easy is it to build a competitor in each space. Not worthwhile if no moat, or if the differentiator is custom domain knowledge too deep to learn.
+4. <h3> Bootstrap viability — for each promising space, could a solo founder or 2-person team realistically land paying customers and reach ~$10K MRR without raising? What's the most plausible wedge? Skip spaces that fail the thin-wrapper or insider-access tests.
 
 Output only the HTML fragment. No preamble, no code fences, no markdown.
 
