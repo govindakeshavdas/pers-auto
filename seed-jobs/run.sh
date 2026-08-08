@@ -62,14 +62,16 @@ if [ "$http_code" -ge 400 ]; then
   exit 1
 fi
 
-# Extract assistant text, then slice from the first <div>. The model narrates
-# between web searches and that commentary arrives as text blocks too, so
-# joining them all puts its scratchpad ahead of the report.
+# Extract assistant text, then slice from the first COMPANY marker or <div>.
+# The model narrates between web searches and that commentary arrives as text
+# blocks too, so joining them all puts its scratchpad ahead of the report.
+# Must match the marker as well as <div> — the marker precedes the first entry,
+# and slicing from <div> alone would drop company 1 from the ledger.
 raw=$(jq -r '[.content[]? | select(.type=="text") | .text] | join("\n")' /tmp/anthropic_response.json)
-output=$(printf '%s' "$raw" | sed -n '/<div/,$p')
+output=$(printf '%s' "$raw" | sed -nE '/<!--[[:space:]]*COMPANY|<div/,$p')
 
 if [ -z "$output" ]; then
-  echo "--- No <div> in model output; refusing to send ---" >&2
+  echo "--- No COMPANY marker or <div> in model output; refusing to send ---" >&2
   printf '%s' "$raw" | head -c 2000 >&2
   exit 1
 fi

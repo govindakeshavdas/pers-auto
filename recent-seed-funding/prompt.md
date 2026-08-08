@@ -56,6 +56,15 @@ moat reasoning (point 2) as its own clearly labelled sub-section with the
 for/against structure and a final verdict using the emoji indicators
 (🟢/🟡/🔴), then close with the crowding note (point 3). Skip a summary table.
 
+Immediately before each entry's `<div>`, emit an HTML comment naming the
+company, exactly in this form and on its own line:
+
+    <!-- COMPANY 1: Acme AI -->
+
+Use the plain company name only — no tagline, no URL, no verdict. This is
+parsed by a script to build the previously-covered list, so the format must
+match exactly for every entry.
+
 Company entries only. Do not add cross-company synthesis sections — no
 "Recurring problems", no "Gaps", no "Opportunity assessment", no closing
 commentary of any kind. End the output after the last company entry.

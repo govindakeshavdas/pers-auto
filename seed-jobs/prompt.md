@@ -24,7 +24,7 @@ Companies showing these JD signals should rise to the top of the list, even if t
 **Deprioritize already-hyped companies.** If a company has prominent TechCrunch, VentureBeat, Axios Pro Rata, or Forbes coverage, deprioritize it — the goal here is to find niches *before* they're crowded by hype-followers. The inverse of normal signal: less press = better fit for what we're hunting.
 
 Apply stage and recency as a POST-FILTER (not as search keywords). For each company that looks promising, do a follow-up search to confirm:
-- Stage: pre-seed (preferred) or seed only, under $5M if disclosed
+- Stage: pre-seed (preferred) or seed only, under $10M if disclosed
 - Sector: B2B AI tools, AI automation, AI infrastructure, or vertical applied AI
 - Company founded 2025 or 2026 (2026 preferred)
 - Job posted in the last 2 months
@@ -38,40 +38,43 @@ For each company, extract:
 5. **Bootstrap fit** — apply the rubric below and produce a 🟢/🟡/🔴 verdict
 6. Category crowding — who else is in this space, how many, how mature. Skip the "well-funded Series A+ incumbent" framing; that's venture-flavored. Just describe the competitive landscape briefly.
 
-**Bootstrap-fit rubric** (this replaces moat analysis):
+**Bootstrap-fit rubric**
 
-The real question is not "is this a good business?" It is: ***can I, alone, at a laptop, this weekend, build a working v1 and know by myself whether it is any good?*** If the answer is no, nothing else about the company matters — it is not a target for me, however attractive the market is.
+Apply in order. **First failure stops the evaluation — verdict is 🔴.** Do not average.
 
-Run four tests. **Failing any one of them is an automatic 🔴** — do not average the tests out.
+1. **Durability (the gate).** In 18 months, what stops the next indie dev — or the
+   model provider — from shipping this in a weekend? The answer must be something
+   that *accumulates*: a dataset I built, an eval harness, a benchmark, hard-won
+   technical depth. "Better taste", "better prompts", "we're first", "we know the
+   vertical" do not accumulate. Nothing accumulates → 🔴. A single-function utility
+   a platform would absorb as a feature → 🔴.
 
-- **Cold-start build test (the primary gate — apply this first).** Could I get to a demoable v1 on my own, with no customer, no design partner, no domain expert, and no signed agreement? Two parts, and it must pass both:
-  - *Build.* Can I code the thing end to end myself, with public data, synthetic data I generate, or data I can sign up for with a credit card? If the first step of building it is "get an enterprise to grant access," I cannot start. Not "it would be hard" — I literally cannot begin.
-  - *Evaluate.* Once it produces an output, can **I** tell whether that output is right? If judging correctness requires a radiologist, a claims adjuster, a compliance officer, a structural engineer, or the customer's own internal policy context, then I have no feedback loop. I would be shipping blind and iterating on guesses. This is disqualifying on its own, even when the build part is easy.
+2. **Ground truth.** Is there a mechanically checkable right answer? Two ways to
+   fail: correctness is subjective (branding, naming, growth strategy, copy —
+   every opinion is equally valid, so I can never be measurably better), or
+   correctness needs an expert I am not (radiologist, claims adjuster, compliance
+   officer). I need an answer key I can run myself.
 
-  Say explicitly in the write-up what my weekend v1 would be and how I would know it worked. If you cannot describe both concretely, the verdict is 🔴.
-- **Thin-wrapper test.** Is the product an obvious LLM-as-judge / thin-wrapper play (insurance adjudication, claims review, contract review, "AI grades X")? If yes → bad target. Reason: zero technical depth, the next bootstrapper or the foundation model providers themselves can replicate it trivially. Race to zero.
-- **Insider-access test.** Does selling into this market require relationships an outsider can't build (government procurement, defense, niche regulated buyers where you need to know specific people)? If yes → bad target. Reason: the moat is years of relationship-building that a bootstrapper can't shortcut, regardless of product quality.
-- **Data-access test (most important — apply this hardest).** Strip the LLM away. What is left? If what remains is *somebody else's data* that I cannot obtain on day one, it is a bad target. The pattern to reject is **"their data + an LLM layer on top"**. Ask specifically:
-  - Does the product only work once it is *inside* a customer's systems — their policy corpus, ticket history, codebase, ERP, HRIS, EHR, cloud accounts, internal wiki, security logs? An outsider cannot build or demo this before a customer hands over access, and no enterprise hands that over to a one-person company.
-  - Does it depend on licensed, scraped-at-scale, or otherwise proprietary third-party data (market data feeds, MLS, claims databases, permit records, regulatory corpora behind paywalls)?
-  - Does the value only appear at scale — the product is useless until it has seen many customers' data (benchmarks, anomaly baselines, "how does my org compare")? Cold start kills a bootstrapper here.
-  - Is it a **control plane / governance / observability layer** sitting over an enterprise's stack (AI safety and policy enforcement, compliance monitoring, real-time risk detection, security posture)? Reject these outright. They require deep integration, a security review, SOC 2, procurement, and an enterprise's trust before line one of value is delivered. There is no way to get a foot in the door as a solo builder — the product cannot even be *tried* without a signed enterprise.
+3. **Proxy bootstrap.** Can I build v1 *and its eval set* alone — from public data,
+   data I generate, data a user pastes in the first five minutes, or a dataset I
+   construct myself? Constructing the dataset is fine. That is the work, and it is
+   usually the thing from test 1 that accumulates. Fails: needing to sit inside a
+   customer's live systems (ERP, EHR, ticket history, security logs), licensed or
+   proprietary feeds, or value that only appears after many customers' data.
 
-  The inverse — what passes — is a product I could build and demo with **public data, data I can generate myself, or data the customer pastes/uploads in the first five minutes**. If a single user can get value on their own, alone, without an integration project, it passes.
+4. **Buyer.** Can I reach the buyer alone, and will they pay? Fails: consumers,
+   prosumers, job seekers, anything freemium-shaped — low willingness to pay and
+   saturated with indie devs. Also fails: procurement- or relationship-gated buyers
+   (government, defense, regulated niches).
 
-Verdict scale:
-- 🟢 = good bootstrap target. Passes all four. I could build a v1 alone and judge it myself, it has real product depth (not just an LLM wrapper), it is sellable on product merit to outsiders, and the data it needs is data I could get on day one.
-- 🟡 = mixed. Passes all four but has one real concern (e.g., the space is crowded, or there's a mild insider angle, or the useful data takes some effort to assemble but is obtainable, or self-evaluation is possible but slow). Worth investigating but with caveats.
-- 🔴 = bad target. Fails the cold-start build, thin-wrapper, insider-access, **or** data-access test. Skip as a competitive opportunity.
+Verdict:
+- 🟢 passes all four. Name the thing that accumulates.
+- 🟡 real depth, but I can name what erodes the barrier.
+- 🔴 fails any one.
 
-Write a short for/against under the Bootstrap fit sub-section, then the verdict. The for/against must cover, concretely:
-- What my weekend v1 would be, and how I would know it worked without asking an expert.
-- What the product looks like with the LLM removed.
-- What data it depends on, and whether I could get that data on day one.
-
-If any of those three cannot be answered concretely, say so plainly and mark it 🔴 — "unclear" is a fail, not a 🟡.
-
-**Don't waste the run on red.** If more than ~3 of the 10 companies come out 🔴, go back and search more before writing output — rotate to different verticals and prefer companies selling to a single practitioner or a small team rather than to an enterprise. The point of the run is to surface targets I could actually attack, not to build a list of things I can't.
+Write-up: under **Bootstrap fit**, four short lines — what accumulates, how I check
+correctness myself, what v1 and its eval set are built from, who pays. Then the
+verdict. "Unclear" on any line is 🔴, not 🟡.
 
 Do NOT include founder pedigree. **Significantly prefer non-YC companies.** YC-backed companies have funding, network, and reputation tailwinds from day one that make them poor competitive targets for a bootstrapper. Include a YC company only if no comparable non-YC equivalent surfaces in this run, and when included, flag it explicitly (e.g., "(YC F25 — included for lack of non-YC equivalent)"). Skip companies already in PREVIOUSLY COVERED.
 
@@ -79,7 +82,13 @@ Return exactly 10 companies per run. Before writing output, think through the bo
 
 Output: self-contained HTML fragment (no <html>/<head>/<body>). Inline styles only. Clean fonts, ~8px padding, light section backgrounds, 1px borders. Clickable <a> links.
 
-Structure: numbered company entries as <div> blocks, ordered 🟢 → 🟡 → 🔴 top to bottom. 6–8 sentences covering points 1–4, then a clearly labelled **Bootstrap fit** sub-section with for/against and 🟢/🟡/🔴 verdict, then the crowding note. No summary table.
+Structure: numbered company entries as <div> blocks, ordered 🟢 → 🟡 → 🔴 top to bottom. 6–8 sentences covering points 1–4, then a clearly labelled **Bootstrap fit** sub-section with the four write-up lines and the 🟢/🟡/🔴 verdict, then the crowding note. No summary table.
+
+Immediately before each entry's `<div>`, emit an HTML comment naming the company, exactly in this form and on its own line:
+
+    <!-- COMPANY 1: Acme AI -->
+
+Use the plain company name only — no tagline, no URL, no verdict. This is parsed by a script to build the previously-covered list, so the format must match exactly for every entry.
 
 Company entries only. Do not add cross-company synthesis sections — no "Recurring problems", no "Gaps", no "Bootstrap viability" round-up, no closing commentary of any kind. End the output after the last company entry.
 

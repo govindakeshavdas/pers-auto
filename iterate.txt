@@ -1,0 +1,45 @@
+-BrandBrahma — AI Branding & Naming Platform for Entrepreneurs
+    Problems : 
+        - There is absolutely 0 moat even if i spend time developing it 
+        - Too subjective
+        - Too easy to replicate . 
+        - Even though not exactly a wrapper -- there is too much subjectivity / taste involved 
+
+2. ArcadeLift — AI-Native Growth Strategy Platform for Founders
+    - again too subjective 
+    - Cold start problem --- very hard to get the data in a representative way 
+    - Super super non technical and subjective 
+
+3. LiftmyCV — AI Job Search Automation for Job Seekers
+    - Simply a tool 
+    - Job seekers are fremium -- avoid this 
+    - Full of indie devs -- race to the bottom 
+
+4. Vyaseka AI — Multilingual Meeting Intelligence & Documentation Platform
+    - decent one - 
+    - There is some tech involved 
+    - But not an insurmountable barrier 
+
+5. Bobyard — AI Takeoffs & Cost Estimation for Landscaping Contractors
+    - Not terrible but not good  - 
+    - Domain specificity --- it will get commodotized - race to bottom 
+    - There is 0 moat for me over time . 
+
+
+6. Suitpax — AI-Powered B2B Travel Management Platform
+    - Too gimmicky . 
+    - No real moat . 
+
+7. TransVoix — Real-Time Voice Translation Infrastructure
+    - Decent one 
+    - Some tech -- even if i spend time devleoping will not be replaced immediately 
+    - On deeper research it feels like this is too much like a tool and will be cloned / done by one of the larger providers . 
+
+
+ ---- Euphonia
+    - Good one 
+    - Even though i dont have teh phoneme dataset 
+    - Something adjacent can easily be brought up .. 
+    - Its not just a tool , because a product can be built on the side for checking phonemes across providers - 
+
+    
