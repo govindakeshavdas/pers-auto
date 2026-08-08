@@ -48,4 +48,7 @@ jobs:
           git add seed-jobs/history/
           git diff --cached --quiet && exit 0
           git commit -m "chore: save seed jobs results $(date +%Y-%m-%d)"
+          # recent-seed-funding runs on the same schedule every 6 days and
+          # pushes first — rebase or this push is rejected and the run is lost.
+          git pull --rebase
           git push

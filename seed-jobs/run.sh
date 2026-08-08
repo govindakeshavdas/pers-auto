@@ -21,17 +21,14 @@ fi
 
 today=$(date +%Y-%m-%d)
 HISTORY_DIR="$SCRIPT_DIR/history"
+LEDGER="$HISTORY_DIR/ledger.txt"
 mkdir -p "$HISTORY_DIR"
+touch "$LEDGER"
 
-# Build previous results from last 3 history files (newest first).
-previous=""
-if ls "$HISTORY_DIR"/*.html 1>/dev/null 2>&1; then
-  for f in $(ls -t "$HISTORY_DIR"/*.html | head -3); do
-    run_date=$(basename "$f" .html)
-    previous="$previous<h4>Run: $run_date</h4>"$'\n'"$(cat "$f")"$'\n'
-  done
-fi
-
+# Previously covered companies: names only, every run to date.
+# Deliberately NOT the past HTML — feeding whole outputs back made the model
+# imitate their structure and verdicts instead of just skipping the names.
+previous=$(cat "$LEDGER")
 if [ -z "$previous" ]; then
   previous="(No previous runs yet — this is the first one.)"
 fi
@@ -65,11 +62,30 @@ if [ "$http_code" -ge 400 ]; then
   exit 1
 fi
 
-# Extract final assistant text (concat all text blocks, skip thinking blocks).
-output=$(jq -r '[.content[]? | select(.type=="text") | .text] | join("\n")' /tmp/anthropic_response.json)
+# Extract assistant text, then slice from the first <div>. The model narrates
+# between web searches and that commentary arrives as text blocks too, so
+# joining them all puts its scratchpad ahead of the report.
+raw=$(jq -r '[.content[]? | select(.type=="text") | .text] | join("\n")' /tmp/anthropic_response.json)
+output=$(printf '%s' "$raw" | sed -n '/<div/,$p')
 
-# Save to history and prune to last 3 runs.
+if [ -z "$output" ]; then
+  echo "--- No <div> in model output; refusing to send ---" >&2
+  printf '%s' "$raw" | head -c 2000 >&2
+  exit 1
+fi
+
+# Save to history and prune to last 3 runs (readable archive; git keeps the rest).
 echo "$output" > "$HISTORY_DIR/$today.html"
 ls -t "$HISTORY_DIR"/*.html | tail -n +4 | xargs rm -f 2>/dev/null || true
+
+# Append this run's company names to the ledger, preserving first-seen order.
+printf '%s' "$output" | python3 -c '
+import re, sys
+for n in re.findall(r"<!--\s*COMPANY\s*\d+\s*[:—–-]+\s*(.*?)\s*-->", sys.stdin.read(), re.I):
+    n = re.sub(r"\s+", " ", n).strip()
+    if n:
+        print(n)
+' >> "$LEDGER"
+awk 'NF && !seen[tolower($0)]++' "$LEDGER" > "$LEDGER.tmp" && mv "$LEDGER.tmp" "$LEDGER"
 
 echo "$output"
