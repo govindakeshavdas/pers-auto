@@ -279,3 +279,13 @@ Standard Template Labs
 Stealth Industrial-AI (Equipment Maintenance)
 Parachute
 The LLM Data Company
+Vals AI
+BenchSpan
+Spur
+PatternAI
+Phaselab
+Structured AI
+IronLedger
+Revic
+HawkAI (FutureSight)
+Vector Legal
