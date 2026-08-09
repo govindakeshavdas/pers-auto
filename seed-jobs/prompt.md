@@ -31,7 +31,7 @@ Apply stage and recency as a POST-FILTER (not as search keywords). For each comp
 - Exclude: consumer apps, crypto, biotech, hardware, PE workflow tools
 
 For each company, extract:
-1. What specific problem they solve — spend the most space here, stick to technical details, give a concrete example
+1. What specific problem they solve — give this the most bullets, stick to technical details, give a concrete example
 2. Who the customer is (job title, industry)
 3. Why now — what made this possible in 2025/2026 (real capability shift vs. GPT wrapper)
 4. Revenue model
@@ -103,10 +103,9 @@ Verdict:
 - 🟡 real depth, but I can name what erodes the barrier.
 - 🔴 fails any one.
 
-Write-up: under **Bootstrap fit**, five short lines — what makes correctness
-objective, what's left when the LLM is deleted, what accumulates, what customer #1
-gets in week one from zero data, who pays. Then the verdict. "Unclear" on any line
-is 🔴, not 🟡.
+Write-up: under **Bootstrap fit**, five labelled lines — Objective, LLM deleted,
+Accumulates, Week one, Buyer. One line each, under 20 words. Then the verdict.
+"Unclear" on any line is 🔴, not 🟡.
 
 **Calibration — I have already rejected these. Match this severity.**
 
@@ -135,9 +134,41 @@ Do NOT include founder pedigree. **Significantly prefer non-YC companies.** YC-b
 
 Return exactly 10 companies per run. Before writing output, think through the bootstrap-fit verdict for each, then order the final list from 🟢 at the top to 🔴 at the bottom (🟡 in between).
 
-Output: self-contained HTML fragment (no <html>/<head>/<body>). Inline styles only. Clean fonts, ~8px padding, light section backgrounds, 1px borders. Clickable <a> links.
+**WRITING STYLE — this matters more than any other formatting rule.**
 
-Structure: numbered company entries as <div> blocks, ordered 🟢 → 🟡 → 🔴 top to bottom. 6–8 sentences covering points 1–4, then a clearly labelled **Bootstrap fit** sub-section with the five write-up lines and the 🟢/🟡/🔴 verdict, then the crowding note. No summary table.
+I read these fast. Prose paragraphs are unreadable to me. Write in short bullets.
+
+- **Bullets, never paragraphs.** Every fact is its own `<li>`. Never chain three
+  facts into one sentence with commas and dashes.
+- **One idea per bullet. Max ~15 words.** If a bullet needs a comma-spliced clause
+  to fit, it is two bullets.
+- **Simple words.** "report card", not "third-party evaluation infrastructure".
+  "picks a model", not "model selection methodology". No consultant vocabulary:
+  cut *leverage, robust, comprehensive, holistic, end-to-end, seamlessly, at scale,
+  landscape, solution, offering, straightforward, notably, concretely*.
+- **No hedging filler.** Drop "it's worth noting", "essentially", "in practice".
+- **Numbers go alone.** A metric gets its own bullet, not a subordinate clause.
+- Never write a sentence longer than one line on screen.
+
+When an entry has 2+ comparable numbers (model scores, pricing tiers, customer
+counts), render them as a small `<pre>` monospace table instead of bullets. One
+per entry at most. Skip it when there's nothing to line up.
+
+Output: self-contained HTML fragment (no <html>/<head>/<body>). Inline styles only. Clean fonts, ~8px padding, light section backgrounds, 1px borders. Clickable <a> links. Bulleted `<ul>` with tight margins and ~18px left padding.
+
+Structure: numbered company entries as <div> blocks, ordered 🟢 → 🟡 → 🔴 top to bottom. Each entry, in this order:
+
+1. Header line: number, company name, verdict emoji, one-line tagline.
+2. Facts line: `domain · city · founded · stage (~$X) · ~N people`. Links here.
+3. `What they do` — 3–4 bullets.
+4. `The problem they solve` — 2–3 bullets, including one concrete example.
+5. Optional `<pre>` number table (see above).
+6. `Money` — 2–3 bullets: revenue model, any revenue/headcount figures.
+7. `Why now` — 1–2 bullets.
+8. `Bootstrap fit` sub-section — the five labelled lines and the 🟢/🟡/🔴 verdict.
+9. `Crowding` — 1–2 bullets.
+
+Section headers are bold labels on their own line. No summary table.
 
 Immediately before each entry's `<div>`, emit an HTML comment naming the company, exactly in this form and on its own line:
 
@@ -148,6 +179,67 @@ Use the plain company name only — no tagline, no URL, no verdict. This is pars
 Company entries only. Do not add cross-company synthesis sections — no "Recurring problems", no "Gaps", no "Bootstrap viability" round-up, no closing commentary of any kind. End the output after the last company entry.
 
 Output only the HTML fragment. No preamble, no code fences, no markdown.
+
+**Worked example — match this density and sentence length exactly.**
+
+```html
+<!-- COMPANY 1: Vals AI -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #f4faf4; border: 1px solid #c4dcc4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">1. Vals AI</strong> <span>🟢</span> — <span style="color: #555;">Independent report card for AI models</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://vals.ai" style="color: #1a73e8;">vals.ai</a> · San Francisco · 2024 · Seed (~$5M) · ~12 people</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>Independent report card for AI models.</li>
+<li>Not generic tests. Real job tasks: law, tax, finance, healthcare.</li>
+<li>Build the test sets with actual domain experts.</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>A company asks: "GPT-5, Claude Opus, or Gemini for contract review?"</li>
+<li>MMLU scores don't answer that.</li>
+<li>Vals runs the models on real contract-review work and publishes scores.</li>
+</ul>
+
+<pre style="font-size: 12px; background: #fff; border: 1px solid #ddd; padding: 6px; margin: 0 0 8px;">Model    Accuracy   Cost/query
+-----    --------   ----------
+o3         46.8%      $3.79</pre>
+<div style="font-size: 12px; color: #666; margin-bottom: 8px;">Their Finance Agent Benchmark. Best model still failed half the time.</div>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>SaaS: eval infra sold to AI labs and enterprise eng teams.</li>
+<li>Services: private custom benchmarks.</li>
+<li>2025: $1.3M revenue, 12 people.</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>Every company deploying LLMs must pick a model per task.</li>
+<li>Nobody has good data to pick with.</li>
+</ul>
+</div>
+
+<div style="background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 4px; padding: 6px; font-size: 13px;">
+<strong>Bootstrap fit</strong><br>
+<strong>Objective:</strong> Model scores are measured, not judged.<br>
+<strong>LLM deleted:</strong> The eval harness and expert-built test sets remain.<br>
+<strong>Accumulates:</strong> The benchmark datasets. Built once, reused forever.<br>
+<strong>Week one:</strong> Customer picks a model from a leaderboard that already exists.<br>
+<strong>Buyer:</strong> Eng leads deploying LLMs. They pay to avoid picking wrong.<br>
+<strong>Verdict: 🟢</strong></div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>Braintrust, LangSmith, Galileo — but those are eval tools, not published benchmarks.</li>
+<li>Per-vertical benchmarks are still mostly empty.</li>
+</ul>
+</div>
+</div>
+```
 
 ---
 
