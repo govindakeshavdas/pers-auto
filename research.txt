@@ -1,0 +1,68 @@
+======= Euphonia ====== 
+ - There was a company called namecoach which had a bunch of phonemes i.e. the way things were pronounced - for name pronunciation for exameple 
+ - they are selling that as a hosted service for companies to tap into ... 
+ -i.e. LLM -> phoneme hosted service ( insrted in flow ) -> TTS 
+
+- There maybe a variant of this that is useful ( What we can do )
+    - In future all providers may use such phonemes automatically 
+    - This euophinai will always have to be a hosted service 
+    - Ther may be technical terms and drug names and so on --- that need to be validated for phoneme pronunciation 
+    - Is it possible to launch a service that takes text before TTS -> Runs on different TTS providers -> sees where there are mismatches -> flags them ( possibly asks for correct phoneme ). This also handles model provider drift / mismatch ... 
+    - Highlights which of them are closest to the bussiness that the user is interested in --- so that they can make phonemes for them --- can routinely check dashboard --etc ... 
+
+
+
+Euphonia
+
+                       ┌─────────────────────┐
+                       │  THEIR DICTIONARY   │  ← locked, hosted
+                       │  (the whole moat)   │     never leaves
+                       └──────────┬──────────┘
+                                  │
+                          network hop, per call
+                                  │
+   LLM ──────▶ [ their API ] ─────┴─────▶ TTS ──▶ audio
+                    ▲
+                    │
+            you can never remove this
+            stop paying → pronunciation breaks
+
+   Customer owns: nothing.
+Us
+
+   ═══════════ OFFLINE LOOP (our product) ═══════════
+
+   customer's real traffic / term list
+        │
+        ▼
+   ┌─────────────────────────────────────┐
+   │  FAN OUT → ASR → COMPARE            │
+   │   TTS A /zɛl.dʒænz/  ┐              │
+   │   TTS B /ksɛl.jants/ ├─ differ → FLAG
+   │   TTS C /zɛl.dʒænz/  │              │
+   │   TTS D /zɛl.jɑnz/   ┘              │
+   └──────────────┬──────────────────────┘
+                  ▼
+           rank by traffic impact
+                  ▼
+           fix (LLM / customer / majority)
+                  ▼
+   ┌─────────────────────────────────────┐
+   │  THEIR LEXICON                      │
+   │  their SKUs, their drugs, their     │
+   │  clinicians — verified per provider │
+   └──────────────┬──────────────────────┘
+                  │
+                  │  we EXPORT it. it's theirs.
+                  │  SSML · provider lexicon file · JSON
+                  ▼
+   ═══════════ THEIR LIVE FLOW (we're not in it) ═══════
+
+   LLM ──────▶ [ their own lookup ] ──────▶ TTS ──▶ audio
+                      ▲
+                      │
+              file sits in their repo
+              zero latency · zero per-call fee
+              works if we disappear
+
+====== 
