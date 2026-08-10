@@ -1,351 +1,629 @@
-<!-- COMPANY 1: Caledon -->
-<!-- COMPANY 2: Tetherline -->
-<!-- COMPANY 3: Herdr -->
-<!-- COMPANY 4: hiloop -->
-<!-- COMPANY 5: Logen.io -->
-<!-- COMPANY 6: Expanse -->
-<!-- COMPANY 7: Stoa -->
-<!-- COMPANY 8: Mimos -->
-<!-- COMPANY 9: Stealth Hardware Design AI (SuperSeed) -->
-<!-- COMPANY 10: Stealth Knowledge Platform (Fabrik Talent) -->
+<!-- COMPANY 1: Dashnode -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #f4faf4; border: 1px solid #c4dcc4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">1. Dashnode</strong> <span>🟢</span> — <span style="color: #555;">AI-powered CNC costing from CAD files</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://dashnode.ai" style="color: #1a73e8;">dashnode.ai</a> · Bengaluru, India · 2018 · Unfunded (bootstrapped) · ~7 people</span>
 
-Let me now do the bootstrap-fit analysis for each:
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>Upload a CAD file, get a CNC machining cost estimate in seconds.</li>
+<li>Parses geometry, calculates cycle time, material cost, setup cost.</li>
+<li>Also runs DFM (design-for-manufacturability) checks on the part.</li>
+<li>Bulk costing for RFQs with configurable shop-floor parameters.</li>
+</ul>
 
-**Caledon** — sells validated datasets and tooling for finance/accounting LLMs to AI labs and fintechs. Gate 2: domain knowledge (CPAs, accounting rules) owns the value. Removing the LLM, what's left is a network of CPAs — a domain-expert service business. 🔴 Gate 2.
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>A machine shop gets an RFQ with 40 parts. Today an estimator eyeballs each.</li>
+<li>
+Time savings of up to 90%, freeing up capacity to process more enquiries.
+</li>
+<li>
+Provides file upload, configurable inputs, raw material analysis, DFM analysis, and bulk costing.
+</li>
+</ul>
 
-**Tetherline** — AI agents that operate lab instruments (proprietary software with no API). Gate 4: needs integration into each customer's specific lab instruments and proprietary instrument software. Cold start. 🔴 Gate 4.
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Has not raised any funding yet.
+</li>
+<li>SaaS: free tier for startups, paid plans for shops and enterprises.</li>
+<li>
+7 employees as of Apr 2026.
+</li>
+</ul>
 
-**Herdr** — open-source terminal multiplexer for AI coding agents. Single Rust binary, 16K stars. Gate 3: what accumulates? Open-source traction, plugin ecosystem (500 community plugins in first month). But durability — tmux/Zellij could add agent detection, or Cursor/Claude Code could absorb this. Thin layer risk. Also YC. Gate 5: devtools/prosumer buyer — freemium-shaped. 🔴 Gate 5.
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+As of Dec 2025, US manufacturing had 433,000 job openings.
+</li>
+<li>AI can parse 3D geometry and compute toolpaths — not possible at speed before.</li>
+</ul>
+</div>
 
-**hiloop** — automated model improvement infra. Give it a task + eval, it runs thousands of experiments to find the best model config. Gate 2: what's left without the LLM? The research orchestration system, experiment lineage, compute scheduling. That's a technical system. Gate 3: experiment lineage data + benchmarks accumulate. Gate 4: customer #1 brings a task and an eval — the system can run immediately. Gate 5: teams spending on inference/training — they'll pay for measurable improvements. BUT: YC S26 with serious compute costs (50 B200s). Not bootstrappable — you need GPU spend. 🔴 operational: can't bootstrap this — GPU costs alone are prohibitive. Also YC.
-
-**Logen.io** — AI app builder that includes backend, database, auth, hosting. Gate 3: what accumulates? Nothing unique. Lovable, Bolt, Replit, v0 all exist. Market is extremely crowded — the search results list 10+ direct competitors. A thin layer over code generation. 🔴 Gate 3.
-
-**Expanse** — GPU waste recovery (right-sizing, failure prediction for HPC jobs). Gate 1: output is objective — resource utilization measurements, predicted failures, cost savings. Gate 2: without the LLM, the value is a measurement/prediction harness over HPC job metadata. Technical system. Gate 3: what accumulates — a dataset of job profiles, resource utilization patterns, failure signatures across workloads. Gate 4: customer #1 — needs access to their HPC scheduler logs and job queue data. That's an integration into their compute infra (SLURM, Kubernetes, etc.). 🔴 Gate 4 — cold start requires deep integration into customer's HPC environment.
-
-**Stoa** — GPU marketplace with RFQ system, pricing data. Gate 1: prices and availability are objective. Gate 2: without the LLM, the value is the marketplace and pricing data. Gate 3: pricing history dataset accumulates. Gate 4: can start with public pricing data, but the RFQ marketplace needs both sides — cold start. Gate 5: GPU buyers/sellers will pay. 🟡 — marketplace cold start is real but can be bootstrapped one side at a time. BUT: YC.
-
-**Mimos** — AI agents for plaintiff law firm intake and lead gen (Google Ads, LSA, GBP management). Gate 1: what's the output? Ad campaign management, lead qualification. Lead qualification is somewhat subjective — "is this a good case?" involves judgment. But ad spend optimization and conversion tracking is objective (CPA, ROAS are numbers). Gate 2: without LLM, what's left? The ad management pipeline + intake workflow. The value is in knowing plaintiff marketing — domain knowledge. Law firms hiring a marketing agency would beat this. Gate 2: 🔴.
-
-**Stealth Hardware Design AI (SuperSeed)** — Copilot for physical/mechanical engineering, integrating with CAD/CAE tools like Onshape and Ansys. Gate 4: needs integration into proprietary CAD/CAE software. No data on day one. Also Gate 3: what accumulates? Engineering design patterns? Those are domain knowledge. 🔴 Gate 2 — domain knowledge (physics, mechanical engineering) owns it. Hardware design companies hiring one engineer could build this.
-
-**Stealth Knowledge Platform (Fabrik Talent)** — RAG + multi-source data ingestion for "complex, high-value industry." Founded by ex-consultants. Gate 2: the value is domain knowledge of the target industry. Ex-consultants who know the industry. 🔴 Gate 2.
-
-I need to find some companies that might actually pass. Let me reconsider what I've found. Looking back at the Portless listing — it's an existing logistics company hiring their first AI engineer. Not a startup to compete with. The construction AI platform hiring mobile engineer — that's on the previously covered list probably.
-
-Let me reconsider and be honest: most of what I found this run are 🔴. Let me check for a few more and evaluate honestly.
-
-From the data, the most interesting spaces are:
-- **Vals AI** (already covered) — the eval pattern
-- The **Stealth AI-native ERP/Supply Chain** — already covered
-- Agent multiplexers — crowded, freemium
-
-The ones worth including despite all being 🔴 (per the rubric's harshness):
-1. Caledon — 🔴 Gate 2
-2. Tetherline — 🔴 Gate 4
-3. Herdr — 🔴 Gate 5
-4. hiloop — 🔴 Gate 3 (GPU costs + YC)
-5. Logen.io — 🔴 Gate 3
-6. Expanse — 🔴 Gate 4
-7. Stoa — 🟡 (marketplace, but YC)
-8. Mimos — 🔴 Gate 2
-9. Stealth Hardware Design AI — 🔴 Gate 2
-10. Stealth Knowledge Platform — 🔴 Gate 2
-
-Actually let me reconsider Stoa and Expanse more carefully, and see if any others can be 🟡 or 🟢.
-
-**Stoa** — GPU RFQ marketplace. The RFQ marketplace model is interesting — you're matching buyers and sellers of GPUs. What accumulates: pricing history, supply/demand data, dealer reputation scores. Day one: you could list publicly available GPU offerings from known dealers and provide a pricing comparison. That's useful without any customer's data. Marketplace cold start is a problem, but you can start as an aggregator. 🟡 — marketplace cold start is the eroding factor. YC though.
-
-**Expanse** — GPU waste recovery for HPC. Re-thinking Gate 4: could you build a benchmark dataset of common HPC workload profiles yourself? The product right-sizes job submissions before they reach the scheduler. You'd need the customer to pipe their job metadata to you. That's an integration but it's a lightweight one (read scheduler logs). Actually, the first product could be an open-source sizing recommendation tool that installs next to SLURM. Customer #1 gets value immediately from any job submission. 🟡 — but the accumulating dataset is only useful if you have many customers (data network effect). YC.
-
-Hmm, let me look at the **ProdTrace** mention — ex-SambaNova engineer building a platform for hardware companies to manage bills of materials. That's interesting. But I don't have enough detail.
-
-Let me look at **Conduit** (loading dock operations). Already covered as a YC company.
-
-Given the constraint of what I found, I'll produce the list ordered 🟡 → 🔴, with no 🟢 this run. Let me output the HTML now.
-
-<div style="font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; max-width: 960px; margin: 0 auto; color: #1a1a1a; line-height: 1.55;">
-
-<!-- COMPANY 1: Stoa -->
-<div style="background: #fafaf6; border: 1px solid #d4d0c8; border-radius: 6px; padding: 8px 12px; margin-bottom: 14px;">
-<strong style="font-size: 1.05em;">1. Stoa</strong> — <span style="color: #666;">GPU pricing &amp; RFQ marketplace</span><br>
-<span style="font-size: 0.85em; color: #888;">(YC S26 — included for lack of non-YC equivalent) · ~2 employees · San Francisco · Founded 2026</span><br><br>
-
-
-Stoa provides pricing and trading infrastructure for AI hardware, live with an RFQ marketplace where companies buy and sell GPUs through vetted dealers in real-time.
- The product solves a concrete problem: GPU procurement is currently opaque and manual — buyers email brokers, compare quotes over spreadsheets, and have no historical pricing data to negotiate against. Stoa aggregates live ask/bid data from dealers and lets a buyer fire an RFQ to multiple vetted suppliers simultaneously, then compare responses side-by-side. The output is a structured price comparison with timestamp, spec match, and delivery terms — entirely objective. Why now: the GPU market is still fragmented post-NVIDIA supply constraints, and the volume of secondary-market H100/B200 trades has exploded alongside the AI buildout. Revenue model is likely a transaction fee or subscription for pricing data access. The buyer is an AI infra lead or procurement manager at a company spending $500K+ on compute.
-
-<div style="background: #f0efe8; padding: 6px 10px; border-radius: 4px; margin-top: 8px;">
+<div style="background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 4px; padding: 6px; font-size: 13px;">
 <strong>Bootstrap fit</strong><br>
-<strong>Objectivity:</strong> Prices, specs, delivery dates — mechanically comparable. ✅<br>
-<strong>Without LLM:</strong> A marketplace + pricing database. Technical system, not domain knowledge. ✅<br>
-<strong>Durability:</strong> Historical pricing dataset + dealer reputation data accumulate. Partial — a larger marketplace (like NVIDIA itself or a cloud broker) could absorb. ⚠️<br>
-<strong>Day one:</strong> Aggregate publicly listed GPU availability from known resellers. Buyer gets price comparison immediately. ✅<br>
-<strong>Buyer:</strong> AI infra leads at funded startups and mid-market companies. Reachable, will pay for cost savings. ✅<br>
-<strong>Verdict: 🟡</strong> — Real pricing data accumulates, but marketplace cold start is hard for a solo founder and a well-funded exchange (CoreWeave, Lambda) could add this as a feature. YC backing gives them a demand-side network you can't match.
+<strong>Objective:</strong> Cost = material + cycle time + setup. Math, not opinion.<br>
+<strong>LLM deleted:</strong> The CAD parser, cycle-time calculator, and DFM rules remain.<br>
+<strong>Accumulates:</strong> Shop-specific machine/tooling profiles and validated cost data.<br>
+<strong>Week one:</strong> Upload a STEP file, get a cost. No history needed.<br>
+<strong>Buyer:</strong> Machine shop estimators and sourcing leads. Clear willingness to pay.<br>
+<strong>Verdict: 🟢</strong> — the thing that accumulates is the validated cost model per shop config.</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>
+Top competitors include Paperless Parts, 3D Spark, DigiFabster.
+</li>
+<li>Dashnode is bootstrapped from India — lean cost base, real product.</li>
+</ul>
+</div>
 </div>
 
-<div style="margin-top: 6px; font-size: 0.88em; color: #555;">
-<strong>Crowding:</strong> GPU brokerages (SemiAnalysis tracked ~40 in 2025) are mostly manual. Sfcompute and CoreWeave operate cloud marketplaces but don't do RFQ-style price comparison. The "pricing data" niche is relatively open — no dominant aggregator yet — but it's a race to liquidity.
+<!-- COMPANY 2: Assemble Labs -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #f4faf4; border: 1px solid #c4dcc4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">2. Assemble Labs</strong> <span>🟢</span> — <span style="color: #555;">AI that runs spec-driven experiments on hardware labs</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://assemblelabs.ai" style="color: #1a73e8;">assemblelabs.ai</a> · Menlo Park · 2024 · Pre-seed (~$1.3M) · ~2 people</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Designs spec-driven experiments, runs them on embedded systems, delivers verified fixes.
+</li>
+<li>
+Parses your ERS/ERD and captures every measurable spec without losing precision.
+</li>
+<li>
+Translates each requirement into a hardware-ready test with pass/fail criteria.
+</li>
+<li>
+Continuously tests firmware builds, identifies regressions, validates fixes in seconds.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>EE teams write firmware, then manually set up oscilloscope/multimeter to verify.</li>
+<li>Each spec is a measurable electrical property: voltage, current, timing.</li>
+<li>AssembleAI auto-generates the test, controls the instruments, logs pass/fail.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Has raised $1.3M.
+</li>
+<li>
+Menlo Ventures has invested.
+</li>
+<li>
+2 total employees.
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>LLMs can reliably parse engineering spec documents into structured test cases.</li>
+<li>Lab instruments now expose APIs (SCPI/VISA) that an agent can drive.</li>
+</ul>
 </div>
-</div>
 
-<!-- COMPANY 2: Expanse -->
-<div style="background: #fafaf6; border: 1px solid #d4d0c8; border-radius: 6px; padding: 8px 12px; margin-bottom: 14px;">
-<strong style="font-size: 1.05em;">2. Expanse</strong> — <span style="color: #666;">GPU waste recovery for HPC workloads</span><br>
-<span style="font-size: 0.85em; color: #888;">YC S26 — included for lack of non-YC equivalent · 4 employees · Founded 2026</span><br><br>
-
-
-Expanse unlocks wasted GPU capacity by recovering idle compute through three capabilities: resource prediction (right-sizing job submissions before they reach the scheduler), optimisation suggestions (code and config changes researchers can apply themselves), and failure prediction (catching jobs that will fail before they consume hours of GPU time).
- 
-The team is four engineers who ran HPC and GPU training workloads at the largest quant funds and national supercomputing centres, and faced this problem first hand where the only fix was to over-provision and burn millions.
- Concretely: a researcher submits a training job requesting 8×H100 for 72 hours; Expanse analyzes the job configuration and historical profiles of similar workloads, predicts it only needs 4×H100 for 48 hours, and flags a common config error that would cause an OOM crash at hour 30. 
-The founder built the first multimodal HPC resource predictor as research at EPCC (Edinburgh's Parallel Computing Centre), which beat every published baseline.
- Revenue is usage-based: percentage of recovered compute costs.
-
-<div style="background: #f0efe8; padding: 6px 10px; border-radius: 4px; margin-top: 8px;">
+<div style="background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 4px; padding: 6px; font-size: 13px;">
 <strong>Bootstrap fit</strong><br>
-<strong>Objectivity:</strong> GPU hours saved, jobs right-sized, failures caught before execution — all mechanically measurable against actual resource usage. ✅<br>
-<strong>Without LLM:</strong> A measurement + prediction harness over scheduler metadata. Technical system. ✅<br>
-<strong>Durability:</strong> Workload profiles and failure signatures dataset accumulates across customers. ✅ in theory.<br>
-<strong>Day one:</strong> 🔴 — Requires integration into customer's SLURM/Kubernetes scheduler, read access to job logs, and enough historical runs to calibrate predictions. Cold start: useless until connected to a live cluster.<br>
-<strong>Buyer:</strong> ML infra leads and HPC admins at companies spending $1M+/yr on GPU compute. Reachable but long sales cycle.<br>
-<strong>Verdict: 🟡</strong> — Deep technical system with real accumulation, but Gate 4 integration requirement makes bootstrapping hard. You can't build the calibration dataset alone before any customer. YC + compute-heavy customers = venture-shaped.
+<strong>Objective:</strong> Pass/fail against a measured voltage or timing. Physically checkable.<br>
+<strong>LLM deleted:</strong> The instrument-control harness and spec parser remain.<br>
+<strong>Accumulates:</strong> Validated test-case library per board/chip family.<br>
+<strong>Week one:</strong> Customer uploads a spec doc and connects instruments. Tests run immediately.<br>
+<strong>Buyer:</strong> EE/firmware leads at hardware companies. Budget exists for test tooling.<br>
+<strong>Verdict: 🟢</strong> — the test harness + instrument integration is the moat.</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>Traditional HIL test vendors (NI, dSPACE) are big and expensive.</li>
+<li>No AI-native competitor doing spec-to-test automation at this layer yet.</li>
+</ul>
+</div>
 </div>
 
-<div style="margin-top: 6px; font-size: 0.88em; color: #555;">
-<strong>Crowding:</strong> Run:AI (acquired by NVIDIA), Determined AI (acquired by HPE), and schedulers like SLURM+Flux have some resource optimization. Cloud providers (AWS SageMaker, GCP Vertex) offer auto-scaling but not pre-submission right-sizing. The "predict failure before GPU hours are burned" niche is mostly open. Academic work exists but no dominant commercial player.
+<!-- COMPANY 3: Mineflow -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fefce8; border: 1px solid #e0d88c; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">3. Mineflow</strong> <span>🟡</span> — <span style="color: #555;">AI predictions for mineral deposit shapes and locations</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://www.ycombinator.com/companies/mineflow" style="color: #1a73e8;">mineflow.ai</a> · San Francisco · 2024 · Pre-seed (~$590K, YC S24) · ~2 people</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+AI platform for mineral exploration. Generates predictions for mineral deposit shapes and locations.
+</li>
+<li>
+Automatically reads and extracts georeferenced data from hundreds of file formats.
+</li>
+<li>
+In early trials, predicts hard rock lithium deposits an order of magnitude more accurately than competitors.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Geologists need to know precisely where deposits are because drilling is expensive.
+</li>
+<li>A single drill hole costs $50K–$500K. Better targeting saves millions.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Has raised $590K.
+</li>
+<li>
+Self-funded machine learning SaaS company.
+ (YC S24 batch.)</li>
+<li>Revenue model: SaaS per-project or per-site licensing to mining cos.</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>Transformer models handle 3D spatial data at scale; geological data digitization accelerating.</li>
+<li>Lithium/critical mineral demand driving exploration budgets up sharply.</li>
+</ul>
 </div>
-</div>
 
-<!-- COMPANY 3: Caledon -->
-<div style="background: #fafaf6; border: 1px solid #d4d0c8; border-radius: 6px; padding: 8px 12px; margin-bottom: 14px;">
-<strong style="font-size: 1.05em;">3. Caledon</strong> — <span style="color: #666;">Data layer for accounting &amp; finance AI</span><br>
-<span style="font-size: 0.85em; color: #888;">Non-YC · 2 employees · San Francisco · Founded 2024</span><br>
-<a href="https://www.caledon.ai/" target="_blank" style="font-size: 0.85em;">caledon.ai</a><br><br>
-
-
-Caledon is a developer of a data-based platform designed for scaling large language models in accounting and finance applications, offering validated datasets, custom tooling for data management, and processes for ensuring data quality and compliance.
- 
-They provide access to a specialized network of certified financial professionals — CPAs, CFOs, ex-IRS auditors, and financial analysts — to build high-quality, auditable datasets, with every expert vetted through a rigorous, compliance-first selection process.
- Concretely: an AI lab building a tax-prep agent needs thousands of annotated examples of complex multi-entity tax scenarios with correct line-item mappings. Caledon sources, structures, and validates that data using their CPA network. 
-The team is 2 people and was finalizing a leading AI lab as a customer at the time of their launch.
- Non-technical founder (ex-Growth at Pilot.com) hiring first engineer — strong domain signal.
-
-<div style="background: #f0efe8; padding: 6px 10px; border-radius: 4px; margin-top: 8px;">
+<div style="background: #fff9c4; border: 1px solid #f0e68c; border-radius: 4px; padding: 6px; font-size: 13px;">
 <strong>Bootstrap fit</strong><br>
-<strong>Objectivity:</strong> Dataset quality is measurable against known tax rules and accounting standards (GAAP, IRC). ✅<br>
-<strong>Without LLM:</strong> What's left is a network of vetted CPAs and the annotation tooling. The CPAs are the asset. 🔴 — Domain experts own the value. Any accounting data company (Thomson Reuters, Wolters Kluwer) hiring one engineer could build the tooling.<br>
-<strong>Durability:</strong> N/A — stopped at Gate 2.<br>
-<strong>Day one:</strong> N/A.<br>
-<strong>Buyer:</strong> N/A.<br>
-<strong>Verdict: 🔴</strong> — Gate 2. Non-technical founder hiring first engineer is a strong traction signal (surface it), but the value is the CPA expert network, which is a domain asset I can't replicate. An accounting firm or data labeling company (Scale AI) beats a bootstrapper by hiring one developer.
+<strong>Objective:</strong> Deposit shape prediction is checkable against drill results. Passes.<br>
+<strong>LLM deleted:</strong> Custom ML models and geo-data parsers remain. Passes.<br>
+<strong>Accumulates:</strong> Training data from each project. The model improves with more sites.<br>
+<strong>Week one:</strong> Customer uploads drill data — model runs. But accuracy improves with more data.<br>
+<strong>Buyer:</strong> Mining exploration managers. High willingness to pay, but procurement-gated and slow.<br>
+<strong>Verdict: 🟡</strong> — real depth. Buyer cycle is long and relationship-gated for a bootstrapper. (YC S24 — included, niche has no non-YC equivalent.)</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>Seequent (Bentley), Leapfrog, Micromine are legacy geomodeling tools.</li>
+<li>Very few AI-native competitors in mineral deposit prediction specifically.</li>
+</ul>
+</div>
 </div>
 
-<div style="margin-top: 6px; font-size: 0.88em; color: #555;">
-<strong>Crowding:</strong> Scale AI, Labelbox, and Surge AI offer general data labeling. For finance-specific: Basis, Numeric, and MindBridge have their own internal data. The "domain-specific training data marketplace" niche has few dedicated players for finance, but the underlying moat is expert access, not software.
+<!-- COMPANY 4: Candid Intelligence -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fff3f3; border: 1px solid #dca4a4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">4. Candid Intelligence</strong> <span>🔴</span> — <span style="color: #555;">AI layer for EPC preconstruction engineering</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://candidintelligence.com" style="color: #1a73e8;">candidintelligence.com</a> · San Francisco · 2022 · Seed (~$6.5M) · ~10 people</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Building the AI layer for EPCs. Automates document understanding, consistency checks, and repetitive workflow steps.
+</li>
+<li>
+Catches design mismatches during FEED, when fixes cost thousands — not millions.
+</li>
+<li>
+Will cap headcount at 10 until $100M in revenue.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+A typical construction project lasts four years, first two consumed by pre-construction.
+</li>
+<li>Manual review of thousands of engineering docs for cross-discipline consistency.</li>
+<li>Example: electrical load assumptions must match mechanical equipment specs across packages.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Raised $6.5M from top AI and industrial investors including Schneider Electric.
+</li>
+<li>
+Team includes engineers from MIT, Carnegie Mellon, major LNG projects.
+</li>
+<li>SaaS: per-project licensing to EPCs and owner-operators.</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>LLMs + vision models can parse engineering drawings and cross-reference specs.</li>
+<li>Global energy transition driving massive EPC project pipeline.</li>
+</ul>
 </div>
-</div>
 
-<!-- COMPANY 4: Tetherline -->
-<div style="background: #fafaf6; border: 1px solid #d4d0c8; border-radius: 6px; padding: 8px 12px; margin-bottom: 14px;">
-<strong style="font-size: 1.05em;">4. Tetherline</strong> — <span style="color: #666;">AI agents for lab instrument operation</span><br>
-<span style="font-size: 0.85em; color: #888;">Non-YC · Small team · NYC · Stealth</span><br>
-<a href="https://tetherline.dev/" target="_blank" style="font-size: 0.85em;">tetherline.dev</a><br><br>
-
-
-Tetherline is working in the AI-for-science space, specifically at the point of experimental execution. Scientific labs run on expensive instruments locked behind proprietary software with no real API. Getting an agent to actually operate these machines is unsolved, and it's the bottleneck between "AI can design experiments" and "AI can run them."
- 
-The team is small, technical, and well-funded, with real design partners already pulling on them. They're hiring one of the first engineers to work across agents, low-level systems, ML infra, and the runtime that ties it together.
- Concretely: a pharma lab has a mass spectrometer running vendor-locked Windows software. Tetherline wraps it with a computer-use agent that reads the GUI, configures the run parameters, triggers acquisition, and pipes results back — giving the lab an API where none existed. The "why now" is that computer-use agents (Claude computer use, GPT-4o with screen actions) have made GUI automation of legacy software realistic for the first time.
-
-<div style="background: #f0efe8; padding: 6px 10px; border-radius: 4px; margin-top: 8px;">
+<div style="background: #ffebee; border: 1px solid #ef9a9a; border-radius: 4px; padding: 6px; font-size: 13px;">
 <strong>Bootstrap fit</strong><br>
-<strong>Objectivity:</strong> Either the instrument runs correctly and produces the expected output, or it doesn't. Round-trip verifiable. ✅<br>
-<strong>Without LLM:</strong> What's left is the instrument integration layer — GUI automation harnesses, protocol adapters, reliability wrappers. Technical system. ✅<br>
-<strong>Durability:</strong> Each instrument integration (Thermo Fisher, Agilent, Waters) is hard-won reverse engineering that accumulates. ✅<br>
-<strong>Day one:</strong> 🔴 — Customer #1 needs their specific instruments integrated. You need physical access to the lab, the vendor's proprietary software, and the specific workflows. Can't build a library of integrations alone before any customer — each instrument is a bespoke effort requiring the lab's cooperation. Cold start.<br>
-<strong>Buyer:</strong> Lab directors, pharma R&D managers. Procurement-gated in pharma/biotech. ⚠️<br>
-<strong>Verdict: 🔴</strong> — Gate 4. The integration library accumulates, but each new instrument requires the customer's lab to build. A solo founder can't pre-build integrations for instruments they don't have access to. Venture-shaped: needs capital to buy equipment, hire field engineers, and navigate pharma procurement.
+<strong>Objective:</strong> Consistency check is mechanically verifiable. Passes.<br>
+<strong>LLM deleted:</strong> Deep EPC domain knowledge required. Domain experts own it. 🔴.<br>
+<strong>Accumulates:</strong> n/a — stopped at gate 2.<br>
+<strong>Week one:</strong> n/a.<br>
+<strong>Buyer:</strong> n/a.<br>
+<strong>Verdict: 🔴</strong> — Gate 2. Founders are EPC engineers; an existing EPC firm hiring one dev catches up. Strong traction signal but bad bootstrap fit.</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>Structured AI (YC) does AEC drawing QA. Onware, InEight in legacy space.</li>
+<li>Candid is energy/industrial EPC — narrower and less crowded.</li>
+</ul>
+</div>
 </div>
 
-<div style="margin-top: 6px; font-size: 0.88em; color: #555;">
-<strong>Crowding:</strong> Emerald Cloud Lab and Strateos offer cloud lab infrastructure. Benchling handles lab informatics. The "agent that operates proprietary instrument GUIs" niche is genuinely novel — no obvious competitor does this with computer-use agents. But instrument companies (Thermo Fisher, Agilent) could build native integrations themselves.
+<!-- COMPANY 5: Nexcade -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fff3f3; border: 1px solid #dca4a4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">5. Nexcade</strong> <span>🔴</span> — <span style="color: #555;">AI agents for freight forwarding quoting and bookings</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://nexcade.ai" style="color: #1a73e8;">nexcade.ai</a> · London · 2025 · Seed (~$8.5M total) · ~10 people</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Builds AI agents for freight forwarders. Agents run quoting, tenders, rates, bookings and reporting.
+</li>
+<li>
+Turns emails and attachments into usable records to automate spot quotes and rate sourcing.
+</li>
+<li>
+Also launching Atlas, a data insights tool showing where processes break down.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Much of this work still happens across emails, attachments, spreadsheets and disconnected systems.
+</li>
+<li>A forwarder gets a rate request. Today: manual email parsing, rate lookup, quote assembly.</li>
+<li>
+Cuts quote turnaround by over 90%, boosts win rates.
+</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+$8.5M total, including a $6M Seed round led by Project A, announced 8 July 2026.
+</li>
+<li>
+Customers include XPO, Zencargo, Cardinal Global Logistics and CargoTrans.
+</li>
+<li>
+More than tripled ARR since start of 2026.
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>LLMs parse unstructured emails/PDFs into structured freight data reliably now.</li>
+<li>
+Despite available automation, many freight forwarders still relied on manual spreadsheets.
+</li>
+</ul>
 </div>
-</div>
 
-<!-- COMPANY 5: Herdr -->
-<div style="background: #fafaf6; border: 1px solid #d4d0c8; border-radius: 6px; padding: 8px 12px; margin-bottom: 14px;">
-<strong style="font-size: 1.05em;">5. Herdr</strong> — <span style="color: #666;">Open-source terminal multiplexer for AI coding agents</span><br>
-<span style="font-size: 0.85em; color: #888;">YC S26 — included for discussion · 1 employee · Ankara, Turkey · Founded 2026</span><br>
-<a href="https://herdr.dev/" target="_blank" style="font-size: 0.85em;">herdr.dev</a><br><br>
-
-
-Developers don't run one coding agent anymore — they run fleets of them for hours, sometimes days, across laptops, servers, and sandboxes. Keeping track of that work is the new bottleneck. Herdr is the open-source home for that work: a background server that owns the agents' terminal sessions on each machine, so the work survives disconnects, closed lids, and dropped SSH. Herdr detects each agent and turns the chaos into an attention queue — working, blocked, done, across every project.
- 
-The project is about 105 days old, has nearly 15,000 GitHub stars, hit #1 on GitHub Trending, and is built by a single full-time developer.
- 
-It is written in Rust, weighs about 10 megabytes, and ships with zero dependencies — no Electron shell, no cloud account.
- 
-The terminal multiplexer / multi-agent coding space is getting very crowded — YC alone has funded Herdr, Superset, cmux, Emdash, Orca, Bullet, Conductor, plus companies outside YC.
-
-
-<div style="background: #f0efe8; padding: 6px 10px; border-radius: 4px; margin-top: 8px;">
+<div style="background: #ffebee; border: 1px solid #ef9a9a; border-radius: 4px; padding: 6px; font-size: 13px;">
 <strong>Bootstrap fit</strong><br>
-<strong>Objectivity:</strong> Agent state detection (working/blocked/done) is observable terminal output — mechanically checkable. ✅<br>
-<strong>Without LLM:</strong> A terminal multiplexer + process state monitor. Pure technical system. ✅<br>
-<strong>Durability:</strong> Plugin ecosystem (500+ in first month) creates some lock-in, but core functionality is a single Rust binary that any competent dev could rebuild. Tmux and Zellij could add agent state detection as a plugin. 🔴<br>
-<strong>Day one:</strong> Download and use immediately. ✅<br>
-<strong>Buyer:</strong> Individual developers — prosumer/freemium-shaped. The tool is free and open source (Apache-2.0). Monetization path unclear for a bootstrapper. 🔴<br>
-<strong>Verdict: 🔴</strong> — Gate 5. Prosumer buyer + freemium dynamics. The space is extremely crowded (8+ funded competitors in this exact niche). Even with 16K stars, converting open-source developer traction to revenue as a solo bootstrapper is a known hard problem. YC + VC runway is the play here, not bootstrapping.
+<strong>Objective:</strong> Quoting is math on rates and cargo specs. Passes.<br>
+<strong>LLM deleted:</strong> Freight domain knowledge owns it. Founders are ex-Sedna COO / ex-Palantir freight. 🔴.<br>
+<strong>Accumulates:</strong> n/a — stopped at gate 2.<br>
+<strong>Week one:</strong> n/a.<br>
+<strong>Buyer:</strong> n/a.<br>
+<strong>Verdict: 🔴</strong> — Gate 2. Domain experts (freight ops + Palantir data eng) built this. A freight company hiring one dev catches up. Excellent traction signal though.</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>Sedna (comms), Flexport (marketplace), CargoWise (TMS) in adjacent space.</li>
+<li>AI-native quoting for forwarders is still early. Nexcade has named customers.</li>
+</ul>
+</div>
 </div>
 
-<div style="margin-top: 6px; font-size: 0.88em; color: #555;">
-<strong>Crowding:</strong> Extremely crowded. 
-YC alone has funded herdr, Superset, cmux, Emdash, Orca, Bullet, and Conductor
-, plus non-YC entries like Superlogical and Agentastic.dev. This is a feature, not a company — the model providers (Anthropic, OpenAI) are likely to absorb session management into their own CLI tools.
+<!-- COMPANY 6: DECA (Decadent.com) -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fff3f3; border: 1px solid #dca4a4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">6. DECA (Decadent.com)</strong> <span>🔴</span> — <span style="color: #555;">AI-native operating system for dental practices</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://wellfound.com/jobs/4407211-founding-ai-native-platform-engineer" style="color: #1a73e8;">Wellfound JD</a> · Remote (US) · Pre-seed · ~1 person (hiring #1)</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+AI-native operating system for dentistry. Sits above legacy PMS as a control plane — unifying data, orchestrating AI agents, automating workflows.
+</li>
+<li>Handles scheduling, billing, insurance verification, patient comms.</li>
+<li>
+Built-in live pilot is a 7-location dental group in Texas.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>Dental practices run on fragmented legacy PMS (Dentrix, Eaglesoft, Open Dental).</li>
+<li>Front-desk staff juggle scheduling, insurance verification, billing manually.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Most pre-seed startups build in a speculative vacuum.
+ DECA has a live pilot.</li>
+<li>
+Hire #1. Full technical ownership.
+</li>
+<li>Revenue model: SaaS per-location to dental groups / DSOs.</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Dental AI startups collectively raised more than $100M in H1 2026.
+</li>
+<li>DSO consolidation creating larger buyers for unified platforms.</li>
+</ul>
 </div>
-</div>
 
-<!-- COMPANY 6: hiloop -->
-<div style="background: #fafaf6; border: 1px solid #d4d0c8; border-radius: 6px; padding: 8px 12px; margin-bottom: 14px;">
-<strong style="font-size: 1.05em;">6. hiloop</strong> — <span style="color: #666;">Automated agent &amp; model training optimization</span><br>
-<span style="font-size: 0.85em; color: #888;">YC S26 — included for discussion · 2 employees · San Francisco · Founded 2026</span><br>
-<a href="https://hiloop.ai/" target="_blank" style="font-size: 0.85em;">hiloop.ai</a><br><br>
-
-
-hiloop helps teams train agents for tasks where general models are not good enough. Give it a task, your current agent or model, and an evaluation. hiloop runs an autoresearch campaign across data, SFT and other post-training methods, continual learning, prompts, tools, harnesses, and systems, then returns the best verified improvement. It runs hosted or in your cloud, providing the research system around models: persistent memory, full experiment lineage, compute orchestration, and statistical verification.
- 
-Their demo: two stock coding agents on 50 B200 GPUs ran 4,188 experiments in two days and beat the published state of the art on Karpathy's autoresearch benchmark. The same machinery found a NanoGPT speedrun candidate that beats the best known result.
- Founders previously held ML roles at Reducto, DynamoAI, Discord, and SoFi.
-
-<div style="background: #f0efe8; padding: 6px 10px; border-radius: 4px; margin-top: 8px;">
+<div style="background: #ffebee; border: 1px solid #ef9a9a; border-radius: 4px; padding: 6px; font-size: 13px;">
 <strong>Bootstrap fit</strong><br>
-<strong>Objectivity:</strong> Output is a measurably better model/agent on the customer's own eval. Improvement is a number, not a judgment call. ✅<br>
-<strong>Without LLM:</strong> The orchestration system, experiment lineage, compute scheduler, and statistical verification framework. Technical system. ✅<br>
-<strong>Durability:</strong> Experiment lineage + recipes that work across tasks accumulate. The research loop itself gets better with each run. ✅<br>
-<strong>Day one:</strong> Customer brings a task + eval + model. System runs experiments and returns improvements in days. ✅<br>
-<strong>Buyer:</strong> ML teams at companies with deployed agents. Will pay for measurable improvement. ✅<br>
-<strong>BUT — Operational 🔴:</strong> The demo required 50 B200 GPUs. This is not a bootstrappable cost structure. Running 4,000+ experiments over 2 days on top-tier hardware means six-figure monthly GPU bills. A solo founder without venture capital cannot serve the first customer.<br>
-<strong>Verdict: 🔴</strong> — Passes all five rubric gates conceptually, but fails on operational bootstrappability — GPU costs are prohibitive. This is a venture-scale business by construction. Also YC S26.
+<strong>Objective:</strong> Insurance verification and scheduling are checkable. Passes.<br>
+<strong>LLM deleted:</strong> Dental ops domain knowledge remains the value. 🔴.<br>
+<strong>Accumulates:</strong> n/a — stopped at gate 2.<br>
+<strong>Week one:</strong> n/a.<br>
+<strong>Buyer:</strong> n/a.<br>
+<strong>Verdict: 🔴</strong> — Gate 2. A dental DSO hiring one developer replicates this. Founder likely has dental-ops background. Good niche signal, bad bootstrap fit.</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>
+Overjet raised $130M+ for dental AI.
+ Pearl has FDA-cleared x-ray AI.</li>
+<li>PMS layer is contested: Dentrix, CareStack, Tab32, plus dozens of AI add-ons.</li>
+</ul>
+</div>
 </div>
 
-<div style="margin-top: 6px; font-size: 0.88em; color: #555;">
-<strong>Crowding:</strong> Weights & Biases, Determined AI (HPE), and Anyscale provide experiment management. The "automated research loop" concept is emerging — Cognition Labs (Devin), Nous Research, and Sakana AI have published auto-research approaches. No dedicated "autoresearch-as-a-service" commercial product yet, but frontier labs run this internally.
+<!-- COMPANY 7: Anchor AI -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fff3f3; border: 1px solid #dca4a4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">7. Anchor AI</strong> <span>🔴</span> — <span style="color: #555;">AI agents for customs brokers</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://builtin.com/job/founding-engineer-anchor-ai/6414737" style="color: #1a73e8;">BuiltIn JD (expired)</a> · San Francisco · ~2024 · Seed (First Round Capital, Pear VC) · Small team</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Building AI agents for customs brokers. AI works alongside humans to help brokers process more shipments — faster, with fewer errors.
+</li>
+<li>Parses trade docs (commercial invoices, packing lists, HS codes) into structured entries.</li>
+<li>
+Turning messy, fragmented data into automated systems.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Global trade still runs on outdated, time-consuming manual workflows.
+</li>
+<li>A customs broker manually classifies hundreds of line items per shipment.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Backed by First Round Capital (early investors in Flexport) and Pear VC.
+</li>
+<li>
+Deeply technical founding team from Google, LinkedIn, and AI research labs.
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>Tariff changes and de minimis rule shifts creating urgency for faster classification.</li>
+<li>LLMs parse trade documents reliably; HS code lookup is structured.</li>
+</ul>
 </div>
-</div>
 
-<!-- COMPANY 7: Logen.io -->
-<div style="background: #fafaf6; border: 1px solid #d4d0c8; border-radius: 6px; padding: 8px 12px; margin-bottom: 14px;">
-<strong style="font-size: 1.05em;">7. Logen.io</strong> — <span style="color: #666;">AI app builder with full-stack deployment</span><br>
-<span style="font-size: 0.85em; color: #888;">Non-YC · Small team · Bangalore, India · Hiring founding engineer July 2026</span><br>
-<a href="https://logen.io/" target="_blank" style="font-size: 0.85em;">logen.io</a><br><br>
-
-
-Logen.io is building an AI app builder for real production apps — not just toy prototypes. The goal is to let users go from idea → working web app → deployable product, with auth, database, payments, custom domains, and editable app structure built in.
- 
-Logen builds functional full-stack projects — backend, database and auth — from plain English.
- The differentiation claim is that while Lovable, Bolt, and v0 generate front-ends and leave you to wire up Supabase/hosting yourself, 
-Logen provisions a real, dedicated PostgreSQL database per project and builds and hosts the full stack from plain English.
- Revenue model is likely per-project hosting fees. The buyer is non-technical founders and small business operators who need a working web app.
-
-<div style="background: #f0efe8; padding: 6px 10px; border-radius: 4px; margin-top: 8px;">
+<div style="background: #ffebee; border: 1px solid #ef9a9a; border-radius: 4px; padding: 6px; font-size: 13px;">
 <strong>Bootstrap fit</strong><br>
-<strong>Objectivity:</strong> The app either works (deploys, serves requests, persists data) or it doesn't. ✅<br>
-<strong>Without LLM:</strong> A hosting + provisioning pipeline. Heroku + a template system. Thin. ⚠️<br>
-<strong>Durability:</strong> 🔴 — Nothing accumulates. The differentiation is "we host the backend too," which is an integration convenience, not a moat. Lovable just added Supabase integration. Replit hosts full-stack apps natively. The no-code AI market has 10+ well-funded competitors shipping fast. A platform feature, not a company.<br>
-<strong>Day one:</strong> N/A — stopped at Gate 3.<br>
-<strong>Buyer:</strong> N/A.<br>
-<strong>Verdict: 🔴</strong> — Gate 3. The space is a Red Queen's race — every week, Lovable, Bolt, Replit, and v0 ship new features that close whatever temporary gap Logen exploits. Nothing accumulates, and the core capability (code generation + hosting) is commoditizing at platform speed. A bootstrapper entering this market would be outrun within months.
+<strong>Objective:</strong> HS classification is checkable against tariff schedules. Passes.<br>
+<strong>LLM deleted:</strong> Customs/trade domain knowledge owns it. 🔴.<br>
+<strong>Accumulates:</strong> n/a — stopped at gate 2.<br>
+<strong>Week one:</strong> n/a.<br>
+<strong>Buyer:</strong> n/a.<br>
+<strong>Verdict: 🔴</strong> — Gate 2. Licensed customs brokers + one dev will replicate. Domain-expert moat. Job posting expired — included for niche signal.</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>Customs classification: Zonos, Tarifflo, Descartes (legacy), 3CE.</li>
+<li>Full broker workflow automation is still early-stage.</li>
+</ul>
+</div>
 </div>
 
-<div style="margin-top: 6px; font-size: 0.88em; color: #555;">
-<strong>Crowding:</strong> Extremely crowded. Lovable ($75M+), Bolt.new ($400M), Replit ($400M), v0 (Vercel), Bubble, and numerous others. 
-The no-code AI market is projected to grow from about $6.5B in 2025 to roughly $75B by 2034.
- The incumbents have massive funding and distribution advantages.
+<!-- COMPANY 8: LimitlessCNC -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fff3f3; border: 1px solid #dca4a4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">8. LimitlessCNC</strong> <span>🔴</span> — <span style="color: #555;">AI agent for automated CNC programming</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://metrology.news/ai-startup-limitlesscnc-emerges-from-stealth-to-transform-cnc-programming/" style="color: #1a73e8;">metrology.news</a> · Israel · ~2024 · Seed (~$4.1M) · Small team</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Pioneering AI agent technology to automate CNC machining — a trillion-dollar industry.
+</li>
+<li>Takes a CAD model and generates CNC toolpaths and G-code automatically.</li>
+<li>
+Aims to solve the growing shortage of skilled CNC programmers.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Up to 2.1 million manufacturing jobs could go unfilled by 2030.
+</li>
+<li>A CNC programmer today handles 2–3 machines. AI could let them manage 20–30.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+$4.1M seed round led by Grove Ventures and Meron Capital.
+</li>
+<li>SaaS: per-seat or per-machine pricing to machine shops.</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>AI can now parse 3D geometry and generate valid toolpath strategies.</li>
+<li>Labor shortage makes automation financially urgent, not optional.</li>
+</ul>
 </div>
-</div>
 
-<!-- COMPANY 8: Mimos -->
-<div style="background: #fafaf6; border: 1px solid #d4d0c8; border-radius: 6px; padding: 8px 12px; margin-bottom: 14px;">
-<strong style="font-size: 1.05em;">8. Mimos</strong> — <span style="color: #666;">AI-powered growth &amp; intake automation for plaintiff law firms</span><br>
-<span style="font-size: 0.85em; color: #888;">YC — included for discussion · NYC · Early stage</span><br><br>
-
-
-Plaintiff-side law firms compete in some of the most expensive search ad markets to acquire high-intent leads, but the path from click, call, or form fill to signed retainer is still fragmented. Disconnected intake workflows, slow response times, and disconnected spend-to-case data make it hard to know what is actually working. Mimos automates their growth and intake playbook: agents manage Google Ads, Local Services Ads, Google Business Profile, and other high-intent acquisition channels.
- The product combines ad management (bidding, creative rotation) with intake automation (qualifying inbound leads, routing to case managers). The buyer is the managing partner or marketing director at a plaintiff firm spending $50K+/month on Google Ads.
-
-<div style="background: #f0efe8; padding: 6px 10px; border-radius: 4px; margin-top: 8px;">
+<div style="background: #ffebee; border: 1px solid #ef9a9a; border-radius: 4px; padding: 6px; font-size: 13px;">
 <strong>Bootstrap fit</strong><br>
-<strong>Objectivity:</strong> Ad performance (CPA, ROAS, conversion rates) is objective. But lead qualification — "is this a viable personal injury case?" — is a judgment call that depends on case type, jurisdiction, and firm preferences. Mixed. ⚠️<br>
-<strong>Without LLM:</strong> What's left is a Google Ads management + CRM integration pipeline. The value proposition rests on knowing plaintiff marketing — which ad keywords convert for mass tort vs. car accidents, which intake questions qualify a case. That's domain knowledge specific to plaintiff law. 🔴<br>
-<strong>Durability:</strong> N/A — stopped at Gate 2.<br>
-<strong>Day one:</strong> N/A.<br>
-<strong>Buyer:</strong> N/A.<br>
-<strong>Verdict: 🔴</strong> — Gate 2. Domain knowledge (plaintiff law marketing, intake qualification, case-type-specific ad strategy) owns the value. A legal marketing agency hiring one developer could build the automation layer. The domain-expert founder pattern applies — this is a strong traction signal (plaintiff marketing is a high-spend vertical), but the wrong competitive target for a bootstrapper without legal marketing expertise.
+<strong>Objective:</strong> Generated G-code either machines the part correctly or not. Passes.<br>
+<strong>LLM deleted:</strong> CAM domain knowledge (tooling, feeds, fixtures) is the value. 🔴.<br>
+<strong>Accumulates:</strong> n/a — stopped at gate 2.<br>
+<strong>Week one:</strong> n/a.<br>
+<strong>Buyer:</strong> n/a.<br>
+<strong>Verdict: 🔴</strong> — Gate 2. Existing CAM vendors (Autodesk Fusion, Mastercam) adding AI features. Deep manufacturing expertise required. Toolpath ($10M seed) and CloudNC are well ahead.</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>
+Toolpath raised $10M in seed round led by Leaders Fund.
+</li>
+<li>CloudNC (CAM Assist), Spanflug, Machineflows also in this space.</li>
+</ul>
+</div>
 </div>
 
-<div style="margin-top: 6px; font-size: 0.88em; color: #555;">
-<strong>Crowding:</strong> Legal marketing agencies (e.g., Rankings.io, Scorpion, Foster Web Marketing) dominate this space with human expertise. CaseFlood.ai (previously covered) and a few other AI-native entrants are emerging. Google's own Smart Campaigns and Performance Max automate basic bidding. The value-add is vertical specialization on plaintiff law, which is domain knowledge, not software depth.
+<!-- COMPANY 9: Partcl -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fff3f3; border: 1px solid #dca4a4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">9. Partcl</strong> <span>🔴</span> — <span style="color: #555;">AI-powered chip design automation</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://www.ycombinator.com/companies/partcl" style="color: #1a73e8;">YC page</a> · San Francisco · ~2024 · YC batch · Small team</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+The vibe coding platform for chip designers.
+</li>
+<li>
+Developing next-gen chip design automation with a focus on performance, scalability and productivity.
+</li>
+<li>
+Exploring new ML model architectures for 1000x performance over existing EDA methods.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>Chip layout optimization (place-and-route) is NP-complete — brute force is slow.</li>
+<li>Current EDA tools (Cadence, Synopsys) are expensive and optimization-limited.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>YC-backed. Undisclosed funding. (YC — included for niche signal.)</li>
+<li>Hiring founding engineer (Systems + ML) and ML intern.</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>ML architectures can now approximate NP-hard optimization problems usefully.</li>
+<li>Chip design costs ($100M+ for advanced nodes) make any speedup valuable.</li>
+</ul>
 </div>
-</div>
 
-<!-- COMPANY 9: Stealth Hardware Design AI -->
-<div style="background: #fafaf6; border: 1px solid #d4d0c8; border-radius: 6px; padding: 8px 12px; margin-bottom: 14px;">
-<strong style="font-size: 1.05em;">9. Stealth Hardware Design AI (SuperSeed-backed)</strong> — <span style="color: #666;">AI copilot for physical/mechanical engineering</span><br>
-<span style="font-size: 0.85em; color: #888;">Non-YC · London · Pre-seed (multi-million £, SuperSeed) · Pre-MVP · Hiring founding AI engineer</span><br><br>
-
-
-This startup is building the intelligent core for physical design — an agent that integrates seamlessly with tools like Onshape and Ansys, reasons across physics and geometry, and helps engineers create better systems faster.
- 
-The founding team includes the lead engineer at Imperial's Karman Space Programme (shipped flight code to orbit, led reusable rocket development) and the builder of London's first Hyperloop team (scaling to 100+ engineers before launching and exiting multiple deep tech ventures).
- 
-Currently pre-MVP, with a working demo deployed and design partner pilots kicking off.
- The JD asks for someone to 
-architect agentic systems with memory, planning, and fallback logic, build LLM interfaces to domain-specific tools (CAD/CAE, simulation platforms), and implement retrieval systems and evaluation tooling.
-
-
-<div style="background: #f0efe8; padding: 6px 10px; border-radius: 4px; margin-top: 8px;">
+<div style="background: #ffebee; border: 1px solid #ef9a9a; border-radius: 4px; padding: 6px; font-size: 13px;">
 <strong>Bootstrap fit</strong><br>
-<strong>Objectivity:</strong> Mechanical design has objective validation — does the part meet structural requirements under simulated load? FEA results are numerical. ✅<br>
-<strong>Without LLM:</strong> What's left is CAD/CAE integration tooling and physics simulation wrappers. But the core value — "reasoning across physics and geometry" — is mechanical engineering domain knowledge embedded in the system. The founders are aerospace/rocketry domain experts. 🔴<br>
-<strong>Durability:</strong> N/A — stopped at Gate 2.<br>
-<strong>Day one:</strong> N/A.<br>
-<strong>Buyer:</strong> N/A.<br>
-<strong>Verdict: 🔴</strong> — Gate 2. Aerospace/mechanical engineering domain knowledge owns the value. The founders' advantage is precisely that they are rocketry and Hyperloop engineers who understand physics constraints intimately. An engineering services firm (Ansys, PTC, Dassault Systèmes) hiring one developer to build an LLM wrapper around their existing tools would dominate. Strong traction signal (domain-expert founders, SuperSeed backing, design partners), wrong competitive position for a bootstrapper without aerospace expertise.
+<strong>Objective:</strong> Layout quality is measurable (area, timing, power). Passes.<br>
+<strong>LLM deleted:</strong> Custom ML models and EDA parsers remain. Passes.<br>
+<strong>Accumulates:</strong> Trained models on layout data. Passes.<br>
+<strong>Week one:</strong> Needs access to proprietary chip designs / PDKs to deliver value. Cold start. 🔴.<br>
+<strong>Buyer:</strong> n/a — stopped at gate 4.<br>
+<strong>Verdict: 🔴</strong> — Gate 4. Cold start: needs proprietary design data and PDK access. Also procurement-gated (semiconductor companies). YC — included for niche uniqueness.</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>Cadence, Synopsys dominate EDA. Both adding ML features internally.</li>
+<li>Google's ML-for-chip-design research (Nature 2021) was foundational but controversial.</li>
+</ul>
+</div>
 </div>
 
-<div style="margin-top: 6px; font-size: 0.88em; color: #555;">
-<strong>Crowding:</strong> Onshape (PTC) has AI features in development. Ansys is integrating AI into simulation workflows. Siemens NX has an AI copilot in beta. The "Cursor for hardware design" is an active thesis — several stealth startups and at least two VC-backed entrants are pursuing it. The incumbents (Dassault, Siemens, Ansys) have massive distribution and data advantages.
+<!-- COMPANY 10: Superposition -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fff3f3; border: 1px solid #dca4a4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">10. Superposition</strong> <span>🔴</span> — <span style="color: #555;">AI headhunter for startups</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://builtin.com/job/founding-engineer/7792415" style="color: #1a73e8;">BuiltIn JD</a> · New York · 2025 · Pre-seed · ~2 people</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+The AI headhunter for startups. Hiring their first employee.
+</li>
+<li>
+Early traction for an agent that actually gets work done.
+</li>
+<li>
+Runs multiple coding agents in parallel to ship interfaces rapidly.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Recruitment agencies charge US companies $200B/year but have NPS worse than healthcare.
+</li>
+<li>Startup hiring is especially broken: founders spend weeks on recruiting, low conversion.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+2 employees. Founded 2025.
+</li>
+<li>
+Co-founder Edmund was a recruiter for 7 years, placed engineer #1 at Brex.
+</li>
+<li>Revenue model: placement fees or SaaS for hiring workflow.</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>LLMs can parse resumes and match to JDs. Agentic loops can do outreach.</li>
+</ul>
 </div>
-</div>
 
-<!-- COMPANY 10: Stealth Knowledge Platform (Fabrik Talent) -->
-<div style="background: #fafaf6; border: 1px solid #d4d0c8; border-radius: 6px; padding: 8px 12px; margin-bottom: 14px;">
-<strong style="font-size: 1.05em;">10. Stealth AI-native Knowledge Platform (Fabrik Talent listing)</strong> — <span style="color: #666;">RAG knowledge system for a complex, high-value industry</span><br>
-<span style="font-size: 0.85em; color: #888;">Non-YC · London · Seed-stage · 1–10 employees · Hiring first AI engineer</span><br><br>
-
-
-A well-funded, seed-stage AI start-up, founded by ex-top-tier consultants, is hiring its first founding AI engineer to help build a new kind of AI-native knowledge platform.
- 
-Already live with its first product and early revenue projected (high six-figure ARR this year), the company is now developing a second, more ambitious system that uses LLMs, RAG, and multi-source data ingestion to solve real problems in a complex, high-value industry.
- 
-The engineer will build and own core AI/ML systems (Python, MLOps/LLMOps pipelines, integrations, data retrieval) and architect and scale a product that works across messy enterprise data (SharePoint, Slack, Outlook, etc.).
- The JD is deliberately vague about the industry. Non-technical founders (ex-consultants) hiring their first engineer — classic domain-expert pattern.
-
-<div style="background: #f0efe8; padding: 6px 10px; border-radius: 4px; margin-top: 8px;">
+<div style="background: #ffebee; border: 1px solid #ef9a9a; border-radius: 4px; padding: 6px; font-size: 13px;">
 <strong>Bootstrap fit</strong><br>
-<strong>Objectivity:</strong> A "knowledge platform" that surfaces information from messy enterprise data. Output is search results and summaries — correctness depends on the domain. If the industry is regulated (legal, finance, healthcare), accuracy is checkable against source documents. Arguably objective. ✅ with caveats.<br>
-<strong>Without LLM:</strong> What's left is the domain knowledge of the target industry (likely consulting, professional services, or construction — "complex, high-value" + "ex-consultants"). The founders' consulting backgrounds mean they understand what questions matter and how to structure knowledge for their industry. 🔴<br>
-<strong>Durability:</strong> N/A — stopped at Gate 2.<br>
-<strong>Day one:</strong> N/A.<br>
-<strong>Buyer:</strong> N/A.<br>
-<strong>Verdict: 🔴</strong> — Gate 2. Domain knowledge owns the value. The ex-consultant founders know the industry's information architecture, terminology, and pain points. A domain consultancy hiring one developer could build the RAG pipeline. Strong traction signal (high six-figure ARR projected, first product live, first engineer hire), but the moat is industry expertise, not technology.
-</div>
+<strong>Objective:</strong> Candidate-job match quality is subjective. Who's "good" is a judgment call. 🔴.<br>
+<strong>LLM deleted:</strong> n/a — stopped at gate 1.<br>
+<strong>Accumulates:</strong> n/a.<br>
+<strong>Week one:</strong> n/a.<br>
+<strong>Buyer:</strong> n/a.<br>
+<strong>Verdict: 🔴</strong> — Gate 1. Candidate ranking and match quality are subjective. Also saturated with indie-dev competitors (Gate 5).</div>
 
-<div style="margin-top: 6px; font-size: 0.88em; color: #555;">
-<strong>Crowding:</strong> Enterprise knowledge platforms are one of the most crowded AI categories: Glean ($7.2B), Guru, Notion AI, Slite, and dozens of vertical RAG players. The "RAG over messy enterprise data" pattern has become table stakes. Differentiation comes from industry-specific data models and integrations, which is domain knowledge, not a software moat.
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>Dozens: Jack & Jill AI, Fonzi, Gem, Ashby, Wellfound Reach, Dover, etc.</li>
+<li>Every AI recruiter startup is fighting every other AI recruiter startup.</li>
+</ul>
 </div>
-</div>
-
 </div>

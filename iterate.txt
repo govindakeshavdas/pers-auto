@@ -1,3 +1,79 @@
+
+==0809== 
+ Vals AI   
+ - Model benchmark evaluation - 
+ - Absolutely 0 moat - not worth pursuing 
+
+
+ 2. BenchSpan  
+ - simplest possile infra and benchmarks --- ok but not great --- nothing that cant be copied 
+
+
+ 3 - Spur 
+ - Very solid example of what needs to show up in these runs 
+ - Very good example itself - the only problem is that it seems like its gonna be tight / crwoded space . 
+
+
+ 4. PatternAI  
+ - Seems to subjective about what is a real issue . 
+ 
+
+5. Phase law 
+- This is not bad -- the issue is that it is a very specific point tool 
+- On the other hand thats what docusign is as well - excpet that docusign has 2 parties involved 
+- Unlike docusign which had an entry because acrobat -- not necassarly owned by 2 parties -- 
+- THis one is only used by the producer --= so more likely that it will be swallowed as a feature in a larger product ... 
+
+
+1. Stoa — GPU pricing & RFQ marketplace
+- Marketplaces are really hard to stand up -- not a terrible addition here 
+
+2. Expanse — GPU waste recovery for HPC workloads
+- Good idea - except that it might be too technically difficult for me --- 
+
+3. Caledon — Data layer for accounting & finance AI
+- Good overall idea -- but not a software bussiness per se --- accounting and data layer 
+
+4. Tetherline — AI agents for lab instrument operation
+- Difficult to get started without access to data source 
+
+5. Herdr — Open-source terminal multiplexer for AI coding agents
+- Good idea -- already has open source alternatives --- 
+
+7. Logen.io — AI app builder with full-stack deployment
+--- Too crowded and subjective 
+
+
+
+
+
+
+
+==0808 1200== 
+
+
+NewCase.ai — AI Litigation Intelligence for Insurance Defense
+    - there is a really a cold start problem here 
+    - There is no version where i have access to the data to get started , meaning it wont be useful to a first customer ever 
+
+ Agentic AI for Trust & Safety Content Moderation
+ - This is too thin a layer - completely subjective decisions
+
+3. IndustrialMind.ai — AI Manufacturing Engineer for Factories
+- Combination of a wrapper + probably existing domain experts - means that i am not positioned well to disrupt this . 
+
+
+4. River — Voice AI Agents That Demo and Close B2B Deals
+    - Too subjective 
+
+5. Casium — AI-Powered Immigration & Visa Management for Employers
+- Combination of a wrapper + probably existing domain experts - means that i am not positioned well to disrupt this . 
+
+6. VoiceOps — AI-Powered QA & Coaching for Call Centers
+    - Too subjective 
+
+
+==== 0808 1130 AM === 
 -BrandBrahma — AI Branding & Naming Platform for Entrepreneurs
     Problems : 
         - There is absolutely 0 moat even if i spend time developing it 
@@ -42,4 +118,3 @@
     - Something adjacent can easily be brought up .. 
     - Its not just a tool , because a product can be built on the side for checking phonemes across providers - 
 
-    
