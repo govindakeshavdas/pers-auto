@@ -307,3 +307,13 @@ DECA (Decadent.com)
 Anchor AI
 LimitlessCNC
 Partcl
+Pangram Labs
+MSPilot
+Axe
+Tapitab
+Jiga
+Uplane
+Probo
+Furnace Systems Corp
+Stealth Supply Chain AI (London)
+Stealth Hardware Design AI (London/Imperial)

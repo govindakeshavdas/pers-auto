@@ -1,0 +1,608 @@
+<!-- COMPANY 1: Pangram Labs -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #faf4f4; border: 1px solid #dcc4c4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">1. Pangram Labs</strong> <span>🟡</span> — <span style="color: #555;">Detects AI-generated text with measurable accuracy claims</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://pangram.com" style="color: #1a73e8;">pangram.com</a> · Brooklyn, NY · 2023 · Seed (~$14M total) · ~8 people</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>Classifies text as human-written, AI-generated, or mixed.</li>
+<li>Ships a web detector, browser extension, and API.</li>
+<li>
+Claims "over 99.98% accuracy" via NLP pattern analysis.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>A professor gets 200 student essays. Which ones did ChatGPT write?</li>
+<li>
+Universities struggle to address misuse of AI. Pangram builds partnerships in higher ed.
+</li>
+<li>
+Also serves businesses and media orgs verifying product reviews and news.
+</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>SaaS API + browser extension for institutions and enterprises.</li>
+<li>
+Raised $9M in July 2026, led by Menlo Ventures.
+</li>
+<li>
+Total funding now ~$13–14M over 3 rounds.
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>LLM output is now indistinguishable from human text to a reader.</li>
+<li>Detection requires constant retraining as model families evolve.</li>
+</ul>
+</div>
+
+<div style="background: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; padding: 6px; font-size: 13px;">
+<strong>Bootstrap fit</strong><br>
+<strong>Objective:</strong> Binary: AI or not. Round-trip measurable against known-provenance text. ✅<br>
+<strong>LLM deleted:</strong> Detection models, training data, and eval harness remain. ✅<br>
+<strong>Accumulates:</strong> Training corpus of labeled AI/human text grows with each model gen. ✅<br>
+<strong>Week one:</strong> Customer submits text, gets classification. Works day one. ✅<br>
+<strong>Buyer:</strong> EdTech procurement at universities. Often RFP-gated, slow cycles. ⚠️<br>
+<strong>Verdict: 🟡</strong> — Real tech moat in the detection models. But the buyer (university procurement) is slow, Turnitin is entrenched, and $14M of VC means they're already past the scrappy phase. The erosion risk: model providers could ship detection as a feature.</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>
+Top competitors include GPTZero, Copyleaks, and Originality.AI.
+</li>
+<li>Turnitin ($1.7B revenue) added AI detection. Pangram is the indie challenger.</li>
+</ul>
+</div>
+</div>
+
+<!-- COMPANY 2: MSPilot -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #faf4f4; border: 1px solid #dcc4c4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">2. MSPilot</strong> <span>🟡</span> — <span style="color: #555;">AI agent deployment + billing platform for IT service providers (YC F25)</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://mspilot.io" style="color: #1a73e8;">mspilot.io</a> · San Francisco · 2026 · Pre-seed (YC) · 3 people</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Helps MSPs deploy, govern, and monetize AI agents across their client base.
+</li>
+<li>
+Author an agent once, roll it out to your whole book, bill for every token — with markup.
+</li>
+<li>
+Initial templates target law firms, dental, accounting, and field services.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>SMB owners ask their IT provider for AI. The MSP has no way to deliver it at scale.</li>
+<li>
+Demand validated: outbound experiments booking calls at exceptional economics.
+</li>
+<li>
+Demand grew 7× in six months among MSP clients asking for AI agents.
+</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>SaaS to MSPs. Token pass-through with markup as a billing layer.</li>
+<li>YC F25 batch. Pre-revenue / very early revenue.</li>
+<li>
+SMBs already paying "thousands of dollars per month" for AI delivered via MSPs.
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>LLMs are now good enough for document-heavy SMB tasks (law, dental, accounting).</li>
+<li>MSPs already have the trust and billing relationship with SMBs.</li>
+</ul>
+</div>
+
+<div style="background: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; padding: 6px; font-size: 13px;">
+<strong>Bootstrap fit</strong><br>
+<strong>Objective:</strong> Agent output varies by task. Template quality is judgment. ⚠️ But the billing/governance layer is mechanical. Mixed.<br>
+<strong>LLM deleted:</strong> A multi-tenant agent hosting + billing system remains. Thin but real.<br>
+<strong>Accumulates:</strong> Template library per vertical. Real but copyable quickly.<br>
+<strong>Week one:</strong> MSP picks a template, deploys to a client, bills. Plausible day-one value. ✅<br>
+<strong>Buyer:</strong> MSP owners. Reachable via MSP forums, conferences, ConnectWise ecosystem. ✅<br>
+<strong>Verdict: 🟡</strong> — The channel insight (sell through MSPs) is real. But the agent templates are thin-layer and the billing middleware has no deep moat. ConnectWise or Datto could add this as a feature. YC F25 — included because the channel idea is worth watching; a bootstrapper could target a single MSP vertical (e.g. dental-only agents for MSPs) without the platform breadth.</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>
+No incumbent has built this yet — genuine blue-ocean per the founders.
+</li>
+<li>But ConnectWise, Kaseya/Datto, and HaloPSA all have the distribution to add it.</li>
+</ul>
+</div>
+</div>
+
+<!-- COMPANY 3: Axe -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fce4e4; border: 1px solid #e8a0a0; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">3. Axe</strong> <span>🔴</span> — <span style="color: #555;">AI agents for freight broker and carrier back-office ops</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://axe.so" style="color: #1a73e8;">axe.so</a> · Dublin / London · 2024 · Pre-seed (~€1.5M) · ~6 people</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Builds AI agents for logistics and supply chain ops. Replaces phone calls, emails, and spreadsheets.
+</li>
+<li>
+Agents handle order entry, quoting, scheduling, and phone calls.
+</li>
+<li>
+Load building feature extracts order data from inbox, PDFs, spreadsheets, or plain text emails.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>A freight broker's ops team spends 4+ hours daily on manual data entry and phone calls.</li>
+<li>
+Already saving logistics companies "as much as two hours per person per day."
+</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>SaaS to freight brokers, carriers, 3PLs.</li>
+<li>
+Raised €1.5M pre-seed led by Pitchdrive.
+</li>
+<li>
+Founded by James McElroy and Dan Quill (exits to Blackstone and Wayflyer). Growing rapidly in first 7 months.
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>LLMs can now reliably extract structured data from messy emails and PDFs.</li>
+<li>
+Global supply chain uncertainty and tighter margins accelerating need.
+</li>
+</ul>
+</div>
+
+<div style="background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; padding: 6px; font-size: 13px;">
+<strong>Bootstrap fit</strong><br>
+<strong>Objective:</strong> Data extraction from shipping docs is checkable against a spec. ✅<br>
+<strong>LLM deleted:</strong> Logistics domain knowledge + TMS integrations. Domain experts own this. 🔴<br>
+<strong>Accumulates:</strong> TMS integrations are real but not defensible long-term.<br>
+<strong>Week one:</strong> Requires integration into customer's TMS and email flow. Cold-start friction.<br>
+<strong>Buyer:</strong> Logistics ops managers. Reachable but relationship-heavy.<br>
+<strong>Verdict: 🔴</strong> — Gate 2. The value is logistics domain knowledge (how quoting works, what a load tender looks like, carrier workflows). The founders are ex-logistics operators with exits. A domain firm with one engineer catches up. Strong traction signal but wrong race for a bootstrapper.</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>
+Top competitors include WiseTech Global, Kale Logistics, Spyne. ~2,964 active competitors.
+</li>
+<li>Cervo AI (acquired by Altana for ~$100M) shows the space is hot but exits fast.</li>
+</ul>
+</div>
+</div>
+
+<!-- COMPANY 4: Tapitab -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fce4e4; border: 1px solid #e8a0a0; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">4. Tapitab</strong> <span>🔴</span> — <span style="color: #555;">Self-learning customer intelligence platform for hospitality POS</span><br>
+<span style="font-size: 13px; color: #666;">tapitab.com · New York City · Stealth · Pre-seed · ~5 people (est.)</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Stealth fintech building a proprietary self-learning customer intelligence platform for US hospitality.
+</li>
+<li>
+Patent-pending across multiple core innovations.
+</li>
+<li>
+Building a POS software layer: payment integration, tab origination, settlement, Android app on handheld device.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>A bar owner runs Toast/Square but has no idea which customers drive repeat revenue.</li>
+<li>Tapitab layers AI intelligence on top of POS transactions to learn customer patterns.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>POS software + payment processing revenue.</li>
+<li>Stealth mode. Hiring on HN "Who is Hiring" threads (June 2026).</li>
+<li>Revenue model likely payment processing fees + SaaS.</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>LLMs can now learn customer patterns from messy transaction data.</li>
+<li>Hospitality POS market fragmenting away from Toast/Square incumbents.</li>
+</ul>
+</div>
+
+<div style="background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; padding: 6px; font-size: 13px;">
+<strong>Bootstrap fit</strong><br>
+<strong>Objective:</strong> "Customer intelligence" and "self-learning" = insights and recommendations. 🔴<br>
+<strong>LLM deleted:</strong> A POS + payments system remains. Standard fintech plumbing.<br>
+<strong>Accumulates:</strong> Transaction data from venues. But that's a data-network-effect play.<br>
+<strong>Week one:</strong> Must integrate into restaurant ops, process payments. High cold-start friction.<br>
+<strong>Buyer:</strong> Restaurant/bar owners. Low willingness to pay, high churn vertical.<br>
+<strong>Verdict: 🔴</strong> — Gate 1. "Self-learning customer intelligence" is subjective. What counts as a valuable pattern? The customer and the product will disagree. Also Gate 4: needs live transaction data to learn — cold start.</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>Toast ($4.5B+), Square, Lightspeed, Clover — massively entrenched.</li>
+<li>AI-native POS is interesting but payments infra is regulatory-heavy.</li>
+</ul>
+</div>
+</div>
+
+<!-- COMPANY 5: Jiga -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fce4e4; border: 1px solid #e8a0a0; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">5. Jiga</strong> <span>🔴</span> — <span style="color: #555;">Manufacturing parts sourcing marketplace with AI quoting (YC W21)</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://jiga.io" style="color: #1a73e8;">jiga.io</a> · Tel Aviv / Remote · 2020 · Seed (~$4M) · ~110 people</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Custom parts sourcing platform: CNC machining, sheet metal, 3D printing, injection molding.
+</li>
+<li>
+Think "npm install for mechanical engineers" — infrastructure to make hardware dev fast.
+</li>
+<li>
+Serves companies like NASA, Tesla, and Siemens.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>A hardware engineer needs 50 CNC parts. Currently emails 8 shops, waits weeks for quotes.</li>
+<li>
+One customer: "We used to have upwards of 8 weeks before I would see parts. Now 2 or 3 weeks."
+</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>Marketplace take rate on parts orders.</li>
+<li>
+Fully funded, cashflow positive, with growing revenue MoM.
+</li>
+<li>
+$4M raised. Seed stage.
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>LLMs can parse CAD files, extract specs, and auto-match to manufacturer capabilities.</li>
+<li>Supply chain reshoring is creating more demand for US/EU manufacturing sourcing.</li>
+</ul>
+</div>
+
+<div style="background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; padding: 6px; font-size: 13px;">
+<strong>Bootstrap fit</strong><br>
+<strong>Objective:</strong> Quoting and matching parts to manufacturers is spec-checkable. ✅<br>
+<strong>LLM deleted:</strong> Vetted manufacturer network remains. That's a marketplace, not tech. 🔴<br>
+<strong>Accumulates:</strong> Manufacturer relationships, not engineering. Marketplace cold-start.<br>
+<strong>Week one:</strong> Needs supply-side manufacturers already on platform. Classic marketplace cold start. 🔴<br>
+<strong>Buyer:</strong> Hardware engineers at mid-size companies. Reachable.<br>
+<strong>Verdict: 🔴</strong> — Gate 4. Two-sided marketplace. Without manufacturers already signed up, customer #1 gets nothing. Jiga has 6 years of supply-side build-out. Also 110 employees — well past the stage we care about. (YC W21 — included for contrast; too mature to target.)</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>Xometry (public, $500M+ rev), Hubs (Protolabs), Fictiv, Fathom.</li>
+<li>Heavily competed marketplace. Jiga differentiates on direct supplier communication.</li>
+</ul>
+</div>
+</div>
+
+<!-- COMPANY 6: Uplane -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fce4e4; border: 1px solid #e8a0a0; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">6. Uplane</strong> <span>🔴</span> — <span style="color: #555;">AI-driven self-improving ad campaign automation (YC F25)</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://uplane.co" style="color: #1a73e8;">uplane.co</a> · San Francisco · 2025 · Pre-seed (YC) · ~5 people</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Well-funded startup focused on revolutionizing advertising through self-improving AI systems.
+</li>
+<li>
+Build AI systems with LangGraph. Design data backbone for AI agents that get smarter over time.
+</li>
+<li>
+Automated marketing campaigns using LangGraph and TypeScript.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>A growth marketer runs 50 ad campaigns across channels. Optimizing each is manual and slow.</li>
+<li>Uplane automates campaign creation and continuously optimizes based on performance data.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>SaaS for marketing teams. YC F25 batch.</li>
+<li>Early stage — founding AI engineer role open.</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>LLMs can generate ad copy and creative variations at scale.</li>
+<li>Multi-channel orchestration is now automatable with agent frameworks.</li>
+</ul>
+</div>
+
+<div style="background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; padding: 6px; font-size: 13px;">
+<strong>Bootstrap fit</strong><br>
+<strong>Objective:</strong> Ad performance is measurable (clicks, conversions). But "self-improving" = AI deciding what's good. 🔴<br>
+<strong>LLM deleted:</strong> A campaign orchestration tool remains. Commodity.<br>
+<strong>Accumulates:</strong> Performance data across customers. Data-network-effect play.<br>
+<strong>Week one:</strong> Needs customer ad accounts connected + historical performance data. Cold start.<br>
+<strong>Buyer:</strong> Growth marketers. Saturated with indie tools. Willingness to pay is fragmented.<br>
+<strong>Verdict: 🔴</strong> — Gate 1. "Self-improving" ad optimization is subjective. What counts as a good ad? The AI and the brand will disagree. Also saturated: Meta, Google already build optimization into their ad platforms. YC F25.</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>AdCreative.ai, Smartly.io, Pencil, Madgicx, and dozens of AI ad tools.</li>
+<li>Meta and Google's own AI tools are the real competitor.</li>
+</ul>
+</div>
+</div>
+
+<!-- COMPANY 7: Probo -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fce4e4; border: 1px solid #e8a0a0; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">7. Probo</strong> <span>🔴</span> — <span style="color: #555;">AI compliance team: automates SOC 2, ISO 27001 for startups</span><br>
+<span style="font-size: 13px; color: #666;">probo.so · YC · 2025 · Pre-seed (YC) · ~5 people (est.)</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Acts like your compliance team. Set requirements, handle docs/risks/controls/evidence, run the audit, keep everything updated.
+</li>
+<li>Targets SOC 2, ISO 27001, and similar frameworks for startups.</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>A seed-stage founder needs SOC 2 to close an enterprise deal. It normally takes weeks and a consultant.</li>
+<li>
+Founders shouldn't lose weeks to compliance. Even one day is too much.
+</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>SaaS subscription for compliance management.</li>
+<li>YC-backed. Early stage.</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>LLMs can generate policy docs, map controls, and auto-collect evidence.</li>
+<li>Enterprise buyers increasingly require SOC 2 even from tiny startups.</li>
+</ul>
+</div>
+
+<div style="background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; padding: 6px; font-size: 13px;">
+<strong>Bootstrap fit</strong><br>
+<strong>Objective:</strong> Compliance frameworks have checklists. Pass/fail is checkable. ✅<br>
+<strong>LLM deleted:</strong> Compliance domain knowledge. A GRC consultant with one dev catches up. 🔴<br>
+<strong>Accumulates:</strong> Template library for frameworks. Copyable.<br>
+<strong>Week one:</strong> Customer picks a framework, gets auto-generated policies. Plausible. ✅<br>
+<strong>Buyer:</strong> Startup founders / CTOs. Reachable, willing to pay $5K–$50K/yr.<br>
+<strong>Verdict: 🔴</strong> — Gate 2. The value is compliance domain knowledge — which framework applies, what evidence counts, how to pass the audit. Vanta ($10B+ valuation), Drata, Secureframe already own this. A compliance consultant who hires one engineer is the real competitive threat. YC-backed.</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>Vanta, Drata, Secureframe, Thoropass — all Series B+ with hundreds of employees.</li>
+<li>Hyper-crowded. AI-native angle is the differentiation attempt but the moat is distribution.</li>
+</ul>
+</div>
+</div>
+
+<!-- COMPANY 8: Furnace Systems Corp -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fce4e4; border: 1px solid #e8a0a0; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">8. Furnace Systems Corp</strong> <span>🔴</span> — <span style="color: #555;">Stealth enterprise startup (product undisclosed)</span><br>
+<span style="font-size: 13px; color: #666;">NYC · 2025 · Pre-seed (~$3.55M) · ~3 people</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Stealth startup — product not disclosed.
+</li>
+<li>
+Founded by Matthew Siff, Andrew Siff, and Gabriel Rizk — three Brown University alumni.
+</li>
+<li>
+Investors include Bessemer Venture Partners, Gradient Ventures, Harpoon Ventures, Malachyte.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>Unknown — fully stealth.</li>
+<li>
+Tagged as "Enterprise" category by AlleyWatch.
+</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Raised $3.55M per SEC filing. Nine investors.
+</li>
+<li>Bessemer + Gradient (Google's AI fund) is significant for a pre-seed.</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>Unknown. Enterprise AI is broad enough to be anything.</li>
+</ul>
+</div>
+
+<div style="background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; padding: 6px; font-size: 13px;">
+<strong>Bootstrap fit</strong><br>
+<strong>Objective:</strong> Unknown — cannot evaluate. 🔴<br>
+<strong>LLM deleted:</strong> Unknown.<br>
+<strong>Accumulates:</strong> Unknown.<br>
+<strong>Week one:</strong> Unknown.<br>
+<strong>Buyer:</strong> Unknown.<br>
+<strong>Verdict: 🔴</strong> — Cannot evaluate any gate. Included as a traction signal: $3.55M from Bessemer + Gradient for 3 Brown grads, fully stealth, filing this week. Worth watching but not actionable.</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>Unknown. No product to compare against.</li>
+</ul>
+</div>
+</div>
+
+<!-- COMPANY 9: Stealth Supply Chain AI (London) -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fce4e4; border: 1px solid #e8a0a0; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">9. Stealth Freight Forwarding AI (London)</strong> <span>🔴</span> — <span style="color: #555;">Agentic AI for supply chain and freight forwarding automation</span><br>
+<span style="font-size: 13px; color: #666;">London · 2025 · Pre-seed (~$2.4M) · ~3 people</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Using agentic AI to automate and disrupt the $210B supply chain and freight forwarding industry.
+</li>
+<li>
+Founded in early 2025 by supply chain and AI experts.
+</li>
+<li>
+Founding AI engineer builds AI-driven agents for workflow automation and decision-making in supply chain ops.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>Freight forwarders juggle booking confirmations, customs docs, rate quotes — all via email.</li>
+<li>AI agents read inbound emails, extract shipment data, and trigger workflows.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Pre-seed round of $2.4M closed.
+</li>
+<li>
+Investors backed Synthesia, Genie AI, Superlinked, Plain, Signal AI.
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>Same as Axe: LLMs can now parse messy logistics documents reliably.</li>
+<li>Tariff volatility driving urgency to automate compliance steps.</li>
+</ul>
+</div>
+
+<div style="background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; padding: 6px; font-size: 13px;">
+<strong>Bootstrap fit</strong><br>
+<strong>Objective:</strong> Data extraction from shipping docs is checkable. ✅<br>
+<strong>LLM deleted:</strong> Supply chain domain knowledge. Freight forwarders who hire a dev catch up. 🔴<br>
+<strong>Accumulates:</strong> Integrations with forwarder systems. Real but thin.<br>
+<strong>Week one:</strong> Needs integration into forwarder's email and TMS. High friction.<br>
+<strong>Buyer:</strong> Freight forwarder ops teams. Relationship-gated industry.<br>
+<strong>Verdict: 🔴</strong> — Gate 2. Same pattern as Axe. The founders are "supply chain and AI experts" — domain expertise is the asset. A freight forwarding company with one engineer replicates this for their own ops. Cervo AI's $100M acquisition proves the space has exits but the moat is domain depth, not tech.</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>Axe, Cervo AI (acquired), FleetWorks, and many logistics AI plays.</li>
+<li>WiseTech Global ($20B+ market cap) is the gorilla in freight forwarding software.</li>
+</ul>
+</div>
+</div>
+
+<!-- COMPANY 10: Stealth Hardware Design AI (London/Imperial) -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fce4e4; border: 1px solid #e8a0a0; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">10. Stealth Physical Engineering AI (London)</strong> <span>🔴</span> — <span style="color: #555;">Agentic copilot for mechanical and aerospace design (CAD/CAE)</span><br>
+<span style="font-size: 13px; color: #666;">London · 2025 · Pre-seed (SuperSeed) · ~3 people</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Building agentic systems for the physical world — software that co-designs alongside mechanical, aerospace, and robotics engineers.
+</li>
+<li>
+Integrates with tools like Onshape and Ansys, reasons across physics and geometry.
+</li>
+<li>
+Currently pre-MVP. Working demo deployed and design partner pilots kicking off.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Coding agents like Devin and Cursor changed software. Physical engineering still uses outdated tools and slow simulations.
+</li>
+<li>An aerospace engineer designs a bracket. The agent suggests geometry changes that reduce weight 15%.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Raised a multi-million-pound pre-seed from SuperSeed.
+</li>
+<li>
+Seed raise anticipated for Spring 2026.
+</li>
+<li>Hiring founding AI engineer via recruiter (Techmunity).</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>LLMs + physics simulation APIs = first plausible "copilot for CAD."</li>
+<li>
+Founders: lead engineer at Imperial's Karman Space Programme + builder of London's first Hyperloop team.
+</li>
+</ul>
+</div>
+
+<div style="background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; padding: 6px; font-size: 13px;">
+<strong>Bootstrap fit</strong><br>
+<strong>Objective:</strong> Physics simulations are measurable (stress, weight, thermal). ✅<br>
+<strong>LLM deleted:</strong> Physics simulation domain knowledge + CAD/CAE integrations. Deep tech. 🔴<br>
+<strong>Accumulates:</strong> Domain-specific training data (engineering designs + simulation results). Real depth.<br>
+<strong>Week one:</strong> Needs integration with Onshape/Ansys. Pre-MVP — design partners only.<br>
+<strong>Buyer:</strong> Mechanical engineering teams at hardware companies. Reachable but long sales cycles.<br>
+<strong>Verdict: 🔴</strong> — Gate 2. The value is physics + engineering domain knowledge. The founders are literal rocket engineers. Building a physics-aware AI copilot requires deep mechanical engineering expertise, not just LLM plumbing. Also pre-MVP — no product to compete against yet, but the barrier to entry is physics, not code. Interesting space but wrong race for a bootstrapper without engineering domain depth.</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>Previously covered as "Stealth Hardware Design AI (SuperSeed)" — included here with more detail from the job posting. Note: same company, more info surfaced this run.</li>
+<li>Competitors: nTopology (acquired), Altair, Ansys's own AI features.</li>
+</ul>
+</div>
+</div>
