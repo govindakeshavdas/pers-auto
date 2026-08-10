@@ -29,7 +29,7 @@ response=$(jq -n \
      model: $model,
      max_tokens: 64000,
      thinking: {type: "enabled", budget_tokens: 50000},
-     tools: [{type: "web_search_20250305", name: "web_search", max_uses: 30}],
+     tools: [{type: "web_search_20250305", name: "web_search", max_uses: 60}],
      messages: [{role: "user", content: $prompt}]
    }' \
 | curl -sS https://api.anthropic.com/v1/messages \

@@ -1,96 +1,123 @@
 # CONTEXT
-I am a 38yo bootstrapped AI founder (side projects, Google day job, SF-based).
-My networking goal: attend 1-2 high-signal events per week with zero weekly cognitive load.
 
-My filters (HARD):
-- No VC-pitch events
-- No fluffy networking happy hours
-- Builder/founder/technical crowd only
-- Bay Area only (SF + peninsula + East Bay all fine)
-- AI-related or bootstrapper-focused preferred
+I live in the SF Bay Area. Once a week I want a full picture of what is
+happening in the local tech / startup / builder scene in the week ahead.
 
-My profile for matching:
-- Solo founder, B2B AI micro-SaaS
-- Technical (full-stack, Java/backend, now AI features at Google)
-- Active projects: AI voice, AI answering service, SaaS for SMBs
-- Want to: mine ideas, stress-test assumptions, meet potential users or co-builders
+I am deliberately not telling you what I work on or what I am interested in.
+Do not guess, and do not optimize the list toward any topic. Every event is
+worth at least looking at. My job is to decide; your job is to show me the
+board and tell me what each thing actually is.
 
 ---
 
 # YOUR JOB
 
-Every time I ask "what events this week" or "find me events":
+Every run:
 
-1. Search the web fresh using the hints below
-2. **Only include events whose start date is on or after {{TODAY}}.** Do not
-   include anything from the past, even if it was recent. If you are unsure
-   of an event's date after searching, skip it rather than guess.
-3. Rank what you find using the scoring rubric below
-4. Output a ranked table — top pick is my default, I'll override if I want
+1. Search the web fresh and find as many real, dated, in-person events as you
+   can in the Bay Area (SF, peninsula, East Bay, South Bay) that start on or
+   after {{TODAY}} and fall within the following 7 days.
+2. Classify each event — what kind of thing it is, and who is actually in the
+   room.
+3. Score each event on the rubric below.
+4. Return **everything you found**, ranked by score. Do not filter. Do not
+   trim the list to the good ones. A low score is information, not a reason
+   to hide an event from me.
 
-Treat {{TODAY}} as the authoritative current date. Scope "this week" to the
-7 days starting from {{TODAY}}.
+Treat {{TODAY}} as the authoritative current date.
 
-That's it. No files. No memory. Just search and rank.
+No files. No memory of previous runs. Just search, classify, score, rank.
 
 ---
 
 # HOW TO SEARCH
 
-Do not rely on fixed URLs. Run fresh searches every time using terms like these:
+Work out your own approach. I am not giving you queries, sites, or
+communities on purpose — a fixed recipe returns a fixed answer, and I want
+the search itself to vary run to run. Come at it from several different
+angles rather than one.
 
-## Event aggregators
-- "SF Bay Area AI events this week"
-- "AI meetup San Francisco [month] [year]"
-- "Bay Area founder meetup [month] [year]"
-- site:luma.com "san francisco" "AI" "builder"
-- site:meetup.com "san francisco" "AI founders"
-- site:eventbrite.com "AI" "san francisco" "developer"
+Be exhaustive, not efficient. Use your full search budget. Keep searching
+until new searches stop surfacing events you have not already found. A short
+list means you stopped early, not that the week was quiet.
 
-## Communities
-Search for active builder/founder communities in the Bay Area.
-Examples of the kind of communities worth finding:
-bootstrapper breakfasts, AI tinkerer groups, indie hacker meetups,
-hacker/founder dinners, developer demo nights — but don't limit to these.
-Find what's currently active and well-attended.
+Hard rules:
 
-## Bigger one-off events
-- "AI developer conference San Francisco [month] [year]"
-- "AI startup conference Bay Area [quarter] [year]"
-- "bootstrapper conference Bay Area"
-
-## What to skip
-- Anything with "pitch competition" or "investor access" as the main draw
-- Webinars or virtual-only events
-- Events over $100 unless exceptionally high fit score
+- Only include events whose start date you can actually confirm. If you
+  cannot confirm the date after searching, drop the event rather than guess.
+- Every link must be a page you actually saw in search results. Never
+  construct, guess, or pattern-match a URL.
+- Exclude virtual-only events, and anything that has already happened.
+- Exclude nothing else. Not pitch nights, not recruiting events, not big
+  corporate ones. Tag them and score them instead.
 
 ---
 
-# RANKING CRITERIA
-Score each event on these 5 factors (1-5 each, max 25):
+# CLASSIFY
 
-1. **Crowd fit** — Are attendees builders/founders/technical? (not corporate, not VC-circuit)
-2. **Idea density** — Will I hear about real products being built or real problems being solved?
-3. **Signal/noise** — Small and curated vs. large and generic?
-4. **Relevance to current projects** — AI voice, answering service, SMB SaaS
-5. **Friction to attend** — Free/cheap? Daytime/evening? Close to SF?
+For each event, give me three things:
 
-Output format:
+**Type** — pick the closest:
+hack night / workshop · demo night · talk or panel · conference or summit ·
+dinner or salon · mixer or social · pitch or investor event · hiring event ·
+recurring user group · other (say what)
+
+**Room** — one short, honest phrase on who actually shows up. Specific beats
+flattering: "~20 people, working engineers", "mostly recruiters and vendors",
+"large and mixed", "new event, unknown crowd".
+
+**Scale** — rough expected headcount if you can tell, otherwise "unknown".
+
+---
+
+# RUBRIC
+
+Score each event 1-5 on all five, max 25. Score the event on its own merits.
+You have no information about my interests — do not invent any and do not
+score for fit to a topic.
+
+1. **Crowd** — Are the people in the room doing the work (builders,
+   operators, researchers), or spectating (recruiters, vendors, tourists,
+   professional networkers)?
+2. **Substance** — Will real products, real numbers, and real problems get
+   discussed, or is it surface-level takes and small talk?
+3. **Curation** — Small and selective, or run by an organizer with a real
+   track record? Versus open-registration and generic.
+4. **Novelty** — Is this new, unusual, or hard to stumble across? A recurring
+   series that runs every single week scores low here; a one-off or a first
+   edition scores high.
+5. **Friction** — Cost, timing, travel, RSVP difficulty. Free or cheap,
+   evening, SF-accessible scores high.
+
+Show the five sub-scores. Do not collapse them into a total only.
+
+---
+
+# OUTPUT
 
 Return a self-contained **HTML fragment** (no `<html>`, `<head>`, or `<body>`
-wrappers — it will be embedded into a Gmail email). Use an inline-styled
-`<table>` with columns: Event | Date | Score /25 | One-line reason | Link.
+wrappers — it will be embedded into a Gmail email).
 
-Requirements:
+Structure:
+
+1. One short `<p>` reading the week at a glance — how many events you found,
+   and any pattern worth noting (e.g. "unusually heavy on hiring events",
+   "three separate hardware nights").
+2. An inline-styled `<table>`, sorted by score descending, with columns:
+   **Event | Date & time | Type | Room | Score /25 | Link**
+   - Score cell shows the total and the breakdown, e.g. `19` then a smaller
+     line `crowd 4 · substance 5 · curation 4 · novelty 3 · friction 3`.
+   - Link text is the domain only, not the full URL.
+   - Bold the top row.
+3. After the table, one `<p>` each for the top three: what it is and why it
+   scored where it did. Two sentences max each.
+
+Formatting requirements:
+
 - Inline `style="..."` only. No `<style>` blocks. No external CSS.
-- Style the table so it reads well in Gmail: border-collapse, ~8px cell
-  padding, light header background, simple 1px borders.
-- Make links clickable with `<a href="...">` — just show the domain as link
-  text, not the full URL.
-- Sort rows by score descending. Bold the top row.
-- Always surface minimum 3 options.
-- After the table, add a short `<p>` with a one-sentence recommendation of
-  the top pick and why.
+- Gmail-safe table: border-collapse, ~8px cell padding, light header
+  background, simple 1px borders.
+- Include every event you found, however low it scored.
 
 Output **only** the HTML fragment. No preamble, no explanation, no code
 fences, no markdown.
