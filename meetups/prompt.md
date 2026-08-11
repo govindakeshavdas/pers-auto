@@ -72,24 +72,23 @@ flattering: "~20 people, working engineers", "mostly recruiters and vendors",
 
 # RUBRIC
 
-Score each event 1-5 on all five, max 25. Score the event on its own merits.
-You have no information about my interests — do not invent any and do not
-score for fit to a topic.
+Four axes, max 17. Score the event on its own merits. You have no information
+about my interests — do not invent any and do not score for fit to a topic.
 
-1. **Crowd** — Are the people in the room doing the work (builders,
+1. **Crowd** (1-5) — Are the people in the room doing the work (builders,
    operators, researchers), or spectating (recruiters, vendors, tourists,
    professional networkers)?
-2. **Substance** — Will real products, real numbers, and real problems get
-   discussed, or is it surface-level takes and small talk?
-3. **Curation** — Small and selective, or run by an organizer with a real
-   track record? Versus open-registration and generic.
-4. **Novelty** — Is this new, unusual, or hard to stumble across? A recurring
-   series that runs every single week scores low here; a one-off or a first
-   edition scores high.
-5. **Friction** — Cost, timing, travel, RSVP difficulty. Free or cheap,
-   evening, SF-accessible scores high.
+2. **Substance** (1-5) — Will real products, real numbers, and real problems
+   get discussed, or is it surface-level takes and small talk?
+3. **Friction** (1-5) — Cost, timing, travel, RSVP difficulty. Free or cheap,
+   evening, and reachable anywhere in the Bay scores high. Do not penalise an
+   event for being outside San Francisco — South Bay, peninsula and East Bay
+   are all fine.
+4. **Novelty** (0-2) — Is this new, unusual, or hard to stumble across? A
+   recurring series that runs every single week scores 0; a one-off or a first
+   edition scores 2. This is a small tiebreaker only, not a main signal.
 
-Show the five sub-scores. Do not collapse them into a total only.
+Show the four sub-scores. Do not collapse them into a total only.
 
 ---
 
@@ -104,9 +103,9 @@ Structure:
    and any pattern worth noting (e.g. "unusually heavy on hiring events",
    "three separate hardware nights").
 2. An inline-styled `<table>`, sorted by score descending, with columns:
-   **Event | Date & time | Type | Room | Score /25 | Link**
-   - Score cell shows the total and the breakdown, e.g. `19` then a smaller
-     line `crowd 4 · substance 5 · curation 4 · novelty 3 · friction 3`.
+   **Event | Date & time | Type | Room | Score /17 | Link**
+   - Score cell shows the total and the breakdown, e.g. `13` then a smaller
+     line `crowd 4 · substance 5 · friction 3 · novelty 1`.
    - Link text is the domain only, not the full URL.
    - Bold the top row.
 3. After the table, one `<p>` each for the top three: what it is and why it
