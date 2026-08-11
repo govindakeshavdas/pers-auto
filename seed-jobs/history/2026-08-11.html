@@ -1,452 +1,414 @@
-<!-- COMPANY 1: CrashLabs -->
-<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #f4faf4; border: 1px solid #c4dcc4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
-<strong style="font-size: 15px;">1. CrashLabs</strong> <span>🟢</span> — <span style="color: #555;">Pre-production testing that catches agent failures before users do</span><br>
-<span style="font-size: 13px; color: #666;">AI agent testing · <a href="https://crashlabs.ai" style="color: #1a73e8;">crashlabs.ai</a> · Toronto · 2025 · Pre-seed · ~3 people</span>
+<!-- COMPANY 1: Rankwise -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fafaf4; border: 1px solid #dcd8c4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">1. Rankwise</strong> <span>🟡</span> — <span style="color: #555;">Monitors whether AI search engines cite your brand, then ships the content that earns citations</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://tryrankwise.com" style="color: #1a73e8;">tryrankwise.com</a> · Remote · ~2025 · Bootstrapped (Founder Ventures studio) · ~2–4 people</span>
 
 <div style="font-size: 13px; color: #333; margin-top: 6px;">
 <strong>What they do</strong>
 <ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>
-Pre-production testing platform for AI agent deployment.
-</li>
-<li>
-Catches edge-case and brittle failures in AI agents before they reach users.
-</li>
-<li>
-Tests for correctness, security, production readiness, and compliance.
-</li>
+<li>Measures whether ChatGPT, Perplexity, and Google AI Overviews cite you.</li>
+<li>Finds questions AI engines answer without mentioning your brand.</li>
+<li>Generates structured, schema-marked content to close the citation gap.</li>
+<li>Auto-publishes articles with FAQ, Article, and Speakable schema markup.</li>
 </ul>
 
 <strong>The problem they solve</strong>
 <ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>AI agent teams ship agents that silently break on edge cases.</li>
-<li>Example: an agentic checkout flow hallucinates a discount code — caught only after live customer complaints.</li>
-<li>CrashLabs runs structured failure scenarios before deploy, like a CI suite for agent behavior.</li>
+<li>
+Scans your domain and competitor gaps to surface a prioritized queue of articles, scored by search volume, keyword difficulty, and funnel stage.
+</li>
+<li>
+Every article ships with FAQ, Article, and Speakable schema — the markup that makes content visible in AI Overviews and Perplexity, not just traditional search.
+</li>
+<li>Example: a B2B SaaS company discovers Claude answers "best expense tracker for startups" and never cites them. Rankwise generates and publishes the structured page that earns the citation.</li>
 </ul>
 
 <strong>Money</strong>
 <ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>SaaS: usage-based or per-agent testing infra.</li>
+<li>SaaS: tiered plans for solo founders, marketing teams, and agencies.</li>
+<li>Bootstrapped through Founder Ventures studio — no disclosed raise.</li>
 <li>
-Founded 2025 in Toronto. 3 employees.
+Part of Founder Ventures, a venture studio building bootstrapped B2B SaaS, described as "the infrastructure layer for AI search."
 </li>
-<li>Founders: ex-Cohere ML, ex-Vector Institute researcher.</li>
 </ul>
 
 <strong>Why now</strong>
 <ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>Agentic AI is shipping to prod in 2025–2026. No standard test harness exists.</li>
-<li>Every agent team needs regression tests for multi-step LLM workflows.</li>
+<li>
+Search traffic is dropping as ~60% of Google searches don't lead to clicks — users read the AI summary instead.
+</li>
+<li>GEO (Generative Engine Optimization) is a new category — no entrenched incumbents yet.</li>
 </ul>
 </div>
 
-<div style="background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 4px; padding: 6px; font-size: 13px;">
+<div style="background: #fff8e1; border: 1px solid #ffe082; border-radius: 4px; padding: 6px; font-size: 13px;">
 <strong>Bootstrap fit</strong><br>
-<strong>Objective:</strong> Pass/fail on correctness, security, compliance — checkable against spec.<br>
-<strong>LLM deleted:</strong> The test harness, scenario library, and CI pipeline remain.<br>
-<strong>Accumulates:</strong> Library of failure scenarios per agent pattern. Grows with every customer.<br>
-<strong>Week one:</strong> Customer plugs agent into test runner; gets pass/fail report instantly.<br>
-<strong>Buyer:</strong> AI eng leads shipping agents. $500+/mo pain; reachable on HN/Twitter.<br>
-<strong>Verdict: 🟢</strong> — The scenario library accumulates.</div>
+<strong>Objective:</strong> Citation presence is binary — you're cited or you're not. Measurable.<br>
+<strong>LLM deleted:</strong> The monitoring harness and schema templates remain. Some value is content gen — thin.<br>
+<strong>Accumulates:</strong> Citation-tracking index across queries, engines, and time. Real dataset.<br>
+<strong>Week one:</strong> Customer enters domain, sees which AI queries miss them. No data needed from me.<br>
+<strong>Buyer:</strong> Marketing leads at B2B SaaS. Mid willingness to pay. Reachable via content channels.<br>
+<strong>Verdict: 🟡</strong> — Monitoring + schema harness is real, but the content-gen half is a thin layer over an LLM call. Profound ($155M raised) and Promptwatch (€6M seed) are well-funded entrants. The moat erodes as AI search APIs stabilize.
+</div>
 
 <div style="font-size: 13px; margin-top: 6px;">
 <strong>Crowding</strong>
 <ul style="margin: 2px 0 0; padding-left: 18px;">
-<li>Braintrust, Galileo, AgentOps — eval/observability, not pre-deploy testing.</li>
-<li>Dedicated agent testing is still mostly empty.</li>
+<li>
+Profound has raised $155M across 4 rounds and is the category leader.
+</li>
+<li>
+Promptwatch (Amsterdam) raised €6M seed.
+ 
+Bluefish AI raised $5M seed.
+</li>
+<li>Category is forming fast — 6+ funded players in GEO/AI search optimization already.</li>
 </ul>
 </div>
 </div>
 
-<!-- COMPANY 2: Vardera -->
-<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #f4faf4; border: 1px solid #c4dcc4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
-<strong style="font-size: 15px;">2. Vardera</strong> <span>🟢</span> — <span style="color: #555;">CV-powered identification, grading, and valuation of collectibles from photos</span><br>
-<span style="font-size: 13px; color: #666;">Collectibles AI · <a href="https://vardera.com" style="color: #1a73e8;">vardera.com</a> · Cambridge, MA · 2025 · Seed (~$4.8M) · ~6 people</span>
+<!-- COMPANY 2: Remy (Construction Submittals) -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fafaf4; border: 1px solid #dcd8c4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">2. Remy (Construction Submittals)</strong> <span>🔴</span> — <span style="color: #555;">AI-powered submittal review and compliance for commercial general contractors</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://buildremy.com" style="color: #1a73e8;">buildremy.com</a> · New York · ~2024 · Seed (VC-backed) · ~3–8 people</span>
 
 <div style="font-size: 13px; color: #333; margin-top: 6px;">
 <strong>What they do</strong>
 <ul style="margin: 2px 0 8px; padding-left: 18px;">
 <li>
-Builds the AI infrastructure layer for physical asset valuation.
+First AI-powered Submittal Intelligence Platform for commercial GCs. Reads specs and drawings, flags compliance issues, helps teams approve submittals faster.
 </li>
 <li>
-Deep learning models identify, appraise, and authenticate high-value goods from a single image, compressing years of human expertise into a sub-second API call.
+Identifies gaps across submittals, specs, and drawings so teams resolve conflicts before rework.
 </li>
 <li>
-AI pipeline identifies item, extracts attributes, pulls comparable sales, assesses condition, and scores trust signals — automatically.
+Captures learnings across reviews, building a knowledge base that extends insights to active projects.
 </li>
 </ul>
 
 <strong>The problem they solve</strong>
 <ul style="margin: 2px 0 8px; padding-left: 18px;">
 <li>
-Appraisal and auction world runs on gut instinct and manual guesswork at a scale of billions in value.
+Project teams dig through 1000-page spec books, flip between CSI sections, mark up PDFs manually, and chase missing info. Slow, error-prone, expensive.
 </li>
-<li>Example: an auction house receives 25,000 items/month. Each needs expert grading. Vardera grades from photo in seconds.</li>
-<li>
-Enterprises like eBay use Vardera to power identification and pricing across millions of items.
-</li>
+<li>Example: a PE reviews an HVAC submittal against Division 23 specs. Remy flags a missing fire damper UL rating in the submittal vs. what the spec requires.</li>
 </ul>
 
 <strong>Money</strong>
 <ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>API: per-call or volume pricing for marketplaces and auction houses.</li>
+<li>SaaS sold to commercial general contractors.</li>
 <li>
-Founded 2025. Cambridge, MA. 6 employees. Raised $4.77M.
+Venture-backed with growing adoption among ENR Top 400 contractors.
 </li>
 <li>
-Active across coins, trading cards, comics, toys, jewelry — signed contracts and POCs in production.
+Founded by a former project engineer — classic domain-expert-hires-first-engineer pattern.
 </li>
 </ul>
 
 <strong>Why now</strong>
 <ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>Multimodal CV models (GPT-4V, Gemini) made fine-grained object recognition cheap enough to deploy.</li>
-<li>
-Reference dataset of 200M+ items is the core moat — compounds with every transaction.
-</li>
+<li>Vision models can now parse construction drawings and specs reliably enough to extract structured requirements.</li>
+<li>Submittal compliance has never been automated before — only tracked in spreadsheets.</li>
 </ul>
 </div>
 
-<div style="background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 4px; padding: 6px; font-size: 13px;">
+<div style="background: #ffebee; border: 1px solid #ef9a9a; border-radius: 4px; padding: 6px; font-size: 13px;">
 <strong>Bootstrap fit</strong><br>
-<strong>Objective:</strong> Item identification and price match against comparable sales — mechanically checkable.<br>
-<strong>LLM deleted:</strong> The CV models, reference dataset, and pricing engine remain.<br>
-<strong>Accumulates:</strong> The 200M+ item reference dataset. Built from public auction records. Grows per transaction.<br>
-<strong>Week one:</strong> Customer uploads item photos; gets grading + estimated value from existing dataset.<br>
-<strong>Buyer:</strong> Auction houses, eBay-scale marketplaces, resellers. Clear pain, clear budget.<br>
-<strong>Verdict: 🟢</strong> — The reference dataset accumulates. Buildable from public auction data before customer #1.</div>
+<strong>Objective:</strong> Spec compliance is checkable: "does this submittal match Division 23, Section 3.2?" Yes/no. Passes.<br>
+<strong>LLM deleted:</strong> Construction domain knowledge remains. Founder is a domain expert. 🔴.<br>
+<strong>Accumulates:</strong> N/A — failed at gate 2.<br>
+<strong>Week one:</strong> N/A.<br>
+<strong>Buyer:</strong> N/A.<br>
+<strong>Verdict: 🔴</strong> — Gate 2. Domain expert founder + construction knowledge = domain firm with one developer beats me. Strong traction signal but bad bootstrap target.
+</div>
 
 <div style="font-size: 13px; margin-top: 6px;">
 <strong>Crowding</strong>
 <ul style="margin: 2px 0 0; padding-left: 18px;">
-<li>WorthPoint (historical pricing database, not CV-based).</li>
-<li>PSA / Beckett (grading services — human, not automated).</li>
-<li>No direct CV-to-valuation API competitor at this breadth.</li>
+<li>
+Structured AI (YC) does AI QA/QC on construction drawings — adjacent, different entry point.
+</li>
+<li>Procore and PlanGrid dominate construction project management but lack AI submittal review.</li>
 </ul>
 </div>
 </div>
 
-<!-- COMPANY 3: FlowGen Labs -->
-<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fffdf0; border: 1px solid #e0d8a8; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
-<strong style="font-size: 15px;">3. FlowGen Labs</strong> <span>🟡</span> — <span style="color: #555;">Agentic operations layer for SAP/ERP systems</span><br>
-<span style="font-size: 13px; color: #666;">ERP automation · <a href="https://flowgenlabs.com" style="color: #1a73e8;">flowgenlabs.com</a> · San Francisco · 2025 · Seed · ~11-50 people</span>
+<!-- COMPANY 3: Nexcade -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fafaf4; border: 1px solid #dcd8c4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">3. Nexcade</strong> <span>🔴</span> — <span style="color: #555;">AI agents that automate quoting, rate procurement, and booking for freight forwarders</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://nexcade.ai" style="color: #1a73e8;">nexcade.ai</a> · London · 2025 · Seed (~$8.5M total) · ~10–15 people</span>
 
 <div style="font-size: 13px; color: #333; margin-top: 6px;">
 <strong>What they do</strong>
 <ul style="margin: 2px 0 8px; padding-left: 18px;">
 <li>
-Agentic operating procedures for your ERP. Executes at machine speed, learns from every exception.
+Develops AI agents that process customer emails, attachments, and spreadsheets to prepare freight quotations, procure rates, and enter shipment orders.
 </li>
 <li>
-Connects to your ERP in place, builds your complete enterprise ontology. Logic captured via configuration and custom code. No workshops, no consultants.
+Agents read customer requests, understand shipment context, ask clarifying questions, procure rates, and prepare quotes.
 </li>
 <li>
-Processes become natural-language workflows — readable, editable, auditable. Agent executes inside your ERP.
+Atlas: data analytics tool that analyses communication flows to identify operational bottlenecks.
 </li>
 </ul>
 
 <strong>The problem they solve</strong>
 <ul style="margin: 2px 0 8px; padding-left: 18px;">
 <li>
-Decades-old business logic, mission-critical systems, colossal codebases where every percent of reliability matters.
+Forwarders coordinate shipments across customers, carriers, agents, warehouses, customs. Much of this still happens in emails, attachments, spreadsheets. Impossible to automate with prior software.
 </li>
-<li>Example: a manufacturer's SAP has 200K lines of custom ABAP. FlowGen maps it automatically, then runs procurement workflows as agents.</li>
-<li>
-Backed by tier-1 investors, ex-SAP executives, and CXOs. Building at the intersection of SAP and AI.
-</li>
+<li>Example: a forwarder gets an email requesting an LCL ocean quote from Shanghai to Rotterdam. Agent extracts cargo details, checks 3 carrier rate sheets, applies margin rules, and drafts the quote. Human reviews and sends.</li>
 </ul>
 
 <strong>Money</strong>
 <ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>Enterprise SaaS: likely six-figure contracts per ERP instance.</li>
 <li>
-Founded 2025. 11-50 employees. Seed stage.
+$8.5M total raised. $6M seed led by Project A Ventures. Customers include XPO, Zencargo, Cardinal Global Logistics.
 </li>
-<li>Hiring Founding Engineer, Software Engineering Lead, SAP Technical Lead.</li>
+<li>
+Founded by ex-Sedna COO Dan Bailey and ex-Palantir tech lead Tasho Kjosev.
+</li>
 </ul>
 
 <strong>Why now</strong>
 <ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>S/4HANA migration wave is forcing enterprises to touch ancient codebases.</li>
-<li>LLMs can now parse ABAP and generate transformation plans at the code level.</li>
-</ul>
-</div>
-
-<div style="background: #fff9c4; border: 1px solid #f0e68c; border-radius: 4px; padding: 6px; font-size: 13px;">
-<strong>Bootstrap fit</strong><br>
-<strong>Objective:</strong> Code analysis and process mapping are checkable against the running system.<br>
-<strong>LLM deleted:</strong> The SAP connector, ABAP parser, and ontology builder remain — real technical depth.<br>
-<strong>Accumulates:</strong> SAP-specific parsing and ontology tooling. Hard to replicate quickly.<br>
-<strong>Week one:</strong> 🟡 Requires live connection to customer's SAP instance — integration-gated.<br>
-<strong>Buyer:</strong> Enterprise SAP buyers — procurement/relationship-gated. Hard to reach solo.<br>
-<strong>Verdict: 🟡</strong> — Real technical depth, but enterprise buyer and integration gate erode solo viability.</div>
-
-<div style="font-size: 13px; margin-top: 6px;">
-<strong>Crowding</strong>
-<ul style="margin: 2px 0 0; padding-left: 18px;">
-<li>SAP's own Joule AI, LeanIX, Signavio — all large-company tools.</li>
-<li>Panaya, Basis Technologies — SAP change/testing. Less agentic.</li>
-<li>Niche is open but buyer concentration makes it a venture play.</li>
-</ul>
-</div>
-</div>
-
-<!-- COMPANY 4: CollectWise -->
-<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fef0f0; border: 1px solid #e0c4c4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
-<strong style="font-size: 15px;">4. CollectWise</strong> <span>🔴</span> — <span style="color: #555;">AI agents that automate late-stage consumer debt collection</span><br>
-<span style="font-size: 13px; color: #666;">Debt collection AI · <a href="https://collectwise.com" style="color: #1a73e8;">collectwise.com</a> · NYC · 2024 · Pre-seed (~$500K) · ~8 people · (YC F24 — included for exceptional traction signal)</span>
-
-<div style="font-size: 13px; color: #333; margin-top: 6px;">
-<strong>What they do</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>LLMs can now parse messy email chains and attachment formats that rule-based automation couldn't.</li>
 <li>
-Automates consumer debt collection with AI. Allows creditors/agencies to double recovery rates while reducing collection costs by 75%.
-</li>
-<li>
-AI agents fully automate credit reporting, legal collections, outreach, garnishments, and liens.
-</li>
-<li>
-AI-driven processes automate everything from personalized SMS campaigns to phone calls nearly indistinguishable from human agents.
-</li>
-</ul>
-
-<strong>The problem they solve</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>
-Traditional debt collection relies on outdated methods largely unchanged for decades.
-</li>
-<li>Example: a medical practice has $500K in overdue receivables. CollectWise's agents run the entire recovery pipeline — SMS, calls, legal filings — at a fraction of a human collector's cost.</li>
-</ul>
-
-<pre style="font-size: 12px; background: #fff; border: 1px solid #ddd; padding: 6px; margin: 0 0 8px;">Metric       Value
---------     --------
-ARR          $2M (annualized)
-Team         8 people
-Recovery     2X vs. human collectors
-Cost saving  75% reduction</pre>
-<div style="font-size: 12px; color: #666; margin-bottom: 8px;">
-Team of five scaled to $2M ARR in just a few months.
-</div>
-
-<strong>Money</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>Revenue model: likely percentage of recovered debt or per-account SaaS.</li>
-<li>
-Founder personally ran hundreds of sales calls. Closed millions in revenue.
-</li>
-<li>
-Raised $500K total.
- Now hiring AEs and FDEs to push to $10M ARR.</li>
-</ul>
-
-<strong>Why now</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>Voice AI and LLMs reached quality sufficient for regulated, scripted conversations.</li>
-<li>
-$35B market in the US alone.
+Logistics (11% of global GDP) under increasing pressure from supply chain disruptions. Forwarders need to respond faster.
 </li>
 </ul>
 </div>
 
 <div style="background: #ffebee; border: 1px solid #ef9a9a; border-radius: 4px; padding: 6px; font-size: 13px;">
 <strong>Bootstrap fit</strong><br>
-<strong>Objective:</strong> Recovery rates are measurable. But outreach scripts and legal compliance calls are judgment-heavy.<br>
-<strong>LLM deleted:</strong> Domain knowledge (FDCPA, state regs, garnishment rules) — domain experts own this.<br>
-<strong>Accumulates:</strong> Regulatory playbooks and recovery scripts. But domain firm + one dev replicates.<br>
-<strong>Week one:</strong> Needs customer's debt portfolio uploaded and legal entity setup. Integration-gated.<br>
-<strong>Buyer:</strong> Creditors and collection agencies. Reachable but relationship-heavy.<br>
-<strong>Verdict: 🔴</strong> — Gate 2. Domain knowledge (FDCPA rules, state-by-state legal procedures) is the value. A collection agency hiring one dev beats me. Outstanding traction signal — surface it for learning — but the space is a 🔴 for bootstrapping.</div>
+<strong>Objective:</strong> Quote generation is checkable against carrier rate sheets and margin rules. Passes.<br>
+<strong>LLM deleted:</strong> Freight domain knowledge remains. Founders are domain experts (ex-Sedna COO). 🔴.<br>
+<strong>Accumulates:</strong> N/A — failed at gate 2.<br>
+<strong>Week one:</strong> N/A.<br>
+<strong>Buyer:</strong> N/A.<br>
+<strong>Verdict: 🔴</strong> — Gate 2. Domain-expert founders with deep freight relationships. A freight software company hiring one AI engineer would replicate faster than I could enter.
+</div>
 
 <div style="font-size: 13px; margin-top: 6px;">
 <strong>Crowding</strong>
 <ul style="margin: 2px 0 0; padding-left: 18px;">
-<li>TrueAccord (Series C), InDebted (Series B) — AI-first collections.</li>
-<li>Incumbent agencies (Encore Capital, Midland Credit) building in-house AI.</li>
-<li>Already competitive; YC-backed with $2M ARR is ahead.</li>
+<li>Sedna, Flexport, and legacy freight TMS vendors are all adding AI features.</li>
+<li>At least 3–5 funded AI freight startups emerged in 2025–2026.</li>
 </ul>
 </div>
 </div>
 
-<!-- COMPANY 5: Flowtel -->
-<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fef0f0; border: 1px solid #e0c4c4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
-<strong style="font-size: 15px;">5. Flowtel</strong> <span>🔴</span> — <span style="color: #555;">AI voice agents as the operating system for hotels</span><br>
-<span style="font-size: 13px; color: #666;">Hospitality AI · <a href="https://flowtel.ai" style="color: #1a73e8;">flowtel.ai</a> · San Francisco · 2024 · Seed (~$3M) · ~5 people · (YC W25 — included for lack of non-YC equivalent)</span>
+<!-- COMPANY 4: Allus AI -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fafaf4; border: 1px solid #dcd8c4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">4. Allus AI</strong> <span>🔴</span> — <span style="color: #555;">Vision foundation model for manufacturing quality inspection (YC F25 — included for traction signal)</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://allus.ai" style="color: #1a73e8;">allus.ai</a> · Atlanta · 2023 · Seed (~$500K YC) · ~3 people</span>
 
 <div style="font-size: 13px; color: #333; margin-top: 6px;">
 <strong>What they do</strong>
 <ul style="margin: 2px 0 8px; padding-left: 18px;">
 <li>
-AI agents handle everything from booking to room service for hotels.
+Develops a vision foundation model for manufacturing quality inspection, trained on 1.5B proprietary industrial data pairs.
 </li>
 <li>
-AI-first company. Every part of the business uses AI. Product, sales, marketing, operations, support, engineering.
+Replaces slow, bespoke vision systems with a platform configurable in minutes, not months.
 </li>
 <li>
-Team kept small and talented — everyone is an engineer at heart.
-</li>
-</ul>
-
-<strong>The problem they solve</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>Hotels staff a front desk 24/7 to answer calls, process bookings, handle room service.</li>
-<li>Example: a 100-room boutique hotel gets 200 calls/day. Flowtel's voice agent handles booking changes, room service orders, and concierge requests.</li>
-</ul>
-
-<strong>Money</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>SaaS: per-hotel/per-room pricing likely.</li>
-<li>
-Just launched, secured $3M in seed funding, backed by YC.
-</li>
-<li>
-Founded 2024. Team size 5.
-</li>
-</ul>
-
-<strong>Why now</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>Real-time voice AI latency dropped below 500ms in 2025 — usable for phone-based hospitality.</li>
-<li>Hotel labor costs spiked post-COVID; front desk automation demand is high.</li>
-</ul>
-</div>
-
-<div style="background: #ffebee; border: 1px solid #ef9a9a; border-radius: 4px; padding: 6px; font-size: 13px;">
-<strong>Bootstrap fit</strong><br>
-<strong>Objective:</strong> Booking confirmations and room service orders are checkable. Concierge recommendations are subjective.<br>
-<strong>LLM deleted:</strong> Hospitality domain logic (PMS integration, room types, upsell rules). Domain experts own it.<br>
-<strong>Accumulates:</strong> PMS integrations per chain. But hotel chains will build or buy from incumbents.<br>
-<strong>Week one:</strong> Requires PMS integration (Opera, Mews, Cloudbeds). Integration-gated.<br>
-<strong>Buyer:</strong> Hotel GMs — reachable, but hospitality sales is relationship-heavy and fragmented.<br>
-<strong>Verdict: 🔴</strong> — Gate 4. PMS integration required for day-one value. Also gate 2: hospitality domain experts (ex-hotel ops people) can hire one dev to replicate.</div>
-
-<div style="font-size: 13px; margin-top: 6px;">
-<strong>Crowding</strong>
-<ul style="margin: 2px 0 0; padding-left: 18px;">
-<li>Canary Technologies (Series B), Akia, Whistle — hotel messaging/automation.</li>
-<li>Voice AI: Poly AI, Replicant — broader but entering hospitality.</li>
-<li>Oracle Hospitality and Mews building native AI features.</li>
-</ul>
-</div>
-</div>
-
-<!-- COMPANY 6: Boam AI -->
-<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fef0f0; border: 1px solid #e0c4c4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
-<strong style="font-size: 15px;">6. Boam AI</strong> <span>🔴</span> — <span style="color: #555;">Managed data intelligence for enterprise CRMs, starting with restaurants</span><br>
-<span style="font-size: 13px; color: #666;">CRM data enrichment · <a href="https://boam.ai" style="color: #1a73e8;">boam.ai</a> · Miami / Budapest / Cape Town · ~11-50 people</span>
-
-<div style="font-size: 13px; color: #333; margin-top: 6px;">
-<strong>What they do</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>
-Builds managed data solutions that transform messy, unstructured signals into structured, reliable intelligence on millions of SMBs. Agentic systems power CRMs and mission-critical decisions.
-</li>
-<li>
-Supercharges sales and operations teams for smarter pipeline prioritization and higher conversion rates. Surfaces verified contacts, real-time signals, and high-value opportunities before competitors.
-</li>
-<li>
-Platform built from the ground up to solve challenges facing delivery platforms. Expanding to new verticals beyond restaurants.
+Achieves 99.95% defect detection accuracy. Integrates directly with existing cameras and production lines.
 </li>
 </ul>
 
 <strong>The problem they solve</strong>
 <ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>Enterprise food-delivery platforms need clean, enriched data on millions of restaurant partners.</li>
-<li>Example: a delivery platform has 500K restaurant listings. 30% have stale contact info. Boam AI continuously cleanses and enriches records.</li>
-</ul>
-
-<strong>Money</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>SaaS: managed data service, likely per-record or platform license.</li>
-<li>11-50 employees across three offices.</li>
-<li>Hiring Staff Backend Engineer, Applied AI Engineer, Technical Product Lead.</li>
-</ul>
-
-<strong>Why now</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>LLMs can now extract structured data from messy web sources at scale.</li>
-<li>Post-COVID delivery market matured; platforms need ops efficiency.</li>
-</ul>
-</div>
-
-<div style="background: #ffebee; border: 1px solid #ef9a9a; border-radius: 4px; padding: 6px; font-size: 13px;">
-<strong>Bootstrap fit</strong><br>
-<strong>Objective:</strong> Data accuracy is checkable against ground truth. Passes.<br>
-<strong>LLM deleted:</strong> The data pipeline, scraping infra, and enrichment engine remain.<br>
-<strong>Accumulates:</strong> Proprietary enriched dataset. But requires massive crawling infra to build.<br>
-<strong>Week one:</strong> 🔴 Customer needs enriched records on their existing CRM data — cold start on data corpus.<br>
-<strong>Buyer:</strong> Enterprise delivery platforms. Procurement-gated.<br>
-<strong>Verdict: 🔴</strong> — Gate 4. Value only appears after building a massive proprietary data corpus across millions of SMBs. Classic data-network-effect business — good venture bet, cold-start problem for solo founder.</div>
-
-<div style="font-size: 13px; margin-top: 6px;">
-<strong>Crowding</strong>
-<ul style="margin: 2px 0 0; padding-left: 18px;">
-<li>ZoomInfo, Apollo, Clearbit — general B2B enrichment.</li>
-<li>Restaurant-specific: Yelp data APIs, Google Places.</li>
-<li>Boam's edge is verticalized, managed quality — hard to replicate without scale.</li>
-</ul>
-</div>
-</div>
-
-<!-- COMPANY 7: Technical Visionaries (SASKI) -->
-<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fef0f0; border: 1px solid #e0c4c4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
-<strong style="font-size: 15px;">7. Technical Visionaries (SASKI)</strong> <span>🔴</span> — <span style="color: #555;">AI liability and safety auditing for deployed chatbots</span><br>
-<span style="font-size: 13px; color: #666;">AI safety auditing · Reno / San Jose · Pre-seed · ~1-3 people · <a href="https://wellfound.com/jobs/4255434" style="color: #1a73e8;">Wellfound listing</a></span>
-
-<div style="font-size: 13px; color: #333; margin-top: 6px;">
-<strong>What they do</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
 <li>
-Proprietary engine has run 40+ forensic audits on AI platforms. 100% failed the majority of safety scenarios.
+Traditional machine vision requires months of custom engineering, is expensive to maintain, and fails outside narrow use cases.
 </li>
-<li>
-Solves a boardroom headache: every enterprise deploying AI chatbots is terrified of data leaks, hallucinations, and liability.
-</li>
-<li>
-Buyers are platforms deploying customer-facing AI — digital health, school districts, compliance-heavy enterprise tech, EdTech.
-</li>
+<li>Example: an electronics manufacturer inspects solder joints on PCBs. Traditional vision takes 3 months to set up per SKU. Allus deploys in minutes with natural-language problem definition.</li>
 </ul>
 
-<strong>The problem they solve</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>AI chatbots deployed in regulated environments (health, education) generate liability risk.</li>
-<li>Example: a school district deploys an EdTech chatbot; SASKI runs safety scenarios and flags 14 failure modes before a student encounter.</li>
-</ul>
+<pre style="font-size: 12px; background: #fff; border: 1px solid #ddd; padding: 6px; margin: 0 0 8px;">Metric          Allus AI     Traditional
+----------      --------     -----------
+Deploy time     Minutes      3–6 months
+Cost            ~93% lower   $50K–$200K/line
+Accuracy        99.95%       Variable</pre>
 
 <strong>Money</strong>
 <ul style="margin: 2px 0 8px; padding-left: 18px;">
 <li>
-No base salary yet. Equity + commission. Closing 1-2 customers triggers angel round.
+$500K raised (YC).
 </li>
 <li>
-Product is 100% built, audited, and ready to deploy.
+Contracts from Apple, Tencent, Panasonic, Tesla, KUKA, Corning, Novo Nordisk, Mondelēz.
 </li>
-<li>Public Benefit Corporation structure.</li>
+<li>
+Co-founder Kai grew up in manufacturing, managed iPhone back-panel production at 18.
+</li>
 </ul>
 
 <strong>Why now</strong>
 <ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>Vision foundation models now generalize across defect types without per-SKU training.</li>
 <li>
-Regulators are moving fast on AI chatbot liability.
+Labour shortages, wage inflation, aging inspectors driving factories to rethink inspection.
 </li>
 </ul>
 </div>
 
 <div style="background: #ffebee; border: 1px solid #ef9a9a; border-radius: 4px; padding: 6px; font-size: 13px;">
 <strong>Bootstrap fit</strong><br>
-<strong>Objective:</strong> "Safety scenarios" and compliance calls are subjective. What counts as a failure? Whose rubric?<br>
-<strong>LLM deleted:</strong> The test scenarios remain, but "safe vs. unsafe" is a judgment call, not a measurement.<br>
-<strong>Accumulates:</strong> Scenario library, but regulatory interpretations shift constantly.<br>
-<strong>Week one:</strong> Customer points at a chatbot URL; audit runs. Low integration barrier.<br>
-<strong>Buyer:</strong> EdTech, health-tech compliance officers. Procurement-gated in regulated sectors.<br>
-<strong>Verdict: 🔴</strong> — Gate 1. Safety/compliance scoring is subjective. What counts as "passing" a safety scenario is a policy call, not a measurement. Same class as trust & safety moderation.</div>
+<strong>Objective:</strong> Defect detection is checkable — defect present or not. Passes.<br>
+<strong>LLM deleted:</strong> The trained vision model and 1.5B training pairs remain. Real technical asset.<br>
+<strong>Accumulates:</strong> Proprietary industrial vision dataset. Genuine moat.<br>
+<strong>Week one:</strong> Requires on-site camera feeds and production-line integration. 🔴.<br>
+<strong>Buyer:</strong> N/A — failed at gate 4.<br>
+<strong>Verdict: 🔴</strong> — Gate 4. Cold start: needs live camera feeds from factory floors and per-facility integration. No value without physical access to production lines. Also requires hardware-adjacent deployment (edge compute). Good venture bet, terrible bootstrap.
+</div>
 
 <div style="font-size: 13px; margin-top: 6px;">
 <strong>Crowding</strong>
 <ul style="margin: 2px 0 0; padding-left: 18px;">
-<li>CalypsoAI, Robust Intelligence (now Cisco) — AI security/guardrails.</li>
-<li>LLM red-teaming services from Anthropic, HackerOne.</li>
-<li>Regulatory compliance auditing for AI is heating up fast.</li>
+<li>
+810 active competitors including Voxel AI, Landing AI, Instrumental.
+</li>
+<li>Category has well-funded players (Landing AI $150M+) but most still require custom setup per line.</li>
+</ul>
+</div>
+</div>
+
+<!-- COMPANY 5: Prox -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fafaf4; border: 1px solid #dcd8c4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">5. Prox</strong> <span>🔴</span> — <span style="color: #555;">AI product specialist for manufacturers — turns manuals into a knowledge graph powering support agents (YC F25 — included for niche signal)</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://useprox.com" style="color: #1a73e8;">useprox.com</a> · San Francisco · 2025 · Seed (~$500K YC) · ~2 people</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Takes a manufacturer's full catalog — manuals, spec sheets, fitment data, parts diagrams — and converts it into a product knowledge graph.
+</li>
+<li>
+Builds multimodal knowledge graphs that let AI interpret schematics and wiring diagrams.
+</li>
+<li>
+Grounded in manuals, cited to the page, deployed everywhere: product page, dealer counter, internal tools, ChatGPT, Claude.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Complex products (HVAC, auto parts, machinery) generate complicated technical calls. Standard AI can't handle product-specific schematics.
+</li>
+<li>Example: a technician calls asking how to wire terminal A to terminal B on a specific HVAC unit. Prox's agent reads the wiring diagram from the manual and generates a step-by-step visual walkthrough.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Flat monthly payment, no per-seat or per-escalation charges.
+</li>
+<li>
+Serves companies in powersports, agriculture, HVAC, firearms, construction equipment.
+</li>
+<li>
+Received $500K from YC in Spring 2026.
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Three years into the LLM era, penetration in complex product support is very low. Off-the-shelf models don't understand wiring schematics or 48-page technical manuals buried in terrible formatting.
+</li>
+</ul>
+</div>
+
+<div style="background: #ffebee; border: 1px solid #ef9a9a; border-radius: 4px; padding: 6px; font-size: 13px;">
+<strong>Bootstrap fit</strong><br>
+<strong>Objective:</strong> "Does terminal A connect to terminal B per manual page 37?" Checkable. Passes.<br>
+<strong>LLM deleted:</strong> The knowledge graph and multimodal document parser remain. Real tech asset. Passes.<br>
+<strong>Accumulates:</strong> Per-manufacturer knowledge graphs, schematic parsers. Real compound asset.<br>
+<strong>Week one:</strong> Need the manufacturer's full manual corpus ingested. That's their data, not mine. 🔴.<br>
+<strong>Buyer:</strong> N/A — failed at gate 4.<br>
+<strong>Verdict: 🔴</strong> — Gate 4. Cold start: customer #1 must hand over their full manual catalog, and I must parse every schematic before any value appears. The parsing pipeline is real tech, but the bootstrapper has no manuals on day zero. Also, each manufacturer's catalog is a separate cold start.
+</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>General RAG-over-docs tools (Glean, Guru, etc.) serve adjacent use cases but lack multimodal schematic parsing.</li>
+<li>No direct funded competitor doing multimodal knowledge graphs specifically for complex physical products.</li>
+</ul>
+</div>
+</div>
+
+<!-- COMPANY 6: Proximitty -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fafaf4; border: 1px solid #dcd8c4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">6. Proximitty</strong> <span>🔴</span> — <span style="color: #555;">AI loan servicing agents for commercial lenders (YC W26 — included for space signal)</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://proximitty.ai" style="color: #1a73e8;">proximitty.ai</a> · San Francisco · 2025 · Pre-seed (~$500K YC) · ~2 people</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+AI-native commercial loan servicing platform. Agents handle document collection, financial spreading, covenant tracking, early warning, and recoveries.
+</li>
+<li>
+Agent Studio deploys AI agents that autonomously monitor portfolios, contact borrowers for documents, parse blurry scans and handwritten notes.
+</li>
+<li>
+Captures every servicing rule, assumption, and edge case your team carries in their heads, then automates it.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Teams of analysts spend weeks every quarter pulling tax returns, spreading financials into templates, checking covenants one by one, chasing borrowers for missing documents.
+</li>
+<li>
+One fintech cut servicing staff from 15 to 2 and redeployed team to close $20M in new originations in a single quarter.
+</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+~$500K raised (YC).
+</li>
+<li>
+CEO previously led FinCrime and Growth at Taptap Send ($75M → $200M ARR), started career advising banks at McKinsey.
+</li>
+<li>
+Claims 5 large banks and fintechs processing >$1B delinquent loans as customers within 3 weeks.
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>LLMs can now parse handwritten tax docs and messy financial statements with sufficient accuracy for spreading.</li>
+<li>
+Commercial credit is a $3T+ market in the US — almost none automated.
+</li>
+</ul>
+</div>
+
+<div style="background: #ffebee; border: 1px solid #ef9a9a; border-radius: 4px; padding: 6px; font-size: 13px;">
+<strong>Bootstrap fit</strong><br>
+<strong>Objective:</strong> Financial spreading is checkable — numbers reconcile or they don't. Passes.<br>
+<strong>LLM deleted:</strong> Commercial lending domain knowledge remains. Founders are domain experts. 🔴.<br>
+<strong>Accumulates:</strong> N/A — failed at gate 2.<br>
+<strong>Week one:</strong> N/A.<br>
+<strong>Buyer:</strong> N/A.<br>
+<strong>Verdict: 🔴</strong> — Gate 2. CEO is ex-McKinsey banking advisor. CTO built Bloomberg security infra. Domain experts who could hire one engineer to build this — and they already did. Also fails gate 5: FDIC-insured banks are procurement-gated buyers.
+</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>
+Zolvo (YC P26) does nearly the same thing: AI that automates servicing for commercial lenders.
+</li>
+<li>Numerated, Baker Hill, nCino — legacy loan origination platforms adding AI features.</li>
 </ul>
 </div>
 </div>
