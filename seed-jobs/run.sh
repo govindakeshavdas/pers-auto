@@ -62,18 +62,32 @@ if [ "$http_code" -ge 400 ]; then
   exit 1
 fi
 
-# Extract assistant text, then slice from the LAST "COMPANY 1" marker.
+# Extract assistant text, then pick the best draft out of it.
 # The model drafts the report repeatedly between web searches — each draft is
-# its own text block, and joining them all concatenates every discarded draft.
-# Only the final draft is the report; everything before it is scratchpad.
-# Fall back to the first COMPANY marker or <div> if no numbered marker is found.
+# its own text block, so joining them concatenates every discarded draft.
+# Splitting on "COMPANY 1" gives one candidate per draft. Taking the last one
+# is wrong: a trailing partial pass (one entry, then stop) would beat a
+# complete earlier draft. Take the candidate with the MOST entries instead,
+# ties going to the later one. Falls back to the first marker or <div>.
 raw=$(jq -r '[.content[]? | select(.type=="text") | .text] | join("\n")' /tmp/anthropic_response.json)
 output=$(printf '%s' "$raw" | python3 -c '
 import re, sys
 s = sys.stdin.read()
-starts = [m.start() for m in re.finditer(r"<!--\s*COMPANY\s*1\s*[:—–-]", s, re.I)]
+ENTRY = re.compile(r"<!--\s*COMPANY\s*(\d+)\s*[:—–-]", re.I)
+starts = [m.start() for m in ENTRY.finditer(s) if m.group(1) == "1"]
 if starts:
-    sys.stdout.write(s[starts[-1]:])
+    # A draft runs from its "COMPANY 1" to the next one (or EOF for the last).
+    # Bounding matters: counting to EOF would score every draft as the whole
+    # remaining text, so the first would always win and swallow the rest.
+    bounds = list(zip(starts, starts[1:] + [len(s)]))
+    # Score by entry count; the (i) tiebreak keeps the later draft when equal.
+    best, end = max(bounds, key=lambda b: (len(ENTRY.findall(s[b[0]:b[1]])), b[0]))
+    n = len(ENTRY.findall(s[best:end]))
+    if len(starts) > 1:
+        print("--- %d drafts found; kept the one with %d entries ---" % (len(starts), n), file=sys.stderr)
+    if n < 3:
+        print("--- WARNING: best draft has only %d entries ---" % n, file=sys.stderr)
+    sys.stdout.write(s[best:end])
 else:
     m = re.search(r"<!--\s*COMPANY|<div", s)
     sys.stdout.write(s[m.start():] if m else "")
