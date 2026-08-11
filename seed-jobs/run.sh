@@ -62,13 +62,22 @@ if [ "$http_code" -ge 400 ]; then
   exit 1
 fi
 
-# Extract assistant text, then slice from the first COMPANY marker or <div>.
-# The model narrates between web searches and that commentary arrives as text
-# blocks too, so joining them all puts its scratchpad ahead of the report.
-# Must match the marker as well as <div> — the marker precedes the first entry,
-# and slicing from <div> alone would drop company 1 from the ledger.
+# Extract assistant text, then slice from the LAST "COMPANY 1" marker.
+# The model drafts the report repeatedly between web searches — each draft is
+# its own text block, and joining them all concatenates every discarded draft.
+# Only the final draft is the report; everything before it is scratchpad.
+# Fall back to the first COMPANY marker or <div> if no numbered marker is found.
 raw=$(jq -r '[.content[]? | select(.type=="text") | .text] | join("\n")' /tmp/anthropic_response.json)
-output=$(printf '%s' "$raw" | sed -nE '/<!--[[:space:]]*COMPANY|<div/,$p')
+output=$(printf '%s' "$raw" | python3 -c '
+import re, sys
+s = sys.stdin.read()
+starts = [m.start() for m in re.finditer(r"<!--\s*COMPANY\s*1\s*[:—–-]", s, re.I)]
+if starts:
+    sys.stdout.write(s[starts[-1]:])
+else:
+    m = re.search(r"<!--\s*COMPANY|<div", s)
+    sys.stdout.write(s[m.start():] if m else "")
+')
 
 if [ -z "$output" ]; then
   echo "--- No COMPANY marker or <div> in model output; refusing to send ---" >&2
