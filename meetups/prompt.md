@@ -3,10 +3,13 @@
 I live in the SF Bay Area. Once a week I want a full picture of what is
 happening in the local tech / startup / builder scene in the week ahead.
 
-I am deliberately not telling you what I work on or what I am interested in.
-Do not guess, and do not optimize the list toward any topic. Every event is
-worth at least looking at. My job is to decide; your job is to show me the
-board and tell me what each thing actually is.
+What I care about: business and startup building, AI, and building software
+for business or for AI. That is the centre of the target.
+
+This shapes **scoring only**, not searching. Keep searching wide — every event
+is worth at least looking at, and I still want the whole board. Do not narrow
+your searches to my interests and do not drop things that miss the centre.
+Score them honestly and let me decide.
 
 ---
 
@@ -72,23 +75,42 @@ flattering: "~20 people, working engineers", "mostly recruiters and vendors",
 
 # RUBRIC
 
-Four axes, max 17. Score the event on its own merits. You have no information
-about my interests — do not invent any and do not score for fit to a topic.
+Five axes, max 22, then apply the penalty below.
 
 1. **Crowd** (1-5) — Are the people in the room doing the work (builders,
    operators, researchers), or spectating (recruiters, vendors, tourists,
    professional networkers)?
 2. **Substance** (1-5) — Will real products, real numbers, and real problems
    get discussed, or is it surface-level takes and small talk?
-3. **Friction** (1-5) — Cost, timing, travel, RSVP difficulty. Free or cheap,
-   evening, and reachable anywhere in the Bay scores high. Do not penalise an
-   event for being outside San Francisco — South Bay, peninsula and East Bay
-   are all fine.
-4. **Novelty** (0-2) — Is this new, unusual, or hard to stumble across? A
+3. **Fit** (1-5) — How close is this to business and startup building, AI, or
+   building software for business or for AI?
+   - **5** — squarely on target: AI builders, applied AI, founders building
+     companies, tooling for AI or for business.
+   - **4** — clearly adjacent: general startup, product, or infra events where
+     business or AI is a live topic.
+   - **3** — general tech with no particular business or AI angle.
+   - **2** — a meetup organised around a single programming language,
+     framework, or general dev craft, with no business or AI angle. A monthly
+     Python or Rust presentation night is a 2, however good the talks are.
+   - **1** — foreign government, consulate, chamber of commerce, trade
+     delegation, or country-promotion events. Also pure professional
+     networking with nothing being built or sold.
+4. **Friction** (1-5) — Cost, timing, travel, RSVP difficulty. Free or cheap
+   and reachable anywhere in the Bay scores high. Do not penalise an event for
+   being outside San Francisco — South Bay, peninsula and East Bay are all
+   fine.
+   - I strongly prefer **evening** events. Cap all-day, multi-day and daytime
+     events at **2**, regardless of how cheap or close they are.
+5. **Novelty** (0-2) — Is this new, unusual, or hard to stumble across? A
    recurring series that runs every single week scores 0; a one-off or a first
    edition scores 2. This is a small tiebreaker only, not a main signal.
 
-Show the four sub-scores. Do not collapse them into a total only.
+**Penalty:** subtract **1** from the total if the event is substantially about
+crypto, tokens, web3, blockchain, or digital assets. Apply it once. Show it in
+the breakdown as `crypto -1`.
+
+Show the five sub-scores and any penalty. Do not collapse them into a total
+only.
 
 ---
 
@@ -103,9 +125,10 @@ Structure:
    and any pattern worth noting (e.g. "unusually heavy on hiring events",
    "three separate hardware nights").
 2. An inline-styled `<table>`, sorted by score descending, with columns:
-   **Event | Date & time | Type | Room | Score /17 | Link**
-   - Score cell shows the total and the breakdown, e.g. `13` then a smaller
-     line `crowd 4 · substance 5 · friction 3 · novelty 1`.
+   **Event | Date & time | Type | Room | Score /22 | Link**
+   - Score cell shows the total and the breakdown, e.g. `17` then a smaller
+     line `crowd 4 · substance 5 · fit 4 · friction 3 · novelty 1`. Append
+     `· crypto -1` when the penalty applies.
    - Link text is the domain only, not the full URL.
    - Bold the top row.
 3. After the table, one `<p>` each for the top three: what it is and why it
