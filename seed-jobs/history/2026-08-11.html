@@ -1,366 +1,48 @@
-<!-- COMPANY 1: Serafis -->
-<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fffdf4; border: 1px solid #e0d8a8; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
-<strong style="font-size: 15px;">1. Serafis</strong> <span>🟡</span> — <span style="color: #555;">Podcast knowledge graph for investors</span><br>
-<span style="font-size: 13px; color: #666;"><a href="https://serafis.ai" style="color: #1a73e8;">serafis.ai</a> · San Francisco · 2025 · Seed · ~2 people · (YC S25 — flagged, no non-YC equivalent in podcast intelligence)</span>
+<!-- COMPANY 1: RefortifAI -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fffde7; border: 1px solid #ffe082; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">1. RefortifAI</strong> <span>🟡</span> — <span style="color: #555;">DRM and IP protection for distributed AI models</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://refortif.ai" style="color: #1a73e8;">refortif.ai</a> · San Francisco · 2026 · YC P26 · ~3 people (YC P26 — included for lack of non-YC equivalent)</span>
 
 <div style="font-size: 13px; color: #333; margin-top: 6px;">
 <strong>What they do</strong>
 <ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>Index 100K+ podcast transcripts into a structured knowledge graph.</li>
-<li>Search by person, company, or theme — returns timestamped citations.</li>
-<li>API, MCP agent tools, Snowflake data share for programmatic access.</li>
+<li>Obfuscate AI model weights so they run only inside a hardened runtime.</li>
+<li>Drop-in replacement for vLLM, SGLang.</li>
+<li>Ships models to edge/on-prem without exposing weights.</li>
 </ul>
 
 <strong>The problem they solve</strong>
 <ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>
-Info is scattered across thousands of hours of audio. Serafis builds a queryable knowledge graph — starting with podcasts.
-</li>
-<li>Analyst needs every CEO comment on margins — buried across 40 episodes.</li>
-<li>
-Already live with 12 organizations managing over $70B in capital.
-</li>
+<li>Company fine-tunes Llama for medical imaging, deploys to hospital GPU.</li>
+<li>Without protection, weights can be copied and resold.</li>
+<li>RefortifAI wraps them; extraction fails.</li>
 </ul>
 
 <strong>Money</strong>
 <ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>SaaS tiers: search, alerts, API, data warehouse feed.</li>
-<li>No disclosed revenue.</li>
+<li>Likely per-deployment or SaaS license. No public revenue yet.</li>
 </ul>
 
 <strong>Why now</strong>
 <ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>Whisper-class ASR + entity resolution at scale became cheap in 2024–25.</li>
-<li>
-Investors share perspectives on independent channels now, not just filings.
-</li>
+<li>Open-weight models are fine-tuned and deployed on-prem at scale for the first time.</li>
 </ul>
 </div>
 
-<div style="background: #fff8e1; border: 1px solid #ffe082; border-radius: 4px; padding: 6px; font-size: 13px;">
+<div style="background: #fff9c4; border: 1px solid #ffee58; border-radius: 4px; padding: 6px; font-size: 13px;">
 <strong>Bootstrap fit</strong><br>
-<strong>Objective:</strong> Timestamped transcript excerpts, not opinions. ✅<br>
-<strong>LLM deleted:</strong> Corpus + entity graph + search index remain. ✅<br>
-<strong>Accumulates:</strong> Corpus grows daily; entity graph deepens with each transcript. ✅<br>
-<strong>Week one:</strong> Customer searches a 100K-transcript library already built. ✅<br>
-<strong>Buyer:</strong> Asset managers — reachable, but AlphaSense ($3B+) already owns them. 🟡<br>
-<strong>Verdict: 🟡</strong> — corpus accumulates; eroding factor is AlphaSense expanding into podcasts.</div>
+<strong>Objective:</strong> Weights run only in the runtime or they don't. Binary test.<br>
+<strong>LLM deleted:</strong> Crypto/obfuscation runtime remains. No LLM involved.<br>
+<strong>Accumulates:</strong> Obfuscation techniques, inference-engine compatibility.<br>
+<strong>Week one:</strong> Customer wraps model and deploys. Immediate.<br>
+<strong>Buyer:</strong> AI teams deploying models off-cloud. Reachable but niche.<br>
+<strong>Verdict: 🟡</strong> — Real depth. Erodes: hardware TEEs and inference-engine providers could bundle. Market narrow — most providers serve via API.</div>
 
 <div style="font-size: 13px; margin-top: 6px;">
 <strong>Crowding</strong>
 <ul style="margin: 2px 0 0; padding-left: 18px;">
-<li>
-AlphaSense overlaps on transcript discovery; Sentieo on filings search.
-</li>
-<li>Podcast-only structured search is nearly empty as a sub-niche today.</li>
-</ul>
-</div>
-</div>
-
-<!-- COMPANY 2: Forgepoint AI -->
-<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fef4f4; border: 1px solid #e0b8b8; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
-<strong style="font-size: 15px;">2. Forgepoint (forgepoint.ai)</strong> <span>🔴</span> — <span style="color: #555;">AI inside-sales agents for US manufacturers</span><br>
-<span style="font-size: 13px; color: #666;"><a href="https://forgepoint.ai" style="color: #1a73e8;">forgepoint.ai</a> · Remote (US) · 2025 · Pre-seed (a16z Speedrun) · <a href="https://builtin.com/company/forgepoint-forgepointai" style="color: #1a73e8;">~3 people</a></span>
-
-<div style="font-size: 13px; color: #333; margin-top: 6px;">
-<strong>What they do</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>
-Deploy AI workers for sales, quoting, order intake, purchasing, AR, and customer service.
-</li>
-<li>Agent reads inbound RFQ emails, drawings, specs.</li>
-<li>Extracts material, tolerance, qty — applies the shop's own costing rules.</li>
-<li>Outputs a reviewable quote.</li>
-</ul>
-
-<strong>The problem they solve</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>
-Reads fastener RFQs, pulls size, grade, thread, finish, qty, doc requirements, checks stock, prepares quote.
-</li>
-<li>
-Claims 91% faster quote turnaround and 40+ hours saved per rep monthly. Go-live in &lt;30 days.
-</li>
-</ul>
-
-<strong>Money</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>Pricing not disclosed. Likely per-agent SaaS.</li>
-<li>
-Backed by a16z Speedrun, plus angels from Brex, Xwing, Betterment.
-</li>
-<li>
-Claims more customer demand than they can serve.
-</li>
-</ul>
-
-<strong>Why now</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>LLMs reliably extract structured data from messy PDFs and emails now.</li>
-<li>Reshoring pressure creates volume at shops with no back-office staff.</li>
-</ul>
-</div>
-
-<div style="background: #ffebee; border: 1px solid #ef9a9a; border-radius: 4px; padding: 6px; font-size: 13px;">
-<strong>Bootstrap fit</strong><br>
-<strong>Objective:</strong> Quote from deterministic inputs (material + time + markup). ✅<br>
-<strong>LLM deleted:</strong> Rules engine + ERP connector remain, but thin. 🟡<br>
-<strong>Accumulates:</strong> Extraction pipelines commoditize; nothing unique accrues. 🔴<br>
-<strong>Week one:</strong> Needs ERP integration — go-live is weeks, not minutes. 🟡<br>
-<strong>Buyer:</strong> Small manufacturer owners — reachable, willing to pay. ✅<br>
-<strong>Verdict: 🔴</strong> — Gate 3. Toolpath ($20M), Paperless Parts, Uptool, AMFG already here. Extraction pipelines don't accumulate a moat a bootstrapper can defend.</div>
-
-<div style="font-size: 13px; margin-top: 6px;">
-<strong>Crowding</strong>
-<ul style="margin: 2px 0 0; padding-left: 18px;">
-<li>
-Toolpath has raised $20M to date from Kennametal, Autodesk, ModuleWorks.
-</li>
-<li>Paperless Parts, Uptool, AMFG, Jiga also in manufacturing quoting AI.</li>
-</ul>
-</div>
-</div>
-
-<!-- COMPANY 3: Domos -->
-<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fef4f4; border: 1px solid #e0b8b8; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
-<strong style="font-size: 15px;">3. Domos</strong> <span>🔴</span> — <span style="color: #555;">AI workforce for residential property management</span><br>
-<span style="font-size: 13px; color: #666;"><a href="https://joindomos.com" style="color: #1a73e8;">joindomos.com</a> · New York · 2024 · Seed (~$3.25M) · <a href="https://builtin.com/job/founding-engineer-backend/4813600" style="color: #1a73e8;">~9 people</a></span>
-
-<div style="font-size: 13px; color: #333; margin-top: 6px;">
-<strong>What they do</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>
-AI agents handle resident and prospect communication via phone, email, SMS, and web chat 24/7. Voice AI answers calls with live access to resident data.
-</li>
-<li>Covers leasing, maintenance triage, collections, renewals, vendor coordination.</li>
-<li>
-Integrates into Yardi, Entrata, Rent Manager — no rip-and-replace.
-</li>
-</ul>
-
-<strong>The problem they solve</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>
-Built for mid-market operators facing chronic staffing shortages, high turnover, and rising costs.
-</li>
-<li>500-unit complex gets 200+ resident calls/week. Domos handles routine ones end-to-end.</li>
-</ul>
-
-<strong>Money</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>
-Raised $3.25M seed in April 2025.
- Investors include TenOneTen Ventures.</li>
-<li>
-100% pilot-to-deployment conversion rate. 900%+ YoY growth in 2025.
-</li>
-</ul>
-
-<strong>Why now</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>Voice AI quality crossed the threshold for handling real tenant calls.</li>
-<li>Property management staffing shortages are acute and structural.</li>
-</ul>
-</div>
-
-<div style="background: #ffebee; border: 1px solid #ef9a9a; border-radius: 4px; padding: 6px; font-size: 13px;">
-<strong>Bootstrap fit</strong><br>
-<strong>Objective:</strong> Route maintenance requests, answer with factual property data. ✅<br>
-<strong>LLM deleted:</strong> PMS connectors + call routing remain, but thin without AI. 🔴<br>
-<strong>Accumulates:</strong> PMS integrations are commodity; model quality needs data volume. 🔴<br>
-<strong>Week one:</strong> "Pre-trained from millions of interactions." Bootstrapper has zero. 🔴<br>
-<strong>Buyer:</strong> Mid-market property operators — reachable, paying. ✅<br>
-<strong>Verdict: 🔴</strong> — Gate 4. Cold-start: value comes from pre-training on millions of property interactions. Data-network-effect business.</div>
-
-<div style="font-size: 13px; margin-top: 6px;">
-<strong>Crowding</strong>
-<ul style="margin: 2px 0 0; padding-left: 18px;">
-<li>EliseAI ($220M raised), Funnel Leasing, LeaseHawk in property management AI.</li>
-<li>Crowded and capital-heavy space.</li>
-</ul>
-</div>
-</div>
-
-<!-- COMPANY 4: Octozi -->
-<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fef4f4; border: 1px solid #e0b8b8; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
-<strong style="font-size: 15px;">4. Octozi</strong> <span>🔴</span> — <span style="color: #555;">AI for clinical trial data cleaning</span><br>
-<span style="font-size: 13px; color: #666;"><a href="https://octozi.com" style="color: #1a73e8;">octozi.com</a> · Brooklyn, NY · 2023 · Seed (~$3M) · <a href="https://www.cbinsights.com/company/octozi" style="color: #1a73e8;">~4 people</a></span>
-
-<div style="font-size: 13px; color: #333; margin-top: 6px;">
-<strong>What they do</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>
-Automates clinical data workflows: data cleaning, review, reconciliation, reporting.
-</li>
-<li>
-Hybrid LLM + heuristics platform. Owns architecture, data integrations, and eval infra.
-</li>
-<li>
-Hiring first engineer outside the founding team now.
-</li>
-</ul>
-
-<strong>The problem they solve</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>
-Clinical trials cost ~$1B each and ~$1M for every day late. Still run on manual data review — people checking by hand.
-</li>
-<li>
-One customer's 10-month data cleaning process compressed to one month.
-</li>
-</ul>
-
-<strong>Money</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>
-$3M seed led by Surface Ventures (Remarkable Ventures participating).
-</li>
-<li>
-Clinical data management market: $4B in 2026, growing to $10.9B by 2035.
-</li>
-</ul>
-
-<strong>Why now</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>LLMs parse unstructured clinical formats that rule-based systems couldn't.</li>
-</ul>
-</div>
-
-<div style="background: #ffebee; border: 1px solid #ef9a9a; border-radius: 4px; padding: 6px; font-size: 13px;">
-<strong>Bootstrap fit</strong><br>
-<strong>Objective:</strong> Flag data mismatches against protocol specs — mechanically checkable. ✅<br>
-<strong>LLM deleted:</strong> Clinical domain expertise drives the validation rules. 🔴<br>
-<strong>Accumulates:</strong> Protocol-specific test sets, but domain experts own them. 🟡<br>
-<strong>Week one:</strong> Needs customer's trial data + protocol docs to do anything. 🟡<br>
-<strong>Buyer:</strong> Pharma companies — procurement-gated, 12+ month sales cycles. 🔴<br>
-<strong>Verdict: 🔴</strong> — Gate 2. Clinical domain expertise owns the rules. Gate 5 also fails: pharma procurement is heavy. Strong traction signal but not a bootstrap shape.</div>
-
-<div style="font-size: 13px; margin-top: 6px;">
-<strong>Crowding</strong>
-<ul style="margin: 2px 0 0; padding-left: 18px;">
-<li>Medidata (Dassault), Veeva Vault CDMS, Oracle Clinical dominate legacy.</li>
-<li>AI-native entrants are few. Octozi is early in a space owned by legacy vendors.</li>
-</ul>
-</div>
-</div>
-
-<!-- COMPANY 5: Aviad AI -->
-<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fef4f4; border: 1px solid #e0b8b8; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
-<strong style="font-size: 15px;">5. Aviad AI</strong> <span>🔴</span> — <span style="color: #555;">On-device small language models for game devs</span><br>
-<span style="font-size: 13px; color: #666;"><a href="https://aviad.ai" style="color: #1a73e8;">aviad.ai</a> · San Francisco · 2024 · Pre-seed (South Park Commons) · <a href="https://tracxn.com/d/companies/aviad/__TtsFTk8FdB9F_aShcJBW25nk579qP1EJC1-ii0v9g-Y" style="color: #1a73e8;">~3 people</a></span>
-
-<div style="font-size: 13px; color: #333; margin-top: 6px;">
-<strong>What they do</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>
-Focused on bringing on-device AI models to games. Models small enough to run locally on CPU.
-</li>
-<li>
-Free Unity package for building game systems around SLMs and embeddings.
-</li>
-<li>Fine-tune models for NPC dialogue, interactive storytelling mechanics.</li>
-</ul>
-
-<strong>The problem they solve</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>Game dev wants AI NPCs but can't call a cloud API (latency, cost, offline play).</li>
-<li>
-Models support low-end systems and don't compete with a game's graphics needs.
-</li>
-</ul>
-
-<strong>Money</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>
-Has not raised any funding rounds yet.
- South Park Commons community backing.</li>
-<li>Revenue model unclear — current package is free.</li>
-</ul>
-
-<strong>Why now</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>SLMs hit quality thresholds making on-device game dialogue viable.</li>
-<li>llama.cpp ecosystem matured enough for production CPU inference.</li>
-</ul>
-</div>
-
-<div style="background: #ffebee; border: 1px solid #ef9a9a; border-radius: 4px; padding: 6px; font-size: 13px;">
-<strong>Bootstrap fit</strong><br>
-<strong>Objective:</strong> Latency/memory are measurable; dialogue quality is taste. 🟡<br>
-<strong>LLM deleted:</strong> The SLM IS the product. Only a thin Unity wrapper remains. 🔴<br>
-<strong>Accumulates:</strong> Fine-tuned models and training data accumulate. ✅<br>
-<strong>Week one:</strong> Dev downloads free package, gets working NPC dialogue. ✅<br>
-<strong>Buyer:</strong> Indie game devs — prosumer, low WTP, saturated with free tools. 🔴<br>
-<strong>Verdict: 🔴</strong> — Gate 5. Game dev tooling is prosumer-shaped. Free package anchors price at zero.</div>
-
-<div style="font-size: 13px; margin-top: 6px;">
-<strong>Crowding</strong>
-<ul style="margin: 2px 0 0; padding-left: 18px;">
-<li>Inworld AI ($500M val), Convai, Charisma.ai in NPC dialogue.</li>
-<li>
-Gaming × AI has 530+ startups per Specter Insights.
-</li>
-</ul>
-</div>
-</div>
-
-<!-- COMPANY 6: Nullspace -->
-<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fef4f4; border: 1px solid #e0b8b8; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
-<strong style="font-size: 15px;">6. Nullspace</strong> <span>🔴</span> — <span style="color: #555;">Next-gen electromagnetic simulation for RF and quantum</span><br>
-<span style="font-size: 13px; color: #666;"><a href="https://nullspaceinc.com" style="color: #1a73e8;">nullspaceinc.com</a> · Huntsville, AL · 2025 · Seed (~$2.5M) · Small team</span>
-
-<div style="font-size: 13px; color: #333; margin-top: 6px;">
-<strong>What they do</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>
-Developing real-world enterprise RF simulation tools on modern numerical methods.
-</li>
-<li>Physics-based solvers for antenna, microwave, scattering, ion-trap design.</li>
-<li>
-Core tech refined 10+ years through IERUS Technologies, tested on products delivered to the DoD.
-</li>
-</ul>
-
-<strong>The problem they solve</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>
-Legacy simulation software tools used by engineers are cumbersome and outdated.
-</li>
-<li>RF engineer designing a 5G antenna waits hours for legacy sims to converge.</li>
-</ul>
-
-<strong>Money</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>
-$2.5M seed led by Fathom Fund with Golden Seeds.
-</li>
-<li>
-Targets aerospace, defense, quantum computing, and AI hardware markets.
-</li>
-</ul>
-
-<strong>Why now</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>
-5G, AI chip development, and electronic warfare drive surging RF demand. Quantum computing advances create a new design market.
-</li>
-</ul>
-</div>
-
-<div style="background: #ffebee; border: 1px solid #ef9a9a; border-radius: 4px; padding: 6px; font-size: 13px;">
-<strong>Bootstrap fit</strong><br>
-<strong>Objective:</strong> EM simulation is physics, not opinions. ✅<br>
-<strong>LLM deleted:</strong> No LLM involved — pure numerical methods. ✅<br>
-<strong>Accumulates:</strong> Solver algorithms refined over a decade. Deep moat. ✅<br>
-<strong>Week one:</strong> Engineer runs a simulation — useful immediately. ✅<br>
-<strong>Buyer:</strong> Defense/aerospace — procurement-gated, clearance-gated. 🔴<br>
-<strong>Verdict: 🔴</strong> — Gate 5. Primary buyers are defense contractors. 12–24 month procurement cycles. Not reachable by a solo founder without clearances and relationships.</div>
-
-<div style="font-size: 13px; margin-top: 6px;">
-<strong>Crowding</strong>
-<ul style="margin: 2px 0 0; padding-left: 18px;">
-<li>Ansys HFSS, CST Studio (Dassault), Altair FEKO dominate EM simulation.</li>
-<li>Nullspace is one of very few startup entrants in this legacy-vendor space.</li>
+<li>Fortanix, Opaque Systems — hardware-enclave approaches.</li>
+<li>No direct software DRM-for-weights competitor visible yet.</li>
 </ul>
 </div>
 </div>
