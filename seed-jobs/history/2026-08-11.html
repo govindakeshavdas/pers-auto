@@ -1,48 +1,311 @@
-<!-- COMPANY 1: RefortifAI -->
-<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fffde7; border: 1px solid #ffe082; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
-<strong style="font-size: 15px;">1. RefortifAI</strong> <span>🟡</span> — <span style="color: #555;">DRM and IP protection for distributed AI models</span><br>
-<span style="font-size: 13px; color: #666;"><a href="https://refortif.ai" style="color: #1a73e8;">refortif.ai</a> · San Francisco · 2026 · YC P26 · ~3 people (YC P26 — included for lack of non-YC equivalent)</span>
+<!-- COMPANY 1: Bucket Robotics -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fffbe6; border: 1px solid #e0d6a0; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">1. Bucket Robotics</strong> <span>🟡</span> — <span style="color: #555;">CAD → synthetic data → defect detection for factories</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://bucket.bot" style="color: #1a73e8;">bucket.bot</a> · SF / Pittsburgh · 2024 · Seed · ~5 people · (YC S24 — no non-YC equiv found)</span>
 
 <div style="font-size: 13px; color: #333; margin-top: 6px;">
 <strong>What they do</strong>
 <ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>Obfuscate AI model weights so they run only inside a hardened runtime.</li>
-<li>Drop-in replacement for vLLM, SGLang.</li>
-<li>Ships models to edge/on-prem without exposing weights.</li>
+<li>
+CV inspection for manufacturing — no labeling, no long pilots, no fragile rules.
+</li>
+<li>
+Generate photorealistic training datasets directly from CAD files.
+</li>
+<li>
+Model the part's geometry and failure modes. Working model before a camera is installed.
+</li>
 </ul>
 
 <strong>The problem they solve</strong>
 <ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>Company fine-tunes Llama for medical imaging, deploys to hospital GPU.</li>
-<li>Without protection, weights can be copied and resold.</li>
-<li>RefortifAI wraps them; extraction fails.</li>
+<li>
+Quality inspection is hard to deploy, hard to scale, and too dependent on manual labor. Most systems need months of labeling.
+</li>
+<li>Upload CAD of injection-molded part → synthetic defect images → model on line camera, same week.</li>
 </ul>
 
 <strong>Money</strong>
 <ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>Likely per-deployment or SaaS license. No public revenue yet.</li>
+<li>
+Team from Michelin, Uber ATG, Argo AI, Stack AV. Enterprise auto/industrial customers.
+</li>
+<li>
+~$500K raised. 5 people.
+</li>
 </ul>
 
 <strong>Why now</strong>
 <ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>Open-weight models are fine-tuned and deployed on-prem at scale for the first time.</li>
+<li>
+$700B US manufacturing automation push. Quality still a trust problem.
+</li>
+<li>Synthetic data gen now good enough to replace real-image labeling for industrial CV.</li>
 </ul>
 </div>
 
-<div style="background: #fff9c4; border: 1px solid #ffee58; border-radius: 4px; padding: 6px; font-size: 13px;">
+<div style="background: #fff8e1; border: 1px solid #ffe082; border-radius: 4px; padding: 6px; font-size: 13px;">
 <strong>Bootstrap fit</strong><br>
-<strong>Objective:</strong> Weights run only in the runtime or they don't. Binary test.<br>
-<strong>LLM deleted:</strong> Crypto/obfuscation runtime remains. No LLM involved.<br>
-<strong>Accumulates:</strong> Obfuscation techniques, inference-engine compatibility.<br>
-<strong>Week one:</strong> Customer wraps model and deploys. Immediate.<br>
-<strong>Buyer:</strong> AI teams deploying models off-cloud. Reachable but niche.<br>
-<strong>Verdict: 🟡</strong> — Real depth. Erodes: hardware TEEs and inference-engine providers could bundle. Market narrow — most providers serve via API.</div>
+<strong>Objective:</strong> Defect = mismatch vs. CAD geometry. Mechanically measurable.<br>
+<strong>LLM deleted:</strong> Synthetic data pipeline + CV models remain. Not an LLM wrapper.<br>
+<strong>Accumulates:</strong> Each part → synthetic dataset → trained model. Library compounds.<br>
+<strong>Week one:</strong> Customer uploads CAD, gets working inspection model pre-install.<br>
+<strong>Buyer:</strong> Mfg quality engineers. Reachable at trade shows. Pay to cut scrap.<br>
+<strong>Verdict: 🟡</strong> — All five gates pass technically. Downgraded: enterprise mfg sales are slow for a bootstrapper, on-site deployment adds services load, YC + AV-pedigree team is a poor competitive target.</div>
 
 <div style="font-size: 13px; margin-top: 6px;">
 <strong>Crowding</strong>
 <ul style="margin: 2px 0 0; padding-left: 18px;">
-<li>Fortanix, Opaque Systems — hardware-enclave approaches.</li>
-<li>No direct software DRM-for-weights competitor visible yet.</li>
+<li>Landing AI, Instrumental, Eigen — funded, some Series B+.</li>
+<li>
+Bucket ranks 7th among 12 competitors, 3 funded.
+ Synthetic-from-CAD is uncommon.</li>
+</ul>
+</div>
+</div>
+
+<!-- COMPANY 2: WilsonAI -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fce4ec; border: 1px solid #e0a0a0; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">2. WilsonAI</strong> <span>🔴</span> — <span style="color: #555;">AI paralegal for in-house legal teams</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://getwilson.ai" style="color: #1a73e8;">getwilson.ai</a> · London · Aug 2024 · Pre-seed (~$1.7M) · ~8 people</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Automate routine contract reviews, legal FAQ responses, integrate with internal knowledge bases.
+</li>
+<li>
+Flagship: AI paralegal powered by a "Legal Large Action Model."
+</li>
+<li>
+Beaten competitors in head-to-head pilots. Multi-six-figure revenue, 50× growth YTD.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Ex-Clifford Chance lawyer: "repetitive 30% of legal work consumes 70% of junior lawyers' time."
+</li>
+<li>
+Deployed with 10 high-growth tech companies. GCs to junior lawyers seeing gains.
+</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+€1.6M pre-seed led by Nomad Ventures.
+</li>
+<li>SaaS per-seat to in-house legal departments.</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>LLMs reliable enough for routine clause flagging and internal legal Q&A.</li>
+<li>
+Founder saw in-house pain firsthand. Met CTO at Entrepreneur First.
+</li>
+</ul>
+</div>
+
+<div style="background: #ffebee; border: 1px solid #ef9a9a; border-radius: 4px; padding: 6px; font-size: 13px;">
+<strong>Bootstrap fit</strong><br>
+<strong>Objective:</strong> 🔴 Contract review = judgment on risk, materiality, playbook deviations.<br>
+<strong>LLM deleted:</strong> Legal expertise remains. Ex-lawyer founder + one dev wins.<br>
+<strong>Accumulates:</strong> —<br>
+<strong>Week one:</strong> —<br>
+<strong>Buyer:</strong> —<br>
+<strong>Verdict: 🔴</strong> — Fails gate 1. Also fails gate 2: domain expert owns the value. Excellent traction signal — bad bootstrap target.</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>Harvey, Luminance, Ironclad AI, SpotDraft — well-funded.</li>
+<li>WilsonAI's wedge: in-house (not law firm) focus. Still crowded.</li>
+</ul>
+</div>
+</div>
+
+<!-- COMPANY 3: Tadata -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fce4ec; border: 1px solid #e0a0a0; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">3. Tadata</strong> <span>🔴</span> — <span style="color: #555;">MCP-as-a-Service: turn any API into an MCP server for agents</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://tadata.com" style="color: #1a73e8;">tadata.com</a> · San Francisco · 2024 · Seed · ~7 people</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Make products AI-ready in seconds. Spin up MCP servers so any AI agent can use your product. No auth/compatibility hassle.
+</li>
+<li>
+Creator of FastAPI-MCP, open-source framework used by startups and Fortune 10.
+</li>
+<li>
+250K+ downloads of the OSS library.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>SaaS companies need an MCP endpoint. Building one is boilerplate.</li>
+<li>
+People want to turn many backends into MCP servers — from OpenAPI specs, databases, workflow tools.
+</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Founded 2024. SF. 7 employees.
+</li>
+<li>
+Investors: GreatPoint Ventures, Rackhouse VC, Vermilion Cliffs.
+</li>
+<li>OSS bottom-up → hosted cloud platform (paid tier).</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>MCP protocol exploded 2025–2026. Every SaaS vendor now needs an MCP endpoint.</li>
+</ul>
+</div>
+
+<div style="background: #ffebee; border: 1px solid #ef9a9a; border-radius: 4px; padding: 6px; font-size: 13px;">
+<strong>Bootstrap fit</strong><br>
+<strong>Objective:</strong> Pass — API-to-MCP conversion is mechanically checkable.<br>
+<strong>LLM deleted:</strong> Pass — scaffolding tooling and hosting remain.<br>
+<strong>Accumulates:</strong> 🔴 Nothing durable. Thin utility. Model providers ship this as a feature.<br>
+<strong>Week one:</strong> —<br>
+<strong>Buyer:</strong> —<br>
+<strong>Verdict: 🔴</strong> — Fails gate 3. Anthropic, OpenAI, and Cloudflare absorb this as platform features. Open-source traction is real but not defensible.</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>Manufact/mcp-use (below), Cloudflare MCP Workers, Anthropic tooling.</li>
+<li>Dozens of OSS MCP generators competing for dev adoption.</li>
+</ul>
+</div>
+</div>
+
+<!-- COMPANY 4: Attunement -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fce4ec; border: 1px solid #e0a0a0; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">4. Attunement</strong> <span>🔴</span> — <span style="color: #555;">Compliance and audit infra for AI in behavioral health clinics</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://attunement.ai" style="color: #1a73e8;">attunement.ai</a> · San Francisco · 2024 · Pre-seed (~$500K) · ~3 people · (YC W24)</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Build compliance infra for AI in behavioral health. Make AI systems auditable, explainable, accountable.
+</li>
+<li>
+Connect clinical data pipelines, model outputs, and audit systems so every AI decision is traceable.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Clinics using Attunement cut audit prep time by 80%, documentation costs by 40%.
+</li>
+<li>Behavioral health clinics adopting AI must prove every decision is traceable for auditors.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+$500K convertible note (Jan 2024).
+</li>
+<li>
+3 people. Founded 2024. YC W24.
+</li>
+<li>
+Founding engineer role: $150–$300K, onsite SF.
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>Behavioral health clinics rushing to adopt AI. No purpose-built compliance layer exists.</li>
+</ul>
+</div>
+
+<div style="background: #ffebee; border: 1px solid #ef9a9a; border-radius: 4px; padding: 6px; font-size: 13px;">
+<strong>Bootstrap fit</strong><br>
+<strong>Objective:</strong> Pass — audit compliance is checkable against regulatory specs.<br>
+<strong>LLM deleted:</strong> 🔴 Domain knowledge (BH compliance rules, clinical audit norms). Compliance firm + one dev wins.<br>
+<strong>Accumulates:</strong> —<br>
+<strong>Week one:</strong> —<br>
+<strong>Buyer:</strong> —<br>
+<strong>Verdict: 🔴</strong> — Fails gate 2. Value is BH compliance expertise, not a technical system. Also gate 4: needs integration into clinic's EHR/data pipelines (cold start). Good niche signal — bad bootstrap target.</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>Narrow niche. Few direct competitors in BH-specific AI compliance.</li>
+<li>
+Competitors: Smart Reporting, RADPAIR, AxonDAO in adjacent spaces.
+</li>
+</ul>
+</div>
+</div>
+
+<!-- COMPANY 5: Manufact -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fce4ec; border: 1px solid #e0a0a0; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">5. Manufact (formerly mcp-use)</strong> <span>🔴</span> — <span style="color: #555;">OSS SDK + cloud for building and deploying MCP servers</span><br>
+<span style="font-size: 13px; color: #666;"><a href="https://mcp-use.io" style="color: #1a73e8;">mcp-use.io</a> · Zürich / SF · 2025 · YC S25 · ~3 people</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+OSS dev tools and infra for MCP. "Vercel, but for MCP servers."
+</li>
+<li>
+SDK: 8K+ GitHub stars, 3M+ downloads. Used by NASA, SAP, NVIDIA, 5K+ companies.
+</li>
+<li>
+3-person team. YC S25.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>Dev teams building AI agents need MCP servers to connect to external tools.</li>
+<li>Scaffolding, deploying, and managing MCP servers is boilerplate work.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>OSS SDK (free) → hosted cloud platform (paid).</li>
+<li>
+Founding team comp: $100K–$150K + 0.5%–1% equity.
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>MCP adopted by all major model providers in 2025–2026. Every agent team needs MCP infra.</li>
+</ul>
+</div>
+
+<div style="background: #ffebee; border: 1px solid #ef9a9a; border-radius: 4px; padding: 6px; font-size: 13px;">
+<strong>Bootstrap fit</strong><br>
+<strong>Objective:</strong> Pass — SDK works or doesn't.<br>
+<strong>LLM deleted:</strong> Pass — infra tooling remains.<br>
+<strong>Accumulates:</strong> 🔴 Nothing durable. MCP hosting is commodity infra. Protocol owner ships native tooling.<br>
+<strong>Week one:</strong> —<br>
+<strong>Buyer:</strong> —<br>
+<strong>Verdict: 🔴</strong> — Fails gate 3. Thin infra layer over a protocol controlled by Anthropic. Cloudflare already ships MCP Workers. Weekend project for any platform vendor. YC S25.</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>Tadata (above), Cloudflare MCP Workers, Anthropic's own tooling.</li>
+<li>Dozens of OSS MCP libs. Protocol owner dominates long-term.</li>
 </ul>
 </div>
 </div>
