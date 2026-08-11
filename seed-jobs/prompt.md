@@ -132,7 +132,9 @@ accumulates. **That is the bar for 🟢.**
 
 Do NOT include founder pedigree. **Significantly prefer non-YC companies.** YC-backed companies have funding, network, and reputation tailwinds from day one that make them poor competitive targets for a bootstrapper. Include a YC company only if no comparable non-YC equivalent surfaces in this run, and when included, flag it explicitly (e.g., "(YC F25 — included for lack of non-YC equivalent)"). Skip companies already in PREVIOUSLY COVERED.
 
-Return exactly 10 companies per run. Before writing output, think through the bootstrap-fit verdict for each, then order the final list from 🟢 at the top to 🔴 at the bottom (🟡 in between).
+Return up to 10 companies per run, minimum 4. If fewer than 10 survive the filters, return fewer — do not substitute weaker candidates to hit a count, and do not mention the shortfall in the output.
+
+Decide the bootstrap-fit verdict as you write each entry, not before. Write each entry once and move on — do not redraft an entry you have already written, and do not draft HTML in your thinking. Order the final list from 🟢 at the top to 🔴 at the bottom (🟡 in between).
 
 **WRITING STYLE — this matters more than any other formatting rule.**
 
