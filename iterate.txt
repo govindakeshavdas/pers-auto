@@ -1,4 +1,42 @@
 
+== 0811 == 
+
+1. Antares Labs — Custom AI for real estate owner-operators
+- Somewhat interesting ... but ... sits inside legacy systems 
+- If the first thing on day 1 is to be getting client meetings then very hard to get any traction - almost have to sell vaporware - to get an invite - ignore . 
+
+2. HousApp — AI workflow platform for real estate agents
+    - Fully subjective - ignore 
+
+3. Prolo — AI procurement for SME construction contractors
+-  THis is interesting rather than selling software -- selling the outcome --- genuinely interesting - keep -- 
+
+4. Traza — Autonomous AI workers for industrial procurement
+    - 
+7. Sira — AI HR manager for hourly deskless workers
+- I like this because it is a good niche - 
+- The task is not too subjective 
+- There may not be too many competitors - possible to get funded . 
+
+8. Halluminate — RL sandbox environments for training AI agents
+    - I like this -- 
+    - Techncial enough to be interesting 
+    - Very non subjective . 
+
+10. Inevitable AI Group (IAIG) — AI venture studio that builds SaaS companies in weeks
+ - Too weird 
+
+ 11. Intropy — AI operating system for the spare parts supply chain
+- Excellent --- UK based company there may not be too much crowding here ... 
+
+12. Trooly — AI voice agent that runs 45-min user research interviews
+    --- TOo subjective 
+
+13. Prop-AI — AI investment analytics for real estate (the "Bloomberg of RE")
+ - Junk too subjective .. 
+
+
+
 ==0809== 
  Vals AI   
  - Model benchmark evaluation - 
