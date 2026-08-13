@@ -1,110 +1,451 @@
-<!-- COMPANY 1: ThirdLaw AI -->
-<!-- COMPANY 2: BlinqIO -->  - skip, too large, founded 2023
-<!-- COMPANY 3: NegotiateAI -->
-<!-- COMPANY 4: Nexcade -->
-<!-- COMPANY 5: Traza -->
-<!-- COMPANY 6: Warrant -->
-<!-- COMPANY 7: Phaselab -->
-<!-- COMPANY 8: Prism Layer -->
+<!-- COMPANY 1: Temper -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #f4faf4; border: 1px solid #c4dcc4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">1. Temper</strong> <span>🟡</span> — <span style="color: #555;">AI agents that build, deploy, and fix supply-chain integrations</span><br>
+<span style="font-size: 13px; color: #666;">Supply-chain integration · <a href="https://ontemper.com" style="color: #1a73e8;">ontemper.com</a> · San Francisco · ~2024 · Seed (~$8M) · ~8 people</span>
 
-Let me finalize my list:
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Agentic integration platform: AI agents handle the full lifecycle of supply-chain data integrations.
+</li>
+<li>
+Automates EDI transactions (850s, 856s, 810s) without manual mapping.
+</li>
+<li>
+When something breaks, the agents fix it.
+</li>
+<li>
+Connects ERP, TMS, WMS, and carrier systems with AI-generated code.
+</li>
+</ul>
 
-1. **ThirdLaw AI** — Control/policy layer for enterprise AI agents. ~4 people. 2025. This is the most bootstrap-plausible.
-2. **NegotiateAI** — AI procurement for indirect spend. Menlo Ventures backed, Apple founder. Hiring founding engineers.
-3. **Nexcade** — AI agents for freight forwarders. London. Seed ($8.5M total). Named customers.
-4. **Traza** — AI procurement agents. Pre-seed ($2.1M). NYC. 7 people.
-5. **Warrant** — AI marketing compliance. Pre-seed ($720K). Durham. Techstars.
-6. **Phaselab** — AI eDiscovery. Seed ($2.8M). NYC. Fortune 500 customers.
-7. **Prism Layer** — AI enterprise risk management. Pre-seed. DC. Ex-Block founders.
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Every time two companies exchange data, someone builds a custom integration by hand. Manual, every time.
+</li>
+<li>Example: a 3PL needs to connect a new shipper's TMS to its WMS. Old way: 3–6 months of analysts + engineers. Temper: hours.</li>
+<li>
+Founders built a logistics startup from pre-seed to 400+ people. Dealt with broken integrations for years.
+</li>
+</ul>
 
-Now let me run bootstrap fit:
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Paying enterprise customers. More demand than they can keep up with. Seed-funded with over $8M raised.
+</li>
+<li>Revenue model: platform fees per integration or per connection.</li>
+</ul>
 
-**ThirdLaw AI**: Control layer for enterprise AI agents
-- Objective: Real-time policy enforcement against enterprise rules. "Is this behavior OK?" is checkable against a policy spec. ✅
-- LLM deleted: Policy engine and evaluation infrastructure remains. ✅
-- Accumulates: Policy libraries, enforcement rules, pattern database of AI misbehaviors. Maybe. But this could be replicated. Hmm. The eval harness accumulates if I build it carefully.
-- Week one: Customer needs to define their policies. But the product can ship with default policy templates. This is plausible.
-- Buyer: IT/Security teams at enterprises deploying AI. These are procurement-gated. 🔴 likely.
-Actually - these are enterprise security buyers. Very relationship-gated. And the space is getting crowded fast (Lakera, Arthur AI, Lasso Security, Calypso AI, etc.). Also this is close to trust & safety / content moderation territory which is auto-🔴 on objectivity. Let me reconsider.
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>LLMs can now generate, test, and debug integration code reliably enough to automate what was pure services work.</li>
+<li>
+Turns months of manual engineering into hours.
+</li>
+</ul>
+</div>
 
-Wait - "Is this AI behavior OK?" is literally a judgment call. This is moderation for AI agents. That's auto-🔴 on gate 1.
+<div style="background: #fff9c4; border: 1px solid #ffe082; border-radius: 4px; padding: 6px; font-size: 13px;">
+<strong>Bootstrap fit</strong><br>
+<strong>Objective:</strong> Integration either works or breaks — round-trip testable. ✅<br>
+<strong>LLM deleted:</strong> Code-gen engine + integration test harness remain. ✅<br>
+<strong>Accumulates:</strong> Library of working integration templates and EDI maps. ✅<br>
+<strong>Week one:</strong> Customer names two systems; agent writes and deploys the connection. ✅<br>
+<strong>Buyer:</strong> IT/ops leads at 3PLs and shippers. Pay to avoid months of services work. ✅<br>
+<strong>Verdict: 🟡</strong> — Passes all gates technically. But $8M raised, ~8 people, deep supply-chain operator founders, and already more demand than they can fill. Competing here means catching up to a well-resourced team with domain credibility and enterprise customers. The template library accumulates, but so does theirs — faster.
+</div>
 
-**NegotiateAI**: AI-driven procurement negotiation and benchmarking for indirect spend
-- Objective: "Benchmarking" prices and "automating negotiations" - negotiations involve judgment. But benchmarking against market prices could be objective. Actually the core action is negotiation, which is fundamentally taste/strategy. And "benchmark" prices still require data I'd need to accumulate. 
-- LLM deleted: Procurement domain knowledge and negotiation strategy. Domain experts own this. 🔴 gate 2.
-- Also needs ERP integration, spend data. Cold start problem.
-Verdict: 🔴
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>Legacy EDI vendors (SPS Commerce, Cleo) are large but not AI-native.</li>
+<li>Pandium, Workato, Celigo do iPaaS but are horizontal, not supply-chain specific.</li>
+<li>The vertical + AI-agent combo is still sparse.</li>
+</ul>
+</div>
+</div>
 
-**Nexcade**: AI agents for freight forwarders
-- Objective: Processing emails/documents into structured quote/booking data. Extracting from emails is checkable against the source email. Structured data extraction is objective. ✅
-- LLM deleted: What remains? Need to understand freight forwarding workflows deeply. Domain-expert founders (ex-Sedna COO). A freight forwarding firm could hire one dev... 🔴 gate 2.
-- Also: cold start - needs integration into forwarder systems, carrier data, rate sheets.
-Verdict: 🔴 (gate 2 — domain experts own it, and cold start on rate data)
+<!-- COMPANY 2: ZUUZ -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #f4faf4; border: 1px solid #c4dcc4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">2. ZUUZ</strong> <span>🟡</span> — <span style="color: #555;">AI layer that captures sales pipeline from email into CRM</span><br>
+<span style="font-size: 13px; color: #666;">Sales pipeline capture · <a href="https://zuuz.ai" style="color: #1a73e8;">zuuz.ai</a> · Sunnyvale, CA · ~2025 · Pre-seed · ~1–5 people</span>
 
-**Traza**: AI procurement agents for manufacturers
-- Same as NegotiateAI but for manufacturing/construction procurement
-- Needs ERP integration, supplier databases. Cold start. 🔴 gate 4.
-- Domain expertise required (procurement, supply chain). 🔴 gate 2.
-Verdict: 🔴
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Reads every email in a sales inbox, qualifies the lead, drafts the reply, and tracks the deal — automatically.
+</li>
+<li>
+Matches customer requirements against the seller's catalog and prepares quotes.
+</li>
+<li>Syncs captured pipeline back to CRM (HubSpot, etc.).</li>
+</ul>
 
-**Warrant**: AI marketing compliance for regulated industries
-- Objective: Reviews marketing content against compliance regulations. This is checking content against rules, which seems objective. But "aligns with brand voice and risk tolerance" is subjective. The compliance check itself could be objective (does this piece violate regulation X?), but risk tolerance is subjective. And "real-time insights" language. This is close to auto-🔴 territory for "scoring" and "judgment calls."
-- Actually: compliance review is a judgment call. "Does this marketing piece violate FINRA rules?" has gray areas. The rubric is the subjective part. 🔴 gate 1.
-Verdict: 🔴
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+RFP responses, renewal negotiations, and deal registrations move through email, not CRM. Pipeline visibility lives in reps' memory.
+</li>
+<li>
+Within 30 days at RA Technologies, ZUUZ surfaced $120K in active pipeline that had never been recorded in CRM.
+</li>
+</ul>
 
-**Phaselab**: AI eDiscovery for legal teams
-- What they do: Document classification for eDiscovery (relevance, privilege, responsiveness). This is literally document review — a classification/judgment task. 
-- Objective: Document classification in eDiscovery involves legal judgment about relevance and privilege. That's subjective. 🔴 gate 1.
-Verdict: 🔴
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+RA Technologies is live at $50K ARR with 50+ active users.
+</li>
+<li>
+In production at RA Technologies, Cloud Box, Nesto, and WIG.
+</li>
+<li>Tiered SaaS pricing: 1 mailbox (solo) through unlimited (enterprise).</li>
+</ul>
 
-**Prism Layer**: AI-native enterprise risk management
-- Objective: Risk management involves assessment and scoring. Auto-🔴.
-Verdict: 🔴
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>LLMs can now reliably classify inbound emails by intent (RFP, renewal, cold inquiry) and extract deal fields.</li>
+<li>SMB sales teams still use email as the real system of record.</li>
+</ul>
+</div>
 
-OK, so every company I found fails the bootstrap rubric. That's actually consistent with the calibration examples. Let me be honest about this and still write them up.
+<div style="background: #fff9c4; border: 1px solid #ffe082; border-radius: 4px; padding: 6px; font-size: 13px;">
+<strong>Bootstrap fit</strong><br>
+<strong>Objective:</strong> Email → deal record is checkable: does it match what's in the email? ✅<br>
+<strong>LLM deleted:</strong> Email parsing rules + CRM sync pipeline remain. Thin. ⚠️<br>
+<strong>Accumulates:</strong> Classification accuracy improves with labeled emails. Modest moat.<br>
+<strong>Week one:</strong> Connect mailbox, pipeline appears within hours. ✅<br>
+<strong>Buyer:</strong> SMB sales managers (1–10 reps). Real budget but small ACV.<br>
+<strong>Verdict: 🟡</strong> — Functional day one, buyer is reachable, output is checkable. But the CRM-sync-from-email space is crowded (Clari, Troops, Regie, Attio auto-capture, HubSpot AI). The LLM layer is thin — an intern-scale integration over model calls. What accumulates is the catalog-matching logic for niche industries (distribution, B2B wholesale), but a platform can absorb the core feature.
+</div>
 
-But wait - let me think about ThirdLaw more carefully. ThirdLaw enforces enterprise policies on AI agent actions in real-time. The policy is defined by the customer. ThirdLaw checks agent behavior against those policies. Is this objective?
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>Clarify, Attio, Streak — CRMs with auto-capture already built in.</li>
+<li>Clari, Gong — pipeline intelligence tools for mid-market+.</li>
+<li>ZUUZ's niche: SMB distribution/wholesale where the "catalog match" adds value beyond generic CRM capture.</li>
+</ul>
+</div>
+</div>
 
-The check is: "Does this AI action violate policy X?" - if policy X is written as a formal rule (e.g., "never send data to external APIs", "never use PII in responses"), then yes, it's checkable. It's like a firewall rule, not a moderation call. Firewall rules are objective.
+<!-- COMPANY 3: Spur -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fef9f0; border: 1px solid #f0d9a8; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">3. Spur</strong> <span>🔴</span> — <span style="color: #555;">AI QA agent that tests websites via natural language (YC S24 — included for reference)</span><br>
+<span style="font-size: 13px; color: #666;">QA testing · <a href="https://spurtest.com" style="color: #1a73e8;">spurtest.com</a> · New York · 2024 · Seed (~$4.5M) · ~8 people</span>
 
-But... "Is this OK?" is their own framing. And they include "policy-violating output" which could include content moderation. And their product description mentions "block, redact, reroute, or escalate" which sounds a lot like trust & safety.
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+AI QA agent. Users type natural-language test instructions; Spur launches web agents that mimic real users.
+</li>
+<li>
+AI-driven browser agents emulate real user interactions without CSS selectors or code access.
+</li>
+<li>
+Teams like Alo and HelloFresh cut regression testing time by 95%.
+</li>
+</ul>
 
-Actually, if the policies are formal/mechanistic (data never leaves this VPC, PII is redacted, no financial advice), then it's more like a compliance engine than moderation. But if it includes "is this response appropriate?" then it's moderation.
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Testing is time-consuming and painful. Tests break because UI is constantly changing.
+</li>
+<li>Example: e-commerce team deploys a checkout change. Old way: re-write Selenium scripts. Spur: re-run same natural-language instruction.</li>
+</ul>
 
-This is genuinely ambiguous. Per the rubric: "Unclear" on any line is 🔴, not 🟡.
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Raised $4.5M seed led by First Round Capital.
+</li>
+<li>
+Founded by Yale alums, ex-Figma & DeepMind. Backed by First Round, Neo, Pear VC, Conviction.
+</li>
+<li>SaaS pricing; customers include NextDoor, LivingSpaces, Wander.</li>
+</ul>
 
-Let me think about this differently. What I need is something that's closer to the accepted shape — "round-trip mismatch is mechanically measurable."
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>Multimodal LLMs can now navigate web UIs visually, making selector-free testing possible.</li>
+</ul>
+</div>
 
-ThirdLaw's policy enforcement could work IF the policies are formal rules (like security policies) and the output is binary (violation/no violation against a spec). That IS mechanically checkable. Like a firewall for AI. The value isn't in judging content — it's in enforcing machine-readable rules.
+<div style="background: #fde0dc; border: 1px solid #f5b7b1; border-radius: 4px; padding: 6px; font-size: 13px;">
+<strong>Bootstrap fit</strong><br>
+<strong>Objective:</strong> Test pass/fail is checkable — page state matches expected state. ✅<br>
+<strong>LLM deleted:</strong> A browser automation harness. Thin — the LLM is the product.<br>
+<strong>Accumulates:</strong> Nothing durable. Better prompts, better browser-use agents — but model providers ship these natively (Anthropic computer use, OpenAI Operator). 🔴<br>
+<strong>Week one:</strong> Works immediately — no data needed. ✅<br>
+<strong>Buyer:</strong> Eng/QA leads. Real budget. ✅<br>
+<strong>Verdict: 🔴</strong> — Fails gate 3 (durability). Browser-use agents are a platform feature, not a product. Anthropic, Google, and OpenAI are all shipping native browser interaction. The "natural language → browser action" layer commoditizes within 18 months. Also YC S24 with First Round backing — wrong competitive target.
+</div>
 
-But I think the line is blurry enough to be 🟡 at best. The problem is: what's in the policy is ultimately the subjective part, and the customer will always have edge cases where "is this a violation?" is arguable. 
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>QA Wolf, Cypress, Playwright, Rainforest QA — established testing tools.</li>
+<li>Anthropic computer-use, OpenAI Operator — platform-level browser agents.</li>
+<li>Numerous YC/seed-stage AI testing startups (Momentic, Carbonate, etc.).</li>
+</ul>
+</div>
+</div>
 
-Going 🔴 on gate 1 for ThirdLaw.
+<!-- COMPANY 4: Manufex -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fef9f0; border: 1px solid #f0d9a8; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">4. Manufex</strong> <span>🔴</span> — <span style="color: #555;">AI-powered manufacturing procurement and quoting marketplace</span><br>
+<span style="font-size: 13px; color: #666;">Manufacturing · <a href="https://manufex.io" style="color: #1a73e8;">manufex.io</a> · San Francisco · ~2024 · Early stage · 1–10 people</span>
 
-So I have a set of 🔴 companies. Let me present them honestly but clearly. The user's instruction says to return minimum 4 if they survive filters, and not to pad with weak ones. But the companies themselves ARE interesting niche signals even if bootstrap fit is 🔴.
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+On-demand manufacturing marketplace connecting hardware companies with vetted suppliers across CNC, sheet metal, 3D printing.
+</li>
+<li>
+AI agents ingest CAD files, identify manufacturability risks, and generate instant cost/lead-time estimates.
+</li>
+<li>
+Three portals — customer, supplier, internal — connected by a single order lifecycle.
+</li>
+</ul>
 
-Let me present the 6 most interesting ones, all 🔴, honestly evaluated.
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Custom manufacturing has always been opaque on the buyer side and chaotic on the ops side.
+</li>
+<li>Example: a hardware startup uploads a CNC part file. Old way: email 5 shops, wait days for quotes. Manufex: instant price + DFM feedback.</li>
+</ul>
 
-Actually wait - let me reconsider NegotiateAI. Their core value prop is "AI-driven benchmarks and AI-driven negotiations." If I strip out the negotiation part and just look at the benchmarking... 
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>Marketplace take-rate model on manufacturing orders.</li>
+<li>
+1–10 people, actively hiring across 6 roles.
+</li>
+<li>Traction signal: hiring first sales rep with "strong existing network within industrial machinery OEM procurement."</li>
+</ul>
 
-Benchmarking indirect spend: "You're paying $X for category Y, market rate is $Z." If this is based on a price comparison database they build, the comparison is objective. But:
-- LLM deleted: you need the price database/market intelligence. That's the moat.
-- Where does the database come from? Pooled customer data or purchased datasets. Cold start problem for a bootstrapper.
-🔴 gate 4.
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>Vision-language models can now parse CAD geometry well enough for DFM checks.</li>
+<li>Manufacturing procurement is still emails and phone calls for most shops.</li>
+</ul>
+</div>
 
-OK let me finalize. I'll write up 6 companies, all 🔴, ordered by how instructive the niche signal is.
+<div style="background: #fde0dc; border: 1px solid #f5b7b1; border-radius: 4px; padding: 6px; font-size: 13px;">
+<strong>Bootstrap fit</strong><br>
+<strong>Objective:</strong> Quotes are checkable against supplier actuals. ✅<br>
+<strong>LLM deleted:</strong> Supplier network and procurement ops remain — that's the real asset. 🔴<br>
+<strong>Accumulates:</strong> Supplier network, pricing history, quality data — all marketplace assets.<br>
+<strong>Week one:</strong> Cold start: no supplier network, no pricing data, no trust. 🔴<br>
+<strong>Buyer:</strong> Procurement engineers at hardware companies. Reachable. ✅<br>
+<strong>Verdict: 🔴</strong> — Fails gates 2 and 4. The value is the vetted supplier network and ops team, not the AI layer. A marketplace cold-start is unsolvable for a solo founder. Xometry, Fictiv, Hubs (Protolabs) are all large incumbents in this exact space.
+</div>
 
-Actually - let me reconsider one more time. What about the Fabrik Talent posting for a London seed-stage AI startup founded by ex-consultants, building an "AI-native knowledge platform" with early revenue? Too anonymous to include - it's a blind posting from a recruiter.
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>Xometry ($1B+ public), Fictiv, Hubs (Protolabs) — well-established marketplaces.</li>
+<li>Numerous smaller instant-quoting tools (Paperless Parts, Calcuquote).</li>
+<li>Crowded space with deep network effects.</li>
+</ul>
+</div>
+</div>
 
-Let me finalize with the 6 I have:
+<!-- COMPANY 5: Haladir -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fef9f0; border: 1px solid #f0d9a8; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">5. Haladir</strong> <span>🔴</span> — <span style="color: #555;">Formal solvers + LLMs for logistics optimization (YC W26 — included for reference)</span><br>
+<span style="font-size: 13px; color: #666;">Logistics optimization · <a href="https://www.ycombinator.com/companies/haladir" style="color: #1a73e8;">YC page</a> · San Francisco · 2025 · Seed (~$4.3M) · 4 people</span>
 
-1. Nexcade
-2. Traza  
-3. NegotiateAI
-4. Warrant
-5. Phaselab
-6. ThirdLaw AI
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Combines formal solvers with LLMs to give models a fundamental understanding of constraints. For logistics: routing, scheduling, resource allocation.
+</li>
+<li>
+Builds at model training layer (solver-based RL environments for frontier labs) and application layer (model harnesses for constrained workflows).
+</li>
+<li>
+Sits on top of WMS, TMS, OMS, unifies data into one operational graph.
+</li>
+</ul>
 
-All 🔴. I'll present them ordered by niche-signal value. Since they're all 🔴, order doesn't matter for the verdict-based sort. But the user wants 🟢 → 🟡 → 🔴. So they'll all be grouped as 🔴.
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Top models often fail to understand constraints in difficult scenarios. Optimizing across systems with millions of interdependent variables under hard constraints remains beyond current models.
+</li>
+<li>
+ConstraintBench: frontier models score under 65% feasibility on standard OR tasks.
+</li>
+</ul>
 
-Let me write the HTML now.
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Raised seed round, total funding $4.3M. Led by BoxGroup and Susa Ventures.
+</li>
+<li>Two revenue lines: selling RL training environments to AI labs + selling optimization layer to logistics firms.</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>RLVR (RL with verifiable rewards) changed post-training. Formal verification provides checkable ground-truth for RL.</li>
+<li>LLMs can now orchestrate solver calls, but can't replace them for constraint satisfaction.</li>
+</ul>
+</div>
+
+<div style="background: #fde0dc; border: 1px solid #f5b7b1; border-radius: 4px; padding: 6px; font-size: 13px;">
+<strong>Bootstrap fit</strong><br>
+<strong>Objective:</strong> Solver output is verifiably optimal/feasible — checkable. ✅<br>
+<strong>LLM deleted:</strong> Formal solvers, RL environments, constraint specs remain. Real depth. ✅<br>
+<strong>Accumulates:</strong> ConstraintBench datasets, solver harnesses, customer constraint graphs. ✅<br>
+<strong>Week one:</strong> Needs customer's WMS/TMS/OMS data and operational constraints. Cold start. 🔴<br>
+<strong>Buyer:</strong> VP Ops at logistics companies. Procurement-gated, long sales cycle. 🔴<br>
+<strong>Verdict: 🔴</strong> — Real technical depth (passes gates 1–3), but fails gate 4 (needs live operational data from customer systems) and gate 5 (enterprise logistics buyers are relationship-gated, long procurement). Also YC W26 with $4.3M — not a bootstrap target.
+</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>Palantir Foundry, Google OR-Tools, Gurobi — incumbent optimization tools.</li>
+<li>FourKites, project44 — logistics visibility but not optimization.</li>
+<li>Few startups combining formal methods + LLMs specifically.</li>
+</ul>
+</div>
+</div>
+
+<!-- COMPANY 6: sieve -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fef9f0; border: 1px solid #f0d9a8; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">6. sieve</strong> <span>🔴</span> — <span style="color: #555;">AI + human review for hedge fund data cleaning (YC P2025 — included for lack of non-YC equivalent)</span><br>
+<span style="font-size: 13px; color: #666;">Financial data cleaning · <a href="https://usesieve.com" style="color: #1a73e8;">usesieve.com</a> · New York · 2025 · Pre-seed (YC) · 2 people</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Solves data cleaning for hedge funds: API that integrates into existing pipeline, returns clean, high-quality data.
+</li>
+<li>
+AI finds source documents and extracts data. Expert reviewers verify each data point. Achieves accuracy AI-only approaches can't.
+</li>
+<li>
+Offers direct API access and Excel integration.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Most sophisticated hedge funds pay over-qualified data engineers to spend hours daily on data cleaning. Even earnings dates are a known hard problem in finance.
+</li>
+<li>Example: fund needs clean earnings dates across 5,000 tickers from SEC filings. Old way: analyst combs PDFs. sieve: API call returns verified data.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Founded in 2025 by Nicole Lu, 2 employees based in New York.
+</li>
+<li>
+Founder previously at Citadel (quant research, trading, data science) and McKinsey.
+</li>
+<li>Usage-based pricing per data point cleaned.</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>LLMs can now extract structured data from messy financial documents (PDFs, foreign filings).</li>
+<li>Human-in-the-loop hybrid model covers the accuracy gap that pure AI can't close.</li>
+</ul>
+</div>
+
+<div style="background: #fde0dc; border: 1px solid #f5b7b1; border-radius: 4px; padding: 6px; font-size: 13px;">
+<strong>Bootstrap fit</strong><br>
+<strong>Objective:</strong> Data point matches source document — checkable. ✅<br>
+<strong>LLM deleted:</strong> Expert reviewer network and financial domain knowledge remain. 🔴<br>
+<strong>Accumulates:</strong> Verified data corpus and extraction rules — real, but domain-owned.<br>
+<strong>Week one:</strong> Works — customer sends data request via API. ✅<br>
+<strong>Buyer:</strong> Hedge fund data teams. Relationship-gated, high-trust. 🔴<br>
+<strong>Verdict: 🔴</strong> — Fails gate 2. The value is financial domain expertise (knowing what "clean" means for earnings dates, corporate actions, etc.) plus human reviewer network. An ex-Citadel founder hiring one engineer beats a generalist here — and that's exactly their founding story. Strong traction signal, bad bootstrap target. Also gate 5: hedge fund buyers are relationship-gated.
+</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>S&P, Bloomberg, FactSet — incumbents with massive data teams.</li>
+<li>Addepar, Novus — portfolio analytics but not raw data cleaning.</li>
+<li>Small niche — few startups attacking the data-cleaning-as-API angle specifically.</li>
+</ul>
+</div>
+</div>
+
+<!-- COMPANY 7: Korva -->
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fef9f0; border: 1px solid #f0d9a8; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">7. Korva</strong> <span>🔴</span> — <span style="color: #555;">AI infrastructure for health plan (TPA) operations</span><br>
+<span style="font-size: 13px; color: #666;">Healthcare ops · <a href="https://korva.health" style="color: #1a73e8;">korva.health</a> · New York · 2025 · Pre-seed (~$740K) · ~3 people</span>
+
+<div style="font-size: 13px; color: #333; margin-top: 6px;">
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+AI-driven infrastructure platform that modernizes operations for health plans.
+</li>
+<li>
+Founding engineer builds AI agents for TPA operations — end-to-end, embedded with customers.
+</li>
+<li>
+Founded by UC Berkeley alums with deep experience in healthcare data, payer integrations, and provider workflows.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>Third-party administrators (TPAs) process claims, eligibility checks, and provider payments on legacy systems.</li>
+<li>Most of this is manual data entry, phone calls, and fax-based coordination.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>
+Raised $740K. Founded by Noah Kaminer and Shane Lavezzo in 2025.
+</li>
+<li>
+Primary industry: Enterprise Systems (Healthcare).
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 8px; padding-left: 18px;">
+<li>LLMs can now parse unstructured healthcare docs (EOBs, claims forms) reliably enough for automated processing.</li>
+</ul>
+</div>
+
+<div style="background: #fde0dc; border: 1px solid #f5b7b1; border-radius: 4px; padding: 6px; font-size: 13px;">
+<strong>Bootstrap fit</strong><br>
+<strong>Objective:</strong> Claims processing has checkable outputs (paid/denied matches policy). ✅<br>
+<strong>LLM deleted:</strong> Healthcare domain expertise (payer rules, provider contracts) remains. 🔴<br>
+<strong>Accumulates:</strong> Payer integration connectors, but domain experts own the rules.<br>
+<strong>Week one:</strong> Needs live integration into health plan's claims system (EHR, payer feeds). 🔴<br>
+<strong>Buyer:</strong> TPA executives. Regulated, procurement-gated. 🔴<br>
+<strong>Verdict: 🔴</strong> — Fails gates 2, 4, and 5. Domain expertise (payer rules, provider workflows) is the asset, not the tech layer. Cold start requires live payer/provider data feeds. Buyer is in regulated healthcare — procurement-gated. Strong founding signal (domain founders hiring first engineer), but this is the exact "domain expert hires one dev" pattern.
+</div>
+
+<div style="font-size: 13px; margin-top: 6px;">
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 0; padding-left: 18px;">
+<li>HealthEdge, Cognizant TriZetto — large TPA platforms.</li>
+<li>Oscar Health, Collective Health — tech-forward health plans.</li>
+<li>Small but growing cluster of AI-for-TPA startups.</li>
+</ul>
+</div>
+</div>
