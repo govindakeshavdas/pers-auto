@@ -1,0 +1,110 @@
+<!-- COMPANY 1: ThirdLaw AI -->
+<!-- COMPANY 2: BlinqIO -->  - skip, too large, founded 2023
+<!-- COMPANY 3: NegotiateAI -->
+<!-- COMPANY 4: Nexcade -->
+<!-- COMPANY 5: Traza -->
+<!-- COMPANY 6: Warrant -->
+<!-- COMPANY 7: Phaselab -->
+<!-- COMPANY 8: Prism Layer -->
+
+Let me finalize my list:
+
+1. **ThirdLaw AI** — Control/policy layer for enterprise AI agents. ~4 people. 2025. This is the most bootstrap-plausible.
+2. **NegotiateAI** — AI procurement for indirect spend. Menlo Ventures backed, Apple founder. Hiring founding engineers.
+3. **Nexcade** — AI agents for freight forwarders. London. Seed ($8.5M total). Named customers.
+4. **Traza** — AI procurement agents. Pre-seed ($2.1M). NYC. 7 people.
+5. **Warrant** — AI marketing compliance. Pre-seed ($720K). Durham. Techstars.
+6. **Phaselab** — AI eDiscovery. Seed ($2.8M). NYC. Fortune 500 customers.
+7. **Prism Layer** — AI enterprise risk management. Pre-seed. DC. Ex-Block founders.
+
+Now let me run bootstrap fit:
+
+**ThirdLaw AI**: Control layer for enterprise AI agents
+- Objective: Real-time policy enforcement against enterprise rules. "Is this behavior OK?" is checkable against a policy spec. ✅
+- LLM deleted: Policy engine and evaluation infrastructure remains. ✅
+- Accumulates: Policy libraries, enforcement rules, pattern database of AI misbehaviors. Maybe. But this could be replicated. Hmm. The eval harness accumulates if I build it carefully.
+- Week one: Customer needs to define their policies. But the product can ship with default policy templates. This is plausible.
+- Buyer: IT/Security teams at enterprises deploying AI. These are procurement-gated. 🔴 likely.
+Actually - these are enterprise security buyers. Very relationship-gated. And the space is getting crowded fast (Lakera, Arthur AI, Lasso Security, Calypso AI, etc.). Also this is close to trust & safety / content moderation territory which is auto-🔴 on objectivity. Let me reconsider.
+
+Wait - "Is this AI behavior OK?" is literally a judgment call. This is moderation for AI agents. That's auto-🔴 on gate 1.
+
+**NegotiateAI**: AI-driven procurement negotiation and benchmarking for indirect spend
+- Objective: "Benchmarking" prices and "automating negotiations" - negotiations involve judgment. But benchmarking against market prices could be objective. Actually the core action is negotiation, which is fundamentally taste/strategy. And "benchmark" prices still require data I'd need to accumulate. 
+- LLM deleted: Procurement domain knowledge and negotiation strategy. Domain experts own this. 🔴 gate 2.
+- Also needs ERP integration, spend data. Cold start problem.
+Verdict: 🔴
+
+**Nexcade**: AI agents for freight forwarders
+- Objective: Processing emails/documents into structured quote/booking data. Extracting from emails is checkable against the source email. Structured data extraction is objective. ✅
+- LLM deleted: What remains? Need to understand freight forwarding workflows deeply. Domain-expert founders (ex-Sedna COO). A freight forwarding firm could hire one dev... 🔴 gate 2.
+- Also: cold start - needs integration into forwarder systems, carrier data, rate sheets.
+Verdict: 🔴 (gate 2 — domain experts own it, and cold start on rate data)
+
+**Traza**: AI procurement agents for manufacturers
+- Same as NegotiateAI but for manufacturing/construction procurement
+- Needs ERP integration, supplier databases. Cold start. 🔴 gate 4.
+- Domain expertise required (procurement, supply chain). 🔴 gate 2.
+Verdict: 🔴
+
+**Warrant**: AI marketing compliance for regulated industries
+- Objective: Reviews marketing content against compliance regulations. This is checking content against rules, which seems objective. But "aligns with brand voice and risk tolerance" is subjective. The compliance check itself could be objective (does this piece violate regulation X?), but risk tolerance is subjective. And "real-time insights" language. This is close to auto-🔴 territory for "scoring" and "judgment calls."
+- Actually: compliance review is a judgment call. "Does this marketing piece violate FINRA rules?" has gray areas. The rubric is the subjective part. 🔴 gate 1.
+Verdict: 🔴
+
+**Phaselab**: AI eDiscovery for legal teams
+- What they do: Document classification for eDiscovery (relevance, privilege, responsiveness). This is literally document review — a classification/judgment task. 
+- Objective: Document classification in eDiscovery involves legal judgment about relevance and privilege. That's subjective. 🔴 gate 1.
+Verdict: 🔴
+
+**Prism Layer**: AI-native enterprise risk management
+- Objective: Risk management involves assessment and scoring. Auto-🔴.
+Verdict: 🔴
+
+OK, so every company I found fails the bootstrap rubric. That's actually consistent with the calibration examples. Let me be honest about this and still write them up.
+
+But wait - let me think about ThirdLaw more carefully. ThirdLaw enforces enterprise policies on AI agent actions in real-time. The policy is defined by the customer. ThirdLaw checks agent behavior against those policies. Is this objective?
+
+The check is: "Does this AI action violate policy X?" - if policy X is written as a formal rule (e.g., "never send data to external APIs", "never use PII in responses"), then yes, it's checkable. It's like a firewall rule, not a moderation call. Firewall rules are objective.
+
+But... "Is this OK?" is their own framing. And they include "policy-violating output" which could include content moderation. And their product description mentions "block, redact, reroute, or escalate" which sounds a lot like trust & safety.
+
+Actually, if the policies are formal/mechanistic (data never leaves this VPC, PII is redacted, no financial advice), then it's more like a compliance engine than moderation. But if it includes "is this response appropriate?" then it's moderation.
+
+This is genuinely ambiguous. Per the rubric: "Unclear" on any line is 🔴, not 🟡.
+
+Let me think about this differently. What I need is something that's closer to the accepted shape — "round-trip mismatch is mechanically measurable."
+
+ThirdLaw's policy enforcement could work IF the policies are formal rules (like security policies) and the output is binary (violation/no violation against a spec). That IS mechanically checkable. Like a firewall for AI. The value isn't in judging content — it's in enforcing machine-readable rules.
+
+But I think the line is blurry enough to be 🟡 at best. The problem is: what's in the policy is ultimately the subjective part, and the customer will always have edge cases where "is this a violation?" is arguable. 
+
+Going 🔴 on gate 1 for ThirdLaw.
+
+So I have a set of 🔴 companies. Let me present them honestly but clearly. The user's instruction says to return minimum 4 if they survive filters, and not to pad with weak ones. But the companies themselves ARE interesting niche signals even if bootstrap fit is 🔴.
+
+Let me present the 6 most interesting ones, all 🔴, honestly evaluated.
+
+Actually wait - let me reconsider NegotiateAI. Their core value prop is "AI-driven benchmarks and AI-driven negotiations." If I strip out the negotiation part and just look at the benchmarking... 
+
+Benchmarking indirect spend: "You're paying $X for category Y, market rate is $Z." If this is based on a price comparison database they build, the comparison is objective. But:
+- LLM deleted: you need the price database/market intelligence. That's the moat.
+- Where does the database come from? Pooled customer data or purchased datasets. Cold start problem for a bootstrapper.
+🔴 gate 4.
+
+OK let me finalize. I'll write up 6 companies, all 🔴, ordered by how instructive the niche signal is.
+
+Actually - let me reconsider one more time. What about the Fabrik Talent posting for a London seed-stage AI startup founded by ex-consultants, building an "AI-native knowledge platform" with early revenue? Too anonymous to include - it's a blind posting from a recruiter.
+
+Let me finalize with the 6 I have:
+
+1. Nexcade
+2. Traza  
+3. NegotiateAI
+4. Warrant
+5. Phaselab
+6. ThirdLaw AI
+
+All 🔴. I'll present them ordered by niche-signal value. Since they're all 🔴, order doesn't matter for the verdict-based sort. But the user wants 🟢 → 🟡 → 🔴. So they'll all be grouped as 🔴.
+
+Let me write the HTML now.
