@@ -24,19 +24,7 @@ changes the verdict. No founder pedigree; I don't care and it stops me reading.
 🔴.** Do not average, do not balance. A 🔴 costs me nothing; a false 🟢 costs me
 weeks. When a gate is arguable, it fails.
 
-**1. Objective?** (cheapest kill — run it first) Would two competent people, given
-the same input and no discussion, produce the same output? If the product emits a
-score, a rating, a judgment call, a recommendation, or anything sold as
-"insights" — no → 🔴. Adding a rubric doesn't fix it; the rubric *is* the
-subjective part.
-
-Auto-🔴: agent/broker workflow tools, investment "intelligence", interview or
-research quality, call scoring, coaching, moderation, branding, copy, design
-taste, candidate ranking.
-
-Passing shape: the output is checkable against something outside anyone's opinion
-— a spec, a measurement, a part number, a round-trip, a price, a diff, a number
-that reconciles.
+**1. Highly subjective / Taste / Judgement  : If the result is some report that is subjective , design content . Another example is some expert using their insight into a prompt like a lawyer adding their insight into cases into a product . This is too subjective and im not that expert with taste . There are a lot of products builnt on expert taste or judgement . -> Auto-🔴 
 
 **2. Can I start it?** Say what I build in week one, alone, before talking to
 anyone. It must run on data I can get myself. 🔴 if the first move is booking
@@ -54,15 +42,20 @@ the one thing that erodes it. 🔴 fails any one — name the gate.
 
 **Calibration — I already judged these. Match this severity.**
 
+
 | Idea | Verdict | Gate |
 |---|---|---|
-| AI workflow platform for real estate agents | 🔴 | 1 — fully subjective |
-| AI investment analytics for real estate | 🔴 | 1 — "insights" |
-| AI voice agent running 45-min research interviews | 🔴 | 1 — interview quality is taste |
-| Custom AI for real estate owner-operators | 🔴 | 2 — lives inside their legacy systems; day one is begging for meetings |
-| RL sandbox environments for training AI agents | 🟢 | technical, pass/fail is measurable |
-| AI operating system for the spare parts supply chain | 🟢 | parts reconcile or they don't; the equivalence table compounds |
-
+| Insurance-defense litigation intelligence | 🔴 | 4 — needs a case corpus I'll never have; useless to customer #1 |
+| Agentic trust & safety moderation | 🔴 | 1 — moderation calls are subjective; also a thin layer |
+| AI manufacturing engineer for factories | 🔴 | 2 — wrapper + domain experts own it |
+| Voice agents that demo and close B2B deals | 🔴 | 1 — demo quality is taste |
+| Immigration & visa management for employers | 🔴 | 2 — wrapper + immigration expertise owns it |
+| Call-center QA & coaching | 🔴 | 1 — scoring and coaching are subjective |
+| AI branding / naming platform | 🔴 | 1 — pure taste, zero moat |
+| Growth-strategy platform for founders | 🔴 | 1 + 4 — subjective and cold-start |
+| Job-search automation for seekers | 🔴 | 5 — freemium, indie-dev race to the bottom |
+| Landscaping takeoffs & cost estimation | 🟡 | 3 — real work, but commoditizes |
+| Real-time voice translation infra | 🟡 | 3 — real tech, but large providers absorb it |
 Return as many companies as you have analyzed ... 
 
 ---

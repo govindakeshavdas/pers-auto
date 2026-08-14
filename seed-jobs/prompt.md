@@ -30,21 +30,8 @@ Apply in order. **First failure stops the evaluation — verdict is 🔴.** Do n
 Be harsh. A 🔴 costs me nothing; a false 🟢 costs me weeks. When a gate is
 arguable, it fails.
 
-1. **Objectivity (cheapest kill — run it first).** Would two competent people,
-   given the same input and no discussion, produce the same output? If the product
-   emits a score, a rating, a judgment call, a policy call, a recommendation, or
-   anything described as "insights", the answer is no → 🔴. Adding a rubric does
-   not fix this; the rubric *is* the subjective part, and the customer will always
-   have their own.
 
-   **Auto-🔴, no further analysis:** content moderation / trust & safety calls,
-   call-center or sales-call QA and scoring, coaching and performance feedback,
-   demo or pitch quality, branding, naming, copy, growth strategy, design taste,
-   candidate or resume ranking, "AI decides what's good."
-
-   The passing shape: output is checkable against something outside anyone's
-   opinion — a spec, a physical measurement, a round-trip, a diff between two
-   systems, a number that reconciles.
+**1. Highly subjective / Taste / Judgement  : If the result is some report that is subjective , design content . Another example is some expert using their insight into a prompt like a lawyer adding their insight into cases into a product . This is too subjective and im not that expert with taste . There are a lot of products builnt on expert taste or judgement . -> Auto-🔴 
 
 2. **Who owns the value.** Delete the LLM from the product. What is left?
    - *Domain knowledge* (immigration rules, manufacturing process, claims practice,
@@ -65,6 +52,8 @@ arguable, it fails.
    "Better taste", "better prompts", "we're first", "we know the vertical" do not
    accumulate. Nothing accumulates → 🔴. A single-function utility a platform
    would absorb as a feature, or a thin layer over one model call → 🔴.
+   Also: is the grader mine, physical, or a public standard — or rented from a
+   third party who can change or kill it? Rented → 🔴.
 
 4. **Day one for customer #1.** Describe literally what the first customer
    receives in week one, and what it was built from. It must be useful with **zero
@@ -89,7 +78,7 @@ Verdict:
 - 🟡 real depth, but I can name what erodes the barrier.
 - 🔴 fails any one.
 
-Write-up: under **Bootstrap fit**, five labelled lines — Objective, LLM deleted,
+Write-up: under **Bootstrap fit**, five labelled lines — Grader, LLM deleted,
 Accumulates, Week one, Buyer. One line each, under 20 words. Then the verdict.
 "Unclear" on any line is 🔴, not 🟡.
 
@@ -167,70 +156,6 @@ Use the plain company name only — no tagline, no URL, no verdict. This is pars
 Company entries only. Do not add cross-company synthesis sections — no "Recurring problems", no "Gaps", no "Bootstrap viability" round-up, no closing commentary of any kind. End the output after the last company entry.
 
 Output only the HTML fragment. No preamble, no code fences, no markdown.
-
-**Worked example — match this density and sentence length exactly.**
-
-```html
-<!-- COMPANY 1: Vals AI -->
-<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #f4faf4; border: 1px solid #c4dcc4; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
-<strong style="font-size: 15px;">1. Vals AI</strong> <span>🟢</span> — <span style="color: #555;">Independent report card for AI models</span><br>
-<span style="font-size: 13px; color: #666;"><a href="https://vals.ai" style="color: #1a73e8;">vals.ai</a> · San Francisco · 2024 · Seed (~$5M) · ~12 people</span>
-
-<div style="font-size: 13px; color: #333; margin-top: 6px;">
-<strong>What they do</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>Independent report card for AI models.</li>
-<li>Not generic tests. Real job tasks: law, tax, finance, healthcare.</li>
-<li>Build the test sets with actual domain experts.</li>
-</ul>
-
-<strong>The problem they solve</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>A company asks: "GPT-5, Claude Opus, or Gemini for contract review?"</li>
-<li>MMLU scores don't answer that.</li>
-<li>Vals runs the models on real contract-review work and publishes scores.</li>
-</ul>
-
-<pre style="font-size: 12px; background: #fff; border: 1px solid #ddd; padding: 6px; margin: 0 0 8px;">Model    Accuracy   Cost/query
------    --------   ----------
-o3         46.8%      $3.79</pre>
-<div style="font-size: 12px; color: #666; margin-bottom: 8px;">Their Finance Agent Benchmark. Best model still failed half the time.</div>
-
-<strong>Money</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>SaaS: eval infra sold to AI labs and enterprise eng teams.</li>
-<li>Services: private custom benchmarks.</li>
-<li>2025: $1.3M revenue, 12 people.</li>
-</ul>
-
-<strong>Why now</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>Every company deploying LLMs must pick a model per task.</li>
-<li>Nobody has good data to pick with.</li>
-</ul>
-</div>
-
-<div style="background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 4px; padding: 6px; font-size: 13px;">
-<strong>Bootstrap fit</strong><br>
-<strong>Objective:</strong> Model scores are measured, not judged.<br>
-<strong>LLM deleted:</strong> The eval harness and expert-built test sets remain.<br>
-<strong>Accumulates:</strong> The benchmark datasets. Built once, reused forever.<br>
-<strong>Week one:</strong> Customer picks a model from a leaderboard that already exists.<br>
-<strong>Buyer:</strong> Eng leads deploying LLMs. They pay to avoid picking wrong.<br>
-<strong>Verdict: 🟢</strong></div>
-
-<div style="font-size: 13px; margin-top: 6px;">
-<strong>Crowding</strong>
-<ul style="margin: 2px 0 0; padding-left: 18px;">
-<li>Braintrust, LangSmith, Galileo — but those are eval tools, not published benchmarks.</li>
-<li>Per-vertical benchmarks are still mostly empty.</li>
-</ul>
-</div>
-</div>
-```
-
----
-
 # PREVIOUSLY COVERED COMPANIES
 
 Every company sent in any previous run is listed below — this list is complete, not a recent sample. **Do not include any of them.** If one turns up in search results, skip it entirely and keep searching. Return only companies absent from this list.

@@ -1,3 +1,26 @@
+#INTERESTING 
+https://frenos.io/ - Very interesting --- probably not too complex 
+Sits at an intersection of hosted / stuff that needs humans to be present - or at least physical prescense in the US - 
+Some SW development also probably needed . 
+Penetration testing for operational technology 
+
+
+#INTERESTING 
+4. BrandRank.AI — Measures and optimizes brand trust inside AI search engines
+Brand ranking is default no effort task that can be done easily --- 
+improving the ranking is the much harder task . 
+
+## Interesting 
+ Serafis 🟡 — Podcast knowledge graph for investors 
+
+## Interesting 
+RefortifAI 🟡 — DRM and IP protection for distributed AI models
+
+2. PageMind 🟡 — AI product-page content for e-commerce, optimized for AI search engines
+
+
+
+
 ======= Euphonia ====== 
  - There was a company called namecoach which had a bunch of phonemes i.e. the way things were pronounced - for name pronunciation for exameple 
  - they are selling that as a hosted service for companies to tap into ... 
