@@ -274,3 +274,9 @@ AgentMail
 StitcherAI
 Ossprey
 Arrakis
+Intellectible
+ChatFeatured
+Spangle AI
+Runlayer
+Architect Labs
+Evertune AI
