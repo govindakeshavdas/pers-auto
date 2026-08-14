@@ -1,4 +1,20 @@
 
+== 0812 == 
+
+- Tenakara : 
+
+ 2. Certo 🟢 — AI compliance OS for beauty and CPG brands
+    - Very deterministic -- compliance doesnt have too many subjective expert opinions . 
+
+3. 3. ConeLabs 🟢 — AI-native infrastructure inspection platform
+    - USer data collecting over time is not a strong moat ( maybe moat should be not a switch but a score ? this would be 1/5 moat and not 0 ) 
+    - Very thin wrapper -- over LLM -- this dilutes the moat even more 
+
+- Wrapper over llm should be penalized . 
+- Foreign companies should not be overvalued -- ... i.e. thre is still value in local . So maybe not  local & no local competitor should be given a weightge but less than teh others - maybe score out of 3 points and not 5 .  
+
+
+
 == 0811 == 
 
 1. Antares Labs — Custom AI for real estate owner-operators

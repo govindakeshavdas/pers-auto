@@ -15,8 +15,8 @@ Filter:
 
 For each company: what problem they solve (most bullets, technical, one concrete
 example), the **Fit** verdict from the rubric below, and crowding — who else
-does this for the same buyer, by name, and whether the **US** slot is open. No
-founder pedigree; I don't care and it stops me reading.
+does this for the same buyer, by name. Crowding is context, not a gate; it never
+changes the verdict. No founder pedigree; I don't care and it stops me reading.
 
 ---
 
@@ -49,16 +49,8 @@ model call, or a single function a bigger platform absorbs next year → it's a 
 → 🔴. Something must accumulate: a dataset I build, a harness, a benchmark, a
 comparison engine, real technical depth. Name it.
 
-**4. Is the US slot open?** Count funded startups doing this for the same buyer in
-the US. Crowded, or a Series A incumbent already there → 🔴. Thin competition is
-what makes it fundable. A non-US company with no US equivalent is a **strong
-positive** — say so.
-
-Call out two boosters when present: sells the outcome rather than seats, and
-technically meaty enough to be interesting.
-
-Verdict: 🟢 passes all four — name what accumulates. 🟡 passes, but I can name the
-one thing that erodes it. 🔴 fails any one — name the gate.
+Verdict: 🟢 passes all three — name what accumulates. 🟡 passes, but I can name
+the one thing that erodes it. 🔴 fails any one — name the gate.
 
 **Calibration — I already judged these. Match this severity.**
 
@@ -68,15 +60,10 @@ one thing that erodes it. 🔴 fails any one — name the gate.
 | AI investment analytics for real estate | 🔴 | 1 — "insights" |
 | AI voice agent running 45-min research interviews | 🔴 | 1 — interview quality is taste |
 | Custom AI for real estate owner-operators | 🔴 | 2 — lives inside their legacy systems; day one is begging for meetings |
-| AI procurement for SME construction contractors | 🟢 | sells the outcome, not software |
-| AI HR manager for hourly deskless workers | 🟢 | narrow niche, checkable task, thin competition |
 | RL sandbox environments for training AI agents | 🟢 | technical, pass/fail is measurable |
-| AI operating system for the spare parts supply chain | 🟢 | parts reconcile or they don't; UK company, US slot open |
+| AI operating system for the spare parts supply chain | 🟢 | parts reconcile or they don't; the equivalence table compounds |
 
-Return about 12 companies, minimum 6. If fewer survive, return fewer — don't pad,
-don't mention the shortfall. Decide each verdict as you write the entry, not
-before. Write each entry once and move on: no redrafting, no drafting HTML in
-your thinking. Order 🟢 first, then 🟡, then 🔴.
+Return as many companies as you have analyzed ... 
 
 ---
 
@@ -102,7 +89,7 @@ Match the example below for styling.
 Each company is a numbered `<div>`: header line (number, name, verdict emoji,
 tagline), facts line (`domain · city · $Xm stage (date)`), `What they do` 3–4
 bullets, `The problem they solve` 2–3 bullets with one concrete example, `Fit`
-with its four labelled lines and verdict, `Crowding` 1–2 bullets naming
+with its three labelled lines and verdict, `Crowding` 1–2 bullets naming
 competitors. Each Fit line under 20 words. "Unclear" on any line is 🔴, not 🟡.
 
 Immediately before each entry's `<div>`, emit an HTML comment naming the company,
@@ -116,48 +103,6 @@ the format must match for every entry.
 Company entries only. No cross-company synthesis — no "Recurring problems", no
 "Gaps", no closing commentary. End after the last entry. Output only the HTML
 fragment: no preamble, no code fences, no markdown.
-
-**Worked example — match this density and sentence length exactly.**
-
-```html
-<!-- COMPANY 1: Ferrum -->
-<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 6px; padding: 10px; margin-bottom: 16px;">
-<strong style="font-size: 15px;">1. Ferrum</strong> <span>🟢</span> — <span style="color: #555;">Finds the replacement part when the original is discontinued</span><br>
-<span style="font-size: 13px; color: #666;"><a href="https://ferrum.io" style="color: #2563eb;">ferrum.io</a> · Manchester · $2.1M pre-seed (Jul 2026)</span>
-
-<div style="font-size: 13px; color: #333; margin-top: 6px;">
-<strong>What they do</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>Sell to maintenance teams in factories and food plants.</li>
-<li>Read 400 manufacturer parts catalogs into one table.</li>
-<li>Given a dead part number, return every equivalent still in production.</li>
-</ul>
-
-<strong>The problem they solve</strong>
-<ul style="margin: 2px 0 8px; padding-left: 18px;">
-<li>A pump seal fails. The manufacturer stopped making it in 2019.</li>
-<li>A technician spends two days on the phone. The line stays down.</li>
-<li>Ferrum returns four in-stock equivalents with dimensions and price.</li>
-</ul>
-</div>
-
-<div style="background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 4px; padding: 8px; font-size: 13px;">
-<strong>Fit</strong><br>
-<strong>Objective:</strong> The part fits or it doesn't. Dimensions are measured.<br>
-<strong>Start:</strong> Catalogs are public PDFs. Scrape them alone in week one.<br>
-<strong>Moat:</strong> The cross-manufacturer equivalence table. Built once, compounds.<br>
-<strong>US slot:</strong> Open. UK company, no US equivalent found.<br>
-<strong>Verdict: 🟢</strong> Sells the outcome — the line restarts.</div>
-
-<div style="font-size: 13px; color: #666; margin-top: 6px;">
-<strong>Crowding</strong>
-<ul style="margin: 2px 0 0; padding-left: 18px;">
-<li>Grainger and RS sell parts. Neither maps equivalents across brands.</li>
-<li>Nobody funded is doing this for US mid-market plants.</li>
-</ul>
-</div>
-</div>
-```
 
 ---
 
