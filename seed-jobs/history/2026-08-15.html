@@ -1,394 +1,429 @@
-<!-- COMPANY 1: Clearafi -->
-<div style="background:#f8fdf8; border:1px solid #c5e1c5; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
-<strong>1. Clearafi 🟡 — Multi-model consensus layer that scores LLM agreement before humans act</strong><br>
-<span style="font-size:12px; color:#555;">AI trust/validation · Remote (US) · founded ~2025 · pre-seed (undisclosed) · ~1–3 people
-<br><a href="https://clearafi.ai" target="_blank">clearafi.ai</a> · <a href="https://clearafi.ai/blog/enterprise-ai-validation-trust-layer/" target="_blank">blog</a></span>
+<!-- COMPANY 1: Structured AI -->
+<div style="background: #f0faf0; border: 1px solid #b6e2b6; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">1. Structured AI &nbsp;🟡&nbsp; Computer-vision QA/QC for construction drawings</strong>
+<br>
+<span style="font-size: 12px; color: #555;">
+Construction AI · New York · Founded 2025 · Seed (~$5M) · ~10 people · (YC F25 — included for strength of signal)
+<br>
+<a href="https://getstructured.ai" target="_blank">getstructured.ai</a> ·
+<a href="https://www.ycombinator.com/companies/structured-ai" target="_blank">YC profile</a>
+</span>
 
 <br><br><strong>What they do</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Sits between user queries and LLMs; fans queries across multiple models and compares outputs.
-</li>
-<li>
-Queries at least three top-tier LLMs (OpenAI, Anthropic, Google) simultaneously.
-</li>
-<li>
-Not another AI — it's a verification layer that aggregates responses, analyzes variance, and surfaces truth via "Algorithmic Consensus."
-</li>
-<li>
-Provides an AI confidence score; highlights exactly where and why models disagree.
-</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>Scans engineering drawing sets (MEP, structural, civil) with custom CV models.</li>
+<li>Checks for code compliance, tag inconsistencies, and cross-discipline clashes.</li>
+<li>Integrates with Revit; moving toward in-software "spell check" for drawings.</li>
 </ul>
 
 <strong>The problem they solve</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Areas where models agree form a probable baseline; disagreements flag ambiguity, complexity, or hallucination.
-</li>
-<li>Example: a law firm asks three LLMs to summarize a contract clause. Two agree, one invents a non-existent clause. Clearafi flags the discrepancy instantly.</li>
-<li>
-Professionals focus only on resolving highlighted discrepancies instead of reading every AI output word-by-word.
-</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>Senior engineers manually redline thousands of drawings — up to half their time.</li>
+<li><em>Example:</em> a missing fire-damper tag on an MEP sheet causes a six-figure change order in the field.</li>
+<li>70% of construction rework traces back to drawing errors caught too late.</li>
 </ul>
 
 <strong>Money</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>Freemium model — free tier with referral unlock for full multi-model consensus.</li>
-<li>Enterprise SaaS pricing likely per-seat or per-query.</li>
-<li>No disclosed revenue or funding round.</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>SaaS sold to engineering firms; already revenue-generating.</li>
+<li>$4.2M seed led by FCVC, with 20VC, Cherry, Sequoia Scout, YC.</li>
+<li>Syska Hennessy (major MEP firm) is both investor and dev partner for ~4 years.</li>
 </ul>
 
 <strong>Why now</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Only ~1/3 of orgs have mature AI governance; 48% now name security concerns the top barrier to AI adoption (up from 17% in 2024).
-</li>
-<li>Multiple frontier LLMs at commodity API prices make multi-model cross-referencing economically viable.</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>Vision-language models now parse dense engineering symbology reliably for the first time.</li>
+<li>Industry under pressure: senior engineers retiring faster than firms can hire replacements.</li>
 </ul>
 
 <strong>Bootstrap fit</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li><strong>Grader:</strong> Objective — model agreement is mechanically measurable, no taste.</li>
-<li><strong>LLM deleted:</strong> Left with a comparison harness and scoring engine — a technical system.</li>
-<li><strong>Accumulates:</strong> Prompt templates, disagreement patterns, per-domain calibration data accumulate — but a thin layer risk exists.</li>
-<li><strong>Week one:</strong> Customer pastes a query, gets consensus score across 3 models in seconds. Zero prior data needed.</li>
-<li><strong>Buyer:</strong> Enterprise compliance/IT teams — reachable but procurement-gated at large orgs; SMB buyers unclear.</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li><strong>Grader:</strong> Objective — mechanical mismatch between drawing marks and code is measurable.</li>
+<li><strong>LLM deleted:</strong> Custom CV models remain; the value is the vision pipeline, not an LLM call.</li>
+<li><strong>Accumulates:</strong> Proprietary CV training data on engineering drawings; grows with each firm onboarded.</li>
+<li><strong>Week one:</strong> Upload a PDF drawing set → get a list of flagged inconsistencies. No historical data needed.</li>
+<li><strong>Buyer:</strong> Engineering firm principals. Reachable, but sales cycle is relationship-heavy in AEC.</li>
 </ul>
-<strong>Verdict: 🟡</strong> — Passes all five gates, but the consensus harness is a thin layer over API calls. Deepseek, OpenRouter, or a model provider could absorb this as a feature. What accumulates (disagreement patterns, domain calibrations) is real but fragile. Named risk: platform absorption.
+<strong>Verdict: 🟡</strong> — Real CV depth and objective grading. But: construction buyers are slow-cycle and relationship-gated. A bootstrapper without AEC network will stall on distribution. Syska partnership (4 years to build) is the moat — not replicable solo.
 
 <br><br><strong>Crowding</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Neuromorphic Labs raised $5.1M seed for a similar "trust layer" for enterprise AI.
-</li>
-<li>Trust3 AI, Attestable, and hapiy.ai all pitch adjacent "AI trust layer" positioning. Space is getting crowded fast.</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>PlanGrid (Autodesk), Newforma, Bluebeam do doc management but not AI QA/QC.</li>
+<li>Few direct competitors: some ConTech startups (Togal.AI, Buildots) touch adjacent problems, not the same niche.</li>
 </ul>
 </div>
 
-<!-- COMPANY 2: Super44 -->
-<div style="background:#f8fdf8; border:1px solid #c5e1c5; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
-<strong>2. Super44 🔴 — AI business partner for local shops: connects to POS, finds profit leaks, suggests actions</strong><br>
-<span style="font-size:12px; color:#555;">SMB analytics · Bonn, Germany · founded 2025 · pre-seed · ~5 people
-<br><a href="https://super44.ai" target="_blank">super44.ai</a> · <a href="https://wellfound.com/jobs/3823058-founding-engineer" target="_blank">Wellfound JD</a></span>
+<!-- COMPANY 2: Mechro -->
+<div style="background: #fff8e1; border: 1px solid #e6d08a; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">2. Mechro &nbsp;🔴&nbsp; AI diagnostic troubleshooting for heavy machinery</strong>
+<br>
+<span style="font-size: 12px; color: #555;">
+Industrial AI · Tulsa, OK · Founded ~2025 · Pre-seed (Gitwit studio, $500K–$2M) · ~3 people
+<br>
+<a href="https://www.gitwit.com/companies" target="_blank">gitwit.com/companies</a> ·
+<a href="https://gitwit.pinpointhq.com/postings/6a91394e-7d4b-433a-a5b5-9232a20f989c" target="_blank">Job posting</a>
+</span>
 
 <br><br><strong>What they do</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Connects to a merchant's POS and finds where they're losing money — then tells them what to do.
-</li>
-<li>
-AI chat interface: ask questions in plain language, get data-backed answers. POS integration + Google review monitoring.
-</li>
-<li>
-Tells you which items to push, which to price up, which to quietly retire — ranked by profit, not popularity.
-</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>Field technicians describe equipment symptoms in plain language.</li>
+<li>Platform returns machine-specific diagnostic guidance.</li>
+<li>Product experts train and evaluate the AI over time — continuous learning loop.</li>
 </ul>
 
 <strong>The problem they solve</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Example: a new patisserie opened nearby — your croissant sales dropped 20%. Your cinnamon buns are your best pastry: 56% of upsells, 14 review mentions.
-</li>
-<li>
-A good consultant is €2,000 and shows up monthly. Super44 shows up every morning — for less than a week of milk.
-</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>Equipment OEMs lose money on support calls; technicians lack tribal knowledge.</li>
+<li><em>Example:</em> a hydraulic fault on a Cat excavator — tech gets step-by-step diagnostic path instead of calling HQ.</li>
+<li>Expertise walks out the door as senior techs retire; no system captures it.</li>
 </ul>
 
 <strong>Money</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Backed by āltitude and Team Ignite Ventures.
-</li>
-<li>SaaS subscription — low monthly price targeting micro-businesses.</li>
-<li>
-Founded by two repeat operators: Henry led POS products at SumUp, Alex was SumUp's CEO Europe with a previous exit.
-</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>Enterprise contracts with OEMs; live revenue within 6 months of POC.</li>
+<li>Built inside Gitwit venture studio, which invests $500K–$2M per venture.</li>
+<li>Hiring co-founder for GTM — implies early but real paying customers.</li>
 </ul>
 
 <strong>Why now</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>LLMs can now interpret messy POS data and generate natural-language business advice cheaply.</li>
-<li>POS APIs (SumUp, Square, Lightspeed) have standardized enough for plug-and-play integration.</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>LLMs can now do multi-step diagnostic reasoning over technical manuals.</li>
+<li>OEMs are under pressure to add intelligence around their machines as a service layer.</li>
 </ul>
 
 <strong>Bootstrap fit</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li><strong>Grader:</strong> Advice is subjective — "push cinnamon buns, retire croissants" is taste/judgement.</li>
-<li><strong>LLM deleted:</strong> Left with POS data aggregation — basic BI; the "what to do" layer is the LLM.</li>
-<li><strong>Accumulates:</strong> Merchant-specific history accumulates, but no defensible technical asset.</li>
-<li><strong>Week one:</strong> Connect POS → see insights. Works day one.</li>
-<li><strong>Buyer:</strong> Local business owners — low willingness to pay, high churn, expensive to acquire.</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li><strong>Grader:</strong> Partially objective (diagnosis has a right answer), but "guidance quality" is subjective.</li>
+<li><strong>LLM deleted:</strong> What remains is OEM-specific troubleshooting data — domain knowledge. 🔴</li>
+<li><strong>Accumulates:</strong> Training data from product experts and field interactions.</li>
+<li><strong>Week one:</strong> Needs OEM manuals, fault codes, and expert training — cold start for a bootstrapper.</li>
+<li><strong>Buyer:</strong> OEM executives — relationship-gated, long sales cycle.</li>
 </ul>
-<strong>Verdict: 🔴</strong> — Fails gate 1 (advice is subjective) and gate 5 (SMB buyers with low willingness to pay). Strong founder signal (SumUp alumni) but wrong shape for bootstrapping. Every POS provider (Square, SumUp, Toast) will add AI insights as a feature.
+<strong>Verdict: 🔴</strong> — Gate 2. Delete the LLM: what's left is machinery domain knowledge and OEM relationships. An equipment manufacturer who hires one engineer catches up. Strong traction signal (revenue in 6 months), but that traction comes from Gitwit's industry partnerships — not replicable solo.
 
 <br><br><strong>Crowding</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>Square AI, Toast AI, Lightspeed analytics all moving here.</li>
-<li>Dozens of "AI business advisor" apps on Product Hunt — heavily crowded SMB space.</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>Augmentir, Aquant, and Maximo (IBM) play in field-service AI.</li>
+<li>OEMs (Caterpillar, John Deere) building in-house diagnostic tools.</li>
 </ul>
 </div>
 
-<!-- COMPANY 3: 5U AI -->
-<div style="background:#f8fdf8; border:1px solid #c5e1c5; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
-<strong>3. 5U AI 🔴 — AI Workers for freight forwarding: quoting, bookings, tracking, invoice reconciliation</strong><br>
-<span style="font-size:12px; color:#555;">logistics AI · Munich, Germany · founded 2025 · pre-seed (~$3.2M) · ~7 people
-<br><a href="https://5u.ai" target="_blank">5u.ai</a> · <a href="https://cargoforwarder.eu/2026/07/28/5u-ai-from-football-to-agentic-ai-freight-start-up/" target="_blank">CFG interview</a></span>
+<!-- COMPANY 3: Soren (AI Evals) -->
+<div style="background: #fff8e1; border: 1px solid #e6d08a; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">3. Soren &nbsp;🔴&nbsp; Automated AI evaluation and debugging agents</strong>
+<br>
+<span style="font-size: 12px; color: #555;">
+AI DevTools · San Francisco · Founded 2025 · Seed (~$500K) · ~3 people · (YC F25 — included for niche relevance)
+<br>
+<a href="https://soren.ai" target="_blank">soren.ai</a> ·
+<a href="https://www.ycombinator.com/companies/soren" target="_blank">YC profile</a>
+</span>
 
 <br><br><strong>What they do</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-AI Workers manage quoting, bookings, shipment tracking, invoice reconciliation, data entry, and routine admin across air, sea, and road freight.
-</li>
-<li>
-Adds AI Workers to existing systems instead of replacing a forwarder's current tools.
-</li>
-<li>
-Key differentiator: a "Context Layer" that records reasoning behind each operational decision, building institutional knowledge.
-</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>Agents auto-generate test cases for LLM/agent systems.</li>
+<li>Analyze failures, cluster root causes, run experiments to find fixes.</li>
+<li>Add new tests when model/prompt/tool changes are detected.</li>
 </ul>
 
 <strong>The problem they solve</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Many freight companies still use email and spreadsheets. General AI and older automation have not made much difference.
-</li>
-<li>
-First AI Workers went live with paying customers end of 2025. Workshop-to-live within four weeks.
-</li>
-<li>Example: forwarder ops person copies rate from email into TMS, cross-checks carrier schedules, creates booking — 5U AI Worker does this end-to-end.</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>AI engineers spend 20+ hours/week writing evals and combing logs.</li>
+<li><em>Example:</em> after a prompt change, Soren auto-generates regression tests and flags a 4% hallucination spike in a customer-support agent before it ships.</li>
 </ul>
 
 <strong>Money</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-$3.2M pre-seed led by Emerge Capital.
-</li>
-<li>
-Backed by personal checks from ex-DHL, GEODIS, DSV, Maersk, Ceva Logistics executives.
-</li>
-<li>
-StartupHub estimates annual revenue ~$965K (low confidence).
-</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>Usage-based SaaS for AI engineering teams.</li>
+<li>$500K raised from Abstraction Capital, YC, Eight Capital Group.</li>
+<li>Targeting $3.5–4B AI testing/MLOps market slice.</li>
 </ul>
 
 <strong>Why now</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-By mid-2025, AI models had reached the point where agents could genuinely do work — and the founders knew that window wouldn't stay open long.
-</li>
-<li>
-Freight forwarding software market expected to grow from ~$530M to $1.7B by 2035.
-</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>Agentic systems are hitting production — eval maintenance is now a real bottleneck, not a research nicety.</li>
 </ul>
 
 <strong>Bootstrap fit</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li><strong>Grader:</strong> Operational tasks (quoting, booking) are objective — pass.</li>
-<li><strong>LLM deleted:</strong> Left with freight domain rules, carrier rate sheets, TMS integrations — domain knowledge.</li>
-<li><strong>Accumulates:</strong> Context Layer is real, but requires customer data to build value.</li>
-<li><strong>Week one:</strong> Needs TMS integration + carrier data + customer's operational context. Cold start.</li>
-<li><strong>Buyer:</strong> Freight forwarder ops managers — reachable but relationship-gated and integration-heavy.</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li><strong>Grader:</strong> Objective — test pass/fail is mechanical.</li>
+<li><strong>LLM deleted:</strong> Left with an orchestration layer and generated test suites — thin. 🔴</li>
+<li><strong>Accumulates:</strong> Arguably the test corpus, but model providers (Anthropic, OpenAI) ship eval tools themselves.</li>
+<li><strong>Week one:</strong> Plug in your eval suite, get auto-generated test cases. Works without historical data.</li>
+<li><strong>Buyer:</strong> AI engineering teams at startups — reachable, but low WTP at early stage; freemium-shaped market.</li>
 </ul>
-<strong>Verdict: 🔴</strong> — Fails gate 2: delete the LLM, what remains is freight domain expertise. Founders backed by DHL/Maersk executives — classic "domain expert hires first engineer" pattern. Strong traction signal, but a domain freight company hiring one developer could replicate. Also fails gate 4: requires live integration into customer TMS/ERP to deliver value.
+<strong>Verdict: 🔴</strong> — Gate 3. This is a thin layer over model calls that model providers will absorb. OpenAI, Anthropic, and open-source frameworks (DeepEval has 10K+ GitHub stars) are already shipping eval tooling. A single-function utility on the platform's roadmap. Nothing accumulates that survives the provider adding "auto-evals" as a feature.
 
 <br><br><strong>Crowding</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-5U AI is part of a competitive field.
- Competitors include Synkka AI, Flexport's AI features, CargoAi, and Freightos.</li>
-<li>Nexcade (previously covered) targets the same $210B market with $2.4M pre-seed.</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>DeepEval (Confident AI, YC, $2.2M seed) — open-source LLM eval framework, widely adopted.</li>
+<li>Braintrust, LangSmith (LangChain), Arize Phoenix, Context.ai (GV-backed).</li>
+<li>OpenAI and Anthropic both ship built-in eval tools.</li>
 </ul>
 </div>
 
-<!-- COMPANY 4: hapiy.ai -->
-<div style="background:#f8fdf8; border:1px solid #c5e1c5; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
-<strong>4. hapiy.ai 🔴 — Trust layer for enterprise AI: validation middleware between teams and LLMs</strong><br>
-<span style="font-size:12px; color:#555;">AI governance · Boston, MA · founded 2025 · pre-seed · ~0–2 people
-<br><a href="https://builtin.com/job/founding-software-engineer/7188513" target="_blank">BuiltIn JD</a></span>
+<!-- COMPANY 4: DiligenceSquared -->
+<div style="background: #fff8e1; border: 1px solid #e6d08a; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">4. DiligenceSquared &nbsp;🔴&nbsp; AI-generated commercial due diligence for PE funds</strong>
+<br>
+<span style="font-size: 12px; color: #555;">
+FinTech / PE Tools · New York · Founded 2025 · Seed (~$5M) · ~3 people · (YC F25 — included for niche relevance)
+<br>
+<a href="https://www.ycombinator.com/companies/diligencesquared-inc" target="_blank">YC profile</a>
+</span>
 
 <br><br><strong>What they do</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Founding engineer role at a pre-seed startup. Mission: build the trust layer for enterprise AI.
-</li>
-<li>Sits between enterprise users and LLM outputs to validate, audit, and enforce guardrails.</li>
-<li>
-Pre-seed startup. Wants a builder who ships systems end-to-end, is energized by ambiguity.
-</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>AI agents conduct expert interviews and synthesize market insights.</li>
+<li>Every claim linked to source transcripts — auditable output.</li>
+<li>Replaces $500K–$1M McKinsey/BCG CDD reports.</li>
 </ul>
 
 <strong>The problem they solve</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>Enterprises adopting AI lack tooling to know when an LLM makes a bad decision or leaks data.</li>
-<li>Adjacent to observability but focused on "Is this output OK?" rather than latency/cost.</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>PE funds spend $30M+/year on static, unauditable due diligence decks.</li>
+<li><em>Example:</em> a mid-market PE fund evaluating a SaaS acquisition gets a full CDD report in days instead of weeks, with source-linked claims.</li>
 </ul>
 
 <strong>Money</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-$100K–$200K salary range for founding engineer. Pre-seed, no disclosed funding.
-</li>
-<li>
-0 employees listed on BuiltIn. Founded 2025.
-</li>
-<li>Revenue model: enterprise SaaS (likely per-seat or per-API-call).</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>Per-engagement pricing (replaces $500K–$1M consulting reports).</li>
+<li>8 PE fund clients with $2.4T combined AUM.</li>
+<li>$5M raised; backed by YC and Relentless.</li>
 </ul>
 
 <strong>Why now</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Enterprise buyers now run AI startup readiness as a first-class diligence track, not a footnote.
-</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>LLMs can now synthesize multi-source qualitative research at the quality bar PE analysts expect.</li>
 </ul>
 
 <strong>Bootstrap fit</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li><strong>Grader:</strong> "Is this OK?" requires defining what OK means — subjective per org.</li>
-<li><strong>LLM deleted:</strong> Left with policy rules engine — but policies are domain-specific.</li>
-<li><strong>Accumulates:</strong> Unclear. Policies are customer-specific, not platform-level.</li>
-<li><strong>Week one:</strong> Customer needs to configure their own policies, data flows, threat models. Cold start.</li>
-<li><strong>Buyer:</strong> Enterprise IT/security teams — heavily procurement-gated.</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li><strong>Grader:</strong> Subjective — "good CDD" is expert judgment. 🔴</li>
+<li><strong>LLM deleted:</strong> Left with domain knowledge of what PE partners want in a report — consulting expertise.</li>
+<li><strong>Accumulates:</strong> Unclear — each deal is bespoke.</li>
+<li><strong>Week one:</strong> Needs access to expert networks, transcripts, proprietary data sources.</li>
+<li><strong>Buyer:</strong> PE fund partners — extreme relationship-gating.</li>
 </ul>
-<strong>Verdict: 🔴</strong> — Fails gate 1 (what's "OK" is subjective per organization), gate 4 (needs customer's policy context), and gate 5 (procurement-gated enterprise buyer). Too early to tell if anything defensible is being built. Space is crowded with Cyera ($12B), Trust3 AI, Neuromorphic Labs, and ThirdLaw AI (previously covered).
+<strong>Verdict: 🔴</strong> — Gate 1. "Good due diligence" is expert judgment. The founders are an ex-Blackstone Principal and ex-BCG Principal — they bring the taste for what PE partners accept. This is a domain-expert-as-founder play. Strong traction signal (8 top PE clients), and a terrible bootstrap target — a solo dev without PE relationships will never land the first client.
 
 <br><br><strong>Crowding</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Cyera raised $600M at $12B for an enterprise AI trust layer.
-</li>
-<li>Neuromorphic Labs ($5.1M seed), Trust3 AI, Attestable, ThirdLaw AI — crowded and well-funded.</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>AlphaSense, Tegus, and SPS (S&P) cover adjacent research/expert-network space.</li>
+<li>Few direct CDD automation competitors yet — early mover advantage, but consulting firms could build in-house.</li>
 </ul>
 </div>
 
-<!-- COMPANY 5: TransVoix -->
-<div style="background:#f8fdf8; border:1px solid #c5e1c5; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
-<strong>5. TransVoix 🔴 — Real-time voice translation infra preserving speaker identity, for contact centers and AI voice platforms</strong><br>
-<span style="font-size:12px; color:#555;">voice infra · Phoenix, AZ · founded ~2025 · bootstrapped / pre-seed (friends & family) · ~1 person
-<br><a href="https://transvoix.ai" target="_blank">transvoix.ai</a> · <a href="https://wellfound.com/jobs/4056650-founding-engineer" target="_blank">Wellfound JD</a></span>
+<!-- COMPANY 5: Superposition -->
+<div style="background: #fff8e1; border: 1px solid #e6d08a; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">5. Superposition &nbsp;🔴&nbsp; AI headhunter agent for startup founding teams</strong>
+<br>
+<span style="font-size: 12px; color: #555;">
+HR Tech · New York · Founded 2025 · Pre-seed (~$1.6M) · 2 people
+<br>
+<a href="https://www.superposition.ai" target="_blank">superposition.ai</a> ·
+<a href="https://builtin.com/job/founding-engineer/7792415" target="_blank">Job posting (Built In)</a>
+</span>
 
 <br><br><strong>What they do</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Voice infrastructure for real-time multi-lingual translation maintaining speaker's vocal identity.
-</li>
-<li>Three product surfaces: human-to-human translation for contact centers, AI agent voice surfaces, and a developer SDK.</li>
-<li>
-C2PA-signed manifest binding cloned voice to speaker, source audio hash, model version, and timestamp.
-</li>
-<li>
-Streaming ASR + MT + synthesis run in parallel. End-to-end p50 of ~740ms.
-</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>Voice-based intake: founders describe their ideal hire in a 30-min conversation.</li>
+<li>Agent sources, screens, and reaches out to candidates from GitHub, blogs, papers.</li>
+<li>Delivers curated shortlists via Slack; integrates with ATS.</li>
 </ul>
 
 <strong>The problem they solve</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-"Pass-the-phone" and coworker translation produce no documentation — a compliance gap under Title VI, Section 1557.
-</li>
-<li>
-Medical/legal interpreter services cost significantly more per minute vs. real-time AI translation.
-</li>
-<li>
-Every conversation produces a side-by-side transcript in both languages, timestamped and searchable.
-</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>Seed founders spend half their week on LinkedIn Recruiter instead of shipping.</li>
+<li><em>Example:</em> agent scanned 43,802 candidates in 5 weeks, surfaced 15 matches, and Plastic Labs hired their platform engineer.</li>
 </ul>
 
-<pre style="font-size:12px; background:#eee; padding:6px; margin:6px 0;">
-Metric            TransVoix
-─────────────────────────────
-Latency (p50)     ~740 ms
-Voice clone seed  3 seconds
-Beta testers      40+
-Compliance        HIPAA BAA ready, C2PA provenance
-</pre>
-
 <strong>Money</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Bootstrapped to date with friends-and-family backing.
-</li>
-<li>Usage-based pricing (per-minute).</li>
-<li>
-Solo founder with cybersecurity background from a Fortune 100 financial institution, two MS degrees.
-</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>Subscription or per-search pricing (replacing $30K+ retained search).</li>
+<li>$1.6M pre-seed from same investors as Hugging Face, Loom, Granola.</li>
+<li>Hiring first employee — implies early but real revenue.</li>
 </ul>
 
 <strong>Why now</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>Streaming ASR, neural MT, and voice cloning became real-time-capable and affordable in 2024–2025.</li>
-<li>AI voice agent platforms (Retell, Vapi, Bland) need multilingual support and don't want to build it themselves.</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>LLMs can now read GitHub, papers, blogs to build candidate profiles — sourcing grunt work is automatable.</li>
 </ul>
 
 <strong>Bootstrap fit</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li><strong>Grader:</strong> Translation quality is mechanically measurable (round-trip accuracy, latency) — pass.</li>
-<li><strong>LLM deleted:</strong> Left with a real-time pipeline: ASR + MT + TTS + voice cloning + provenance — technical system.</li>
-<li><strong>Accumulates:</strong> Real tech depth today. But large providers (Google, Meta, ElevenLabs) absorb this.</li>
-<li><strong>Week one:</strong> API call → translated audio. Works immediately. Pass.</li>
-<li><strong>Buyer:</strong> Contact center ops managers, voice AI platforms — reachable. Pass.</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li><strong>Grader:</strong> Partially subjective — "good candidate" involves taste. 🔴</li>
+<li><strong>LLM deleted:</strong> Left with a sourcing pipeline and profile database — thin layer.</li>
+<li><strong>Accumulates:</strong> Calibration data from founder approvals, but model providers absorb search agents.</li>
+<li><strong>Week one:</strong> Works without historical data — founder describes hire, agent searches.</li>
+<li><strong>Buyer:</strong> Seed founders — reachable but low-volume, price-sensitive segment.</li>
 </ul>
-<strong>Verdict: 🔴</strong> — Fails gate 3 (durability). Real tech depth today, but Google Translate + Cloud TTS, ElevenLabs, Meta SeamlessM4T, and every major cloud provider are converging on real-time voice translation. The pipeline is hard to build today but is a feature for any large provider within 18 months. No dataset or harness accumulates that a platform cannot replicate.
+<strong>Verdict: 🔴</strong> — Gate 1. Candidate quality scoring is fundamentally subjective — "the perfect weirdo" (their words) is pure taste. The founder (ex-recruiter who placed Brex engineer #1) brings domain judgment that is the moat. Also Gate 3: LinkedIn, Wellfound, and AI coding assistants are all building agent-sourcing features.
 
 <br><br><strong>Crowding</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>Meta SeamlessM4T is open-source real-time voice translation.</li>
-<li>Google Cloud Speech-to-Speech, ElevenLabs, Deepgram — all moving into multilingual voice.</li>
-<li>KUDO, Interprefy, and Wordly exist in the enterprise interpreter replacement space.</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>Dover, Juicebox, Moonhub, Ashby AI — all ship AI sourcing for startups.</li>
+<li>LinkedIn Recruiter adding AI features aggressively.</li>
+<li>Wellfound Reach (AI sourcing agents) launched recently.</li>
 </ul>
 </div>
 
-<!-- COMPANY 6: Stealth Edge AI Co -->
-<div style="background:#f8fdf8; border:1px solid #c5e1c5; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
-<strong>6. Stealth Edge AI Co 🔴 — Metro-edge GPU inference nodes with AI traffic routing for low-latency AI workloads</strong><br>
-<span style="font-size:12px; color:#555;">AI infra / edge compute · New York, NY · founded ~2025 · pre-seed (undisclosed, backed by Montauk Capital) · ~2–5 people
-<br><a href="https://www.builtinnyc.com/job/head-infrastructure-stealth-edge-ai-co/9265429" target="_blank">BuiltIn JD</a></span>
+<!-- COMPANY 6: Bravi -->
+<div style="background: #fff8e1; border: 1px solid #e6d08a; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">6. Bravi &nbsp;🔴&nbsp; AI voice/chat agents for home-service installers</strong>
+<br>
+<span style="font-size: 12px; color: #555;">
+Vertical SaaS / Home Services · Paris → New York · Founded 2025 · Pre-seed (~$500K, YC) · ~2 people · (YC F25 — included for niche specificity)
+<br>
+<a href="https://bravi.app" target="_blank">bravi.app</a> ·
+<a href="https://www.ycombinator.com/companies/bravi" target="_blank">YC profile</a>
+</span>
 
 <br><br><strong>What they do</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Pre-seed venture specialized in modular, metro-edge AI capabilities. Leverages existing infrastructure for inference deployment.
-</li>
-<li>
-Intelligently routes traffic based on demand proximity and real-world network limitations, bypassing heavy power requirements of hyperscalers.
-</li>
-<li>
-Initiating operations with pilot nodes in NYC, executing city-by-city expansion.
-</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>AI voice agents answer inbound calls 24/7 for shutter/HVAC/solar installers.</li>
+<li>Chat agents qualify leads; auto-generate quotes.</li>
+<li>Internal AI copilot for technical product Q&A by field teams.</li>
 </ul>
 
 <strong>The problem they solve</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>AI inference at hyperscalers has latency constraints for real-time use cases (voice, robotics, gaming).</li>
-<li>Edge nodes co-located in metro areas reduce round-trip time for latency-sensitive AI workloads.</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>Home-service businesses lose 30–40% of revenue from missed calls and slow follow-up.</li>
+<li><em>Example:</em> a shutter installer misses 8 calls on a Friday; Bravi captures every lead and books site visits automatically.</li>
 </ul>
 
 <strong>Money</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>Co-founded by Montauk Capital (venture studio model).</li>
-<li>Usage-based compute pricing, likely per-GPU-hour or per-inference.</li>
-<li>Capital-intensive: requires physical GPU hardware in multiple metro locations.</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>Monthly SaaS; plug-and-play from day one.</li>
+<li>60,000+ addressable businesses in the US alone ($2M+ revenue each).</li>
+<li>Live with 12+ manufacturers; "tens of thousands" of AI conversations handled.</li>
 </ul>
 
 <strong>Why now</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-AI inference demand projected to exceed 54GW by 2030.
-</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>Real-time voice AI hit production quality in 2024–2025; first time it's reliable enough for inbound calls.</li>
 </ul>
 
 <strong>Bootstrap fit</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li><strong>Grader:</strong> Latency and throughput are objective — pass.</li>
-<li><strong>LLM deleted:</strong> Left with edge GPU infra + routing software — hardware + technical system.</li>
-<li><strong>Accumulates:</strong> N/A — this is a capital expenditure business.</li>
-<li><strong>Week one:</strong> Requires physical GPU nodes deployed in colocation facilities. Massive capex.</li>
-<li><strong>Buyer:</strong> Enterprise infra teams — procurement-gated.</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li><strong>Grader:</strong> Partially objective (lead captured vs. not), but call quality is taste.</li>
+<li><strong>LLM deleted:</strong> Left with a telephony integration layer — thin wrapper. 🔴</li>
+<li><strong>Accumulates:</strong> Nothing durable — Bland.ai, Vapi, Retell all ship white-label voice agents.</li>
+<li><strong>Week one:</strong> Works quickly — plug in phone number. But so does every voice-AI platform.</li>
+<li><strong>Buyer:</strong> SMB installers — reachable, but low WTP and commodity voice-AI race to bottom.</li>
 </ul>
-<strong>Verdict: 🔴</strong> — Fails immediately: this is a hardware infrastructure business requiring heavy capital expenditure. Not bootstrappable. Competing with AWS Local Zones, Cloudflare, Akamai, and Lambda. Included as a signal of edge inference demand, not as a bootstrap candidate.
+<strong>Verdict: 🔴</strong> — Gate 3. Voice-agent platforms (Bland, Vapi, Retell, Synthflow) let anyone spin up a white-label answering agent in a day. The vertical knowledge (shutter product specs, HVAC terminology) is thin — a domain firm adding one dev catches up. Founders' moat is their personal network in fenestration from a family business. Not replicable, and not a technical moat.
 
 <br><br><strong>Crowding</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>AWS Local Zones, Cloudflare Workers AI, Lambda Cloud, CoreWeave, Corelight.</li>
-<li>EdgeRunner AI ($5.5M seed) targets the same edge AI inference niche.</li>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>ServiceTitan (large incumbent) adding AI features for home services.</li>
+<li>Dozens of voice-AI startups targeting SMBs: Goodcall, Smith.ai, Ruby.</li>
+<li>Generic voice-AI infra (Bland, Vapi) enables anyone to build this in a weekend.</li>
 </ul>
+</div>
+
+<!-- COMPANY 7: hiloop -->
+<div style="background: #fff8e1; border: 1px solid #e6d08a; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">7. hiloop &nbsp;🔴&nbsp; Automated research infra for agent/model training</strong>
+<br>
+<span style="font-size: 12px; color: #555;">
+AI Infra · San Francisco · Founded 2026 · Pre-seed (YC S26) · 2 people · (YC S26 — included for technical interest)
+<br>
+<a href="https://www.ycombinator.com/companies/hiloop" target="_blank">YC profile</a>
+</span>
+
+<br><br><strong>What they do</strong>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>You give them a task, your current model/agent, and an eval.</li>
+<li>hiloop runs automated research campaigns across SFT, prompts, tools, data.</li>
+<li>Returns the best verified improvement with full experiment lineage.</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>Teams manually iterate on post-training, prompt tuning, tool selection — slow and expensive.</li>
+<li><em>Example:</em> gave two stock coding agents 50 B200 GPUs; they ran 4,188 experiments in 2 days and beat published SOTA on Karpathy's autoresearch benchmark.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>Compute + platform fee; runs hosted or in customer's cloud.</li>
+<li>YC S26 batch; pre-revenue (just launched).</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>Automated ML research (autoresearch) became feasible with agents that can write, run, and evaluate experiments autonomously.</li>
+</ul>
+
+<strong>Bootstrap fit</strong>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li><strong>Grader:</strong> Objective — improvement measured against customer's own eval metric.</li>
+<li><strong>LLM deleted:</strong> Left with compute orchestration and experiment tracking — infra layer.</li>
+<li><strong>Accumulates:</strong> Experiment lineage and research heuristics, but requires GPU-scale compute. 🔴</li>
+<li><strong>Week one:</strong> Customer needs GPU budget and an eval — works. But hiloop needs 50+ B200s to run.</li>
+<li><strong>Buyer:</strong> AI teams with compute budgets — reachable but niche.</li>
+</ul>
+<strong>Verdict: 🔴</strong> — Gate 3 (and practical). The value requires massive GPU spend — a bootstrapper cannot provide this. Also, model providers (OpenAI fine-tuning, Anthropic) and platforms (Modal, Anyscale) are absorbing automated training workflows. A single-founder cannot out-compute or out-research a well-funded lab.
+
+<br><br><strong>Crowding</strong>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>OpenPipe, Predibase, Together AI — all offer fine-tuning as a service.</li>
+<li>OpenAI and Anthropic expanding fine-tuning and eval APIs continuously.</li>
+<li>Autoresearch is an active academic area; labs will absorb it.</li>
+</ul>
+</div>
+
+<!-- COMPANY 8: Clera (Healthcare Finance, YC S26) -->
+<div style="background: #fff8e1; border: 1px solid #e6d08a; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">8. Clera &nbsp;🔴&nbsp; AI-native financial research platform for healthcare investors</strong>
+<br>
+<span style="font-size: 12px; color: #555;">
+FinTech / HealthTech · San Francisco · Founded ~2025 · Pre-seed · ~3 people · (YC S26 — included as distinct entity from Clera-AI recruiting)
+<br>
+<a href="https://jobs.ashbyhq.com/Clera/32a5f658-9421-4481-9605-9cceb2623fce" target="_blank">Job posting</a>
+</span>
+
+<br><br><strong>What they do</strong>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>AI agents convert public and private data sources into always-updated financial models.</li>
+<li>Starting with the healthcare sector — for banks, hedge funds, asset managers.</li>
+<li>Every insight source-backed and continuously refreshed.</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>Healthcare financial data is fragmented across CMS, SEC filings, clinical trials, payer reports.</li>
+<li><em>Example:</em> a hedge fund analyst building a model on a hospital chain manually pulls from 15+ sources — Clera auto-aggregates and updates.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>Enterprise SaaS for professional investors.</li>
+<li>YC Spring 2026 batch; raising.</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>LLMs can now parse and reconcile heterogeneous data sources (SEC filings + CMS data + clinical trial databases) into structured output.</li>
+</ul>
+
+<strong>Bootstrap fit</strong>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li><strong>Grader:</strong> Partially objective (data accuracy), but model quality is subjective judgment.</li>
+<li><strong>LLM deleted:</strong> Left with data pipelines and healthcare domain knowledge — domain experts own it. 🔴</li>
+<li><strong>Accumulates:</strong> The dataset, but building it requires licensed data feeds and domain expertise.</li>
+<li><strong>Week one:</strong> Cold start — needs proprietary/licensed healthcare data sources I don't have.</li>
+<li><strong>Buyer:</strong> Hedge fund analysts — relationship-gated, high bar for trust.</li>
+</ul>
+<strong>Verdict: 🔴</strong> — Gate 2 + Gate 4. Delete the LLM: what's left is healthcare financial domain knowledge. A healthcare data firm (Definitive Healthcare, PitchBook) hiring one dev catches up. Also fails gate 4: needs licensed data feeds (CMS, payer data, clinical trial databases) that a solo founder can't access on day one.
+
+<br><br><strong>Crowding</strong>
+<ul style="margin: 2px 0 6px 18px; padding: 0;">
+<li>Definitive Healthcare, Trilliant Health — established healthcare data providers.</li>
+<li>AlphaSense, Sentieo — AI-powered financial research platforms.</li>
+<li>Bloomberg adding AI features across terminal.</li>
+</ul>
+</div>
+
 </div>
