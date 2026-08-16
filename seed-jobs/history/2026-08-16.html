@@ -1,328 +1,87 @@
-<!-- COMPANY 1: Shiplight AI -->
-<div style="background:#fdfdfd; border:1px solid #ddd; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
-<strong>1. Shiplight AI 🔴 — Agentic QA testing for AI coding agents</strong><br>
-<span style="font-size:13px; color:#555;">
-AI testing · San Francisco · Founded 2025 · Pre-seed (~undisclosed, Pear VC + Embedding VC) · ~2–10 people<br>
-<a href="https://www.shiplight.ai">shiplight.ai</a> · <a href="https://jobs.ashbyhq.com/pear/e681cf11-9b8a-4630-86ac-b995a76a77d7/application">Job posting</a>
-</span>
+<!-- COMPANY 1: Tracer -->
+<div style="font-family: 'Segoe UI', system-ui, sans-serif; background: #fdf0f0; border: 1px solid #e0c0c0; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
 
-<br><strong>What they do</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-AI agents that generate, run, and maintain browser-based E2E tests.
-</li>
-<li>
-MCP server plugs into Claude Code, Cursor, or Codex — no account needed.
-</li>
-<li>
-YAML tests transpile to Playwright — real exit path if you leave.
-</li>
-<li>
-Self-healing locators use natural-language intent, not DOM selectors.
-</li>
-</ul>
+<strong style="font-size: 15px;">1. Tracer 🔴 — Open-source AI SRE agent for automated incident root-cause analysis</strong>
 
-<strong>The problem they solve</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Dev velocity is no longer limited by humans writing code — it's limited by humans proving code works.
-</li>
-<li>Example: coding agent ships a login flow; Shiplight opens a real browser, verifies the flow, and writes a regression test — all inside the same MCP session.</li>
-<li>
-Maintenance ceiling: ~100–200 E2E tests per QA engineer before upkeep eats all writing time.
-</li>
-</ul>
-
-<strong>Money</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>SaaS — 
-full test management platform with cloud execution.
-</li>
-<li>Revenue/pricing not disclosed.</li>
-<li>
-Very early stage: 2–10 employees, recently emerged from stealth.
-</li>
-</ul>
-
-<strong>Why now</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Term emerged 2024–2025 alongside coding agents; as agents author code, testing must operate at the same autonomy.
-</li>
-</ul>
-
-<strong>Bootstrap fit</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li><strong>Grader:</strong> Browser pass/fail is objective; screenshots + DOM state are evidence.</li>
-<li><strong>LLM deleted:</strong> MCP server, YAML format, Playwright transpiler remain — technical system, not domain.</li>
-<li><strong>Accumulates:</strong> 🔴 Nothing unique. 
-Playwright's own Test Agents already plan, generate, and heal Playwright code; BrowserUse does the same.
- Thin layer the platform absorbs.</li>
-<li><strong>Week one:</strong> Not reached.</li>
-<li><strong>Buyer:</strong> Not reached.</li>
-</ul>
-<strong>Verdict: 🔴 — fails gate 3.</strong> Playwright is shipping native agent test capabilities. YAML format and MCP wrapper are a thin layer with no accumulating asset.
-
-<br><strong>Crowding</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Playwright first-party Test Agents, Playwright MCP, and BrowserUse all compete directly.
-</li>
-<li>Dozens of "AI QA" startups (QA Wolf, Testim, Mabl) plus open-source browser-agent frameworks.</li>
-</ul>
+<div style="font-size: 13px; color: #555; margin: 4px 0 8px 0;">
+  tracer.cloud · New York (remote) · founded 2023 · VC-backed (amount undisclosed) · ~8–11 people
+  · <a href="https://www.tracer.cloud/" target="_blank">site</a>
+  · <a href="https://github.com/Tracer-Cloud/opensre" target="_blank">GitHub</a>
+  · <a href="https://jobs.ashbyhq.com/tracer/02ddb9a6-b717-4ef1-98f5-ef526564edc5" target="_blank">job post</a>
 </div>
 
-<!-- COMPANY 2: Neuromorphic Labs -->
-<div style="background:#fdfdfd; border:1px solid #ddd; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
-<strong>2. Neuromorphic Labs 🔴 — Trust layer for production AI deployments</strong><br>
-<span style="font-size:13px; color:#555;">
-AI infra / governance · Seattle · Founded ~2025 · Seed ($5.1M) · Small team<br>
-<a href="https://neuromorphiclabs.ai">neuromorphiclabs.ai</a> · <a href="https://jobs.ashbyhq.com/Neuromorphic-Labs/78dd02e0-c0bf-4c4a-8d48-f5bab85c290c">Job posting (Aug 2026)</a>
-</span>
-
-<br><strong>What they do</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Assigns verifiable identities to models, weights, datasets, agents, and compute environments.
+<strong>What they do</strong>
+<ul style="margin: 2px 0 8px 18px; padding: 0; font-size: 13px;">
+  <li>
+Open-source SRE agent that investigates incidents and finds root cause before engineers get paged.
 </li>
-<li>
-Embeds trust directly into the AI lifecycle instead of treating it as a separate review process.
+  <li>
+Ingests an alert, assembles context from logs/metrics/traces, reasons across connected systems, posts a structured report to Slack or PagerDuty.
 </li>
-<li>
-Operates across public cloud, on-prem, edge, and hybrid infra.
+  <li>
+Uses eBPF-based data collectors at the OS level — no code changes needed.
+</li>
+  <li>
+Connects to 60+ tools across LLMs, observability, cloud infra, data platforms, and incident management.
 </li>
 </ul>
 
 <strong>The problem they solve</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-As AI assets move across developers, pipelines, clouds, and production, teams stitch together fragmented security, governance, and compliance tools.
+<ul style="margin: 2px 0 8px 18px; padding: 0; font-size: 13px;">
+  <li>
+Evidence for a production incident is scattered: logs in Datadog, metrics in Grafana, config changes in Git. No single system sees all of it.
 </li>
-<li>Example: model trained in AWS, fine-tuned on-prem, deployed to edge — you need provenance proof that the running model matches what you approved.</li>
+  <li>
+Engineers manually pull logs, correlate timestamps, and ping colleagues. Takes hours.
+</li>
+  <li>Example: alert fires at 3 AM for a K8s pod crash loop. Agent runs parallel hypotheses (bad deploy, resource limit, upstream timeout), tests each against live telemetry, delivers a root-cause report before the on-call engineer finishes reading Slack.</li>
 </ul>
 
 <strong>Money</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-$5.1M seed led by Flying Fish, with Toyota Ventures, Amplify Partners, and others.
- Announced Aug 13, 2026.</li>
-<li>No revenue disclosed.</li>
-<li>
-Founder was CPO at CoreWeave through IPO; previously led AI infra at AWS.
+<ul style="margin: 2px 0 8px 18px; padding: 0; font-size: 13px;">
+  <li>Open-source core (Apache 2.0); commercial product presumably on top.</li>
+  <li>No public revenue figures. Still in public alpha.</li>
+  <li>
+Founded 2023 by Vincent Hus (CEO) and Laura Bogaert (COO). Started in bioinformatics observability, pivoted to general AI SRE.
 </li>
 </ul>
 
 <strong>Why now</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-AI is shifting application development like cloud did a generation ago
- — enterprises now own and deploy models, not just consume APIs.</li>
+<ul style="margin: 2px 0 8px 18px; padding: 0; font-size: 13px;">
+  <li>
+SWE-bench gave coding agents training data and clear feedback. Production incident response still lacks an equivalent.
+</li>
+  <li>LLMs now good enough to reason across heterogeneous telemetry signals.</li>
 </ul>
 
 <strong>Bootstrap fit</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li><strong>Grader:</strong> Provenance and identity verification are objective — hash-based, not taste.</li>
-<li><strong>LLM deleted:</strong> This isn't really an LLM product. Identity graph + policy engine remain. Technical system.</li>
-<li><strong>Accumulates:</strong> Cross-cloud provenance schema and policy engine have depth. Borderline pass.</li>
-<li><strong>Week one:</strong> 🔴 Customer must integrate into their ML pipeline, model registry, cloud infra. Useless without live hooks into their deployment systems.</li>
-<li><strong>Buyer:</strong> Not reached.</li>
+<ul style="margin: 2px 0 4px 18px; padding: 0; font-size: 13px;">
+  <li><strong>Grader:</strong> Root-cause correctness is verifiable against the actual fix. Passes.</li>
+  <li><strong>LLM deleted:</strong> eBPF collectors, 60+ integrations, eval harness remain. Passes.</li>
+  <li><strong>Accumulates:</strong> 🔴 Incumbents already ship this as a feature. Datadog, PagerDuty, Resolve.ai all native.</li>
+  <li><strong>Week one:</strong> 🔴 Needs live integration into customer's monitoring stack.</li>
+  <li><strong>Buyer:</strong> SRE/platform-eng teams. Reachable, would pay.</li>
 </ul>
-<strong>Verdict: 🔴 — fails gate 4.</strong> Cold-start: no value until integrated into customer's pipeline, cloud, and deployment infra. Also, founder is an infra heavyweight — classic "domain expert hires first engineer" signal.
 
-<br><strong>Crowding</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>AWS, Azure, GCP all have model registries and governance tooling built in.</li>
-<li>MLflow, Weights & Biases, and Fiddler overlap on model tracking and observability.</li>
-</ul>
+<div style="background: #fff0f0; border: 1px solid #e0b0b0; border-radius: 4px; padding: 6px; margin: 6px 0; font-size: 13px;">
+  <strong>Verdict: 🔴</strong> — Fails gate 3 (durability) and gate 4 (cold start).
+  
+Datadog Bits AI, PagerDuty SRE Agent, New Relic SRE Agent, AWS DevOps Agent, and incident.io AI SRE all ship native AI SRE agents.
+
+  
+Resolve.ai reached $1B valuation faster than any competitor.
+
+  This is a feature the observability platforms absorb, not a standalone product a solo founder can defend. Also requires live hooks into the customer's monitoring stack — cold start for a bootstrapper. Also: company founded 2023, outside the 2025–2026 window.
 </div>
 
-<!-- COMPANY 3: Mobasi -->
-<div style="background:#fdfdfd; border:1px solid #ddd; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
-<strong>3. Mobasi 🔴 — AI digital forensics for law enforcement</strong><br>
-<span style="font-size:13px; color:#555;">
-Digital forensics · Austin (+ remote) · Founded ~2025 · Bootstrapped, profitable · Small team<br>
-<a href="https://mobasi.ai">mobasi.ai</a> · <a href="https://jobs.ashbyhq.com/mobasi/b385d2bb-d338-44cc-8728-f0ebd8168455">Job posting</a>
-</span>
-
-<br><strong>What they do</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Autonomous AI agents for digital forensics — orchestrates 150+ forensic tools to turn days of evidence analysis into minutes.
-</li>
-<li>
-Handles mailboxes, chat exports, cloud drives, ledgers, mobile imagery, vehicles, IoT — normalized to one searchable set.
-</li>
-<li>
-Runs the investigation: scoping evidence, correlating artifacts across sources, producing verifiable reports.
+<strong>Crowding</strong>
+<ul style="margin: 2px 0 8px 18px; padding: 0; font-size: 13px;">
+  <li>
+Six agents dominate in 2026; choice usually follows existing stack.
+ Plus 15+ more tools in comparison lists.</li>
+  <li>
+Every major cloud provider shipped a native AI SRE product in the last 12 months.
 </li>
 </ul>
 
-<strong>The problem they solve</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Digital evidence is present in up to 90% of criminal investigations.
-</li>
-<li>
-69% of law enforcement professionals report not having enough time to manually review all available digital evidence.
-</li>
-<li>Example: CSAM case with 50 devices — investigator spends weeks cross-referencing phone images, chat logs, and cloud accounts. Mobasi correlates artifacts automatically.</li>
-</ul>
-
-<strong>Money</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Bootstrapped, profitable, and shipping.
-</li>
-<li>Compensation listed at $240K + profit sharing — strong signal for a bootstrap.</li>
-<li>Revenue model unclear (likely per-seat or per-agency license).</li>
-</ul>
-
-<strong>Why now</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>LLMs can now read and correlate across unstructured evidence types (chat, email, images) that previously required separate specialist tools.</li>
-</ul>
-
-<strong>Bootstrap fit</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li><strong>Grader:</strong> Artifact correlation is partially objective, but "investigation" involves forensic judgment.</li>
-<li><strong>LLM deleted:</strong> 🔴 Left with tool orchestration + normalization layer. Real value is knowing what forensic patterns to look for. "Built by practitioners" = domain expert builds tool. A forensic consulting firm hires one developer and catches up.</li>
-<li><strong>Accumulates:</strong> Not reached.</li>
-<li><strong>Week one:</strong> Not reached.</li>
-<li><strong>Buyer:</strong> Would fail anyway — law enforcement = government procurement, relationship-gated.</li>
-</ul>
-<strong>Verdict: 🔴 — fails gate 2 + gate 5.</strong> Domain experts (forensic practitioners) own the value. Buyer is government/law enforcement — procurement-gated. Strong traction signal (bootstrapped + profitable), but wrong space for me.
-
-<br><strong>Crowding</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Veritone (public, est. 2014) has a mature AI evidence analysis product for law enforcement.
-</li>
-<li>VIDIZMO, Cellebrite, Magnet Forensics are established players in adjacent evidence management.</li>
-</ul>
-</div>
-
-<!-- COMPANY 4: Remy -->
-<div style="background:#fdfdfd; border:1px solid #ddd; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
-<strong>4. Remy 🔴 — AI submittal intelligence for commercial construction</strong><br>
-<span style="font-size:13px; color:#555;">
-Construction tech · NYC · Founded ~2025 · Stage undisclosed · Small founding team<br>
-<a href="https://startup.jobs/company/remy">startup.jobs profile</a> · <a href="https://startup.jobs/founding-ml-engineer-remy-7690938">Job posting</a>
-</span>
-
-<br><strong>What they do</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-First AI-powered Submittal Intelligence Platform for commercial GCs — reads construction specs, understands requirements, flags compliance issues.
-</li>
-<li>
-Helps general contractors streamline approvals, reduce risk, and boost efficiency.
-</li>
-<li>
-Replaces drowning in PDFs, email chains, and manual checklists with automated accuracy checks.
-</li>
-</ul>
-
-<strong>The problem they solve</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Project teams dig through thousand-page spec books, flip between CSI sections, mark up PDFs manually — slow, error-prone, expensive.
-</li>
-<li>Example: a GC receives a product data sheet for HVAC ductwork; Remy cross-references it against the mechanical spec section and flags that the gauge thickness doesn't meet the requirement.</li>
-</ul>
-
-<strong>Money</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>Revenue model unclear — likely SaaS per project or per seat.</li>
-<li>
-Founded by a former project engineer, backed by operators and investors.
-</li>
-<li>
-Fueled by strong customer demand; scaling fast and assembling founding team.
-</li>
-</ul>
-
-<strong>Why now</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>LLMs can finally parse dense construction specs and match product attributes against requirements — PDF-heavy workflows that earlier NLP couldn't handle.</li>
-</ul>
-
-<strong>Bootstrap fit</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li><strong>Grader:</strong> Spec compliance is checkable against the written document — mostly objective.</li>
-<li><strong>LLM deleted:</strong> 🔴 Left with a PDF parser. Real value is understanding CSI divisions, spec language, and submittal workflow. Founder is a "former project engineer" — domain expert builds tool. Procore or any construction software firm hires one ML engineer.</li>
-<li><strong>Accumulates:</strong> Not reached.</li>
-<li><strong>Week one:</strong> Not reached.</li>
-<li><strong>Buyer:</strong> Not reached.</li>
-</ul>
-<strong>Verdict: 🔴 — fails gate 2.</strong> Construction spec knowledge is the moat, not the AI layer. Domain expert founder confirms the pattern: domain expertise wins, not technical build. (Note: a different company also called "Remy AI" is a YC W26 robotics startup — hardware, excluded.)
-
-<br><strong>Crowding</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>Procore, PlanGrid (Autodesk), and Pype/Newforma handle submittal workflows — AI features are being added.</li>
-<li>Emerging: several construction AI startups attacking document review (Alice Technologies, Trunk Tools).</li>
-</ul>
-</div>
-
-<!-- COMPANY 5: Worktrace AI -->
-<div style="background:#fdfdfd; border:1px solid #ddd; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
-<strong>5. Worktrace AI 🔴 — Workflow discovery + automation recommendations via screen observation</strong><br>
-<span style="font-size:13px; color:#555;">
-Enterprise automation · San Francisco · Founded 2025 · Seed ($9M, 8VC + Conviction) · ~14 people<br>
-<a href="https://www.worktrace.ai">worktrace.ai</a> · <a href="https://jobs.ashbyhq.com/Worktrace%20AI/abeeae1b-6163-43a5-b17b-25574aa2a1b0">Job posting</a>
-</span>
-
-<br><strong>What they do</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Desktop app runs in the background, observes work across tools to find AI automation opportunities — no integrations needed.
-</li>
-<li>
-Surfaces recommendations tailored to company KPIs on how to reimagine processes with AI.
-</li>
-<li>
-Generates automation blueprints for third-party platforms like n8n, Crew AI, and Asteroid.
-</li>
-</ul>
-
-<strong>The problem they solve</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-AI has moved faster than organizations' ability to understand their own work. The bottleneck is not models but mapping what people actually do.
-</li>
-<li>Example: ops team spends 4 hours/day copying data between Salesforce and a spreadsheet. Worktrace spots the pattern and outputs an n8n automation blueprint.</li>
-</ul>
-
-<strong>Money</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-$9M seed co-led by 8VC and Conviction.
-</li>
-<li>
-Co-founded by ex-OpenAI product leader Angela Jiang
- and a UIUC professor.</li>
-<li>Revenue model: enterprise SaaS (likely per-seat or per-team).</li>
-</ul>
-
-<strong>Why now</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Screen-level agents can now identify repetitive patterns and invisible workflows that traditional API integrations miss.
-</li>
-</ul>
-
-<strong>Bootstrap fit</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li><strong>Grader:</strong> 🔴 Workflow observation is mechanical, but the core output — "reimagine your processes" and "high-ROI automation opportunities" — is consulting judgment. Deciding <em>what</em> is worth automating and <em>how</em> to redesign workflows is subjective taste.</li>
-<li><strong>LLM deleted:</strong> Not reached.</li>
-<li><strong>Accumulates:</strong> Not reached.</li>
-<li><strong>Week one:</strong> Would also fail — needs desktop deployed on employee machines + their screen data. Useless without their workflow data (cold start).</li>
-<li><strong>Buyer:</strong> Not reached.</li>
-</ul>
-<strong>Verdict: 🔴 — fails gate 1 (+ gate 4).</strong> Core output is subjective recommendations about what to automate. Even if gate 1 were arguable, value only appears after capturing employee screen data — cold start.
-
-<br><strong>Crowding</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>Process mining incumbents (Celonis, UiPath Process Mining, Microsoft Process Mining) do workflow discovery from system logs.</li>
-<li>Screen-level approach is newer — Worktrace's differentiation — but also pursued by UiPath's task mining and emerging startups.</li>
-</ul>
 </div>
