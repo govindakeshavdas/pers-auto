@@ -1,0 +1,14 @@
+# The ledgers are append-only sets of company names, written by workflow runs.
+# Two runs that branch from the same commit both append at EOF — this workflow
+# racing recent-seed-funding, or a scheduled run whose checkout predates a push
+# that landed while it was running. Git sees two edits to the same trailing
+# region and cannot auto-merge them, so the workflow's `git pull --rebase`
+# stops with a conflict and the run's results are lost (the email has already
+# gone out by then, so the companies are never recorded and resurface later).
+#
+# Union is the correct resolution for a set: keep the lines from both sides.
+# It can leave duplicates when both runs found the same company, so the
+# workflow dedups immediately after pulling, and run.sh dedups again on the
+# next run.
+seed-jobs/history/ledger.txt merge=union
+recent-seed-funding/history/ledger.txt merge=union

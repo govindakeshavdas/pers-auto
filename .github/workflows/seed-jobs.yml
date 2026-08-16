@@ -6,6 +6,13 @@ on:
     - cron: "0 15 */2 * *"
   workflow_dispatch:
 
+# Both workflows commit to the same repo, so serialise them rather than racing
+# on the push. Queue the second run instead of cancelling it — its email has
+# already been sent by the time it commits, so a cancel would lose the record.
+concurrency:
+  group: pers-auto-history-write
+  cancel-in-progress: false
+
 jobs:
   find-and-email:
     runs-on: ubuntu-latest
@@ -67,5 +74,13 @@ jobs:
           git commit -m "chore: save seed jobs results $(date +%Y-%m-%d)"
           # recent-seed-funding runs on the same schedule every 6 days and
           # pushes first — rebase or this push is rejected and the run is lost.
+          # Both ledgers are merge=union (see .gitattributes) so two runs
+          # appending names at EOF resolve instead of conflicting.
           git pull --rebase
+          # union can duplicate a name both runs found; fold it back into the
+          # commit so the stored ledger stays one-line-per-company.
+          awk 'NF && !seen[tolower($0)]++' seed-jobs/history/ledger.txt > /tmp/ledger.dedup
+          mv /tmp/ledger.dedup seed-jobs/history/ledger.txt
+          git add seed-jobs/history/ledger.txt
+          git diff --cached --quiet || git commit --amend --no-edit
           git push
