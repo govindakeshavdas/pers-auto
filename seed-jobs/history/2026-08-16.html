@@ -1,0 +1,492 @@
+<!-- COMPANY 1: Fabraix -->
+<div style="background:#f8fdf8; border:1px solid #c0dcc0; padding:8px; margin-bottom:12px; font-family:system-ui,sans-serif; font-size:14px;">
+
+<b>1. Fabraix 🟡 — AI red-teaming agent that hacks customer-facing AI agents</b>
+
+<div style="color:#555; font-size:13px; margin:4px 0 8px 0;">
+AI security · San Francisco · founded 2025 · seed (YC S26) · ~3 people<br>
+<a href="https://fabraix.com">fabraix.com</a> · <a href="https://www.ycombinator.com/companies/fabraix">YC profile</a>
+<br><span style="color:#b00;">(YC S26 — included because non-YC equivalents in automated AI red-teaming at this stage did not surface)</span>
+</div>
+
+<b>What they do</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Builds AI red-teaming agents that find security holes in customer-facing AI.
+</li>
+<li>
+Nyx tests agents indirectly — places malicious payloads in replicas of SaaS products, websites, documents, files, messages, and tool outputs.
+</li>
+<li>
+Draws on 10,000+ collected jailbreaks as starting points for attacks.
+</li>
+<li>
+Also built ACE (Adversarial Cost to Exploit), a benchmark that measures AI security in dollar cost to break a system.
+</li>
+</ul>
+
+<b>The problem they solve</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+AI agents change more often than teams can test them — a new model, prompt, or tool changes behavior even when code stays the same.
+</li>
+<li>
+Fully automated, so companies can retest on every change at far lower cost than a 7-figure red-team engagement.
+</li>
+<li>Example: an enterprise deploys a customer-support agent. Nyx probes it with injected payloads and reports which ones cause data leaks — within hours, not weeks.</li>
+</ul>
+
+<pre style="font-size:12px; background:#f0f0f0; padding:6px; margin:4px 0; overflow-x:auto;">
+AgentHarm benchmark    Nyx     GPT-5.6 Sol
+Attack success rate    78%     67%
+</pre>
+
+<b>Money</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>Revenue model: likely per-scan or subscription; replaces expensive annual pen tests.</li>
+<li>
+Already found vulnerabilities in agents at dozens of Fortune 500 companies.
+</li>
+<li>YC S26 batch. Funding amount not disclosed beyond standard YC deal.</li>
+</ul>
+
+<b>Why now</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+AI is increasing how much software companies produce and how often it changes.
+ Manual red-teaming can't keep pace.</li>
+<li>Agentic AI with tool-use and real-world permissions created attack surfaces that didn't exist pre-2025.</li>
+</ul>
+
+<b>Bootstrap fit</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li><b>Grader:</b> Objective — payload triggers or it doesn't; ACE benchmark is public and measurable.</li>
+<li><b>LLM deleted:</b> Jailbreak library (10K+), ACE benchmark, replica test environments remain. Technical harness.</li>
+<li><b>Accumulates:</b> Jailbreak corpus and attack success data grow with every scan.</li>
+<li><b>Week one:</b> Customer points Nyx at their agent; first vulnerability report in hours.</li>
+<li><b>Buyer:</b> Security teams at companies deploying AI agents. Willingness to pay is high. But: often procurement-gated at F500.</li>
+</ul>
+<div style="margin-top:4px;"><b>Verdict: 🟡</b> — Real accumulating harness (jailbreak corpus + ACE). Erodes: F500 buyer is procurement-gated, and model providers (OpenAI, Anthropic) are shipping their own safety evals that could absorb this use case at the API level.</div>
+
+<b>Crowding</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+XBOW raised $120M Series C for autonomous offensive security at $1B+ valuation.
+</li>
+<li>ZioSec, General Analysis, Veria Labs all in AI agent red-teaming. Heavy seed-stage formation.</li>
+<li>
+16 of 27 AI safety deals in last 12 months were seed rounds.
+</li>
+</ul>
+</div>
+
+<!-- COMPANY 2: Besty AI -->
+<div style="background:#f8fdf8; border:1px solid #c0dcc0; padding:8px; margin-bottom:12px; font-family:system-ui,sans-serif; font-size:14px;">
+
+<b>2. Besty AI 🔴 — AI automation for short-term rental operators</b>
+
+<div style="color:#555; font-size:13px; margin:4px 0 8px 0;">
+Hospitality AI · New York · founded 2023 · seed (~$3.75M) · ~22 people<br>
+<a href="https://getbesty.com">getbesty.com</a> · <a href="https://wellfound.com/jobs/2996315-founding-engineer">Wellfound listing</a>
+<br><span style="color:#070;">(Non-YC)</span>
+</div>
+
+<b>What they do</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+AI automation for short-term rental providers.
+</li>
+<li>
+Automates guest messaging, maintenance triage, housekeeping instructions, and revenue upsells.
+</li>
+<li>
+Features include an agentic, conversational upselling engine that fills orphan nights and sells early/late checkout.
+</li>
+</ul>
+
+<b>The problem they solve</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Properties can be run almost completely autonomously as long as they're clean, accessible, and as advertised.
+</li>
+<li>Example: a 50-unit STR operator gets 200+ guest messages/day. Besty handles 90%+ on autopilot, including upselling late checkout at $35/night.</li>
+<li>
+300 customers, 30,000 properties across 25 countries.
+</li>
+</ul>
+
+<b>Money</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Subscription-based, 14-day free trial.
+</li>
+<li>
+MRR reached $125K before their first raise.
+</li>
+<li>
+Average monthly revenue growth of 36% since inception.
+</li>
+</ul>
+
+<b>Why now</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Short-term rentals are a "fast-growing, overlooked market" that wasn't the obvious place for AI vs. healthcare or insurance.
+</li>
+<li>LLMs got good enough at conversational guest messaging to handle edge cases (early check-in requests, noise complaints, parking instructions).</li>
+</ul>
+
+<b>Bootstrap fit</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li><b>Grader:</b> Partly subjective — "good guest communication" is taste-adjacent. Upsell conversion is measurable.</li>
+<li><b>LLM deleted:</b> PMS integrations remain. But the core value is the LLM-generated guest replies — thin layer.</li>
+<li><b>Accumulates:</b> Integrations with Guesty/Hostaway/etc. are commodity. Tone-tuning from edits is light.</li>
+<li><b>Week one:</b> Needs PMS integration + property data. Workable but not instant.</li>
+<li><b>Buyer:</b> STR operators — SMB, moderate WTP, but fragmented. Many free/cheap alternatives exist.</li>
+</ul>
+<div style="margin-top:4px;"><b>Verdict: 🔴</b> — Gate 3: thin LLM layer over PMS APIs. Guest messaging quality is partly subjective (gate 1). Any PMS could add this as a feature. Strong traction signal for the space, but no durable moat for a bootstrapper.</div>
+
+<b>Crowding</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>Enso Connect, Hospitable, HostAI, DACK all offer AI guest messaging for STRs.</li>
+<li>PMS platforms (Guesty, Hostaway) can and will embed this directly.</li>
+</ul>
+</div>
+
+<!-- COMPANY 3: Structured AI -->
+<div style="background:#fdf8f8; border:1px solid #dcc0c0; padding:8px; margin-bottom:12px; font-family:system-ui,sans-serif; font-size:14px;">
+
+<b>3. Structured AI 🔴 — AI QA/QC for construction drawing packages</b>
+
+<div style="color:#555; font-size:13px; margin:4px 0 8px 0;">
+Construction AI · New York · founded ~2022 · seed (~$5M) · small team<br>
+<a href="https://getstructured.ai">getstructured.ai</a> · <a href="https://www.ycombinator.com/companies/structured-ai">YC profile</a>
+<br><span style="color:#b00;">(YC — included because no comparable non-YC construction-drawing QA/QC startup surfaced)</span>
+</div>
+
+<b>What they do</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+AI-powered QA/QC platform for drawing packages — works across PDF drawings and native Revit models.
+</li>
+<li>
+"We trained our own computer vision models" for identifying marks on construction documents.
+</li>
+<li>
+Works like spell-check for a drawing set — recommends changes, a person clicks accept.
+</li>
+</ul>
+
+<b>The problem they solve</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Senior engineers spend up to 50% of their time on repetitive manual QA/QC checks.
+</li>
+<li>
+Checks 100-page blueprints against 2,000 pages of building codes in minutes — 100x faster and 150% more errors found vs. manual review.
+</li>
+<li>Example: an MEP coordination clash between HVAC ductwork and structural beams caught across 3,000 drawing sheets before issuing to the field.</li>
+</ul>
+
+<b>Money</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+$4.2M seed round led by FCVC, with Y Combinator, 20VC, Cherry Ventures, Sequoia Scout participating. Total $5M.
+</li>
+<li>
+Syska Hennessy Group (leading MEP firm) invested and co-developed the platform over ~4 years.
+</li>
+<li>Likely SaaS per-seat or per-project. Revenue not disclosed.</li>
+</ul>
+
+<b>Why now</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Advances in computer vision and OCR have made it possible to automate analysis of complex engineering documents.
+</li>
+</ul>
+
+<b>Bootstrap fit</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li><b>Grader:</b> Objective — symbol detection, code compliance, clash detection are mechanically verifiable.</li>
+<li><b>LLM deleted:</b> Proprietary CV models trained on engineering symbols remain. Real technical asset.</li>
+<li><b>Accumulates:</b> CV model trained on thousands of engineering symbols; firm-specific standards learned.</li>
+<li><b>Week one:</b> 🔴 Needs firm's drawing standards, building codes, and a corpus of labeled engineering drawings I don't have.</li>
+<li><b>Buyer:</b> AEC firms — relationship-gated, slow procurement cycles.</li>
+</ul>
+<div style="margin-top:4px;"><b>Verdict: 🔴</b> — Gate 4: cold-start on proprietary training data. The CV models were trained on a dataset built over ~4 years of partnership with Syska Hennessy. A bootstrapper has no path to that data. Gate 2 also arguable: domain experts (AEC firms) own the standards and could hire an engineer. Strong traction signal for the space.</div>
+
+<b>Crowding</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>Swapp, TestFit, and Alice Technologies do adjacent AEC AI work.</li>
+<li>Autodesk (Revit owner) could absorb this as a feature.</li>
+</ul>
+</div>
+
+<!-- COMPANY 4: Traceforce -->
+<div style="background:#fdf8f8; border:1px solid #dcc0c0; padding:8px; margin-bottom:12px; font-family:system-ui,sans-serif; font-size:14px;">
+
+<b>4. Traceforce 🔴 — On-device security monitoring for AI apps and MCP connections</b>
+
+<div style="color:#555; font-size:13px; margin:4px 0 8px 0;">
+AI security · San Francisco · founded 2025 · pre-seed (YC S26) · ~3 people<br>
+<a href="https://traceforce.dev">traceforce.dev</a> · <a href="https://www.ycombinator.com/companies/traceforce">YC profile</a>
+<br><span style="color:#b00;">(YC S26 — included because no non-YC on-device AI security monitor surfaced)</span>
+</div>
+
+<b>What they do</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Installs a lightweight binary and browser extension on employee devices for real-time visibility into AI agents, apps, and MCP connections.
+</li>
+<li>
+Inventories AI apps and MCPs, monitors prompts and tool calls, detects vulnerabilities, remediates packages, blocks dangerous runtime actions.
+</li>
+<li>
+TraceGraph links prompts, tool calls, and outcomes during incident investigation.
+</li>
+</ul>
+
+<b>The problem they solve</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+AI apps like ChatGPT and Claude introduce security risks that traditional tools weren't built to handle. Security teams are struggling to keep up.
+</li>
+<li>Example: an engineer's Claude Code session uses an MCP that exposes API keys in prompts. Traceforce detects and blocks it in real time.</li>
+</ul>
+
+<b>Money</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Pre-seed round (YC standard deal).
+</li>
+<li>
+Deployed on 1,000+ devices across 10 organizations.
+</li>
+<li>Targets SMEs with 200+ employees adopting AI coding tools.</li>
+</ul>
+
+<b>Why now</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>MCP adoption in 2025–2026 created a new attack surface — third-party tool connections inside AI coding assistants.</li>
+<li>
+Open-source mcp-xray tool for testing MCP security.
+</li>
+</ul>
+
+<b>Bootstrap fit</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li><b>Grader:</b> Objective — secret leaked or not, action blocked or not.</li>
+<li><b>LLM deleted:</b> On-device binary + browser extension remain. Real infra.</li>
+<li><b>Accumulates:</b> Vulnerability signatures, MCP risk profiles grow over time.</li>
+<li><b>Week one:</b> Customer installs agent, gets dashboard immediately. Works.</li>
+<li><b>Buyer:</b> 🔴 Security teams — procurement-gated. Enterprise sales cycle. Also: CrowdStrike, Microsoft Defender, Palo Alto will absorb this as a feature on their existing device agents.</li>
+</ul>
+<div style="margin-top:4px;"><b>Verdict: 🔴</b> — Gate 5: security buyer is procurement-gated. Gate 3 also fails: endpoint security incumbents (CrowdStrike, Microsoft, Palo Alto) will add AI-app monitoring to existing device agents. A bootstrapper can't outrun platform absorption here.</div>
+
+<b>Crowding</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>Surf AI launched with $57M. Prompt Security, Lasso Security, Robust Intelligence all in AI security governance.</li>
+<li>Endpoint security giants will integrate this as a feature.</li>
+</ul>
+</div>
+
+<!-- COMPANY 5: Allus AI -->
+<div style="background:#fdf8f8; border:1px solid #dcc0c0; padding:8px; margin-bottom:12px; font-family:system-ui,sans-serif; font-size:14px;">
+
+<b>5. Allus AI 🔴 — Vision foundation model for manufacturing inspection</b>
+
+<div style="color:#555; font-size:13px; margin:4px 0 8px 0;">
+Industrial AI · Atlanta · founded 2025 · seed (YC F25) · 3 people<br>
+<a href="https://allus.ai">allus.ai</a> · <a href="https://www.ycombinator.com/companies/allus-ai">YC profile</a>
+<br><span style="color:#b00;">(YC F25 — included because no non-YC equivalent in manufacturing vision at this stage surfaced)</span>
+</div>
+
+<b>What they do</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Develops a vision foundation model for quality inspection, process monitoring, and defect detection in manufacturing.
+</li>
+<li>
+1 billion parameter model trained on 1.5 billion+ proprietary industrial data pairs.
+</li>
+<li>
+Can be trained and deployed in minutes with just a handful of example images.
+</li>
+</ul>
+
+<b>The problem they solve</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Traditional inspection systems are slow, domain-specific, and expensive.
+</li>
+<li>Example: an electronics line with 200 component types — Allus detects solder defects at >99.95% accuracy vs. manual inspection at ~95%.</li>
+</ul>
+
+<pre style="font-size:12px; background:#f0f0f0; padding:6px; margin:4px 0; overflow-x:auto;">
+Accuracy                    Allus       Traditional
+Defect detection            >99.95%     ~95% (manual)
+Process monitoring          >99.2%      varies
+Setup time                  minutes     weeks–months
+</pre>
+
+<b>Money</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Seed round raised.
+ 
+Backed by YC, Pioneer Fund, Blast, Transpose, 007 Venture Partners, K50, Ponderosa.
+</li>
+<li>
+3 employees. Deployed on production lines of 5 Fortune 500 manufacturers.
+</li>
+</ul>
+
+<b>Why now</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>Vision foundation models got good enough in 2024–2025 to generalize across manufacturing domains with few-shot learning.</li>
+</ul>
+
+<b>Bootstrap fit</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li><b>Grader:</b> Objective — defect detected or missed. Measurable.</li>
+<li><b>LLM deleted:</b> 1B-parameter vision model trained on 1.5B industrial image pairs remains. Massive technical asset.</li>
+<li><b>Accumulates:</b> Proprietary training data is the moat.</li>
+<li><b>Week one:</b> 🔴 Needs the 1.5B industrial image pair dataset — cold-start for a bootstrapper. I don't have factory floor data.</li>
+<li><b>Buyer:</b> Manufacturing ops — relationship- and procurement-gated at F500.</li>
+</ul>
+<div style="margin-top:4px;"><b>Verdict: 🔴</b> — Gate 4: the entire value is a proprietary dataset (1.5B industrial image pairs) I can't construct alone before customer #1. Also gate 5: F500 manufacturing buyer is procurement-gated. Strong company, wrong shape for bootstrapping.</div>
+
+<b>Crowding</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>Landing AI, Instrumental, Cognex (public), Keyence all in manufacturing vision.</li>
+<li>Well-funded space. Google Cloud Visual Inspection AI exists.</li>
+</ul>
+</div>
+
+<!-- COMPANY 6: Leadbay -->
+<div style="background:#fdf8f8; border:1px solid #dcc0c0; padding:8px; margin-bottom:12px; font-family:system-ui,sans-serif; font-size:14px;">
+
+<b>6. Leadbay 🔴 — AI that discovers SMB leads invisible to ZoomInfo/Clay/LinkedIn</b>
+
+<div style="color:#555; font-size:13px; margin:4px 0 8px 0;">
+Sales AI · San Francisco · founded 2023 · seed (~$4.8M) · 2–10 people<br>
+<a href="https://leadbay.ai">leadbay.ai</a> · <a href="https://www.ycombinator.com/companies/leadbay">YC profile</a>
+<br><span style="color:#b00;">(YC F25 — included because no comparable non-YC data-scarce lead discovery startup surfaced)</span>
+</div>
+
+<b>What they do</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Builds a domain-specific AI model that discovers and qualifies SMB leads that LinkedIn, ZoomInfo, Apollo, and Clay can't find.
+</li>
+<li>
+Trained on market data, a company's CRM/ERP history, and reps' instincts. Learns a team's ICP and predicts who buys next.
+</li>
+<li>Targets data-scarce industries: construction, hospitality, manufacturing.</li>
+</ul>
+
+<b>The problem they solve</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+LinkedIn, Clay, ZoomInfo miss 70% of US companies and cover only 0.001% of digital signals.
+</li>
+<li>Example: a building-materials distributor's sales team can't find local contractors on ZoomInfo. Leadbay infers their existence from permit filings, supplier data, and similar sources.</li>
+</ul>
+
+<b>Money</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Total funding $4.8M across two seed rounds.
+</li>
+<li>
+Customers include L'Oréal, Saint-Gobain, Gerflor USA, Corgi, and Nespresso B2B.
+</li>
+<li>Freemium (50 free leads) + paid tiers.</li>
+</ul>
+
+<b>Why now</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>LLMs + inference models can now reason about sparse signals (permit filings, association memberships) to identify businesses without websites.</li>
+</ul>
+
+<b>Bootstrap fit</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li><b>Grader:</b> Partly objective (did the lead exist? did it convert?) but ICP scoring is somewhat subjective.</li>
+<li><b>LLM deleted:</b> Proprietary data crawl + inference model remain.</li>
+<li><b>Accumulates:</b> Data corpus of discovered businesses accumulates.</li>
+<li><b>Week one:</b> 🔴 Needs customer's CRM/ERP data and reps' instincts to train. Also: the core data asset (the map of invisible businesses) is a cold-start corpus I can't build alone. Data-network-effect business.</li>
+<li><b>Buyer:</b> Sales teams — moderate WTP but crowded (Clay, Apollo, ZoomInfo all competing).</li>
+</ul>
+<div style="margin-top:4px;"><b>Verdict: 🔴</b> — Gate 4: classic data-network-effect cold start. Value requires both the customer's CRM data and a proprietary database of invisible businesses that can only be built at scale. A solo founder has no path to this dataset.</div>
+
+<b>Crowding</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>Clay ($500M+ valuation), Apollo, ZoomInfo (public), Clearbit — massively crowded space.</li>
+<li>Leadbay's niche (data-scarce SMBs) is less contested, but the incumbents could move down-market.</li>
+</ul>
+</div>
+
+<!-- COMPANY 7: Zag -->
+<div style="background:#fdf8f8; border:1px solid #dcc0c0; padding:8px; margin-bottom:12px; font-family:system-ui,sans-serif; font-size:14px;">
+
+<b>7. Zag 🔴 — AI review agents that build, test, and run code on every PR</b>
+
+<div style="color:#555; font-size:13px; margin:4px 0 8px 0;">
+Dev tools · San Francisco · founded 2025 · seed (YC F25) · ~3 people<br>
+<a href="https://zag.dev">zag.dev</a> · <a href="https://www.ycombinator.com/companies/zag">YC profile</a>
+<br><span style="color:#b00;">(YC F25 — included because no non-YC equivalent with Apple Silicon focus surfaced)</span>
+</div>
+
+<b>What they do</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Platform for building AI review agents. Describe agents in TypeScript or Swift. Zag runs them in real sandboxed environments on every PR.
+</li>
+<li>
+Agents don't just read diffs — they build your project, run your tests, boot your app, and verify it actually works.
+</li>
+<li>
+At-cost macOS compute at $0.015/min — 5× cheaper than any other macOS runner.
+</li>
+</ul>
+
+<b>The problem they solve</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Coding agents produce changes faster than humans can review. Claude Code and Codex accelerate writing, but review hasn't kept up.
+</li>
+<li>Example: a 10-person iOS team merges 30 PRs/day from coding agents. Zag catches a broken database migration and a clipped button on iPhone SE before merge.</li>
+</ul>
+
+<b>Money</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>Usage-based compute pricing ($0.015/min on Apple Silicon).</li>
+<li>Early access, focused on Apple platform developers initially.</li>
+</ul>
+
+<b>Why now</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Coding agents are producing changes faster than humans can review. Tools like Claude Code and Codex are accelerating how code gets written, but review hasn't kept up.
+</li>
+</ul>
+
+<b>Bootstrap fit</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li><b>Grader:</b> Objective — tests pass or fail, UI renders correctly or not.</li>
+<li><b>LLM deleted:</b> Sandboxed compute environments on Apple Silicon remain. Real infra.</li>
+<li><b>Accumulates:</b> The macOS sandbox infra is real but is compute hosting, not a dataset or harness.</li>
+<li><b>Week one:</b> Customer installs GitHub app, agents run on next PR. Works.</li>
+<li><b>Buyer:</b> 🔴 Engineering teams — developer tools have notoriously low WTP and are prone to freemium races. GitHub, Apple, and CI incumbents (Bitrise, CircleCI) can absorb this as a feature.</li>
+</ul>
+<div style="margin-top:4px;"><b>Verdict: 🔴</b> — Gate 3: platform absorption. GitHub Actions + Apple's own CI tooling could integrate review agents natively. The compute layer is commodity (even if currently cheaper). Dev-tools buyer has low WTP and expects free tiers. A single-function utility a platform would absorb.</div>
+
+<b>Crowding</b>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>CodeRabbit, Graphite, Ellipsis, Codiumate all do AI code review.</li>
+<li>
+Median AI code assistant startup ranked 40–80 has only $500K (YC standard deal) — dense layer of pre-PMF companies.
+</li>
+</ul>
+</div>
