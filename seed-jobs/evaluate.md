@@ -1,22 +1,24 @@
-Search Google and job search sites for job postings from AI startups at pre-seed or seed stage that are actively hiring for early roles. These companies are too early for the funding news cycle but serious enough to pay someone.
+Today is {{TODAY}}.
+
+Two earlier passes produced the shortlist at the bottom of this prompt: one searched job postings and collected candidates, a second read their descriptions and kept the most promising. Companies covered in earlier runs were removed by script — every company below is new. Your job is to research them, judge them, and write up the ones worth my time.
 
 **Goal:** I am looking for niches where a solo founder or 2-person team could realistically bootstrap a competitor — ship product, land paying customers on product merit, and reach meaningful revenue without raising. Maybe raise later, but the starting move is bootstrapped. So this is NOT a hunt for venture-scale opportunities. Surface companies operating in spaces where bootstrapping is plausible, and flag the ones operating in spaces where it isn't.
 
-**How to search.** Combine early-hire phrasing with AI product terms, and vary both each run. Don't lock onto one role title — "founding engineer" is only one way a tiny company writes this. Equally good: "first engineer", "engineer #1/#2/#3", "first technical hire", "first engineering hire", "founding ML engineer", "founding AI engineer", "first product hire", "stealth startup", and any similar phrasing you come up with. Pair those with terms like AI agent, AI automation, AI workflow, AI coworker, applied AI, and whatever verticals you're rotating through this run.
+**Work in this order.**
 
-Run these across Google and job search sites (Jobright, Teal, Wellfound, Y Combinator's job board, company careers pages, etc.). Rotate the exact phrasings between runs so results don't repeat.
+1. **Research the shortlist.** The list is short because a triage pass already dropped the obvious failures — these are the companies worth spending searches on, so search them rather than re-judging them from their one-liners. Verify for each:
+   - Stage: pre-seed (preferred) or seed only, under $10M if disclosed
+   - Sector: B2B AI tools, AI automation, AI infrastructure, or vertical applied AI
+   - Company founded 2025 or 2026 (2026 preferred)
+   - Job posted in the last 2 months
+   - Exclude: consumer apps, crypto, biotech, hardware, PE workflow tools
+2. **Then apply the full rubric** — all five gates — and write up whatever is left.
 
-Companies posting these are usually 1–3 people total — exactly the niche-traction signal we want. The "stealth" searches in particular surface slightly underfunded, under-the-radar ideas — exactly the kind of opportunity worth investigating. Note that "founding engineer" has become a buzzword that already-polished YC-backed companies use, so weight the scrappier phrasings higher.
+Spend your searches evenly rather than exhausting them on the first few companies. If the budget runs out before the list does, judge the remainder on what you already know and say what is unverified — do not silently drop them.
 
+The shortlist is unverified — earlier passes worked from job-posting text without checking any of the above. Treat every claim in it as a lead, not a fact. Dropping a good share of the list is the expected outcome; a triage pass filtered on the description alone, which is thin evidence, so expect some to fail once you see the real product.
 
-Apply stage and recency as a POST-FILTER (not as search keywords). For each company that looks promising, do a follow-up search to confirm:
-- Stage: pre-seed (preferred) or seed only, under $10M if disclosed
-- Sector: B2B AI tools, AI automation, AI infrastructure, or vertical applied AI
-- Company founded 2025 or 2026 (2026 preferred)
-- Job posted in the last 2 months
-- Exclude: consumer apps, crypto, biotech, hardware, PE workflow tools
-
-For each company, extract:
+For each surviving company, extract:
 1. What specific problem they solve — give this the most bullets, stick to technical details, give a concrete example
 2. Who the customer is (job title, industry)
 3. Why now — what made this possible in 2025/2026 (real capability shift vs. GPT wrapper)
@@ -105,7 +107,7 @@ mechanically measurable), the value is a comparison harness not domain knowledge
 the term list arrives in the first five minutes, and the verified lexicon
 accumulates. **That is the bar for 🟢.**
 
-Do NOT include founder pedigree. **Significantly prefer non-YC companies.** YC-backed companies have funding, network, and reputation tailwinds from day one that make them poor competitive targets for a bootstrapper. Include a YC company only if no comparable non-YC equivalent surfaces in this run, and when included, flag it explicitly (e.g., "(YC F25 — included for lack of non-YC equivalent)"). Skip companies already in PREVIOUSLY COVERED.
+Do NOT include founder pedigree. **Significantly prefer non-YC companies.** YC-backed companies have funding, network, and reputation tailwinds from day one that make them poor competitive targets for a bootstrapper. Include a YC company only if no comparable non-YC equivalent surfaces in this run, and when included, flag it explicitly (e.g., "(YC F25 — included for lack of non-YC equivalent)").
 
 Return up to 10 companies per run, minimum 4. If fewer than 10 survive the filters, return fewer — do not substitute weaker candidates to hit a count, and do not mention the shortfall in the output.
 
@@ -156,10 +158,9 @@ Use the plain company name only — no tagline, no URL, no verdict. This is pars
 Company entries only. Do not add cross-company synthesis sections — no "Recurring problems", no "Gaps", no "Bootstrap viability" round-up, no closing commentary of any kind. End the output after the last company entry.
 
 Output only the HTML fragment. No preamble, no code fences, no markdown.
-# PREVIOUSLY COVERED COMPANIES
 
-Every company sent in any previous run is listed below — this list is complete, not a recent sample. **Do not include any of them.** If one turns up in search results, skip it entirely and keep searching. Return only companies absent from this list.
+# SHORTLIST
 
-Do not restate this instruction in the output, and do not claim to have excluded a range of runs — you have names, not run numbers.
+Unverified. Names and one-liners came from job postings; a triage pass ranked them on those descriptions alone. Verify before trusting, and drop freely.
 
-{{PREVIOUS_RESULTS}}
+{{CANDIDATES}}
