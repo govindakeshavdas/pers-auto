@@ -1,177 +1,53 @@
-<!-- COMPANY 1: Willow -->
-<!-- COMPANY 2: Proxy Foods AI -->
-<!-- COMPANY 3: Relu -->
-<!-- COMPANY 4: Zerolook -->
-<!-- COMPANY 5: Riven Systems -->
+<!-- COMPANY 1: Actualyze AI -->
+<div style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; border: 1px solid #ddd; border-radius: 6px; background: #fafafa; padding: 8px; margin-bottom: 12px;">
+  <div style="font-weight: bold; font-size: 15px;">1. Actualyze AI — 🔴 — Unified gateway for enterprise AI requests</div>
+  <div style="font-size: 12px; color: #555; margin-top: 2px;">
+    AI infrastructure · Pasadena, CA · <a href="https://actualyze.ai" style="color:#1a73e8;">actualyze.ai</a> · $7M seed (Aug 2026)
+  </div>
 
-<!-- COMPANY 1: Willow -->
-<div style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 1.5; color: #1a1a1a; border: 1px solid #ddd; border-radius: 8px; padding: 16px; margin-bottom: 16px; background: #fff;">
-<div style="font-size: 16px; font-weight: bold; margin-bottom: 4px;">1 &nbsp; Willow &nbsp; 🔴 &nbsp; AI agent governance &amp; access control for enterprises</div>
-<div style="font-size: 13px; color: #666; margin-bottom: 12px;">AI security · Herzliya, Israel · <a href="https://www.finsmes.com/2026/06/willow-raises-7m-in-seed-funding.html" style="color: #1a73e8;">$7M seed</a> (Jun 2026)</div>
+  <div style="margin-top: 8px; font-weight: bold; font-size: 13px;">What they do</div>
+  <ul style="margin: 4px 0; padding-left: 18px; line-height: 1.5;">
+    <li>
+Proxy layer between an org's people/apps/agents and every AI model it uses.
+</li>
+    <li>
+Enforces access policies, security guardrails, budget controls, and routing on every inference request.
+</li>
+    <li>
+Integrates with any OpenAI-compatible model and third-party AI tools.
+</li>
+    <li>
+Currently in Early Access via a Design Partner Program.
+</li>
+  </ul>
 
-<div style="font-weight: bold; margin-top: 10px; margin-bottom: 4px;">What they do</div>
-<ul style="margin: 0 0 8px 0; padding-left: 20px;">
-<li>Identity &amp; access platform built for AI agents, not human users.</li>
-<li>Runtime permissions, audit trails, and "shadow AI" detection.</li>
-<li>Marketplace of 1,000+ connectors linking agents to internal systems.</li>
-</ul>
+  <div style="margin-top: 8px; font-weight: bold; font-size: 13px;">The problem they solve</div>
+  <ul style="margin: 4px 0; padding-left: 18px; line-height: 1.5;">
+    <li>
+Existing systems can authenticate a model call but can't read the prompt, detect data leaks, route it, or attribute cost to a team.
+</li>
+    <li>Example: 10 teams each hold API keys; month-end bill is one pool with no per-team attribution or policy enforcement.</li>
+  </ul>
 
-<div style="font-weight: bold; margin-top: 10px; margin-bottom: 4px;">The problem they solve</div>
-<ul style="margin: 0 0 8px 0; padding-left: 20px;">
-<li>Companies deploy Claude, ChatGPT, Codex agents with zero oversight of what they access.</li>
-<li>65% of companies reported agent-related security incidents in the past year.</li>
-<li>Example: an agent auto-connected to Salesforce exports a full customer list without approval.</li>
-</ul>
+  <div style="margin-top: 8px; font-weight: bold; font-size: 13px;">Fit</div>
+  <ul style="margin: 4px 0; padding-left: 18px; line-height: 1.5;">
+    <li><strong>Subjective?</strong> No — routing and budget controls are mechanical.</li>
+    <li><strong>Can I start?</strong> Yes — build an OpenAI-compatible proxy in week one on public APIs.</li>
+    <li><strong>Moat?</strong> 🔴 Thin proxy layer. 
+Portkey, LiteLLM, Bifrost, Kong AI Gateway, Helicone, Cloudflare AI Gateway all occupy this space.
+ 
+AWS Bedrock has native IAM and model management built in.
+ Delete the LLM and it's a request router any API-gateway vendor adds as a feature.</li>
+  </ul>
+  <div style="margin-top: 4px;"><strong>Verdict: 🔴</strong> — fails Gate 3. AI gateway is a crowded commodity layer that cloud providers and open-source tools already cover.</div>
 
-<div style="font-weight: bold; margin-top: 10px; margin-bottom: 4px;">Fit</div>
-<ul style="margin: 0 0 8px 0; padding-left: 20px;">
-<li><b>Taste:</b> Pass — access control is binary, not subjective.</li>
-<li><b>Can I start?</b> 🔴 — needs 1,000 connectors into enterprise systems; useless until inside IT.</li>
-<li><b>Moat:</b> —</li>
-</ul>
-<div style="margin-bottom: 8px;"><b>Verdict: 🔴</b> — fails Gate 2. Product is inert without deep integrations into each customer's stack. Week one is meetings, not shipping.</div>
-
-<div style="font-weight: bold; margin-top: 10px; margin-bottom: 4px;">Crowding</div>
-<ul style="margin: 0 0 0 0; padding-left: 20px;">
-<li>Oak ($60M seed, Accel-led), Opal Security, Veza, ConductorOne — all doing agent/identity access.</li>
-<li>Microsoft Entra adding agent identity features in preview.</li>
-</ul>
-</div>
-
-<!-- COMPANY 2: Proxy Foods AI -->
-<div style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 1.5; color: #1a1a1a; border: 1px solid #ddd; border-radius: 8px; padding: 16px; margin-bottom: 16px; background: #fff;">
-<div style="font-size: 16px; font-weight: bold; margin-bottom: 4px;">2 &nbsp; Proxy Foods AI &nbsp; 🟡 &nbsp; AI formulation platform for food &amp; beverage R&amp;D</div>
-<div style="font-size: 13px; color: #666; margin-bottom: 12px;">F&amp;B / CPG · Washington, DC · <a href="https://www.finsmes.com/2026/08/proxy-foods-ai-raises-6m-in-seed-funding.html" style="color: #1a73e8;">$6M seed</a> (Aug 2026)</div>
-
-<div style="font-weight: bold; margin-top: 10px; margin-bottom: 4px;">What they do</div>
-<ul style="margin: 0 0 8px 0; padding-left: 20px;">
-<li>AI predicts formulation performance before lab testing.</li>
-<li>Ingests a company's locked-away legacy R&amp;D files as training data.</li>
-<li>Uses Expert Guided Bayesian Optimization for sensory-match predictions.</li>
-<li>Claims 80% fewer development iterations; prototype timelines from months to days.</li>
-</ul>
-
-<div style="font-weight: bold; margin-top: 10px; margin-bottom: 4px;">The problem they solve</div>
-<ul style="margin: 0 0 8px 0; padding-left: 20px;">
-<li>CPG food R&amp;D teams run hundreds of physical trials to reformulate a single product.</li>
-<li>Each trial costs materials, lab time, and sensory panels.</li>
-<li>Example: Barilla reformulating a pasta sauce for lower sodium needs 50+ bench trials; Proxy cuts it to &lt;10.</li>
-</ul>
-
-<div style="font-weight: bold; margin-top: 10px; margin-bottom: 4px;">Fit</div>
-<ul style="margin: 0 0 8px 0; padding-left: 20px;">
-<li><b>Taste:</b> Borderline — formulation is science (nutrition, viscosity, cost), but "taste" is literally taste. They use Bayesian models, not gut feel. Pass.</li>
-<li><b>Can I start?</b> Yes — USDA food-composition DB is public. Build a constraint solver in week one that optimizes ingredient ratios for nutrition and cost. Demo with open recipes.</li>
-<li><b>Moat:</b> Ingredient-interaction dataset that accumulates with every customer engagement. Proprietary sensory-match models. Not a single LLM call.</li>
-</ul>
-<div style="margin-bottom: 8px;"><b>Verdict: 🟡</b> — passes, but big CPGs (Givaudan, IFF) have in-house AI R&amp;D labs and could build this; your dataset is small vs. theirs until you sign many customers.</div>
-
-<div style="font-weight: bold; margin-top: 10px; margin-bottom: 4px;">Crowding</div>
-<ul style="margin: 0 0 0 0; padding-left: 20px;">
-<li>Tastewise (consumer-trends AI, not formulation), NotCo (proprietary, not SaaS).</li>
-<li>No direct US SaaS competitor doing B2B formulation prediction at this stage.</li>
-</ul>
-</div>
-
-<!-- COMPANY 3: Relu -->
-<div style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 1.5; color: #1a1a1a; border: 1px solid #ddd; border-radius: 8px; padding: 16px; margin-bottom: 16px; background: #fff;">
-<div style="font-size: 16px; font-weight: bold; margin-bottom: 4px;">3 &nbsp; Relu &nbsp; 🟡 &nbsp; AI-automated design for dental lab cases</div>
-<div style="font-size: 13px; color: #666; margin-bottom: 12px;">Dental / medtech · Leuven, BE + Boston, MA · <a href="https://www.finsmes.com/2026/08/relu-raises-1-75m-in-seed-funding.html" style="color: #1a73e8;">$1.75M seed</a> (Aug 2026)</div>
-
-<div style="font-weight: bold; margin-top: 10px; margin-bottom: 4px;">What they do</div>
-<ul style="margin: 0 0 8px 0; padding-left: 20px;">
-<li>AI designs crowns, night guards, surgical guides from CBCT scans — no human CAD technician.</li>
-<li>Pay-per-case SaaS; 1M+ cases/year across 82 countries.</li>
-<li>CBCT segmentation takes &lt;15 min vs. 2–4 hrs manually.</li>
-<li>CE-certified and FDA 510(k) cleared.</li>
-</ul>
-
-<div style="font-weight: bold; margin-top: 10px; margin-bottom: 4px;">The problem they solve</div>
-<ul style="margin: 0 0 8px 0; padding-left: 20px;">
-<li>Dental labs face severe technician shortages; CAD design is the bottleneck.</li>
-<li>Manual crown design takes 20–40 min per case; Relu automates the common shapes.</li>
-<li>Example: a lab doing 200 night guards/week saves ~80 technician-hours by sending files to Relu.</li>
-</ul>
-
-<div style="font-weight: bold; margin-top: 10px; margin-bottom: 4px;">Fit</div>
-<ul style="margin: 0 0 8px 0; padding-left: 20px;">
-<li><b>Taste:</b> Pass — 3D geometry, not aesthetic judgment.</li>
-<li><b>Can I start?</b> Yes — public dental CBCT datasets exist (e.g., OSF repos). Train a 3D tooth-segmentation model week one. The geometry is open; the scan format is standard DICOM.</li>
-<li><b>Moat:</b> Model trained on 1M+ real cases. CE + FDA clearance is a 12–18 month regulatory wall. Partner API (Relu Engine) embedded in Planmeca, Ray, X-Nav.</li>
-</ul>
-<div style="margin-bottom: 8px;"><b>Verdict: 🟡</b> — real tech and regulatory moat, but 3Shape and Align Technology have massive R&amp;D budgets and could integrate similar AI into their existing CAD suites.</div>
-
-<div style="font-weight: bold; margin-top: 10px; margin-bottom: 4px;">Crowding</div>
-<ul style="margin: 0 0 0 0; padding-left: 20px;">
-<li>3Shape (market leader, adding AI), Overjet (dental AI for diagnostics, not lab design), DIBS AI (orthodontic planning).</li>
-<li>No direct US-only competitor doing automated lab case design at this scale.</li>
-</ul>
-</div>
-
-<!-- COMPANY 4: Zerolook -->
-<div style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 1.5; color: #1a1a1a; border: 1px solid #ddd; border-radius: 8px; padding: 16px; margin-bottom: 16px; background: #fff;">
-<div style="font-size: 16px; font-weight: bold; margin-bottom: 4px;">4 &nbsp; Zerolook &nbsp; 🟡 &nbsp; Predictive flight-shopping API for AI-scale search</div>
-<div style="font-size: 13px; color: #666; margin-bottom: 12px;">Travel tech · Zug, Switzerland · <a href="https://www.eu-startups.com/2026/08/zug-based-zerolook-raises-e1-6-million-to-tackle-ai-driven-flight-search-costs/" style="color: #1a73e8;">€1.6M pre-seed</a> (Aug 2026)</div>
-
-<div style="font-weight: bold; margin-top: 10px; margin-bottom: 4px;">What they do</div>
-<ul style="margin: 0 0 8px 0; padding-left: 20px;">
-<li>ML model predicts flight prices instead of querying airline reservation systems live.</li>
-<li>REST and MCP API — plugs into ChatGPT, Claude, and travel agent runtimes.</li>
-<li>Airlines pay GDS fees on every search; Zerolook replaces that cost on non-booking queries.</li>
-</ul>
-
-<div style="font-weight: bold; margin-top: 10px; margin-bottom: 4px;">The problem they solve</div>
-<ul style="margin: 0 0 8px 0; padding-left: 20px;">
-<li>AI travel agents create look-to-book ratios of 1:200,000 — searching costs more than it earns.</li>
-<li>GDS queries cost $0.50–$4 each; most never convert to a booking.</li>
-<li>Example: an OTA serving Claude-powered trip planning burns $200K/month on GDS fees for searches that never book.</li>
-</ul>
-
-<div style="font-weight: bold; margin-top: 10px; margin-bottom: 4px;">Fit</div>
-<ul style="margin: 0 0 8px 0; padding-left: 20px;">
-<li><b>Taste:</b> Pass — price prediction is math, not judgment.</li>
-<li><b>Can I start?</b> Yes — scrape public flight prices (Google Flights, Skyscanner). Train a price-prediction model on historical route/fare data. Ship an API in week one.</li>
-<li><b>Moat:</b> Fare-prediction model gets better with every API call's feedback loop. Accuracy is measurable; customers compare against live GDS. The training dataset is the accumulating asset.</li>
-</ul>
-<div style="margin-bottom: 8px;"><b>Verdict: 🟡</b> — real tech, but Google (ITA/QPX) and Amadeus can add predictive caching to their own stacks. Your moat erodes if a GDS offers the same thing natively.</div>
-
-<div style="font-weight: bold; margin-top: 10px; margin-bottom: 4px;">Crowding</div>
-<ul style="margin: 0 0 0 0; padding-left: 20px;">
-<li>Amadeus, Travelport, Duffel — all provide live results, none do predictive/cached results yet.</li>
-<li>Google Flights (ITA Software) is the latent threat — owns the data already.</li>
-</ul>
-</div>
-
-<!-- COMPANY 5: Riven Systems -->
-<div style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 1.5; color: #1a1a1a; border: 1px solid #ddd; border-radius: 8px; padding: 16px; margin-bottom: 16px; background: #fff;">
-<div style="font-size: 16px; font-weight: bold; margin-bottom: 4px;">5 &nbsp; Riven Systems &nbsp; 🔴 &nbsp; AI platform for critical minerals processing chemistry</div>
-<div style="font-size: 13px; color: #666; margin-bottom: 12px;">Industrial chemistry · New York, NY · <a href="https://www.finsmes.com/2026/08/riven-systems-raises-7-9m-in-pre-seed-funding.html" style="color: #1a73e8;">$7.9M pre-seed</a> (Aug 2026)</div>
-
-<div style="font-weight: bold; margin-top: 10px; margin-bottom: 4px;">What they do</div>
-<ul style="margin: 0 0 8px 0; padding-left: 20px;">
-<li>Combines autonomous wet-lab testing, computational chemistry, and AI.</li>
-<li>Designs and de-risks mineral separation/refining processes for rare earths, lithium, etc.</li>
-<li>Won DOE Genesis Mission award for AI innovation.</li>
-</ul>
-
-<div style="font-weight: bold; margin-top: 10px; margin-bottom: 4px;">The problem they solve</div>
-<ul style="margin: 0 0 8px 0; padding-left: 20px;">
-<li>China controls 70%+ of global critical minerals processing; US has almost no capacity.</li>
-<li>Scaling new processing chemistry takes 5–10 years with traditional trial-and-error.</li>
-<li>Example: a lithium deposit needs a custom extraction flowsheet; Riven's AI-guided lab runs 100x more experiments per week than a manual team.</li>
-</ul>
-
-<div style="font-weight: bold; margin-top: 10px; margin-bottom: 4px;">Fit</div>
-<ul style="margin: 0 0 8px 0; padding-left: 20px;">
-<li><b>Taste:</b> Pass — chemistry is deterministic, not subjective.</li>
-<li><b>Can I start?</b> 🔴 — requires autonomous lab hardware, wet-lab reagents, and physical mineral samples. Cannot ship software alone. Week one is buying lab equipment, not writing code.</li>
-<li><b>Moat:</b> —</li>
-</ul>
-<div style="margin-bottom: 8px;"><b>Verdict: 🔴</b> — fails Gate 2. This is a hardware + lab company disguised as AI. I cannot start with code; I need a physical lab and mineral feedstock.</div>
-
-<div style="font-weight: bold; margin-top: 10px; margin-bottom: 4px;">Crowding</div>
-<ul style="margin: 0 0 0 0; padding-left: 20px;">
-<li>Lilac Solutions (lithium extraction, $200M+), KoBold Metals (AI mineral exploration, $500M+).</li>
-<li>Aether (computational materials), Citrine Informatics (materials AI platform).</li>
-</ul>
+  <div style="margin-top: 8px; font-weight: bold; font-size: 13px;">Crowding</div>
+  <ul style="margin: 4px 0; padding-left: 18px; line-height: 1.5;">
+    <li>
+LiteLLM, Portkey, Kong AI Gateway, Helicone, Bifrost, Arize AI appear most frequently in 2026 gateway comparisons.
+</li>
+    <li>
+Cloudflare AI Gateway is free at moderate volume; AWS Bedrock is native for AWS shops.
+</li>
+  </ul>
 </div>
