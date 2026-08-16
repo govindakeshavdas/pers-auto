@@ -1,411 +1,273 @@
-<!-- COMPANY 1: AgentMail -->
-<div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #fafafa; border: 1px solid #ddd; padding: 8px; margin-bottom: 12px;">
-<strong style="font-size: 15px;">1. AgentMail — 🔴 — Email inbox API built for AI agents</strong><br>
-<span style="font-size: 13px; color: #555;">
-agentmail.to · San Francisco · founded 2025 · seed (~$6M) · ~8 people · YC S25<br>
-<a href="https://www.agentmail.to">agentmail.to</a> · <a href="https://www.ycombinator.com/companies/agentmail">YC profile</a>
+<!-- COMPANY 1: Booko -->
+<div style="background:#fafafa; border:1px solid #ddd; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
+<strong>1. Booko 🔴 — Dynamic pricing engine for bookable time slots</strong><br>
+<span style="color:#666; font-size:13px;">
+  booko.com · San Francisco · founded 2025 · seed (~$4.3M, YC W26) · ~2 people
+  · <a href="https://www.ycombinator.com/companies/booko">YC page</a>
+  · <a href="https://www.ycombinator.com/companies/booko/jobs/iW5ZIzm-founding-machine-learning-engineer">job</a>
 </span>
 
 <br><strong>What they do</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>
-API that gives AI agents their own email inboxes with threading, parsing, labeling, and replying.
+<ul style="margin:4px 0; padding-left:18px;">
+  <li>
+Helps businesses that sell bookable time slots make more money through dynamic pricing.
 </li>
-<li>
-A single API call creates an inbox.
+  <li>
+Integrates with existing booking systems to adjust prices based on historical utilization, availability, and demand.
+</li>
+  <li>
+Forecasts demand class by class and slot by slot, moves price and incentives in real time.
+</li>
+  <li>
+Live in production with national fitness brands, boutique studios, clinics, and chains.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+  <li>
+Unlike physical inventory, unsold time slots disappear forever, yet most businesses still use static pricing.
+</li>
+  <li>Example: a yoga studio has 8 open mats at 2 pm Tuesday. Booko drops the price to fill them, like airline yield management.</li>
+  <li>
+Early customers see ~20% revenue uplift from selling time that would have otherwise gone unsold.
+</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+  <li>Rev share or SaaS on uplift — revenue model not publicly detailed.</li>
+  <li>
+Raised ~$4.3M. Backed by Y Combinator (W26).
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+  <li>
+Service economy has digitized marketing, payments, and booking, but not pricing intelligence.
+</li>
+</ul>
+
+<strong>Bootstrap fit</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+  <li><strong>Grader:</strong> Revenue uplift is measurable — not subjective. Passes.</li>
+  <li><strong>LLM deleted:</strong> Core is demand-forecast model + booking-API integration. Technical, not domain. Passes.</li>
+  <li><strong>Accumulates:</strong> Nothing before customer data arrives. 
+Thin AI wrapper on existing booking APIs with no proprietary data advantage at early stage.
+ 🔴</li>
+  <li><strong>Week one:</strong> Needs customer's historical booking history to forecast. 
+Pricing intelligence improves as booking data compounds.
+ Cold start. 🔴</li>
+  <li><strong>Buyer:</strong> SMB owners (salon, gym, studio) — fragmented, low ACV, hard to reach at scale.</li>
+</ul>
+<div style="background:#ffe0e0; padding:4px 8px; margin-top:4px; border-radius:3px;">
+  <strong>Verdict: 🔴</strong> — Fails gates 3 + 4. No asset accumulates before customer data arrives. Booking platforms (Mindbody, Calendly) can add this as a feature. Data-network-effect business = bad bootstrap. YC W26.
+</div>
+
+<strong>Crowding</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+  <li>
+Yield management software exists for hospitality (IDeaS, Duetto).
+</li>
+  <li>
+Mindbody itself could add dynamic pricing, as could Calendly/Acuity.
+</li>
+</ul>
+</div>
+
+<!-- COMPANY 2: Pharosyn -->
+<div style="background:#fafafa; border:1px solid #ddd; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
+<strong>2. Pharosyn 🔴 — AI competitive intelligence for pharma</strong><br>
+<span style="color:#666; font-size:13px;">
+  pharosyn.ai · London, UK · founded 2025 · pre-seed (Entrepreneurs First) · ~3 people
+  · <a href="https://www.pharosyn.ai/">site</a>
+  · <a href="https://builtin.com/job/founding-ai-engineer-100k-150k-equity-pharosyn/9023935">job</a>
+</span>
+
+<br><strong>What they do</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+  <li>
+Uses AI to continuously write strategic reports on clinical, regulatory, and commercial events involving competitors.
+</li>
+  <li>
+Monitors clinical trials, regulatory filings, press releases, and earnings call transcripts.
+</li>
+  <li>
+AI triaging engine scores and ranks every incoming event against the customer's pipeline criteria.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+  <li>
+Replaces slow manual reporting with real-time AI-powered competitive intelligence in regulated pharma.
+</li>
+  <li>Example: a generics company tracks 40 competitor molecules across FDA, EMA, clinical-trial registries. Today that's a CI analyst reading filings manually.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+  <li>Enterprise SaaS to pharma CI teams. No revenue figures public.</li>
+  <li>
+Has not raised any funding yet.
  
-No OAuth flows, no manual setup, no human in the loop.
+Backed by Entrepreneurs First.
 </li>
-<li>
-Real-time webhooks and websockets.
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+  <li>LLMs can now summarize and triage regulatory filings at scale.</li>
+  <li>Manual CI teams spend most time on collection, not analysis.</li>
+</ul>
+
+<strong>Bootstrap fit</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+  <li><strong>Grader:</strong> Output is strategic reports with "impact assessments" and event prioritization. That is expert judgment. 🔴</li>
+  <li><strong>LLM deleted:</strong> Pharma regulatory + clinical-trial domain knowledge is the core asset. A CI consultancy could hire one dev.</li>
+  <li><strong>Accumulates:</strong> Not reached — stopped at gate 1.</li>
+  <li><strong>Week one:</strong> Not reached.</li>
+  <li><strong>Buyer:</strong> Enterprise pharma — procurement-gated.</li>
+</ul>
+<div style="background:#ffe0e0; padding:4px 8px; margin-top:4px; border-radius:3px;">
+  <strong>Verdict: 🔴</strong> — Fails gate 1. Strategic CI reports are inherently subjective. Also fails gate 2: pharma domain expertise owns the value. Not YC — backed by Entrepreneurs First.
+</div>
+
+<strong>Crowding</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+  <li>
+117 active competitors including Manifold AI, Komodo Health, and Owkin.
+</li>
+  <li>Patsnap Eureka, established CI consultancies, and internal pharma CI teams all compete here.</li>
+</ul>
+</div>
+
+<!-- COMPANY 3: Weave -->
+<div style="background:#fafafa; border:1px solid #ddd; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
+<strong>3. Weave 🔴 — AI measurement of engineering team productivity</strong><br>
+<span style="color:#666; font-size:13px;">
+  workweave.dev · San Francisco · founded 2025 · seed (~$4.2M, YC W25) · ~4 people
+  · <a href="https://www.ycombinator.com/companies/weave-3">YC page</a>
+  · <a href="https://www.ycombinator.com/companies/weave-3/jobs/SqFnIFE-founding-ai-engineer">job</a>
+</span>
+
+<br><strong>What they do</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+  <li>
+Uses AI to measure engineering work — runs LLMs and custom models on every PR and review, analyzing output and quality.
+</li>
+  <li>
+PR-level code attribution: determines what was written by AI, what wasn't, and what should've been.
+</li>
+  <li>
+Key metric is "Weave Hour": how long would it take an experienced engineer to make this change?
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+  <li>
+Engineering measurement has been impossible, so leaders fly blind — relying on gut feel or shoddy metrics.
+</li>
+  <li>Example: an eng VP wants to know how much Cursor adoption actually speeds up the team. Weave shows AI-written vs. human-written code per engineer.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+  <li>SaaS, likely per-seat to eng teams.</li>
+  <li>
+200+ customers including Robinhood, Rho, PostHog, Browserbase.
+</li>
+  <li>
+Raised $4.2M seed from Moonfire, Burst Capital, and YC (W25).
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+  <li>AI coding tools (Cursor, Copilot) create a new measurement need: how much is AI doing?</li>
+  <li>LLMs can now read PRs and estimate effort — not just count lines.</li>
+</ul>
+
+<strong>Bootstrap fit</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+  <li><strong>Grader:</strong> "Productivity," "quality," "how helpful reviews are" — all subjective judgments. "Weave Hour" is an estimate, not a measurement. 🔴</li>
+  <li><strong>LLM deleted:</strong> Not reached — stopped at gate 1.</li>
+  <li><strong>Accumulates:</strong> Not reached.</li>
+  <li><strong>Week one:</strong> Not reached.</li>
+  <li><strong>Buyer:</strong> Eng VPs / CTOs — reachable but would need social proof.</li>
+</ul>
+<div style="background:#ffe0e0; padding:4px 8px; margin-top:4px; border-radius:3px;">
+  <strong>Verdict: 🔴</strong> — Fails gate 1. Estimating engineering "quality" and "impact" is inherently subjective — same shape as call-center QA scoring. Good traction signal (200+ customers) but that makes it a <em>worse</em> bootstrap target, not better. YC W25.
+</div>
+
+<strong>Crowding</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+  <li>LinearB, Jellyfish, Pluralsight Flow, Haystack, Gitprime (acquired by Pluralsight).</li>
+  <li>GitHub Copilot metrics are native and expanding — platform absorption risk.</li>
+</ul>
+</div>
+
+<!-- COMPANY 4: Crustdata -->
+<div style="background:#f5f5f5; border:1px solid #ccc; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
+<strong>4. Crustdata ⛔ DROPPED — B2B data enrichment API</strong><br>
+<span style="color:#666; font-size:13px;">
+  crustdata.com · San Francisco / Gurugram · <a href="https://www.ycombinator.com/companies/crustdata">YC page</a>
+</span>
+<ul style="margin:4px 0; padding-left:18px;">
+  <li><strong>Filter failure: founding year.</strong> 
+Founded in 2020.
+ Required 2025–2026.</li>
+  <li>
+Revenue scaled from $770K to over $4M within seven months post-YC, achieving profitability.
+</li>
+  <li>Also: YC-backed, 
+$6M raised.
+ Mature product with 
+574 active competitors.
+</li>
+  <li>Would also fail gate 4: building a competing dataset of 60M+ companies is not a solo-founder cold start.</li>
+</ul>
+</div>
+
+<!-- COMPANY 5: Unsloth AI -->
+<div style="background:#f5f5f5; border:1px solid #ccc; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
+<strong>5. Unsloth AI ⛔ DROPPED — Open-source LLM fine-tuning framework</strong><br>
+<span style="color:#666; font-size:13px;">
+  unsloth.ai · San Francisco · <a href="https://www.ycombinator.com/companies/unsloth-ai">YC page</a>
+</span>
+<ul style="margin:4px 0; padding-left:18px;">
+  <li><strong>Filter failure: founding year.</strong> 
+Founded in 2023.
+ Required 2025–2026.</li>
+  <li>
+150M+ total downloads; partners with Google, OpenAI, Meta, Mistral, NVIDIA.
+</li>
+  <li>
+Users include Microsoft, NVIDIA, Meta, NASA, HP, VMware, and Intel.
+</li>
+  <li>Also: open-source core with 
+1,642 active competitors.
+ Competing here as a bootstrapper against a YC S24 company with massive adoption is not realistic.</li>
+</ul>
+</div>
+
+<!-- COMPANY 6: Middleware -->
+<div style="background:#f5f5f5; border:1px solid #ccc; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
+<strong>6. Middleware ⛔ DROPPED — AI cloud observability platform</strong><br>
+<span style="color:#666; font-size:13px;">
+  middleware.io · San Francisco · <a href="https://www.ycombinator.com/companies/middleware">YC page</a>
+</span>
+<ul style="margin:4px 0; padding-left:18px;">
+  <li><strong>Filter failure: founding year.</strong> 
+Founded 2022.
+ Required 2025–2026.</li>
+  <li><strong>Filter failure: stage.</strong> 
+Raised $6.5M seed.
  
-Semantic search across inboxes.
-</li>
-<li>
-Shared domain with reputation management built in.
-</li>
-</ul>
-
-<strong>The problem they solve</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>
-Give the agent your personal email and lose control of your inbox.
-</li>
-<li>
-Buy a domain per agent and deal with DNS, DKIM, SPF, deliverability.
-</li>
-<li>Example: a procurement agent needs to email vendors, receive quotes, follow threads — without hijacking a human inbox.</li>
-</ul>
-
-<strong>Money</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>
-Usage-based pricing that works for agents.
-</li>
-<li>
-500+ B2B customers, hundreds of thousands of agent users.
-</li>
-<li>
-$6M seed led by General Catalyst, with YC, Paul Graham, Dharmesh Shah angels.
-</li>
-</ul>
-
-<strong>Why now</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>AI agents are becoming autonomous actors that need persistent digital identities.</li>
-<li>
-AgentMail's larger purpose is to serve as an identity layer for AI agents.
-</li>
-</ul>
-
-<strong>Bootstrap fit</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li><strong>Grader:</strong> Objective — email delivery, threading, parsing are mechanical.</li>
-<li><strong>LLM deleted:</strong> Email infra remains. DKIM, SPF, domain rep, API — no AI needed.</li>
-<li><strong>Accumulates:</strong> Domain reputation takes months. But SendGrid/Mailgun add agent inboxes as a feature. 🔴</li>
-<li><strong>Week one:</strong> API key → inbox → send/receive. Works immediately.</li>
-<li><strong>Buyer:</strong> Developers building agents. Reachable. Will pay usage-based.</li>
-</ul>
-<strong>Verdict: 🔴</strong> — Gate 3. Single-function utility that existing email infra providers (SendGrid, Mailgun, Postmark) absorb as a feature line. Domain reputation accumulates but isn't unique to the product.
-
-<strong>Crowding</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>
-Primitive (YC P26) is building similar email infrastructure for agents.
-</li>
-<li>SendGrid, Mailgun, Postmark all have the infra — just haven't shipped agent-specific APIs yet.</li>
-</ul>
-</div>
-
-<!-- COMPANY 2: Indexable -->
-<div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #fafafa; border: 1px solid #ddd; padding: 8px; margin-bottom: 12px;">
-<strong style="font-size: 15px;">2. Indexable — 🔴 — Sandbox infrastructure for AI agents</strong><br>
-<span style="font-size: 13px; color: #555;">
-ix.dev · San Francisco · founded 2026 · pre-seed (YC P26) · ~3 people · YC P26<br>
-<a href="https://ix.dev">ix.dev</a> · <a href="https://www.ycombinator.com/companies/indexable">YC profile</a>
-</span>
-
-<br><strong>What they do</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>
-Sandbox infrastructure for AI agents — fork and snapshot environments in 26 milliseconds.
-</li>
-<li>
-Full state snapshots include process memory and databases, not just filesystem.
-</li>
-<li>
-Runs a custom Linux 6.19 kernel.
-</li>
-<li>
-Full-environment forks and snapshots across files, processes, memory, and databases.
-</li>
-</ul>
-
-<strong>The problem they solve</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>AI agents executing code need isolated environments they can fork, mutate, and roll back.</li>
-<li>Container-based approaches can't snapshot process memory and DB state together.</li>
-</ul>
-
-<strong>Money</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>Usage-based compute pricing (standard for sandbox infra).</li>
-<li>Revenue/pricing not publicly disclosed.</li>
-</ul>
-
-<strong>Why now</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>
-AI-generated code volumes surge — Cursor alone produces nearly a billion lines of accepted code daily.
-</li>
-</ul>
-
-<strong>Bootstrap fit</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li><strong>Grader:</strong> Objective — latency, snapshot fidelity, isolation are measurable.</li>
-<li><strong>LLM deleted:</strong> Pure systems infra remains. No AI dependency.</li>
-<li><strong>Accumulates:</strong> Kernel-level engineering is hard. But crowded field absorbs it. 🔴</li>
-<li><strong>Week one:</strong> API → spin up sandboxes. Works immediately.</li>
-<li><strong>Buyer:</strong> AI teams needing code execution. Reachable via dev marketing.</li>
-</ul>
-<strong>Verdict: 🔴</strong> — Gate 3. Extremely crowded infra race. 
-Direct competitors include E2B (well-funded), Blaxel (YC S25), Playgent (YC S25), Hopx, Modal.
- Cloud providers are building sandbox primitives natively. A solo founder can't out-engineer these teams on kernel-level VM infrastructure.
-
-<strong>Crowding</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>
-E2B, Modal, Daytona, plus Northflank, Bunnyshell, Cloudflare, Vercel, Fly.io all ship sandbox products.
-</li>
-<li>
-Kubernetes SIG-Apps is standardizing a Sandbox primitive.
-</li>
-</ul>
-</div>
-
-<!-- COMPANY 3: Runtime -->
-<div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #fafafa; border: 1px solid #ddd; padding: 8px; margin-bottom: 12px;">
-<strong style="font-size: 15px;">3. Runtime — 🔴 — Sandboxed coding agents with company guardrails</strong><br>
-<span style="font-size: 13px; color: #555;">
-runtime (unconfirmed domain) · San Francisco · founded ~2026 · pre-seed (YC P26) · team size unverified · YC P26<br>
-<a href="https://www.ycombinator.com/companies/runtime">YC profile</a>
-</span>
-
-<br><strong>What they do</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>Managed coding agents that run in sandboxes and follow each company's engineering standards.</li>
-<li>
-Founder shipped 4 products in 3 months with coding agents; rolling it out to a team failed — PRs were unmergeable.
-</li>
-<li>Wraps coding agents (Claude Code, etc.) with company-specific guardrails and sandbox infra.</li>
-</ul>
-
-<strong>The problem they solve</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>Expert devs use coding agents well. Everyone else produces "unmergeable slop."</li>
-<li>Each repo needs custom setup, linting rules, test requirements before agents produce good PRs.</li>
-</ul>
-
-<strong>Money</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>Likely per-seat or usage-based SaaS. Not publicly disclosed.</li>
-<li>Uses E2B sandboxes under the hood (per E2B blog reference).</li>
-</ul>
-
-<strong>Why now</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>Coding agents (Claude Code, Codex) are powerful but produce inconsistent output across teams.</li>
-</ul>
-
-<strong>Bootstrap fit</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li><strong>Grader:</strong> Partially objective — PR merge rate, lint pass rate are measurable.</li>
-<li><strong>LLM deleted:</strong> A sandbox config layer and linting pipeline. Thin.</li>
-<li><strong>Accumulates:</strong> Nothing unique. Guardrail configs are per-customer, not product-level. 🔴</li>
-<li><strong>Week one:</strong> Connect repo, set guardrails, agents run in sandboxes. Plausible.</li>
-<li><strong>Buyer:</strong> Engineering leads at mid-size teams. Reachable.</li>
-</ul>
-<strong>Verdict: 🔴</strong> — Gate 3. Thin orchestration layer over coding agents + sandbox infra. Company-specific configs don't accumulate for the product. Claude Code / Cursor will absorb guardrails and sandboxing as native features. Coding-agent platforms are moving fast here.
-
-<strong>Crowding</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>Cursor, Claude Code, Codex are all adding team features, guardrails, sandboxing.</li>
-<li>
-Superset coordinates parallel coding agents; multiple YC companies in adjacent space.
-</li>
-</ul>
-</div>
-
-<!-- COMPANY 4: Klavis AI -->
-<div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #fafafa; border: 1px solid #ddd; padding: 8px; margin-bottom: 12px;">
-<strong style="font-size: 15px;">4. Klavis AI — 🔴 — Training data + MCP infra for frontier AI labs</strong><br>
-<span style="font-size: 13px; color: #555;">
-klavis.ai · SF (remote) · founded 2025 · seed (YC S25) · ~3 people · YC S25<br>
-<a href="https://www.klavis.ai">klavis.ai</a> · <a href="https://www.ycombinator.com/companies/klavis-ai">YC profile</a>
-</span>
-
-<br><strong>What they do</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>
-Build long-horizon coding tasks, terminal-based environments, hidden-test verification, expert rubrics, gold trajectories, dockerized environments, and agentic tool-use workflows for RL and SFT.
-</li>
-<li>
-600+ real tools and SaaS apps, state-mutating workflows, deterministic and rubric-based rewards.
-</li>
-<li>
-Strata: an intelligent MCP server that guides agents through staged discovery across hundreds of tools.
-</li>
-</ul>
-
-<strong>The problem they solve</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>
-Frontier models are bottlenecked by quality of coding environments, trajectories, and verification data.
-</li>
-<li>Example: train a coding agent to debug across GitHub + Notion + Slack in a live sandboxed environment with deterministic reward signals.</li>
-</ul>
-
-<strong>Money</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>Data licensing / contract work with frontier AI labs.</li>
-<li>
-Already working with multiple frontier AI labs on production coding and agentic data.
-</li>
-<li>Open-source MCP servers (Apache 2.0) for community adoption; hosted/managed for revenue.</li>
-</ul>
-
-<strong>Why now</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>Post-training data quality is the new bottleneck for frontier labs, not compute alone.</li>
-<li>MCP protocol adoption created demand for managed, enterprise-grade servers.</li>
-</ul>
-
-<strong>Bootstrap fit</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li><strong>Grader:</strong> Deterministic verification, programmatic rewards — objective.</li>
-<li><strong>LLM deleted:</strong> Dockerized environments, test harnesses, tool integrations remain. Technical system.</li>
-<li><strong>Accumulates:</strong> 600+ tool integrations and training environments accumulate.</li>
-<li><strong>Week one:</strong> Environments and data are useful immediately for a lab customer.</li>
-<li><strong>Buyer:</strong> Frontier AI labs — maybe 5-10 globally. Relationship-gated, procurement-heavy. 🔴</li>
-</ul>
-<strong>Verdict: 🔴</strong> — Gate 5. The buyer pool is ~5-10 frontier AI labs. Each deal is relationship-gated and involves procurement. A solo bootstrapper can't cold-email Anthropic's training team and close a data contract. Strong traction signal for a funded team; wrong shape for a bootstrap.
-
-<strong>Crowding</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>
-Similar companies include AfterQuery, Dosu, Cline, and LangChain.
-</li>
-<li>Composio competes on hosted MCP servers directly.</li>
-</ul>
-</div>
-
-<!-- COMPANY 5: Lab0 -->
-<div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #fafafa; border: 1px solid #ddd; padding: 8px; margin-bottom: 12px;">
-<strong style="font-size: 15px;">5. Lab0 — 🔴 — AI agents for enterprise software implementation</strong><br>
-<span style="font-size: 13px; color: #555;">
-lab0.ai · San Francisco · founded 2026 · pre-seed (YC P26) · ~3 people · YC P26<br>
-<a href="https://lab0.ai">lab0.ai</a> · <a href="https://www.ycombinator.com/companies/lab0">YC profile</a>
-</span>
-
-<br><strong>What they do</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>
-AI agents that turn enterprise software implementation from a consulting-heavy deployment into a self-serve product.
-</li>
-<li>
-Config agent: implements systems through APIs and browser automation, writes connectors in ABAP and X++.
-</li>
-<li>
-Testing agent: finds config problems and tests edge cases. Change request agent: handles maintenance after go-live.
-</li>
-<li>
-Agents share a semantic layer for each client, so knowledge from one implementation improves the next.
-</li>
-</ul>
-
-<strong>The problem they solve</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>
-Every ERP rollout requires months of manual integration, configuration, and tuning by armies of system integrators.
-</li>
-<li>Example: deploying SAP takes 6-12 months of Accenture consultants writing ABAP configs.</li>
-</ul>
-
-<strong>Money</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>
-Usage-based or outcome-based pricing.
-</li>
-<li>
-Global SI market is $500B+.
-</li>
-</ul>
-
-<strong>Why now</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>LLMs can now read APIs, reverse-engineer undocumented behavior, and write enterprise connector code.</li>
-<li>Coding agents make ABAP/X++ generation feasible without an army of specialists.</li>
-</ul>
-
-<strong>Bootstrap fit</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li><strong>Grader:</strong> Config correctness is testable. Partially objective.</li>
-<li><strong>LLM deleted:</strong> Domain knowledge of SAP, ERP, ABAP, X++. A consulting firm hiring one dev catches up. 🔴</li>
-<li><strong>Accumulates:</strong> Semantic layer across implementations is real — but only with many customers.</li>
-<li><strong>Week one:</strong> Needs access to customer's ERP system. Cold-start integration problem.</li>
-<li><strong>Buyer:</strong> Enterprise IT leads. Procurement-gated. Hard to reach alone.</li>
-</ul>
-<strong>Verdict: 🔴</strong> — Gate 2. Delete the LLM and what remains is deep knowledge of enterprise systems (SAP, Oracle, X++). Accenture, Deloitte, Wipro, or any SI firm hires one AI engineer and ships this. The founders' story is "domain experts building AI" — strong traction signal, wrong shape for me.
-
-<strong>Crowding</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>Agentin AI (YC) automates actions across Salesforce, NetSuite, SAP with RL.</li>
-<li>Big-4 consulting firms are all building internal AI implementation tools.</li>
-</ul>
-</div>
-
-<!-- COMPANY 6: Adaptional -->
-<div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #fafafa; border: 1px solid #ddd; padding: 8px; margin-bottom: 12px;">
-<strong style="font-size: 15px;">6. Adaptional — 🔴 — AI agents for insurance claims processing</strong><br>
-<span style="font-size: 13px; color: #555;">
-adaptional (domain unconfirmed) · San Francisco (Presidio) · founded ~2025–2026 · pre-seed (YC P26) · team size unverified · YC P26<br>
-<a href="https://www.ycombinator.com/companies/adaptional">YC profile</a>
-</span>
-
-<br><strong>What they do</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>
-Building agentic AI for insurance claims. Claims are 75% of every dollar in the $1T insurance industry.
-</li>
-<li>
-AI claims review agents, already deployed at some of the major P&C carriers.
-</li>
-<li>
-Building a platform that delivers the "Claude Code experience" for insurance teams.
-</li>
-</ul>
-
-<strong>The problem they solve</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>
-Insurance still manages huge amounts of work with manual data entry, outsourced teams, and 20-year-old software.
-</li>
-<li>Example: an adjuster managing 200 open claims files by hand, checking each against policy language.</li>
-</ul>
-
-<strong>Money</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>Enterprise SaaS to P&C carriers. Pricing not disclosed.</li>
-<li>
-Founders previously built and exited a VC-backed insurance startup and raised a $10M seed round.
-</li>
-</ul>
-
-<strong>Why now</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>LLMs can now parse policy documents, extract coverage terms, and match to claim facts.</li>
-</ul>
-
-<strong>Bootstrap fit</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li><strong>Grader:</strong> Claims decisions involve judgment — coverage interpretation is partially subjective.</li>
-<li><strong>LLM deleted:</strong> Insurance claims domain knowledge. Existing insurtechs hire one AI dev. 🔴</li>
-<li><strong>Accumulates:</strong> Claims data and policy patterns would, but I don't have them.</li>
-<li><strong>Week one:</strong> Needs claims files, policy documents, carrier system access. Cold start.</li>
-<li><strong>Buyer:</strong> Insurance carriers — procurement-gated, compliance-heavy.</li>
-</ul>
-<strong>Verdict: 🔴</strong> — Gate 2. Classic domain-expert play. Founders are insurance veterans with a prior exit and top-10 carrier relationships. The value is insurance expertise wrapped in AI. An insurance company or existing insurtech hires one engineer and catches up. Strong traction signal for them, 🔴 for me.
-
-<strong>Crowding</strong>
-<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
-<li>Dozens of insurtech AI claims startups (Tractable, Shift Technology, etc.).</li>
-<li>Carriers building in-house AI teams for claims automation.</li>
-</ul>
-</div>
-
-<div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #fff8e1; border: 1px solid #e0d6a8; padding: 8px; margin-bottom: 12px; font-size: 13px;">
-<strong>Dropped at initial filter — not written up:</strong>
-<ul style="margin: 4px 0; padding-left: 18px;">
-<li><strong>Weave</strong> — 
-$13.5M Series A
-. Exceeds $10M cap. Also YC W25.</li>
-<li><strong>Uno Wallet</strong> — 
-Consumer iPhone wallet that picks the best credit card.
- Consumer app — excluded.</li>
-<li><strong>River Markets</strong> — 
-Prime brokerage for prediction markets, $8.5M seed.
- Not AI sector. Crypto-adjacent (Polymarket, Coinbase Ventures backing).</li>
-<li><strong>Ooak Data</strong> — 
-Founded in 2024.
- Fails 2025/2026 founding-year filter. Also a data-network-effect business (cold start).</li>
-<li><strong>primitive</strong> — 
-No product details, no demo, no customers, no press.
- 
-Team of 1.
- Can't verify anything. Also overlaps directly with AgentMail.</li>
-<li><strong>OpenWork</strong> — 
-Free, open-source alternative to Claude Cowork with 12K GitHub stars.
- No clear revenue model. Open-source desktop tool, not a B2B SaaS business.</li>
-<li><strong>KelAI</strong> — No product information found in any search. Domain, product, and stage unverifiable. Dropped.</li>
+40-person team.
+ Well past early stage.</li>
+  <li>YC W23. Competes with Datadog, New Relic, Grafana — deeply crowded observability market.</li>
 </ul>
 </div>
