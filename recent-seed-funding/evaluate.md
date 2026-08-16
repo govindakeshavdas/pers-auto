@@ -1,22 +1,36 @@
+Today is {{TODAY}}.
+
+Two earlier passes produced the shortlist at the bottom of this prompt: one searched for recent funding announcements and collected candidates, a second read their descriptions and kept the most promising. Companies covered in earlier runs were removed by script — every company below is new. Your job is to research them, judge them, and write up the ones worth my time.
+
 **Goal.** I am not an investor. Each entry is a lead on a niche, not an
 investment. I want a space where I could start a competitor for the **US market**
 and raise a seed round on it. Judge every company by that one question: *if I
 started this next month, would I get funded?* Raising is the plan, not
 bootstrapping — venture scale is fine and wanted.
 
-Search the web for AI startups that raised seed or pre-seed in the last 2 months.
-Cast wide. Most good deals never get press, so lean on general searches, not the
-big outlets. Vary the phrasing each run.
+**Work in this order.**
 
-Filter:
-* Under $8M, pre-seed (preferred) or seed only
-* B2B AI tools, AI automation, AI infrastructure
-* Exclude: consumer apps, crypto, biotech, hardware, PE workflow tools
+1. **Research the shortlist.** The list is short because a triage pass already dropped the obvious failures — these are the companies worth spending searches on, so search them rather than re-judging them from their one-liners. Verify for each:
+   - Under $8M, pre-seed (preferred) or seed only
+   - Round closed or announced in the last 2 months
+   - B2B AI tools, AI automation, AI infrastructure
+   - Exclude: consumer apps, crypto, biotech, hardware, PE workflow tools
+2. **Then apply the full rubric** — all three gates — and write up whatever is left.
 
-For each company: what problem they solve (most bullets, technical, one concrete
-example), the **Fit** verdict from the rubric below, and crowding — who else
-does this for the same buyer, by name. Crowding is context, not a gate; it never
-changes the verdict. No founder pedigree; I don't care and it stops me reading.
+Spend your searches evenly rather than exhausting them on the first few companies.
+If the budget runs out before the list does, judge the remainder on what you
+already know and say what is unverified — do not silently drop them.
+
+The shortlist is unverified — earlier passes worked from announcement text without
+checking any of the above. Treat every claim in it as a lead, not a fact,
+including the amount and the stage. Dropping a good share of the list is the
+expected outcome.
+
+For each surviving company: what problem they solve (most bullets, technical, one
+concrete example), the **Fit** verdict from the rubric below, and crowding — who
+else does this for the same buyer, by name. Crowding is context, not a gate; it
+never changes the verdict. No founder pedigree; I don't care and it stops me
+reading.
 
 ---
 
@@ -56,7 +70,14 @@ the one thing that erodes it. 🔴 fails any one — name the gate.
 | Job-search automation for seekers | 🔴 | 5 — freemium, indie-dev race to the bottom |
 | Landscaping takeoffs & cost estimation | 🟡 | 3 — real work, but commoditizes |
 | Real-time voice translation infra | 🟡 | 3 — real tech, but large providers absorb it |
-Return as many companies as you have analyzed ... 
+
+Return every company from the shortlist that survives verification — do not pad
+the list with weak candidates to hit a count, and do not mention how many were
+dropped.
+
+Decide the Fit verdict as you write each entry, not before. Write each entry once
+and move on — do not redraft an entry you have already written, and do not draft
+HTML in your thinking.
 
 ---
 
@@ -77,13 +98,16 @@ Prose paragraphs are unreadable to me.
 
 **Output.** A self-contained HTML fragment — no `<html>`, `<head>`, `<body>`. It
 gets embedded in a Gmail email. Inline `style="..."` only. Clickable `<a>` links.
-Match the example below for styling.
+Clean fonts, ~8px padding, light section backgrounds, 1px borders, bulleted `<ul>`
+with tight margins and ~18px left padding.
 
 Each company is a numbered `<div>`: header line (number, name, verdict emoji,
 tagline), facts line (`domain · city · $Xm stage (date)`), `What they do` 3–4
 bullets, `The problem they solve` 2–3 bullets with one concrete example, `Fit`
 with its three labelled lines and verdict, `Crowding` 1–2 bullets naming
 competitors. Each Fit line under 20 words. "Unclear" on any line is 🔴, not 🟡.
+
+Order the final list from 🟢 at the top to 🔴 at the bottom (🟡 in between).
 
 Immediately before each entry's `<div>`, emit an HTML comment naming the company,
 exactly in this form, on its own line:
@@ -99,14 +123,10 @@ fragment: no preamble, no code fences, no markdown.
 
 ---
 
-# PREVIOUSLY COVERED COMPANIES
+# SHORTLIST
 
-Every company sent in any previous run is listed below — this list is complete,
-not a recent sample. **Do not include any of them.** If one turns up in search
-results, skip it entirely and keep searching. Return only companies absent from
-this list.
+Unverified. Names, amounts and one-liners came from funding announcements; a
+triage pass ranked them on those descriptions alone. Verify before trusting, and
+drop freely.
 
-Do not restate this instruction in the output, and do not claim to have excluded
-a range of runs — you have names, not run numbers.
-
-{{PREVIOUS_RESULTS}}
+{{CANDIDATES}}

@@ -48,6 +48,23 @@ jobs:
               --data-binary @- \
               --fail-with-body
 
+      # Raw API responses, so a bad run can be diagnosed after the fact.
+      # run.sh discards all but the best draft; without this the discarded
+      # ones are gone and there is nothing to debug against. All three phases
+      # are kept — a thin final report is usually a discovery problem, not an
+      # evaluate one, and only the discovery response shows that.
+      - name: Upload raw responses
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: anthropic-response
+          path: |
+            /tmp/funding_discover_response.json
+            /tmp/funding_triage_response.json
+            /tmp/funding_evaluate_response.json
+          retention-days: 7
+          if-no-files-found: warn
+
       - name: Commit history
         run: |
           git config user.name "github-actions[bot]"
