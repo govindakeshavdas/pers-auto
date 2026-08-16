@@ -1,87 +1,549 @@
-<!-- COMPANY 1: Tracer -->
-<div style="font-family: 'Segoe UI', system-ui, sans-serif; background: #fdf0f0; border: 1px solid #e0c0c0; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<!-- COMPANY 1: Caddi -->
+<div style="background:#fafafa; border:1px solid #ddd; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
+<strong>1. Caddi 🔴 — Record-to-code back-office automation for law firms and RIAs</strong><br>
+<span style="font-size:12px; color:#555;">
+<a href="https://www.trycaddi.com">trycaddi.com</a> · Seattle · founded ~2024 · seed ($5M) · ~10 people · Not YC (AI2 Incubator)
+</span>
 
-<strong style="font-size: 15px;">1. Tracer 🔴 — Open-source AI SRE agent for automated incident root-cause analysis</strong>
-
-<div style="font-size: 13px; color: #555; margin: 4px 0 8px 0;">
-  tracer.cloud · New York (remote) · founded 2023 · VC-backed (amount undisclosed) · ~8–11 people
-  · <a href="https://www.tracer.cloud/" target="_blank">site</a>
-  · <a href="https://github.com/Tracer-Cloud/opensre" target="_blank">GitHub</a>
-  · <a href="https://jobs.ashbyhq.com/tracer/02ddb9a6-b717-4ef1-98f5-ef526564edc5" target="_blank">job post</a>
-</div>
-
-<strong>What they do</strong>
-<ul style="margin: 2px 0 8px 18px; padding: 0; font-size: 13px;">
-  <li>
-Open-source SRE agent that investigates incidents and finds root cause before engineers get paged.
+<br><br><strong>What they do</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Watches you work via screen recording, then automates the workflow.
 </li>
-  <li>
-Ingests an alert, assembles context from logs/metrics/traces, reasons across connected systems, posts a structured report to Slack or PagerDuty.
+<li>
+Converts recordings into deterministic API-based code, not brittle RPA clicks.
 </li>
-  <li>
-Uses eBPF-based data collectors at the OS level — no code changes needed.
+<li>
+Works across 70+ apps — DMS, CRM, email, billing.
 </li>
-  <li>
-Connects to 60+ tools across LLMs, observability, cloud infra, data platforms, and incident management.
+<li>
+Production automations for client intake, document filing, time entry, billing.
 </li>
 </ul>
 
 <strong>The problem they solve</strong>
-<ul style="margin: 2px 0 8px 18px; padding: 0; font-size: 13px;">
-  <li>
-Evidence for a production incident is scattered: logs in Datadog, metrics in Grafana, config changes in Git. No single system sees all of it.
+<ul style="margin:4px 0; padding-left:18px;">
+<li>Law firm ops staff re-key data between 5+ tools for every new client matter.</li>
+<li>
+Classic RPA breaks on UI changes; DIY connectors need clean inputs and a team.
 </li>
-  <li>
-Engineers manually pull logs, correlate timestamps, and ping colleagues. Takes hours.
-</li>
-  <li>Example: alert fires at 3 AM for a K8s pod crash loop. Agent runs parallel hypotheses (bad deploy, resource limit, upstream timeout), tests each against live telemetry, delivers a root-cause report before the on-call engineer finishes reading Slack.</li>
+<li>Example: read inbound contract email → extract metadata → kick off Ironclad workflow.</li>
 </ul>
 
 <strong>Money</strong>
-<ul style="margin: 2px 0 8px 18px; padding: 0; font-size: 13px;">
-  <li>Open-source core (Apache 2.0); commercial product presumably on top.</li>
-  <li>No public revenue figures. Still in public alpha.</li>
-  <li>
-Founded 2023 by Vincent Hus (CEO) and Laura Bogaert (COO). Started in bioinformatics observability, pivoted to general AI SRE.
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Raised $5M seed led by Ubiquity Ventures, joined by Founders' Co-op and AI2 Incubator.
+</li>
+<li>
+Plans to offer platform as a subscription service.
+</li>
+<li>Positioned as "done-for-you" — part software, part managed service.</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+LLMs can now interpret screen recordings and produce code, not just replay clicks.
+</li>
+<li>API coverage across legal/finance SaaS tools hit critical mass in 2024–25.</li>
+</ul>
+
+<strong>Bootstrap fit</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li><strong>Grader:</strong> Workflow correctness is mechanically testable (data arrives in right field).</li>
+<li><strong>LLM deleted:</strong> Left with API orchestration engine and recording parser. Technical system.</li>
+<li><strong>Accumulates:</strong> Library of law-firm workflow patterns — but erodes as computer use models improve. 🔴</li>
+<li><strong>Week one:</strong> Customer records one workflow; Caddi converts and runs it. Works day one.</li>
+<li><strong>Buyer:</strong> Ops managers at mid-size law firms. Reachable at ILTACON, Future Proof.</li>
+</ul>
+<strong>Verdict: 🔴</strong> — Gate 3. 
+UiPath, Automation Anywhere, and OpenAI's Operator all pursue the same "watch and automate" paradigm.
+ The recording-to-API-code approach is real but converging from multiple well-funded directions. Platform absorbs.
+
+<br><br><strong>Crowding</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Zapier, Make for no-code; UiPath, Automation Anywhere for RPA. All competing.
+</li>
+<li>OpenAI Operator and Anthropic computer use heading same direction from above.</li>
+</ul>
+</div>
+
+<!-- COMPANY 2: Proliferate -->
+<div style="background:#fafafa; border:1px solid #ddd; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
+<strong>2. Proliferate 🔴 — Open-source IDE for running coding agents in parallel</strong><br>
+<span style="font-size:12px; color:#555;">
+<a href="https://proliferate.com">proliferate.com</a> · SF · founded 2025 · pre-seed (YC S25) · ~3 people · YC S25
+</span>
+
+<br><br><strong>What they do</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Run Claude Code, Codex, Gemini, and open models in parallel, locally or in cloud.
+</li>
+<li>
+Each agent runs in its own isolated worktree or sandbox with native tools and auth.
+</li>
+<li>
+Includes plan/review agents, subagents, plugin marketplace (500+ community plugins).
+</li>
+<li>
+AGPL-3.0 licensed. Desktop and web apps are open source.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>Engineers juggle 3+ coding agent sessions with no shared view of progress.</li>
+<li>Agent work dies when the laptop lid closes or SSH drops.</li>
+<li>Example: spin up 5 Claude Code agents for 5 features, each in own branch, review diffs in one place.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Salary range $200K–$350K, 0.5–2% equity for founding engineer.
+</li>
+<li>Open-source core; cloud hosting (self-hostable) likely the monetization path.</li>
+<li>
+Runs on credentials you already have. No subscription on top.
 </li>
 </ul>
 
 <strong>Why now</strong>
-<ul style="margin: 2px 0 8px 18px; padding: 0; font-size: 13px;">
-  <li>
-SWE-bench gave coding agents training data and clear feedback. Production incident response still lacks an equivalent.
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Growing belief that AI dev needs dedicated infrastructure, not just plug-in assistants.
 </li>
-  <li>LLMs now good enough to reason across heterogeneous telemetry signals.</li>
+<li>Claude Code and Codex shipped in 2025, creating the "fleet management" problem.</li>
 </ul>
 
 <strong>Bootstrap fit</strong>
-<ul style="margin: 2px 0 4px 18px; padding: 0; font-size: 13px;">
-  <li><strong>Grader:</strong> Root-cause correctness is verifiable against the actual fix. Passes.</li>
-  <li><strong>LLM deleted:</strong> eBPF collectors, 60+ integrations, eval harness remain. Passes.</li>
-  <li><strong>Accumulates:</strong> 🔴 Incumbents already ship this as a feature. Datadog, PagerDuty, Resolve.ai all native.</li>
-  <li><strong>Week one:</strong> 🔴 Needs live integration into customer's monitoring stack.</li>
-  <li><strong>Buyer:</strong> SRE/platform-eng teams. Reachable, would pay.</li>
+<ul style="margin:4px 0; padding-left:18px;">
+<li><strong>Grader:</strong> Objective — agents complete tasks or don't. No taste involved.</li>
+<li><strong>LLM deleted:</strong> Process manager, sandbox orchestrator, plugin system. Technical.</li>
+<li><strong>Accumulates:</strong> Nothing proprietary. AGPL code is public. Plugins are community-built. 🔴</li>
+<li><strong>Week one:</strong> Download, point at existing agent credentials, run. Works immediately.</li>
+<li><strong>Buyer:</strong> Individual developers — prosumer, low WTP, crowded with free tools.</li>
 </ul>
+<strong>Verdict: 🔴</strong> — Gate 3 + Gate 5. The product is open-source with no proprietary accumulation. Coding agent providers (Anthropic, OpenAI, Cursor) will absorb parallel orchestration as a feature. Buyer is prosumer/developer — low WTP, indie-dev race.
 
-<div style="background: #fff0f0; border: 1px solid #e0b0b0; border-radius: 4px; padding: 6px; margin: 6px 0; font-size: 13px;">
-  <strong>Verdict: 🔴</strong> — Fails gate 3 (durability) and gate 4 (cold start).
-  
-Datadog Bits AI, PagerDuty SRE Agent, New Relic SRE Agent, AWS DevOps Agent, and incident.io AI SRE all ship native AI SRE agents.
-
-  
-Resolve.ai reached $1B valuation faster than any competitor.
-
-  This is a feature the observability platforms absorb, not a standalone product a solo founder can defend. Also requires live hooks into the customer's monitoring stack — cold start for a bootstrapper. Also: company founded 2023, outside the 2025–2026 window.
+<br><br><strong>Crowding</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Agent FM: similar "one group chat to hear and steer coding agents."
+</li>
+<li>Cursor, Windsurf, and Claude Code itself are adding multi-agent coordination.</li>
+</ul>
 </div>
 
-<strong>Crowding</strong>
-<ul style="margin: 2px 0 8px 18px; padding: 0; font-size: 13px;">
-  <li>
-Six agents dominate in 2026; choice usually follows existing stack.
- Plus 15+ more tools in comparison lists.</li>
-  <li>
-Every major cloud provider shipped a native AI SRE product in the last 12 months.
+<!-- COMPANY 3: Cardinal -->
+<div style="background:#fafafa; border:1px solid #ddd; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
+<strong>3. Cardinal 🔴 — AI outbound sales platform replacing 10-tool GTM stack</strong><br>
+<span style="font-size:12px; color:#555;">
+<a href="https://trycardinal.ai">trycardinal.ai</a> · SF · founded 2025 · seed ($500K, YC W26) · ~5 people · YC W26
+</span>
+
+<br><br><strong>What they do</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Handles full outbound: ICP building, lead discovery, signal monitoring, personalized outreach, multi-channel sequencing.
+</li>
+<li>
+Self-described as "half-software, half-service."
+</li>
+<li>
+Runs outbound for 40+ YC companies including Mintlify, Greptile, Luminai.
 </li>
 </ul>
 
+<strong>The problem they solve</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+SDRs blast generic sequences to Crunchbase exports with ~1% reply rates.
+</li>
+<li>
+Running precision outbound requires stringing together 10+ tools and a GTM engineer.
+</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Claims ~$1M ARR run rate in ~2 months, ~$80K MRR and growing.
+</li>
+<li>
+Raised $500K in funding.
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>LLMs make personalized outreach at scale feasible without human copywriters.</li>
+<li>
+Moat is YC network flywheel, not technical.
+</li>
+</ul>
+
+<strong>Bootstrap fit</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li><strong>Grader:</strong> Outreach quality is partly taste (messaging, tone). Borderline gate 1.</li>
+<li><strong>LLM deleted:</strong> Data pipelines and multi-tool orchestration. Thin — Clay does this.</li>
+<li><strong>Accumulates:</strong> Nothing technical. The moat is YC distribution network. 🔴</li>
+<li><strong>Week one:</strong> Customer provides ICP; platform finds leads and runs sequences. Works day one.</li>
+<li><strong>Buyer:</strong> Early-stage founders doing founder-led sales. Low WTP segment.</li>
+</ul>
+<strong>Verdict: 🔴</strong> — Gate 3. 
+Outbound automation is extremely crowded: Clay, Apollo, Instantly, Outreach, Salesloft, Smartlead, 11x, Artisan, etc.
+ Nothing technical accumulates; distribution moat is YC network I can't replicate.
+
+<br><br><strong>Crowding</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+38 active competitors including 6 funded and 1 exited.
+</li>
+<li>Clay alone has become the default for GTM data orchestration.</li>
+</ul>
+</div>
+
+<!-- COMPANY 4: NOSO LABS -->
+<div style="background:#fafafa; border:1px solid #ddd; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
+<strong>4. NOSO LABS 🔴 — AI agents for HVAC field technicians (diagnostics + sales follow-up)</strong><br>
+<span style="font-size:12px; color:#555;">
+<a href="https://ycombinator.com/companies/noso-labs">YC page</a> · SF · founded 2025 · pre-seed (YC S25) · 3 people · YC S25
+</span>
+
+<br><br><strong>What they do</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Agents follow up on unsold estimates over text, sync CRM, route complex jobs to dashboard.
+</li>
+<li>
+AI co-pilots provide instant job briefs, access to 20TB+ equipment manual library.
+</li>
+<li>
+Works entirely over text — no app install for the technician.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Technicians must diagnose, sell, and do paperwork. Rare to excel at all three.
+</li>
+<li>Example: tech writes $4,200 furnace estimate, homeowner says "let me think." Nobody follows up. Revenue lost.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>Pre-seed stage; no disclosed revenue.</li>
+<li>
+Founding engineer role at $120K–$200K, 0.10%–0.50% equity.
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>LLMs can now parse equipment manuals and hold multi-turn diagnostic conversations over SMS.</li>
+<li>
+Founder Winston Chi previously founded Butter Technologies, acquired by GrubMarket.
+</li>
+</ul>
+
+<strong>Bootstrap fit</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li><strong>Grader:</strong> Diagnostics partially objective (fault codes), but sales coaching is subjective.</li>
+<li><strong>LLM deleted:</strong> 20TB equipment manual corpus. That's domain data, not a technical system. 🔴</li>
+<li><strong>Accumulates:</strong> Manual library is the asset, but ServiceTitan already ships this.</li>
+<li><strong>Week one:</strong> Needs CRM integration and property/equipment data. Cold-start friction.</li>
+<li><strong>Buyer:</strong> HVAC company owners. Reachable but low-tech buyer.</li>
+</ul>
+<strong>Verdict: 🔴</strong> — Gate 2. The value is domain data (20TB of equipment manuals) and HVAC expertise. 
+ServiceTitan ships ATLAS (scan a nameplate, pull 200+ brands of manuals), Avoca raised $125M at $1B valuation.
+ Incumbents own distribution and the domain.
+
+<br><br><strong>Crowding</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Five AI startups + every field-service incumbent building the same HVAC assistant.
+</li>
+<li>ServiceTitan ATLAS, Avoca ($1B), Prentis — all in the same narrow space.</li>
+</ul>
+</div>
+
+<!-- COMPANY 5: SpaceFlow -->
+<div style="background:#fafafa; border:1px solid #ddd; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
+<strong>5. SpaceFlow Technologies 🔴 — Managed runtime for AI agents in supply chain / procurement</strong><br>
+<span style="font-size:12px; color:#555;">
+<a href="https://spaceflow.tech">spaceflow.tech</a> · SF · founded 2025 · pre-seed (YC S26) · 4 people · YC S26
+</span>
+
+<br><br><strong>What they do</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Turns fragmented operational data and SOPs into a governed context layer for AI agents.
+</li>
+<li>
+Agents normalize quotations, chase suppliers, reconcile phantom inventory, classify materials.
+</li>
+<li>
+Deploys in customer's cloud or on-prem with permissions, approvals, and audit trails.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Supply chains still run on spreadsheets and inboxes because ERPs are rigid and data is messy.
+</li>
+<li>Example: match supplier invoices from email to correct PO and goods receipt across SAP.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Processed ~$400M in annual supplier spend; reached six-figure ARR in early stage.
+</li>
+<li>
+First enterprise contract signed with a national restaurant brand. Their CSCO invested personally.
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>LLMs can now parse messy supplier emails and unstructured documents reliably.</li>
+<li>
+Before YC, built autonomous procurement engine with a medical manufacturer.
+</li>
+</ul>
+
+<strong>Bootstrap fit</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li><strong>Grader:</strong> Three-way match (invoice ↔ PO ↔ receipt) is mechanically verifiable.</li>
+<li><strong>LLM deleted:</strong> ERP connectors + procurement rules. Domain knowledge of supply chain. Borderline.</li>
+<li><strong>Accumulates:</strong> Customer-specific SAP mappings, supplier patterns. Real depth.</li>
+<li><strong>Week one:</strong> Needs live ERP integration, PO history, supplier data. Useless without it. 🔴</li>
+<li><strong>Buyer:</strong> Enterprise procurement/supply chain leaders. Procurement-gated, long sales cycle.</li>
+</ul>
+<strong>Verdict: 🔴</strong> — Gate 4 + Gate 5. Product requires deep integration into customer's ERP (SAP on-prem), email, and historical procurement data to function. Cold start never resolves for a solo founder. Buyer is enterprise procurement — relationship-gated, long sales cycles.
+
+<br><br><strong>Crowding</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>SAP itself ships AI procurement features. Coupa, Jaggaer in the space.</li>
+<li>Multiple YC S26 companies (Khotan, Waybill) attack adjacent supply-chain problems.</li>
+</ul>
+</div>
+
+<!-- COMPANY 6: Proximitty -->
+<div style="background:#fafafa; border:1px solid #ddd; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
+<strong>6. Proximitty 🔴 — AI operating system for commercial loan servicing</strong><br>
+<span style="font-size:12px; color:#555;">
+<a href="https://www.proximitty.ai">proximitty.ai</a> · SF · founded ~2025 · pre-seed (YC W26, ~$1M) · ~5 people · YC W26
+</span>
+
+<br><br><strong>What they do</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+AI agents request, chase, and ingest borrower documents — financials, rent rolls, tax returns.
+</li>
+<li>
+Automated financial spreading and credit memo generation from ingested documents.
+</li>
+<li>
+Unified data layer tracks loan covenants, closing requirements, borrower obligations.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+One fintech cut servicing staff from 15 to 2, redeployed team to close $20M in new originations.
+</li>
+<li>Example: agent parses blurry scanned financials, spreads them using the bank's exact business logic.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Claims trust from publicly traded fintechs and banks nationwide.
+</li>
+<li>Strong founder-domain-expert signal (domain expert building AI product).</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>Vision models can now parse handwritten notes and blurry scans reliably.</li>
+<li>
+Commercial lenders still manage billions on legacy software and manual workflows.
+</li>
+</ul>
+
+<strong>Bootstrap fit</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li><strong>Grader:</strong> Financial spreading can be verified against source docs. Partly objective.</li>
+<li><strong>LLM deleted:</strong> Lending rules, covenant logic, compliance requirements. Domain knowledge. 🔴</li>
+<li><strong>Accumulates:</strong> Institution-specific spreading rules and edge cases.</li>
+<li><strong>Week one:</strong> Needs bank's loan portfolio, documents, compliance rules. Heavy cold start.</li>
+<li><strong>Buyer:</strong> FDIC-insured banks, credit unions. Procurement-gated, regulated.</li>
+</ul>
+<strong>Verdict: 🔴</strong> — Gate 2 + Gate 5. 
+The product captures "every servicing rule, assumption, and edge case your team carries in their heads."
+ That is domain expertise codified. A lending institution with domain experts beats me by hiring one developer. Buyer is also procurement-gated (regulated banks).
+
+<br><br><strong>Crowding</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Underwrite.ai (founded 2015) serves community banks and credit unions with AI credit models.
+</li>
+<li>Scienaptic AI, Zolvo (YC), and legacy loan servicing platforms compete.</li>
+</ul>
+</div>
+
+<!-- COMPANY 7: Cerenovus -->
+<div style="background:#fafafa; border:1px solid #ddd; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
+<strong>7. Cerenovus 🔴 — AI "company brain" that maps workflows and finds inefficiencies</strong><br>
+<span style="font-size:12px; color:#555;">
+<a href="https://www.cerenovus.ai">cerenovus.ai</a> · SF · founded 2026 · pre-seed (YC S26) · ~5 people · YC S26
+</span>
+
+<br><br><strong>What they do</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Aggregates docs, PDFs, emails, Slack, spreadsheets, meeting notes into a markdown knowledge graph.
+</li>
+<li>
+Maps company as a system — people, processes, tools — and draws workflow connections.
+</li>
+<li>
+Findings compiled into polished, cited briefs, reviewed by humans, shipped to clients.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Surfaces duplicate payments, missed discounts, zombie software seats, dormant vendors.
+</li>
+<li>
+Finds approvals that reject nothing but add two weeks. Same process run three different ways.
+</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Custom pricing only; no public pricing as of June 2026.
+</li>
+<li>
+Targets PE value creation teams, exit planners, operational consulting firms.
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>LLMs can now reason across heterogeneous document types at scale.</li>
+<li>
+Three Harvard sophomores in YC S26 batch.
+</li>
+</ul>
+
+<strong>Bootstrap fit</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li><strong>Grader:</strong> Output is "where operations are inefficient and how to improve." Subjective. 🔴</li>
+<li><strong>LLM deleted:</strong> Data ingestion pipeline + knowledge graph. Some technical system.</li>
+<li><strong>Accumulates:</strong> Company-specific graph, but per-customer, not transferable.</li>
+<li><strong>Week one:</strong> Needs full access to email, Slack, CRM, docs. Heavy integration cold start.</li>
+<li><strong>Buyer:</strong> PE value creation teams. Relationship-gated.</li>
+</ul>
+<strong>Verdict: 🔴</strong> — Gate 1. The core output is subjective operational assessments — "this process is inefficient, here's how to fix it." That's consulting judgment automated. Also fails gate 4: needs deep integration into all company communication channels before delivering any value.
+
+<br><br><strong>Crowding</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Glean does enterprise search across 100+ apps; Cerenovus adds workflow inference on top.
+</li>
+<li>Notion, eesel AI, and management consulting firms all adjacent.</li>
+</ul>
+</div>
+
+<!-- COMPANY 8: WAYLINE -->
+<div style="background:#fafafa; border:1px solid #ddd; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
+<strong>8. WAYLINE 🔴 — AI front desk for property management (voice, chat, SMS)</strong><br>
+<span style="font-size:12px; color:#555;">
+<a href="https://startupintros.com/orgs/wayline">startupintros.com</a> · SF · founded 2025 · pre-seed (YC S25) · ~5 people · YC S25
+</span>
+
+<br><br><strong>What they do</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Replaces inbound call routing with an AI front desk that answers calls and messages 24/7.
+</li>
+<li>
+Knowledge base is domain-specific to real estate — handles lease and maintenance inquiries.
+</li>
+<li>
+Trained on property-specific data: leases, policies, local regulations, maintenance history.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Property managers face endless phone calls, missed after-hours leads, high labor costs.
+</li>
+<li>Example: tenant calls at 11pm about a broken pipe; AI triages, files maintenance ticket, texts vendor.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+Founders previously bootstrapped a real estate management company to $1M ARR.
+</li>
+<li>
+Raised over $25M across three YC-backed startups (cumulative, not this company).
+</li>
+<li>
+Setup advertised at 24 hours.
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+AI matured to reliably handle nuanced, property-specific conversations at scale.
+</li>
+</ul>
+
+<strong>Bootstrap fit</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li><strong>Grader:</strong> Call routing and ticket creation are partly objective. Lease Q&A requires judgment.</li>
+<li><strong>LLM deleted:</strong> Property management rules, lease policies, local regulations. Domain knowledge. 🔴</li>
+<li><strong>Accumulates:</strong> Per-property knowledge base. Not transferable across customers.</li>
+<li><strong>Week one:</strong> Needs property-specific data (leases, policies, vendor lists). Cold start.</li>
+<li><strong>Buyer:</strong> Property managers. Reachable, but domain experts hiring first engineer (strong traction signal AND 🔴 for me).</li>
+</ul>
+<strong>Verdict: 🔴</strong> — Gate 2. 
+The product "understands real estate workflows: leasing cycles, maintenance triage, move-in/move-out, and compliance nuances by market."
+ That is domain expertise. Founders are real-estate operators who hired engineers — exactly the pattern that signals traction for them and 🔴 for me. 
+CentralComs and Wayline both operate inside AppFolio, Buildium, and Yardi.
+
+
+<br><br><strong>Crowding</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li>
+CentralComs deploys AI agents inside AppFolio/Buildium/Yardi for maintenance and tickets.
+</li>
+<li>Generic AI call answering (Bland AI, Vapi) competes from below; PMS incumbents from above.</li>
+</ul>
+</div>
+
+<div style="background:#fff8e1; border:1px solid #e0d6a8; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:13px; color:#555;">
+<strong>Dropped at filter stage (4 companies):</strong>
+<ul style="margin:4px 0; padding-left:18px;">
+<li><strong>Invopop</strong> — Founded 2021, not 2025/2026. Tax compliance API, not primarily AI. Fails founding-year filter.</li>
+<li><strong>Keystroke</strong> — Shortlist link points to YC industry page, not a specific company. Cannot identify or verify.</li>
+<li><strong>ArcadeLift</strong> — "AI-native growth platform" in Berlin, 1–10 employees. No product details found anywhere. Too sparse to evaluate.</li>
+<li><strong>Constant</strong> — YC job posting says "novel ways to use AI" with zero product details. No public info on what they build. Unverifiable.</li>
+</ul>
 </div>
