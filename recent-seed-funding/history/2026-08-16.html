@@ -1,0 +1,169 @@
+<!-- COMPANY 1: Intelligence -->
+<div style="font-family: Arial, Helvetica, sans-serif; max-width: 700px; margin: 0 auto 32px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; background: #fff;">
+<p style="margin:0 0 4px; font-size:17px; font-weight:bold;">1. Intelligence 🔴 — Crowdsourced AI design benchmarking</p>
+<p style="margin:0 0 14px; font-size:13px; color:#666;">AI evaluation · San Francisco · <a href="https://www.askflux.ai" style="color:#666; text-decoration:none;">intelligence.ai</a> · $7.9M seed (Aug 2026)</p>
+
+<p style="margin:0 0 4px; font-size:14px; font-weight:bold;">What they do</p>
+<ul style="margin:0 0 12px; padding-left:18px; font-size:14px; line-height:1.6;">
+<li>Users submit prompts, get AI-generated designs, vote A vs. B on outputs.</li>
+<li>Aggregated human-preference rankings sold to frontier labs for model training.</li>
+<li>5.3M users; ARR reportedly grew from $5M to $60M in six months.</li>
+<li>Team of ~10 people; already profitable per Index Ventures.</li>
+</ul>
+
+<p style="margin:0 0 4px; font-size:14px; font-weight:bold;">The problem they solve</p>
+<ul style="margin:0 0 12px; padding-left:18px; font-size:14px; line-height:1.6;">
+<li>Automated benchmarks can't measure design taste; human preference is the bottleneck.</li>
+<li>Example: a frontier lab tests two image models — Design Arena tells it which one users actually prefer across regions.</li>
+</ul>
+
+<p style="margin:0 0 4px; font-size:14px; font-weight:bold;">Fit</p>
+<ul style="margin:0 0 12px; padding-left:18px; font-size:14px; line-height:1.6;">
+<li><b>Gate 1 — Subjective/taste:</b> The entire product IS taste — collecting and selling human aesthetic judgment. 🔴</li>
+<li><b>Gate 2 — Can I start it:</b> Not reached.</li>
+<li><b>Gate 3 — Moat:</b> Not reached.</li>
+<li><b>Verdict: 🔴</b> — Fails Gate 1. The product is literally a taste-measurement instrument. Yupp, a near-identical startup, already shut down this year despite raising $33M.</li>
+</ul>
+
+<p style="margin:0 0 4px; font-size:14px; font-weight:bold;">Crowding</p>
+<ul style="margin:0 0 12px; padding-left:18px; font-size:14px; line-height:1.6;">
+<li><a href="https://lmarena.ai" style="color:#1a73e8;">LM Arena</a> ($150M Series A, text eval); Yupp (dead, $33M raised).</li>
+<li>Frontier labs may build internal preference pipelines (OpenAI, Google already do).</li>
+</ul>
+</div>
+
+<!-- COMPANY 2: Yuki -->
+<div style="font-family: Arial, Helvetica, sans-serif; max-width: 700px; margin: 0 auto 32px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; background: #fff;">
+<p style="margin:0 0 4px; font-size:17px; font-weight:bold;">2. Yuki 🔴 — AI control plane for data cost optimization</p>
+<p style="margin:0 0 14px; font-size:13px; color:#666;">Data infrastructure · Tel Aviv / New York · <a href="https://www.yuki.io" style="color:#666; text-decoration:none;">yuki.io</a> · $6M seed (Jan 2026)</p>
+
+<p style="margin:0 0 4px; font-size:14px; font-weight:bold;">What they do</p>
+<ul style="margin:0 0 12px; padding-left:18px; font-size:14px; line-height:1.6;">
+<li>Sits above Snowflake / BigQuery / Iceberg and routes queries to cheapest compute.</li>
+<li>Learns workload behavior; separates critical from low-priority jobs in real time.</li>
+<li>Claims 42.6% average data-cost savings for customers like Tenable and Angel Studios.</li>
+<li>Charges a percentage of realized savings — zero if no savings found.</li>
+</ul>
+
+<p style="margin:0 0 4px; font-size:14px; font-weight:bold;">The problem they solve</p>
+<ul style="margin:0 0 12px; padding-left:18px; font-size:14px; line-height:1.6;">
+<li>Enterprises overspend on data warehouses by treating all queries the same.</li>
+<li>Example: a cybersecurity firm's overnight batch jobs run on the same tier as dashboards — Yuki right-sizes each.</li>
+</ul>
+
+<p style="margin:0 0 4px; font-size:14px; font-weight:bold;">Fit</p>
+<ul style="margin:0 0 12px; padding-left:18px; font-size:14px; line-height:1.6;">
+<li><b>Gate 1 — Subjective:</b> Passes. Optimization is measurable, not taste.</li>
+<li><b>Gate 2 — Can I start it:</b> 🔴 Product must sit inside the customer's data warehouse. You need access to query logs, warehouse configs, and SLA data. First move is booking a meeting.</li>
+<li><b>Gate 3 — Moat:</b> Not reached.</li>
+<li><b>Verdict: 🔴</b> — Fails Gate 2. Can't build or demo anything without sitting inside their Snowflake account.</li>
+</ul>
+
+<p style="margin:0 0 4px; font-size:14px; font-weight:bold;">Crowding</p>
+<ul style="margin:0 0 12px; padding-left:18px; font-size:14px; line-height:1.6;">
+<li><a href="https://www.keebo.ai" style="color:#1a73e8;">Keebo</a> (Snowflake optimization); <a href="https://www.bluesky.cloud" style="color:#1a73e8;">Select Star</a>; Snowflake's own auto-suspend/scaling.</li>
+<li>Spot.io (Flexera) founder is an angel — same playbook as cloud cost optimization.</li>
+</ul>
+</div>
+
+<!-- COMPANY 3: Rein Security -->
+<div style="font-family: Arial, Helvetica, sans-serif; max-width: 700px; margin: 0 auto 32px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; background: #fff;">
+<p style="margin:0 0 4px; font-size:17px; font-weight:bold;">3. Rein Security 🔴 — Runtime AppSec for production apps & AI agents</p>
+<p style="margin:0 0 14px; font-size:13px; color:#666;">Cybersecurity · Tel Aviv / New York · <a href="https://reinsec.io" style="color:#1a73e8;">reinsec.io</a> · $8M seed (Jan 2026)</p>
+
+<p style="margin:0 0 4px; font-size:14px; font-weight:bold;">What they do</p>
+<ul style="margin:0 0 12px; padding-left:18px; font-size:14px; line-height:1.6;">
+<li>Instruments apps in production to see which APIs, libraries, and AI agents are live.</li>
+<li>Patent-pending runtime context validates which vulnerabilities are actually reachable.</li>
+<li>Covers API security, SCA reachability, DAST, and AI agent security.</li>
+<li>Agentless; claims &lt;1ms performance impact.</li>
+</ul>
+
+<p style="margin:0 0 4px; font-size:14px; font-weight:bold;">The problem they solve</p>
+<ul style="margin:0 0 12px; padding-left:18px; font-size:14px; line-height:1.6;">
+<li>Static scanners flag thousands of theoretical CVEs; teams waste time on non-reachable ones.</li>
+<li>Example: a fintech's SCA scanner flags a library — Rein confirms it's not loaded in production, deprioritizes it.</li>
+</ul>
+
+<p style="margin:0 0 4px; font-size:14px; font-weight:bold;">Fit</p>
+<ul style="margin:0 0 12px; padding-left:18px; font-size:14px; line-height:1.6;">
+<li><b>Gate 1 — Subjective:</b> Passes. Runtime reachability is binary, not taste.</li>
+<li><b>Gate 2 — Can I start it:</b> 🔴 Must deploy an agent inside a customer's production environment. Cannot build or test without their infra. First step is getting a deployment slot inside their k8s cluster.</li>
+<li><b>Gate 3 — Moat:</b> Not reached.</li>
+<li><b>Verdict: 🔴</b> — Fails Gate 2. Product only works deployed inside customer production. No way to start alone.</li>
+</ul>
+
+<p style="margin:0 0 4px; font-size:14px; font-weight:bold;">Crowding</p>
+<ul style="margin:0 0 12px; padding-left:18px; font-size:14px; line-height:1.6;">
+<li><a href="https://www.oligo.security" style="color:#1a73e8;">Oligo Security</a> (runtime SCA); <a href="https://www.kodem.io" style="color:#1a73e8;">Kodem</a>; Ox Security ($60M Series B).</li>
+<li>CrowdStrike, Wiz, and Palo Alto all expanding into runtime AppSec.</li>
+</ul>
+</div>
+
+<!-- COMPANY 4: Flux -->
+<div style="font-family: Arial, Helvetica, sans-serif; max-width: 700px; margin: 0 auto 32px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; background: #fff;">
+<p style="margin:0 0 4px; font-size:17px; font-weight:bold;">4. Flux 🟡 — Code-first engineering intelligence</p>
+<p style="margin:0 0 14px; font-size:13px; color:#666;">Developer tools · Boston · <a href="https://www.askflux.ai" style="color:#1a73e8;">askflux.ai</a> · $5M seed (Jun 2026)</p>
+
+<p style="margin:0 0 4px; font-size:14px; font-weight:bold;">What they do</p>
+<ul style="margin:0 0 12px; padding-left:18px; font-size:14px; line-height:1.6;">
+<li>Reads git commits directly — no dependency on Jira or manual ticket updates.</li>
+<li>Classifies every code change: feature, debt, fix, refactor, test.</li>
+<li>Links code-level activity to quality, security risk, and technical debt metrics.</li>
+<li>One customer went from 9% to 43% engineering effort on features after using it.</li>
+</ul>
+
+<p style="margin:0 0 4px; font-size:14px; font-weight:bold;">The problem they solve</p>
+<ul style="margin:0 0 12px; padding-left:18px; font-size:14px; line-height:1.6;">
+<li>AI-generated code is growing fast (41% of all new code in 2026) and introduces 1.7× more issues.</li>
+<li>Eng leaders can't tell how much time goes to debt vs. features from Jira alone.</li>
+<li>Example: VP of Eng sees 70% of commits are churn — Flux traces it to one AI-generated module with ballooning complexity.</li>
+</ul>
+
+<p style="margin:0 0 4px; font-size:14px; font-weight:bold;">Fit</p>
+<ul style="margin:0 0 12px; padding-left:18px; font-size:14px; line-height:1.6;">
+<li><b>Gate 1 — Subjective:</b> Passes. Code classification is structural, not taste.</li>
+<li><b>Gate 2 — Can I start it:</b> Passes. Week one: build a GitHub integration that reads commits, diffs, and PR metadata. Open-source repos give unlimited test data. No meetings needed.</li>
+<li><b>Gate 3 — Moat:</b> Passes. What accumulates: a labeled corpus of code-change classifications across hundreds of repos. Over time, the classifier gets better at distinguishing debt from feature work. That training set is the moat.</li>
+<li><b>Verdict: 🟡</b> — Passes all three. The thing that erodes it: GitHub Copilot or GitLab add a native "code health" dashboard. Platform risk.</li>
+</ul>
+
+<p style="margin:0 0 4px; font-size:14px; font-weight:bold;">Crowding</p>
+<ul style="margin:0 0 12px; padding-left:18px; font-size:14px; line-height:1.6;">
+<li><a href="https://codescene.com" style="color:#1a73e8;">CodeScene</a> (code health, behavioral analysis); <a href="https://www.linearb.io" style="color:#1a73e8;">LinearB</a> (dev metrics); Sleuth.</li>
+<li>Entire ($60M seed, ex-GitHub CEO) working on adjacent AI-code management problem.</li>
+</ul>
+</div>
+
+<!-- COMPANY 5: Canyon Code -->
+<div style="font-family: Arial, Helvetica, sans-serif; max-width: 700px; margin: 0 auto 32px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; background: #fff;">
+<p style="margin:0 0 4px; font-size:17px; font-weight:bold;">5. Canyon Code 🔴 — Workflow intelligence layer for multi-agent apps</p>
+<p style="margin:0 0 14px; font-size:13px; color:#666;">AI infrastructure · San Francisco · canyoncode.ai · $5M pre-seed (May 2026)</p>
+
+<p style="margin:0 0 4px; font-size:14px; font-weight:bold;">What they do</p>
+<ul style="margin:0 0 12px; padding-left:18px; font-size:14px; line-height:1.6;">
+<li>Governs how AI agents interact with each other and the models powering them.</li>
+<li>Provides granular controls for multi-agent app performance and cost.</li>
+<li>Targets enterprises deploying complex agentic AI stacks.</li>
+</ul>
+
+<p style="margin:0 0 4px; font-size:14px; font-weight:bold;">The problem they solve</p>
+<ul style="margin:0 0 12px; padding-left:18px; font-size:14px; line-height:1.6;">
+<li>Multi-agent apps have opaque costs and unpredictable behavior.</li>
+<li>Example: an enterprise's procurement agent calls three sub-agents in a loop — Canyon Code traces the cost spike to one redundant call.</li>
+</ul>
+
+<p style="margin:0 0 4px; font-size:14px; font-weight:bold;">Fit</p>
+<ul style="margin:0 0 12px; padding-left:18px; font-size:14px; line-height:1.6;">
+<li><b>Gate 1 — Subjective:</b> Passes. Observability and cost control are measurable.</li>
+<li><b>Gate 2 — Can I start it:</b> Arguable → 🔴. The product instruments agentic workloads in the customer's stack. Without a live multi-agent deployment to hook into, you have nothing to show.</li>
+<li><b>Gate 3 — Moat:</b> Not reached.</li>
+<li><b>Verdict: 🔴</b> — Fails Gate 2. Must sit inside the customer's agentic infra to function.</li>
+</ul>
+
+<p style="margin:0 0 4px; font-size:14px; font-weight:bold;">Crowding</p>
+<ul style="margin:0 0 12px; padding-left:18px; font-size:14px; line-height:1.6;">
+<li><a href="https://www.langsmith.com" style="color:#1a73e8;">LangSmith</a> (LangChain's tracing/eval); <a href="https://www.arize.com" style="color:#1a73e8;">Arize AI</a>; Helicone; Braintrust.</li>
+<li>JetStream Security ($34M seed) from adjacent AI governance angle.</li>
+</ul>
+</div>
