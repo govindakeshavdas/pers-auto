@@ -1,123 +1,507 @@
-<!-- COMPANY 1: Alkali -->
-<div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #f9fdf9; border: 1px solid #c3dfc3; padding: 8px; margin-bottom: 12px; border-radius: 4px;">
-<strong>1. Alkali 🟡 — AI steel takeoff from PDF bid sets</strong><br>
-<span style="font-size: 0.92em; color: #555;">
-  steel estimation · Houston, TX / SF · founded 2025 · pre-seed (YC X25) · ~2 people
-  · <a href="https://alkali.engineering" target="_blank">alkali.engineering</a>
-  · <a href="https://www.ycombinator.com/companies/alkali" target="_blank">YC page</a>
-</span>
-<br><br>
+<!-- COMPANY 1: codity.ai -->
+<div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #fafafa; border: 1px solid #ddd; padding: 8px; margin-bottom: 12px;">
+<div style="font-size: 15px; font-weight: bold;">1. codity.ai — 🔴 — AI code review and security scanning for engineering teams</div>
+<div style="font-size: 12px; color: #555; margin-top: 4px;">
+Dev tools · <em>Location unverified</em> · Founded <em>unverified</em> · Stage <em>unverified</em> · <em>~small team</em>
+· <a href="https://codity.ai/" style="color:#1a0dab;">codity.ai</a>
+· <a href="https://wellfound.com/jobs/3428667-founding-engineer-tech-team" style="color:#1a0dab;">Wellfound job</a>
+</div>
 
-<strong>What they do</strong>
-<ul style="margin: 4px 0; padding-left: 18px;">
-  <li>CV + VLMs read structural-steel drawings from PDF bid sets.</li>
-  <li>Auto-detect beams, columns, joists, bracing, base plates.</li>
-  <li>Calculate tonnage using baked-in AISC manual.</li>
-  <li>Convert takeoff to stock-aware nesting plans to cut waste.</li>
-</ul>
-
-<strong>The problem they solve</strong>
-<ul style="margin: 4px 0; padding-left: 18px;">
-  <li>
-Steel fabricators estimate multimillion-dollar projects by reviewing paper blueprints with a highlighter.
+<div style="margin-top: 8px;"><strong>What they do</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+PR-level code review, security scanning, quality gates, and dev productivity in one tool.
 </li>
-  <li>
-Each month, steel fabricators use Alkali to estimate hundreds of projects; ~10% of U.S. structural steel flows through the platform.
+<li>
+Claims to understand a codebase's "DNA" and prioritize high-impact suggestions.
 </li>
-  <li>Example: upload a 200-page bid set → columns and beams auto-identified and sized → tonnage and nesting plan exported to Tekla/Excel.</li>
-</ul>
-
-<strong>Money</strong>
-<ul style="margin: 4px 0; padding-left: 18px;">
-  <li>SaaS subscription for fabrication shops (pricing not public).</li>
-  <li>
-Users took off more than 25,000 tons in April 2026.
+<li>
+Lets you "chat with your whole codebase, not just changed lines."
 </li>
-  <li>
-2 employees.
- YC X25 batch — (YC-backed, included for lack of non-YC equivalent).</li>
+<li>
+Links review feedback to Jira tickets.
+</li>
 </ul>
 
-<strong>Why now</strong>
-<ul style="margin: 4px 0; padding-left: 18px;">
-  <li>VLMs (GPT-4o, Gemini) now read engineering drawings well enough for structured extraction.</li>
-  <li>Steel estimators are scarce; demand for faster bid turnaround is real.</li>
+<div style="margin-top: 8px;"><strong>The problem they solve</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Detect vulnerabilities and insecure patterns during review before they reach production.
+</li>
+<li>Example: PR introduces a new API endpoint; codity flags missing auth check and shows downstream callers.</li>
+<li>
+Most tools react to diffs — codity claims to understand the entire system.
+</li>
 </ul>
 
-<strong>Bootstrap fit</strong>
-<ul style="margin: 4px 0; padding-left: 18px;">
-  <li><strong>Grader:</strong> Tonnage/sizing from AISC standard — objective, mechanical.</li>
-  <li><strong>LLM deleted:</strong> CV extraction pipeline + nesting optimizer remain. Technical system.</li>
-  <li><strong>Accumulates:</strong> Trained vision model on steel drawings, but VLMs commoditize this fast.</li>
-  <li><strong>Week one:</strong> Upload a bid-set PDF, get takeoff and tonnage immediately. Works cold.</li>
-  <li><strong>Buyer:</strong> Estimators at steel fab shops. Reachable, pay for speed. Not procurement-gated.</li>
+<div style="margin-top: 8px;"><strong>Money</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>Revenue model unverified — likely per-seat SaaS (standard for dev-tool space).</li>
+<li>Funding, revenue, and headcount not disclosed publicly.</li>
 </ul>
-<strong>Verdict: 🟡</strong> — Real technical depth in the extraction pipeline, but large VLM providers will absorb engineering-drawing understanding as a capability. Same shape as landscaping takeoffs: genuine work, but the moat erodes as vision models improve. Also: an established steel estimation firm (e.g., Steel Estimating Solutions) hiring one ML engineer has training data + domain + customers on day one.
-<br><br>
 
-<strong>Crowding</strong>
-<ul style="margin: 4px 0; padding-left: 18px;">
-  <li>Steel Estimating Solutions offers AI-assisted estimation; traditional tools like Tekla and Bluebeam are adjacent.</li>
-  <li>Space is early but multiple CV-for-construction plays are emerging (takeoff.ai, etc.).</li>
+<div style="margin-top: 8px;"><strong>Why now</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+AI-generated code volume is surging, but faster generation does not mean better quality.
+</li>
+<li>LLMs now cheap enough to run full-repo analysis per PR.</li>
+</ul>
+
+<div style="margin-top: 8px; background: #fff3f3; padding: 6px; border: 1px solid #ecc;">
+<strong>Bootstrap fit</strong><br/>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li><strong>Grader:</strong> Objective on security vulns; semi-subjective on "architectural reasoning."</li>
+<li><strong>LLM deleted:</strong> A PR webhook + static-analysis rules. SonarQube already exists.</li>
+<li><strong>Accumulates:</strong> Nothing unique — PR integrations are commodity; no proprietary dataset.</li>
+<li><strong>Week one:</strong> Works on first PR. ✓</li>
+<li><strong>Buyer:</strong> Engineering leads. Reachable. But extremely saturated category.</li>
+</ul>
+<div style="font-size: 13px; margin-top: 4px;"><strong>Verdict: 🔴</strong> — Fails gate 3. Thin wrapper; GitHub Copilot, CodeAnt, Codacy, Qodo, SonarQube all here. Platform providers (GitHub, GitLab) absorb this as a feature.</div>
+</div>
+
+<div style="margin-top: 8px;"><strong>Crowding</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+CodeAnt AI claims 50% code-review-time reduction
+; Codacy, Qodo, Codegen, SonarQube all compete.</li>
+<li>GitHub Copilot and GitLab Duo already do AI code review natively inside the platform.</li>
 </ul>
 </div>
 
-<!-- COMPANY 2: Pareto Agent -->
-<div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #fdf5f5; border: 1px solid #e0c3c3; padding: 8px; margin-bottom: 12px; border-radius: 4px;">
-<strong>2. Pareto Agent 🔴 — Autonomous B2B renewal/pricing agents</strong><br>
-<span style="font-size: 0.92em; color: #555;">
-  B2B sales automation · Santa Clara / SF · founded 2025 · pre-seed (~$3.5M) · 1–10 people
-  · <a href="https://paretoagent.ai" target="_blank">paretoagent.ai</a>
-  · likely YC-backed
-</span>
-<br><br>
+<!-- COMPANY 2: Nexera -->
+<div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #fafafa; border: 1px solid #ddd; padding: 8px; margin-bottom: 12px;">
+<div style="font-size: 15px; font-weight: bold;">2. Nexera — 🔴 — NLP-to-backtest trading platform for professional traders</div>
+<div style="font-size: 12px; color: #555; margin-top: 4px;">
+Fintech / trading · Bengaluru, India · Founded ~2024 · Pre-seed · ~3 people
+· <a href="https://nexera.ai/" style="color:#1a0dab;">nexera.ai</a>
+· <a href="https://wellfound.com/jobs/2833521-founding-engineer" style="color:#1a0dab;">Wellfound job</a>
+</div>
 
-<strong>What they do</strong>
-<ul style="margin: 4px 0; padding-left: 18px;">
-  <li>
-Autonomous B2B renewal agents to maximize net revenue retention.
+<div style="margin-top: 8px;"><strong>What they do</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+GenAI platform using a domain-specific language to convert traders' natural-language ideas into executable strategies.
 </li>
-  <li>
-Agents replicate top-performing playbooks for optimized pricing and reduced rep ramp time.
+<li>
+Trader describes a strategy in plain language; Nexera researches, backtests, and can deploy it live.
 </li>
-  <li>Note: shortlist description ("policy-driven agent runtime with guardrails") does not match actual product.</li>
-</ul>
-
-<strong>The problem they solve</strong>
-<ul style="margin: 4px 0; padding-left: 18px;">
-  <li>
-Eliminates pricing inconsistencies in enterprise software sales.
+<li>
+Deterministic historical data with no lookahead bias; same config yields identical results.
 </li>
-  <li>Automates renewal cycles so reps spend less time on low-touch renewals.</li>
 </ul>
 
-<strong>Money</strong>
-<ul style="margin: 4px 0; padding-left: 18px;">
-  <li>
-Raised $3.5M; Copper Sky Capital invested.
+<div style="margin-top: 8px;"><strong>The problem they solve</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Identifying and assessing price factors is core to a trader's research, but it is slow manual work.
 </li>
-  <li>Revenue model unclear — likely outcome-based or SaaS seat pricing.</li>
+<li>
+Most AI tools produce insights but are weak at turning them into executable, deployable logic.
+</li>
+<li>Example: trader types "buy SPY when VIX crosses 25 and RSI &lt; 30" → gets a full backtest with PnL, drawdown, Sharpe.</li>
 </ul>
 
-<strong>Why now</strong>
-<ul style="margin: 4px 0; padding-left: 18px;">
-  <li>LLMs can now parse contracts and generate renewal proposals.</li>
+<div style="margin-top: 8px;"><strong>Money</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Pre-seed round from AngelList Quant Fund.
+</li>
+<li>Revenue not disclosed.</li>
+<li>
+3 total employees.
+</li>
 </ul>
 
-<strong>Bootstrap fit</strong>
-<ul style="margin: 4px 0; padding-left: 18px;">
-  <li><strong>Grader:</strong> 🔴 — "Top-performing playbooks" and pricing recommendations are subjective judgment.</li>
-  <li><strong>LLM deleted:</strong> Sales methodology + renewal domain knowledge. Domain-expert territory.</li>
-  <li><strong>Accumulates:</strong> Not evaluated (stopped at gate 1).</li>
-  <li><strong>Week one:</strong> Not evaluated.</li>
-  <li><strong>Buyer:</strong> Not evaluated.</li>
+<div style="margin-top: 8px;"><strong>Why now</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>LLMs can now reliably parse NL strategy descriptions into structured code.</li>
+<li>
+Despite rapid adoption, GenAI in live trading workflows remains limited.
+</li>
 </ul>
-<strong>Verdict: 🔴</strong> — Fails gate 1. What counts as an optimal renewal price or a "top-performing playbook" is subjective sales judgment. Also fails gate 4 (needs customer's historical pricing/contract data = cold start).
-<br><br>
 
-<strong>Crowding</strong>
-<ul style="margin: 4px 0; padding-left: 18px;">
-  <li>Crowded: Clari, Gainsight, and many CRM-adjacent tools already do renewal forecasting.</li>
-  <li>Multiple startups layering AI on renewal workflows (e.g., Cacheflow, Vendr).</li>
+<div style="margin-top: 8px; background: #fff3f3; padding: 6px; border: 1px solid #ecc;">
+<strong>Bootstrap fit</strong><br/>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li><strong>Grader:</strong> Backtest results are objective and measurable. ✓</li>
+<li><strong>LLM deleted:</strong> A backtesting engine + DSL + data connectors remain. Technical system. ✓</li>
+<li><strong>Accumulates:</strong> The DSL and backtest engine accumulate modestly, but better models will commoditize NL-to-code.</li>
+<li><strong>Week one:</strong> Needs institutional-grade market data — a licensed feed I don't own. 🔴</li>
+<li><strong>Buyer:</strong> Institutional/professional traders — relationship-gated. Solo founder can't reach hedge fund desks.</li>
+</ul>
+<div style="font-size: 13px; margin-top: 4px;"><strong>Verdict: 🔴</strong> — Fails gate 4 (licensed market data feed required) and gate 5 (institutional buyers are relationship-gated).</div>
+</div>
+
+<div style="margin-top: 8px;"><strong>Crowding</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>NexusTrade, QuantConnect, Alpaca, TradingView Pine Script, and dozens of no-code strategy builders.</li>
+<li>
+Many startups offer drag-and-drop no-code interfaces for strategy design.
+</li>
+</ul>
+</div>
+
+<!-- COMPANY 3: RamAIn -->
+<div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #fafafa; border: 1px solid #ddd; padding: 8px; margin-bottom: 12px;">
+<div style="font-size: 15px; font-weight: bold;">3. RamAIn — 🔴 — Computer-use agents for enterprise legacy systems (YC W26)</div>
+<div style="font-size: 12px; color: #555; margin-top: 4px;">
+AI automation · San Francisco · Founded 2025 · Pre-seed (YC W26) · ~small team
+· <a href="https://ramain.ai/" style="color:#1a0dab;">ramain.ai</a>
+· <a href="https://www.ycombinator.com/companies/ramain" style="color:#1a0dab;">YC profile</a>
+</div>
+
+<div style="margin-top: 8px;"><strong>What they do</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Agents simulate mouse and keyboard clicks to use computers just like a human — automating legacy systems, desktop apps, and web portals without APIs.
+</li>
+<li>
+Current CUAs all use the same screenshot→VLM→decision loop, which is expensive and slow. RamAIn pre-trains on specific interfaces.
+</li>
+<li>
+Differentiation claim: pre-training on specific UIs to build a "Visual DOM" instead of screenshot→VLM loops.
+</li>
+</ul>
+
+<div style="margin-top: 8px;"><strong>The problem they solve</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Enterprise teams are stuck manually copy-pasting and tab-switching for hours every week.
+</li>
+<li>
+Early design-partner traction in insurance underwriting and vendor portals.
+</li>
+<li>Example: insurance underwriter opens 5 portals per application — RamAIn reads, extracts, and enters data across them.</li>
+</ul>
+
+<div style="margin-top: 8px;"><strong>Money</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>YC W26 standard deal (~$500K).</li>
+<li>Revenue not disclosed; in design-partner phase.</li>
+</ul>
+
+<div style="margin-top: 8px;"><strong>Why now</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>Multimodal models (GPT-4o, Claude) made screenshot-based computer use feasible in 2024–2025.</li>
+<li>Enterprises still run legacy portals with no API — computer-use is the only automation path.</li>
+</ul>
+
+<div style="margin-top: 8px; background: #fff3f3; padding: 6px; border: 1px solid #ecc;">
+<strong>Bootstrap fit</strong><br/>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li><strong>Grader:</strong> Task completion is objective (did the data transfer correctly?). ✓</li>
+<li><strong>LLM deleted:</strong> UI pre-training pipeline ("Visual DOM") is a real technical artifact. ✓</li>
+<li><strong>Accumulates:</strong> Nothing durable — Anthropic, OpenAI ship computer use as a platform feature. 🔴</li>
+<li><strong>Week one:</strong> Needs access to customer's specific legacy portals for training. Marginal.</li>
+<li><strong>Buyer:</strong> Enterprise ops teams. Procurement-gated at scale.</li>
+</ul>
+<div style="font-size: 13px; margin-top: 4px;"><strong>Verdict: 🔴</strong> — Fails gate 3. 
+The most crowded category in AI right now — Anthropic Computer Use, OpenAI Operator, MultiOn, Browserbase, UiPath all compete.
+ The model providers ship the primitive; the "pre-train on specific UIs" wedge is unproven and erasable.</div>
+</div>
+
+<div style="margin-top: 8px;"><strong>Crowding</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Anthropic Computer Use, OpenAI Operator, MultiOn, Browserbase, UiPath, Automation Anywhere all compete directly or adjacently.
+</li>
+<li>Platform providers are the biggest threat — computer-use is becoming a built-in model capability.</li>
+</ul>
+</div>
+
+<!-- COMPANY 4: OpenWork -->
+<div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #fafafa; border: 1px solid #ddd; padding: 8px; margin-bottom: 12px;">
+<div style="font-size: 15px; font-weight: bold;">4. OpenWork — 🔴 — Open-source desktop AI agent framework (YC-backed)</div>
+<div style="font-size: 12px; color: #555; margin-top: 4px;">
+Dev tools / AI infra · <em>Location unverified</em> · Founded 2026 · Pre-seed (YC) · <em>~small team</em>
+· <a href="https://github.com/different-ai/openwork" style="color:#1a0dab;">GitHub</a>
+· <a href="https://www.ycombinator.com/companies/openwork/jobs/TqV9SSB-founding-engineer" style="color:#1a0dab;">YC job</a>
+</div>
+
+<div style="margin-top: 8px;"><strong>What they do</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Free, open-source desktop app for sharing AI workflows — an alternative to Claude Cowork and Codex.
+</li>
+<li>
+Supports 50+ LLMs from OpenAI, Anthropic, Google; users bring their own API keys.
+</li>
+<li>
+OpenWork Den is the team control plane — provision inference, manage model access, set policies.
+</li>
+</ul>
+
+<div style="margin-top: 8px;"><strong>The problem they solve</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Users want transparency and control over their agent stack — not vendor lock-in to closed platforms.
+</li>
+<li>Example: team shares a reusable "deploy to staging" agent skill via a single link; any teammate runs it locally.</li>
+</ul>
+
+<div style="margin-top: 8px;"><strong>Money</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Free for individuals; Starter plan free for 5 seats, then $10/seat/month; custom Enterprise.
+</li>
+<li>Revenue not disclosed.</li>
+</ul>
+
+<div style="margin-top: 8px;"><strong>Why now</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>Claude Cowork and Codex launched closed-source desktop agents in 2025 — open-source alternative fills a gap.</li>
+</ul>
+
+<div style="margin-top: 8px; background: #fff3f3; padding: 6px; border: 1px solid #ecc;">
+<strong>Bootstrap fit</strong><br/>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li><strong>Grader:</strong> Task execution is objective. ✓</li>
+<li><strong>LLM deleted:</strong> A desktop shell for running agents. Thin orchestration layer.</li>
+<li><strong>Accumulates:</strong> Nothing — open-source community could fork; platform providers absorb. 🔴</li>
+<li><strong>Week one:</strong> User installs, brings API key, runs agents. Works day one. ✓</li>
+<li><strong>Buyer:</strong> Developers. Low willingness to pay; $10/seat is freemium-shaped.</li>
+</ul>
+<div style="font-size: 13px; margin-top: 4px;"><strong>Verdict: 🔴</strong> — Fails gate 3. Thin orchestration layer over model providers. Claude Cowork, Codex, Cursor are the incumbents. Open-source means anyone forks it. Nothing accumulates.</div>
+</div>
+
+<div style="margin-top: 8px;"><strong>Crowding</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>Claude Cowork, OpenAI Codex, Cursor, Windsurf — all first-party or well-funded.</li>
+<li>Other open-source agent frameworks (LangGraph, CrewAI, AutoGen) crowd the OSS layer too.</li>
+</ul>
+</div>
+
+<!-- COMPANY 5: SpaceFlow Technologies -->
+<div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #fafafa; border: 1px solid #ddd; padding: 8px; margin-bottom: 12px;">
+<div style="font-size: 15px; font-weight: bold;">5. SpaceFlow Technologies — 🔴 — AI agents for supply chain procurement (YC S26)</div>
+<div style="font-size: 12px; color: #555; margin-top: 4px;">
+Supply chain / AI automation · San Francisco · Founded 2026 · Pre-seed (YC S26) · ~4 people
+· <a href="https://spaceflow.tech/" style="color:#1a0dab;">spaceflow.tech</a>
+· <a href="https://www.ycombinator.com/companies/spaceflow-technologies-inc" style="color:#1a0dab;">YC profile</a>
+</div>
+
+<div style="margin-top: 8px;"><strong>What they do</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Managed runtime for AI agents that execute supply chain work across ERPs, email, spreadsheets, and supplier portals.
+</li>
+<li>
+Turns fragmented operational data and SOPs into a governed context layer with reusable agent skills.
+</li>
+<li>
+Deploys in the customer's cloud or on-prem with permissions, approvals, and audit trails.
+</li>
+</ul>
+
+<div style="margin-top: 8px;"><strong>The problem they solve</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Procurement and supply chain: the most email-buried, spreadsheet-driven, re-keyed corner of the enterprise.
+</li>
+<li>
+Example: a supplier asks for a price increase by email — the agent files it against the contract, pulls price history, drafts a reply.
+</li>
+</ul>
+
+<div style="margin-top: 8px;"><strong>Money</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Processed ~$400M in annual supplier spend; reached six-figure ARR while early stage.
+</li>
+<li>
+One customer cut off-contract spending by 42% and canceled three planned hires.
+</li>
+</ul>
+
+<div style="margin-top: 8px;"><strong>Why now</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>LLMs can now parse unstructured supplier emails and match them to PO line items.</li>
+<li>
+SAP runs most of the world's largest companies; most still run on-prem, customized over 20 years.
+</li>
+</ul>
+
+<div style="margin-top: 8px; background: #fff3f3; padding: 6px; border: 1px solid #ecc;">
+<strong>Bootstrap fit</strong><br/>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li><strong>Grader:</strong> PO matching and price reconciliation are objective. ✓</li>
+<li><strong>LLM deleted:</strong> ERP connectors + context layer remain, but supply chain domain knowledge drives value. Borderline.</li>
+<li><strong>Accumulates:</strong> The "governed context layer" accumulates per-customer, not for the builder. Vendor scorecards are customer data.</li>
+<li><strong>Week one:</strong> Needs live ERP integration, purchase orders, supplier data. Cold start. 🔴</li>
+<li><strong>Buyer:</strong> Enterprise procurement — on-prem, regulated. Procurement-gated.</li>
+</ul>
+<div style="font-size: 13px; margin-top: 4px;"><strong>Verdict: 🔴</strong> — Fails gate 4. Useless without ERP integration and customer's procurement data. Also fails gate 5 — 
+serves manufacturers, banks, defence: air-gapped networks and regulators.
+ These are procurement-gated buyers a solo founder cannot reach. Strong traction signal — terrible bootstrap fit.</div>
+</div>
+
+<div style="margin-top: 8px;"><strong>Crowding</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>SAP Ariba, Coupa, Jaggaer own the procurement software space.</li>
+<li>Other YC S26 companies (e.g. MarkIt for trade compliance) attack adjacent supply-chain workflows.</li>
+</ul>
+</div>
+
+<!-- COMPANY 6: Technovatime -->
+<div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #fafafa; border: 1px solid #ddd; padding: 8px; margin-bottom: 12px;">
+<div style="font-size: 15px; font-weight: bold;">6. Technovatime — 🔴 — AI computer-use agents for healthcare revenue cycle management</div>
+<div style="font-size: 12px; color: #555; margin-top: 4px;">
+Healthcare AI · <em>Location unverified</em> · Founded <em>unverified</em> · Stage: Techstars · <em>~small team</em>
+· <a href="https://technovatime.com/" style="color:#1a0dab;">technovatime.com</a>
+· <a href="https://jobs.techstars.com/companies/technovatime/jobs/73782177-founding-engineer" style="color:#1a0dab;">Techstars job</a>
+</div>
+
+<div style="margin-top: 8px;"><strong>What they do</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Digital employees that do work across healthcare systems, from patient access to revenue cycle.
+</li>
+<li>
+User records the workflow, maps the process, deploys the right digital employee.
+</li>
+<li>
+Handles claims, patient verification, and legacy-system workflows.
+</li>
+</ul>
+
+<div style="margin-top: 8px;"><strong>The problem they solve</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Healthcare organizations face complex billing, rising denial rates, and limited staff.
+</li>
+<li>Example: eligibility verification requires re-keying patient data across payer portals — a digital employee does it instead.</li>
+</ul>
+
+<div style="margin-top: 8px;"><strong>Money</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>Techstars-backed; specific funding amount not disclosed.</li>
+<li>Revenue not disclosed.</li>
+</ul>
+
+<div style="margin-top: 8px;"><strong>Why now</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+50–75% of American hospitals already adopt some RCM automation.
+</li>
+<li>Computer-use agents can now operate payer portals that lack APIs.</li>
+</ul>
+
+<div style="margin-top: 8px; background: #fff3f3; padding: 6px; border: 1px solid #ecc;">
+<strong>Bootstrap fit</strong><br/>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li><strong>Grader:</strong> Claims submission is pass/fail — objective. ✓</li>
+<li><strong>LLM deleted:</strong> Healthcare billing rules, payer logic, coding standards = domain knowledge. 🔴</li>
+<li><strong>Accumulates:</strong> Domain expertise; an RCM services firm hires one dev and beats me.</li>
+<li><strong>Week one:</strong> Needs EHR/billing system integration and payer portal access. Cold start.</li>
+<li><strong>Buyer:</strong> Hospital finance teams. Procurement-gated, regulated niche.</li>
+</ul>
+<div style="font-size: 13px; margin-top: 4px;"><strong>Verdict: 🔴</strong> — Fails gate 2 (domain knowledge owns the value — medical coding, payer rules, billing logic), gate 4 (needs EHR integration), and gate 5 (healthcare procurement is regulated). 
+Becker's lists 385+ existing RCM companies.
+</div>
+</div>
+
+<div style="margin-top: 8px;"><strong>Crowding</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+385+ RCM companies exist.
+ Waystar, R1 RCM, Athenahealth, ImagineSoftware are established players.</li>
+<li>Every major health IT vendor is adding AI automation to their RCM stack.</li>
+</ul>
+</div>
+
+<!-- COMPANY 7: Kangal AI -->
+<div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #fafafa; border: 1px solid #ddd; padding: 8px; margin-bottom: 12px;">
+<div style="font-size: 15px; font-weight: bold;">7. Kangal AI — 🔴 — Frontier AI for national security and defense</div>
+<div style="font-size: 12px; color: #555; margin-top: 4px;">
+Defense / intelligence · London · 
+Incorporated 19 September 2025
+ · Stage unverified · 11–50 people (per Wellfound)
+· <a href="https://wellfound.com/company/kangal-ai" style="color:#1a0dab;">Wellfound profile</a>
+· <a href="https://wellfound.com/jobs/4435471-ai-founding-engineer" style="color:#1a0dab;">Job posting</a>
+</div>
+
+<div style="margin-top: 8px;"><strong>What they do</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Builds frontier AI for missions where information decides the outcome. Serves governments, national security organizations, and private corporations.
+</li>
+<li>Product details sparse — tagline is "the first to see, the first to know."</li>
+</ul>
+
+<div style="margin-top: 8px;"><strong>The problem they solve</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>Intelligence analysis and information advantage for defense/national security customers.</li>
+<li>Specific product unclear from public information.</li>
+</ul>
+
+<div style="margin-top: 8px;"><strong>Money</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Hiring AI Founding Engineer at £71K–£130K + up to 1.0% equity.
+</li>
+<li>Funding and revenue not disclosed.</li>
+</ul>
+
+<div style="margin-top: 8px;"><strong>Why now</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>Governments accelerating AI adoption for OSINT and intelligence analysis.</li>
+</ul>
+
+<div style="margin-top: 8px; background: #fff3f3; padding: 6px; border: 1px solid #ecc;">
+<strong>Bootstrap fit</strong><br/>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li><strong>Grader:</strong> Unclear — intelligence analysis is partially subjective.</li>
+<li><strong>LLM deleted:</strong> Unclear what remains — product not described publicly.</li>
+<li><strong>Accumulates:</strong> Unclear.</li>
+<li><strong>Week one:</strong> Unclear.</li>
+<li><strong>Buyer:</strong> Governments, national security orgs — procurement-gated, classified. 🔴</li>
+</ul>
+<div style="font-size: 13px; margin-top: 4px;"><strong>Verdict: 🔴</strong> — Fails gate 5 immediately. Government and defense buyers are procurement- and relationship-gated. Multiple unclear gates compound the failure. Also fails gate 1 (intelligence analysis involves subjective judgment).</div>
+</div>
+
+<div style="margin-top: 8px;"><strong>Crowding</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>Palantir, Anduril, and a wave of defense-AI startups (Shield AI, Rebellion Defence, etc.).</li>
+<li>Government AI contracting is dominated by firms with existing clearances and relationships.</li>
+</ul>
+</div>
+
+<!-- COMPANY 8: Alfrd -->
+<div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #fafafa; border: 1px solid #ddd; padding: 8px; margin-bottom: 12px;">
+<div style="font-size: 15px; font-weight: bold;">8. Alfrd — 🔴 — AI financial data cleaning and unification [UNVERIFIED]</div>
+<div style="font-size: 12px; color: #555; margin-top: 4px;">
+Fintech / data · <em>All details unverified</em>
+· <a href="https://wellfound.com/role/l/technical-co-founder/united-states" style="color:#1a0dab;">Wellfound listing</a>
+</div>
+
+<div style="margin-top: 8px;"><strong>What they do (from shortlist one-liner only)</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>AI that cleans and unifies financial data from ERPs, CRMs, and accounting tools into BI-ready format.</li>
+<li>No additional public information found. Searching returned no company website, funding data, or product details.</li>
+</ul>
+
+<div style="margin-top: 8px;"><strong>Status</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>Could not verify: founding date, stage, funding, team size, product details, or whether the company still exists.</li>
+<li>The Wellfound link points to a generic "technical co-founder" listing, not a company-specific page.</li>
+</ul>
+
+<div style="margin-top: 8px; background: #fff3f3; padding: 6px; border: 1px solid #ecc;">
+<strong>Bootstrap fit</strong><br/>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li><strong>Grader:</strong> Data cleaning correctness is measurable. ✓ (assumed)</li>
+<li><strong>LLM deleted:</strong> ETL pipeline + schema mapping remains. Technical system. ✓ (assumed)</li>
+<li><strong>Accumulates:</strong> Schema mappings could accumulate across ERP variants.</li>
+<li><strong>Week one:</strong> Needs live ERP/CRM integration and customer's financial data. 🔴</li>
+<li><strong>Buyer:</strong> Finance/ops teams at mid-market companies. Reachable if SMB; procurement-gated if enterprise.</li>
+</ul>
+<div style="font-size: 13px; margin-top: 4px;"><strong>Verdict: 🔴</strong> — Fails gate 4 on the one-liner alone: value requires connecting to customer's ERP, CRM, and accounting tools (live integration into their systems). Cold start for a solo founder. Company details entirely unverified.</div>
+</div>
+
+<div style="margin-top: 8px;"><strong>Crowding</strong></div>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>Fivetran, Airbyte, dbt, and Census handle data integration/transformation for finance teams.</li>
+<li>Aleph ($29M raised) and others are building AI-native FP&A layers on similar data.</li>
 </ul>
 </div>
