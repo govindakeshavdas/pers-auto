@@ -77,3 +77,7 @@ SpaceFlow
 Proximitty
 Cerenovus
 WAYLINE
+Fabrion
+InQuery
+Loop AI
+PathPilot
