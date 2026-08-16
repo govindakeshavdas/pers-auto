@@ -53,3 +53,5 @@ Weave
 Crustdata
 Unsloth AI
 Middleware
+Alkali
+Pareto Agent

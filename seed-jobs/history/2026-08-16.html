@@ -1,273 +1,123 @@
-<!-- COMPANY 1: Booko -->
-<div style="background:#fafafa; border:1px solid #ddd; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
-<strong>1. Booko 🔴 — Dynamic pricing engine for bookable time slots</strong><br>
-<span style="color:#666; font-size:13px;">
-  booko.com · San Francisco · founded 2025 · seed (~$4.3M, YC W26) · ~2 people
-  · <a href="https://www.ycombinator.com/companies/booko">YC page</a>
-  · <a href="https://www.ycombinator.com/companies/booko/jobs/iW5ZIzm-founding-machine-learning-engineer">job</a>
+<!-- COMPANY 1: Alkali -->
+<div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #f9fdf9; border: 1px solid #c3dfc3; padding: 8px; margin-bottom: 12px; border-radius: 4px;">
+<strong>1. Alkali 🟡 — AI steel takeoff from PDF bid sets</strong><br>
+<span style="font-size: 0.92em; color: #555;">
+  steel estimation · Houston, TX / SF · founded 2025 · pre-seed (YC X25) · ~2 people
+  · <a href="https://alkali.engineering" target="_blank">alkali.engineering</a>
+  · <a href="https://www.ycombinator.com/companies/alkali" target="_blank">YC page</a>
 </span>
+<br><br>
 
-<br><strong>What they do</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-  <li>
-Helps businesses that sell bookable time slots make more money through dynamic pricing.
-</li>
-  <li>
-Integrates with existing booking systems to adjust prices based on historical utilization, availability, and demand.
-</li>
-  <li>
-Forecasts demand class by class and slot by slot, moves price and incentives in real time.
-</li>
-  <li>
-Live in production with national fitness brands, boutique studios, clinics, and chains.
-</li>
+<strong>What they do</strong>
+<ul style="margin: 4px 0; padding-left: 18px;">
+  <li>CV + VLMs read structural-steel drawings from PDF bid sets.</li>
+  <li>Auto-detect beams, columns, joists, bracing, base plates.</li>
+  <li>Calculate tonnage using baked-in AISC manual.</li>
+  <li>Convert takeoff to stock-aware nesting plans to cut waste.</li>
 </ul>
 
 <strong>The problem they solve</strong>
-<ul style="margin:4px 0; padding-left:18px;">
+<ul style="margin: 4px 0; padding-left: 18px;">
   <li>
-Unlike physical inventory, unsold time slots disappear forever, yet most businesses still use static pricing.
+Steel fabricators estimate multimillion-dollar projects by reviewing paper blueprints with a highlighter.
 </li>
-  <li>Example: a yoga studio has 8 open mats at 2 pm Tuesday. Booko drops the price to fill them, like airline yield management.</li>
   <li>
-Early customers see ~20% revenue uplift from selling time that would have otherwise gone unsold.
+Each month, steel fabricators use Alkali to estimate hundreds of projects; ~10% of U.S. structural steel flows through the platform.
 </li>
+  <li>Example: upload a 200-page bid set → columns and beams auto-identified and sized → tonnage and nesting plan exported to Tekla/Excel.</li>
 </ul>
 
 <strong>Money</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-  <li>Rev share or SaaS on uplift — revenue model not publicly detailed.</li>
+<ul style="margin: 4px 0; padding-left: 18px;">
+  <li>SaaS subscription for fabrication shops (pricing not public).</li>
   <li>
-Raised ~$4.3M. Backed by Y Combinator (W26).
+Users took off more than 25,000 tons in April 2026.
 </li>
+  <li>
+2 employees.
+ YC X25 batch — (YC-backed, included for lack of non-YC equivalent).</li>
 </ul>
 
 <strong>Why now</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-  <li>
-Service economy has digitized marketing, payments, and booking, but not pricing intelligence.
-</li>
+<ul style="margin: 4px 0; padding-left: 18px;">
+  <li>VLMs (GPT-4o, Gemini) now read engineering drawings well enough for structured extraction.</li>
+  <li>Steel estimators are scarce; demand for faster bid turnaround is real.</li>
 </ul>
 
 <strong>Bootstrap fit</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-  <li><strong>Grader:</strong> Revenue uplift is measurable — not subjective. Passes.</li>
-  <li><strong>LLM deleted:</strong> Core is demand-forecast model + booking-API integration. Technical, not domain. Passes.</li>
-  <li><strong>Accumulates:</strong> Nothing before customer data arrives. 
-Thin AI wrapper on existing booking APIs with no proprietary data advantage at early stage.
- 🔴</li>
-  <li><strong>Week one:</strong> Needs customer's historical booking history to forecast. 
-Pricing intelligence improves as booking data compounds.
- Cold start. 🔴</li>
-  <li><strong>Buyer:</strong> SMB owners (salon, gym, studio) — fragmented, low ACV, hard to reach at scale.</li>
+<ul style="margin: 4px 0; padding-left: 18px;">
+  <li><strong>Grader:</strong> Tonnage/sizing from AISC standard — objective, mechanical.</li>
+  <li><strong>LLM deleted:</strong> CV extraction pipeline + nesting optimizer remain. Technical system.</li>
+  <li><strong>Accumulates:</strong> Trained vision model on steel drawings, but VLMs commoditize this fast.</li>
+  <li><strong>Week one:</strong> Upload a bid-set PDF, get takeoff and tonnage immediately. Works cold.</li>
+  <li><strong>Buyer:</strong> Estimators at steel fab shops. Reachable, pay for speed. Not procurement-gated.</li>
 </ul>
-<div style="background:#ffe0e0; padding:4px 8px; margin-top:4px; border-radius:3px;">
-  <strong>Verdict: 🔴</strong> — Fails gates 3 + 4. No asset accumulates before customer data arrives. Booking platforms (Mindbody, Calendly) can add this as a feature. Data-network-effect business = bad bootstrap. YC W26.
-</div>
+<strong>Verdict: 🟡</strong> — Real technical depth in the extraction pipeline, but large VLM providers will absorb engineering-drawing understanding as a capability. Same shape as landscaping takeoffs: genuine work, but the moat erodes as vision models improve. Also: an established steel estimation firm (e.g., Steel Estimating Solutions) hiring one ML engineer has training data + domain + customers on day one.
+<br><br>
 
 <strong>Crowding</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-  <li>
-Yield management software exists for hospitality (IDeaS, Duetto).
-</li>
-  <li>
-Mindbody itself could add dynamic pricing, as could Calendly/Acuity.
-</li>
+<ul style="margin: 4px 0; padding-left: 18px;">
+  <li>Steel Estimating Solutions offers AI-assisted estimation; traditional tools like Tekla and Bluebeam are adjacent.</li>
+  <li>Space is early but multiple CV-for-construction plays are emerging (takeoff.ai, etc.).</li>
 </ul>
 </div>
 
-<!-- COMPANY 2: Pharosyn -->
-<div style="background:#fafafa; border:1px solid #ddd; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
-<strong>2. Pharosyn 🔴 — AI competitive intelligence for pharma</strong><br>
-<span style="color:#666; font-size:13px;">
-  pharosyn.ai · London, UK · founded 2025 · pre-seed (Entrepreneurs First) · ~3 people
-  · <a href="https://www.pharosyn.ai/">site</a>
-  · <a href="https://builtin.com/job/founding-ai-engineer-100k-150k-equity-pharosyn/9023935">job</a>
+<!-- COMPANY 2: Pareto Agent -->
+<div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #fdf5f5; border: 1px solid #e0c3c3; padding: 8px; margin-bottom: 12px; border-radius: 4px;">
+<strong>2. Pareto Agent 🔴 — Autonomous B2B renewal/pricing agents</strong><br>
+<span style="font-size: 0.92em; color: #555;">
+  B2B sales automation · Santa Clara / SF · founded 2025 · pre-seed (~$3.5M) · 1–10 people
+  · <a href="https://paretoagent.ai" target="_blank">paretoagent.ai</a>
+  · likely YC-backed
 </span>
+<br><br>
 
-<br><strong>What they do</strong>
-<ul style="margin:4px 0; padding-left:18px;">
+<strong>What they do</strong>
+<ul style="margin: 4px 0; padding-left: 18px;">
   <li>
-Uses AI to continuously write strategic reports on clinical, regulatory, and commercial events involving competitors.
+Autonomous B2B renewal agents to maximize net revenue retention.
 </li>
   <li>
-Monitors clinical trials, regulatory filings, press releases, and earnings call transcripts.
+Agents replicate top-performing playbooks for optimized pricing and reduced rep ramp time.
 </li>
-  <li>
-AI triaging engine scores and ranks every incoming event against the customer's pipeline criteria.
-</li>
+  <li>Note: shortlist description ("policy-driven agent runtime with guardrails") does not match actual product.</li>
 </ul>
 
 <strong>The problem they solve</strong>
-<ul style="margin:4px 0; padding-left:18px;">
+<ul style="margin: 4px 0; padding-left: 18px;">
   <li>
-Replaces slow manual reporting with real-time AI-powered competitive intelligence in regulated pharma.
+Eliminates pricing inconsistencies in enterprise software sales.
 </li>
-  <li>Example: a generics company tracks 40 competitor molecules across FDA, EMA, clinical-trial registries. Today that's a CI analyst reading filings manually.</li>
+  <li>Automates renewal cycles so reps spend less time on low-touch renewals.</li>
 </ul>
 
 <strong>Money</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-  <li>Enterprise SaaS to pharma CI teams. No revenue figures public.</li>
+<ul style="margin: 4px 0; padding-left: 18px;">
   <li>
-Has not raised any funding yet.
- 
-Backed by Entrepreneurs First.
+Raised $3.5M; Copper Sky Capital invested.
 </li>
+  <li>Revenue model unclear — likely outcome-based or SaaS seat pricing.</li>
 </ul>
 
 <strong>Why now</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-  <li>LLMs can now summarize and triage regulatory filings at scale.</li>
-  <li>Manual CI teams spend most time on collection, not analysis.</li>
+<ul style="margin: 4px 0; padding-left: 18px;">
+  <li>LLMs can now parse contracts and generate renewal proposals.</li>
 </ul>
 
 <strong>Bootstrap fit</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-  <li><strong>Grader:</strong> Output is strategic reports with "impact assessments" and event prioritization. That is expert judgment. 🔴</li>
-  <li><strong>LLM deleted:</strong> Pharma regulatory + clinical-trial domain knowledge is the core asset. A CI consultancy could hire one dev.</li>
-  <li><strong>Accumulates:</strong> Not reached — stopped at gate 1.</li>
-  <li><strong>Week one:</strong> Not reached.</li>
-  <li><strong>Buyer:</strong> Enterprise pharma — procurement-gated.</li>
+<ul style="margin: 4px 0; padding-left: 18px;">
+  <li><strong>Grader:</strong> 🔴 — "Top-performing playbooks" and pricing recommendations are subjective judgment.</li>
+  <li><strong>LLM deleted:</strong> Sales methodology + renewal domain knowledge. Domain-expert territory.</li>
+  <li><strong>Accumulates:</strong> Not evaluated (stopped at gate 1).</li>
+  <li><strong>Week one:</strong> Not evaluated.</li>
+  <li><strong>Buyer:</strong> Not evaluated.</li>
 </ul>
-<div style="background:#ffe0e0; padding:4px 8px; margin-top:4px; border-radius:3px;">
-  <strong>Verdict: 🔴</strong> — Fails gate 1. Strategic CI reports are inherently subjective. Also fails gate 2: pharma domain expertise owns the value. Not YC — backed by Entrepreneurs First.
-</div>
+<strong>Verdict: 🔴</strong> — Fails gate 1. What counts as an optimal renewal price or a "top-performing playbook" is subjective sales judgment. Also fails gate 4 (needs customer's historical pricing/contract data = cold start).
+<br><br>
 
 <strong>Crowding</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-  <li>
-117 active competitors including Manifold AI, Komodo Health, and Owkin.
-</li>
-  <li>Patsnap Eureka, established CI consultancies, and internal pharma CI teams all compete here.</li>
-</ul>
-</div>
-
-<!-- COMPANY 3: Weave -->
-<div style="background:#fafafa; border:1px solid #ddd; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
-<strong>3. Weave 🔴 — AI measurement of engineering team productivity</strong><br>
-<span style="color:#666; font-size:13px;">
-  workweave.dev · San Francisco · founded 2025 · seed (~$4.2M, YC W25) · ~4 people
-  · <a href="https://www.ycombinator.com/companies/weave-3">YC page</a>
-  · <a href="https://www.ycombinator.com/companies/weave-3/jobs/SqFnIFE-founding-ai-engineer">job</a>
-</span>
-
-<br><strong>What they do</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-  <li>
-Uses AI to measure engineering work — runs LLMs and custom models on every PR and review, analyzing output and quality.
-</li>
-  <li>
-PR-level code attribution: determines what was written by AI, what wasn't, and what should've been.
-</li>
-  <li>
-Key metric is "Weave Hour": how long would it take an experienced engineer to make this change?
-</li>
-</ul>
-
-<strong>The problem they solve</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-  <li>
-Engineering measurement has been impossible, so leaders fly blind — relying on gut feel or shoddy metrics.
-</li>
-  <li>Example: an eng VP wants to know how much Cursor adoption actually speeds up the team. Weave shows AI-written vs. human-written code per engineer.</li>
-</ul>
-
-<strong>Money</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-  <li>SaaS, likely per-seat to eng teams.</li>
-  <li>
-200+ customers including Robinhood, Rho, PostHog, Browserbase.
-</li>
-  <li>
-Raised $4.2M seed from Moonfire, Burst Capital, and YC (W25).
-</li>
-</ul>
-
-<strong>Why now</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-  <li>AI coding tools (Cursor, Copilot) create a new measurement need: how much is AI doing?</li>
-  <li>LLMs can now read PRs and estimate effort — not just count lines.</li>
-</ul>
-
-<strong>Bootstrap fit</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-  <li><strong>Grader:</strong> "Productivity," "quality," "how helpful reviews are" — all subjective judgments. "Weave Hour" is an estimate, not a measurement. 🔴</li>
-  <li><strong>LLM deleted:</strong> Not reached — stopped at gate 1.</li>
-  <li><strong>Accumulates:</strong> Not reached.</li>
-  <li><strong>Week one:</strong> Not reached.</li>
-  <li><strong>Buyer:</strong> Eng VPs / CTOs — reachable but would need social proof.</li>
-</ul>
-<div style="background:#ffe0e0; padding:4px 8px; margin-top:4px; border-radius:3px;">
-  <strong>Verdict: 🔴</strong> — Fails gate 1. Estimating engineering "quality" and "impact" is inherently subjective — same shape as call-center QA scoring. Good traction signal (200+ customers) but that makes it a <em>worse</em> bootstrap target, not better. YC W25.
-</div>
-
-<strong>Crowding</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-  <li>LinearB, Jellyfish, Pluralsight Flow, Haystack, Gitprime (acquired by Pluralsight).</li>
-  <li>GitHub Copilot metrics are native and expanding — platform absorption risk.</li>
-</ul>
-</div>
-
-<!-- COMPANY 4: Crustdata -->
-<div style="background:#f5f5f5; border:1px solid #ccc; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
-<strong>4. Crustdata ⛔ DROPPED — B2B data enrichment API</strong><br>
-<span style="color:#666; font-size:13px;">
-  crustdata.com · San Francisco / Gurugram · <a href="https://www.ycombinator.com/companies/crustdata">YC page</a>
-</span>
-<ul style="margin:4px 0; padding-left:18px;">
-  <li><strong>Filter failure: founding year.</strong> 
-Founded in 2020.
- Required 2025–2026.</li>
-  <li>
-Revenue scaled from $770K to over $4M within seven months post-YC, achieving profitability.
-</li>
-  <li>Also: YC-backed, 
-$6M raised.
- Mature product with 
-574 active competitors.
-</li>
-  <li>Would also fail gate 4: building a competing dataset of 60M+ companies is not a solo-founder cold start.</li>
-</ul>
-</div>
-
-<!-- COMPANY 5: Unsloth AI -->
-<div style="background:#f5f5f5; border:1px solid #ccc; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
-<strong>5. Unsloth AI ⛔ DROPPED — Open-source LLM fine-tuning framework</strong><br>
-<span style="color:#666; font-size:13px;">
-  unsloth.ai · San Francisco · <a href="https://www.ycombinator.com/companies/unsloth-ai">YC page</a>
-</span>
-<ul style="margin:4px 0; padding-left:18px;">
-  <li><strong>Filter failure: founding year.</strong> 
-Founded in 2023.
- Required 2025–2026.</li>
-  <li>
-150M+ total downloads; partners with Google, OpenAI, Meta, Mistral, NVIDIA.
-</li>
-  <li>
-Users include Microsoft, NVIDIA, Meta, NASA, HP, VMware, and Intel.
-</li>
-  <li>Also: open-source core with 
-1,642 active competitors.
- Competing here as a bootstrapper against a YC S24 company with massive adoption is not realistic.</li>
-</ul>
-</div>
-
-<!-- COMPANY 6: Middleware -->
-<div style="background:#f5f5f5; border:1px solid #ccc; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
-<strong>6. Middleware ⛔ DROPPED — AI cloud observability platform</strong><br>
-<span style="color:#666; font-size:13px;">
-  middleware.io · San Francisco · <a href="https://www.ycombinator.com/companies/middleware">YC page</a>
-</span>
-<ul style="margin:4px 0; padding-left:18px;">
-  <li><strong>Filter failure: founding year.</strong> 
-Founded 2022.
- Required 2025–2026.</li>
-  <li><strong>Filter failure: stage.</strong> 
-Raised $6.5M seed.
- 
-40-person team.
- Well past early stage.</li>
-  <li>YC W23. Competes with Datadog, New Relic, Grafana — deeply crowded observability market.</li>
+<ul style="margin: 4px 0; padding-left: 18px;">
+  <li>Crowded: Clari, Gainsight, and many CRM-adjacent tools already do renewal forecasting.</li>
+  <li>Multiple startups layering AI on renewal workflows (e.g., Cacheflow, Vendr).</li>
 </ul>
 </div>
