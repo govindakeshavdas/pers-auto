@@ -1,0 +1,353 @@
+<!-- COMPANY 1: GhostEye -->
+<div style="font-family: 'Segoe UI', system-ui, sans-serif; background: #fafafa; border: 1px solid #ddd; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">1. GhostEye 🔴 — AI social-engineering pentest platform</strong><br>
+<span style="font-size: 13px; color: #555;">
+cybersecurity · New York, NY · founded 2025 · pre-seed (YC S25) · ~3 people
+· <a href="https://ghosteye.ai" target="_blank">ghosteye.ai</a>
+· <a href="https://www.ycombinator.com/companies/ghosteye" target="_blank">YC page</a>
+</span>
+
+<br><br><strong>What they do</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Autonomous AI agents simulate social engineering attacks against employees.
+</li>
+<li>
+Deploys phishing emails, scam calls, SMS, and deepfakes to test workforce resilience.
+</li>
+<li>
+Tracks individual risk scores; delivers targeted training per employee.
+</li>
+<li>
+Uses OSINT to gather public info about the org and its people.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>Traditional security training is checkbox compliance; employees forget it in weeks.</li>
+<li>
+Vishing attacks grew 442% in 2024, driven by voice cloning and AI impersonation.
+</li>
+<li>Example: an attacker clones the CFO's voice, calls a finance analyst, requests a wire transfer. GhostEye runs that same scenario first to see who falls for it.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Offers a discounted 48-hour assessment as launch deal.
+</li>
+<li>Likely engagement-based or subscription pricing — not disclosed.</li>
+<li>
+Team of 3, YC S25 batch. No external funding beyond YC announced.
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>Cheap voice cloning + LLM-written phishing makes attacks far more convincing than 2 years ago.</li>
+<li>
+$40B in AI-enabled fraud expected in the US by 2027.
+</li>
+</ul>
+
+<strong>Bootstrap fit</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li><strong>Grader:</strong> Objective — did the employee click/respond/hand over creds? Measurable. ✅</li>
+<li><strong>LLM deleted:</strong> OSINT scraper + campaign runner. Red-team consultancies already do this manually. 🔴</li>
+<li><strong>Accumulates:</strong> Not assessed — stopped at gate 2.</li>
+<li><strong>Week one:</strong> Not assessed.</li>
+<li><strong>Buyer:</strong> Not assessed.</li>
+</ul>
+<div style="background: #fff0f0; padding: 6px 8px; border-radius: 4px; font-size: 13px;">
+<strong>Verdict: 🔴 Gate 2.</strong> 
+Founders met at BlackRock, where one was on the Red Team.
+ A pentesting firm hires one dev to wrap LLM calls around their existing red-team playbooks and beats me. Domain experts own this space. (YC S25 — flagged.)
+</div>
+
+<strong>Crowding</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>KnowBe4 (public, dominant in phishing simulation), Proofpoint, Cofense, Hoxhunt.</li>
+<li>
+VanishID emulates attacker recon; ZeroFox covers social-media phishing.
+</li>
+</ul>
+</div>
+
+<!-- COMPANY 2: nao Labs -->
+<div style="font-family: 'Segoe UI', system-ui, sans-serif; background: #fafafa; border: 1px solid #ddd; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">2. nao Labs 🔴 — Open-source AI analytics agent for data teams</strong><br>
+<span style="font-size: 13px; color: #555;">
+data analytics · Paris, France · founded 2024 · pre-seed (YC X25) · small team
+· <a href="https://getnao.io" target="_blank">getnao.io</a>
+· <a href="https://github.com/getnao/nao" target="_blank">GitHub</a>
+</span>
+
+<br><br><strong>What they do</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Open-source framework to build and deploy analytics agents.
+</li>
+<li>
+Users ask questions in natural language; the agent generates SQL, runs queries, visualizes results.
+</li>
+<li>
+Unit-test your agent's performance before deploying.
+</li>
+<li>
+Enterprise edition adds white-label branding, SSO, advanced permissions.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+In every company, data teams were a bottleneck to create insights from data.
+</li>
+<li>Example: a product manager wants "weekly retention by cohort." Today they file a Jira ticket and wait two days. With nao, they type the question and get SQL + chart.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>Open-source core (Apache 2.0) + paid enterprise tier.</li>
+<li>
+Enterprise adds SSO/OIDC, custom branding, Entra auth.
+</li>
+<li>
+YC X25 batch; no disclosed external funding beyond YC.
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>LLMs are now good enough at SQL generation that text-to-SQL works on real schemas.</li>
+<li>
+Context engineering is a new discipline. Nobody has all the answers yet.
+</li>
+</ul>
+
+<strong>Bootstrap fit</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li><strong>Grader:</strong> Objective — SQL output is correct or not; eval harness measures it. ✅</li>
+<li><strong>LLM deleted:</strong> Context CLI + eval framework + deployment tooling. Technical system. ✅</li>
+<li><strong>Accumulates:</strong> Nothing durable. Snowflake Cortex, Databricks Assistant, every warehouse is adding this. 🔴</li>
+<li><strong>Week one:</strong> Not assessed — stopped at gate 3.</li>
+<li><strong>Buyer:</strong> Not assessed.</li>
+</ul>
+<div style="background: #fff0f0; padding: 6px 8px; border-radius: 4px; font-size: 13px;">
+<strong>Verdict: 🔴 Gate 3.</strong> Text-to-SQL analytics is being absorbed as a platform feature by every major data warehouse. Open-source means anyone can fork. 
+It positions itself closer to a software dev lifecycle for analytics agents than a simple text-to-SQL wrapper
+ — but that distinction won't survive platform absorption. Also: founded 2024, borderline on year filter. (YC X25 — flagged.)
+</div>
+
+<strong>Crowding</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>Snowflake Cortex Analyst, Databricks AI/BI, AWS Q in QuickSight — all shipping conversational analytics.</li>
+<li>Indie/startup layer: Delphi, Defog, Waii, DataChat, numerous open-source text-to-SQL projects.</li>
+</ul>
+</div>
+
+<!-- COMPANY 3: Noto -->
+<div style="font-family: 'Segoe UI', system-ui, sans-serif; background: #fafafa; border: 1px solid #ddd; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">3. Noto 🔴 — AI operating system for after-school businesses</strong><br>
+<span style="font-size: 13px; color: #555;">
+vertical SaaS / education · New York, NY · founded 2024 · seed (~$3.8M, Base10 Partners) · small team
+· <a href="https://withnoto.com" target="_blank">withnoto.com</a>
+</span>
+
+<br><br><strong>What they do</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Combines scheduling, payment processing, student tracking, curriculum management, and parent communication in one platform.
+</li>
+<li>
+Uses LLMs to draft lesson reports, reschedule classes, summarize parent communication.
+</li>
+<li>
+Targets tutoring centers, music schools, and sports academies.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Many lesson-based businesses still run on sticky notes, Google Sheets, and outdated software. Owners are "drowning in admin."
+</li>
+<li>Example: a tutoring center owner manually texts 30 parents about schedule changes, tracks payments in a spreadsheet, and hand-writes lesson summaries. Noto automates all of it.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>SaaS subscription for small businesses.</li>
+<li>
+Raised $3.8M seed from Base10 Partners and South Park Commons.
+</li>
+<li>
+Each customer averages over 6 hours of usage per day.
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>LLMs make it cheap to add report drafting, scheduling intelligence, and parent chat summarization to a vertical SaaS.</li>
+<li>After-school market is large (150K businesses) and still mostly undigitized.</li>
+</ul>
+
+<strong>Bootstrap fit</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li><strong>Grader:</strong> Objective — scheduling, billing, payments are not taste-dependent. ✅</li>
+<li><strong>LLM deleted:</strong> A scheduling + billing + payments tool. Existing players already offer this. 🔴</li>
+<li><strong>Accumulates:</strong> Not assessed — stopped at gate 2.</li>
+<li><strong>Week one:</strong> Not assessed.</li>
+<li><strong>Buyer:</strong> Not assessed.</li>
+</ul>
+<div style="background: #fff0f0; padding: 6px 8px; border-radius: 4px; font-size: 13px;">
+<strong>Verdict: 🔴 Gate 2.</strong> Delete the LLM and you have scheduling + billing + parent comms — exactly what Jackrabbit, Pike13, and iClassPro already sell. 
+Managing parent-child-instructor relationships and complex billing rules
+ is domain knowledge those incumbents own. They hire one dev to add LLM report-drafting and catch up. Not YC (good), but founded 2024 (borderline on year filter).
+</div>
+
+<strong>Crowding</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>Jackrabbit Technologies, Pike13, iClassPro — established vertical SaaS for lesson-based businesses.</li>
+<li>Broader SMB scheduling: Mindbody, Vagaro, Acuity.</li>
+</ul>
+</div>
+
+<!-- COMPANY 4: Mount -->
+<div style="font-family: 'Segoe UI', system-ui, sans-serif; background: #fafafa; border: 1px solid #ddd; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">4. Mount 🔴 — AI agent liability insurance carrier</strong><br>
+<span style="font-size: 13px; color: #555;">
+insurtech · San Francisco, CA · founded 2025 · pre-seed (YC S26) · 2 people
+· <a href="https://www.ycombinator.com/companies/mount" target="_blank">YC page</a>
+</span>
+
+<br><br><strong>What they do</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Sells liability insurance for companies deploying AI agents. Scans and red-teams the agent workflow, reduces failure modes, insures the residual risk.
+</li>
+<li>
+Three steps: scan for vulnerabilities, improve security, then insure with 48-hour activation and dynamic pricing.
+</li>
+<li>
+Developing "ADR certification" — aims to be the SOC 2 equivalent for AI agents.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Legacy insurance often excludes autonomous software; traditional insurers lack data to assess AI systems.
+</li>
+<li>Example: a company deploys an AI agent that handles customer refunds. The agent hallucinates a policy and issues $200K in unauthorized refunds. No existing policy clearly covers that.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>Insurance premiums + security scanning fees.</li>
+<li>
+Two-person team. Amherd handles product and underwriting; Bachmann runs ops and growth.
+</li>
+<li>
+YC Spring 2026 batch. Actively hiring go-to-market, AI engineering, underwriting.
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+AI agents now write code, handle customer data, move money, and update records
+ — creating liability no existing policy covers.</li>
+<li>
+Open debate: will AI liability become a standalone product category, or stay embedded in cyber/E&O?
+</li>
+</ul>
+
+<strong>Bootstrap fit</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li><strong>Grader:</strong> Risk scoring is actuarial — objective enough. ✅</li>
+<li><strong>LLM deleted:</strong> An underwriting model + red-team scanner. Insurance domain expertise required. 🔴</li>
+<li><strong>Accumulates:</strong> Not assessed — stopped at gate 2.</li>
+<li><strong>Week one:</strong> Not assessed.</li>
+<li><strong>Buyer:</strong> Not assessed, but also 🔴 — 
+insurance is a regulated, capital-intensive business built on demonstrated capacity and legal authority to bear risk.
+</li>
+</ul>
+<div style="background: #fff0f0; padding: 6px 8px; border-radius: 4px; font-size: 13px;">
+<strong>Verdict: 🔴 Gates 2 + 5.</strong> Insurance requires actuarial expertise, carrier licenses, capital reserves, and reinsurance relationships. A bootstrapper cannot enter this space. Even the YC backing is barely enough — 
+whether Mount becomes the category leader will depend on regulatory clarity and carrier partnerships.
+ Interesting signal that AI-agent liability is a real gap, but impossible to bootstrap. (YC S26 — flagged.)
+</div>
+
+<strong>Crowding</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Klaimee (also YC S26) markets AI agent liability insurance with EU AI Act focus.
+</li>
+<li>
+Corgi is a broader startup insurance carrier where AI coverage is one module.
+</li>
+</ul>
+</div>
+
+<!-- COMPANY 5: Concourse -->
+<div style="font-family: 'Segoe UI', system-ui, sans-serif; background: #f5f5f5; border: 1px solid #ddd; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">5. Concourse 🔴 — Dropped at filter stage</strong><br>
+<span style="font-size: 13px; color: #555;">
+corporate finance AI · New York, NY · founded 2023 · Series A (~$12M) · YC
+· <a href="https://www.concourse.co" target="_blank">concourse.co</a>
+</span>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Raised $12M Series A
+ — over $10M cap. Fails stage filter.</li>
+<li>
+Founded 2023.
+ Fails founding-year filter (need 2025+).</li>
+<li>
+Backed by Standard Capital, a16z, CRV, and Y Combinator.
+ YC-backed.</li>
+<li>No bootstrap assessment performed — failed pre-filters.</li>
+</ul>
+</div>
+
+<!-- COMPANY 6: Piris Labs -->
+<div style="font-family: 'Segoe UI', system-ui, sans-serif; background: #f5f5f5; border: 1px solid #ddd; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">6. Piris Labs 🔴 — Dropped at filter stage</strong><br>
+<span style="font-size: 13px; color: #555;">
+AI inference hardware · San Francisco, CA · founded 2026 · pre-seed (YC W26)
+· <a href="https://pirislabs.io" target="_blank">pirislabs.io</a>
+</span>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Full-stack AI inference service built on replacing copper wires inside GPU clusters with light.
+ This is hardware.</li>
+<li>
+Piris Labs doesn't just sell photonic hardware — they run inference-as-a-service on top.
+</li>
+<li>Excluded sector: hardware. Also capital-intensive and YC-backed.</li>
+<li>No bootstrap assessment performed — failed sector filter.</li>
+</ul>
+</div>
+
+<!-- COMPANY 7: Voiceops -->
+<div style="font-family: 'Segoe UI', system-ui, sans-serif; background: #f5f5f5; border: 1px solid #ddd; border-radius: 6px; padding: 8px; margin-bottom: 12px;">
+<strong style="font-size: 15px;">7. Voiceops 🔴 — Dropped at filter stage</strong><br>
+<span style="font-size: 13px; color: #555;">
+call-center QA · San Francisco, CA · founded 2016 · Series A (~$16M total)
+· <a href="https://tracxn.com/d/companies/voiceops" target="_blank">Tracxn</a>
+</span>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+First funding round was a Seed round raised on Dec 12, 2016.
+ Founded 2016 — fails year filter.</li>
+<li>
+Raised a total of $16.1M over 4 rounds.
+ Over $10M — fails stage filter.</li>
+<li>
+Core engine transcribes calls and automatically grades them against a customizable scorecard.
+ Call-center QA/coaching — matches calibration table 🔴 (subjective scoring).</li>
+<li>No bootstrap assessment performed — failed pre-filters.</li>
+</ul>
+</div>
