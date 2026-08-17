@@ -1,278 +1,330 @@
-<!-- COMPANY 1: Fabrion -->
-<div style="background:#fdfdfd; border:1px solid #ddd; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
-<strong>1. Fabrion 🔴 — AI operating system for industrial manufacturers</strong><br>
-<span style="color:#555; font-size:13px;">
-Manufacturing AI · San Francisco · Founded 2025 · Seed (~$10.5M from 8VC) · ~8 people<br>
-<a href="https://www.fabrion.com" target="_blank">fabrion.com</a> · <a href="https://jobs.ashbyhq.com/fabrion/df73f4bf-429c-427e-a7cb-dc917784f819" target="_blank">job posting</a>
+<!-- COMPANY 1: hillclimb -->
+<div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #fafafa; border: 1px solid #ddd; padding: 8px; margin-bottom: 12px; border-radius: 4px;">
+<strong style="font-size: 15px;">1. hillclimb 🔴 — Math training data for frontier AI labs</strong><br>
+<span style="font-size: 13px; color: #555;">
+AI infrastructure · San Francisco · Founded 2025 · Pre-seed (~$500K, YC F25) · ~4 people
+<br><a href="https://hillclimb.com/" target="_blank">hillclimb.com</a> · <a href="https://www.ycombinator.com/companies/hillclimb" target="_blank">YC page</a> — <em>YC F25, flagged per policy</em>
 </span>
 
 <br><strong>What they do</strong>
-<ul style="margin:4px 0; padding-left:18px;">
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
 <li>
-Connects fragmented data across pre-production, production, and post-production via a knowledge graph.
+Provides math-focused RL environments and training data for frontier AI labs.
 </li>
 <li>
-Full-stack vertical AI: data connectors, ontologies, graph-based data fabrics, agent meshes, fine-tuned models.
+Supplies datasets that enable AI agents to improve their own research capabilities.
 </li>
 <li>
-Targets supply chain agility, launch readiness, and end-of-life planning.
-</li>
-<li>
-Currently operating in stealth mode.
+Maintains direct collaboration between AI researchers and mathematicians for fast iteration.
 </li>
 </ul>
 
 <strong>The problem they solve</strong>
-<ul style="margin:4px 0; padding-left:18px;">
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
 <li>
-Manufacturing runs on spreadsheets and disconnected systems; tools don't talk; signals get buried in inboxes; decisions made on stale data.
+Current data pipelines for labs take months; by arrival, model requirements have changed.
 </li>
-<li>Example: a multi-tier auto supplier tracking parts across stamping plants in Ohio and battery lines in Korea — no single view of launch readiness.</li>
+<li>Example: a lab wants competition-level math problems verified by PhD mathematicians within hours, not via outsourced annotator farms.</li>
 <li>
-Result: delayed launches, tied-up working capital, crushed margins.
-</li>
-</ul>
-
-<strong>Money</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Raised $10.5M; 8VC is the sole disclosed investor.
-</li>
-<li>Enterprise SaaS model (pricing not public).</li>
-<li>$10.5M is slightly above the $10M filter — borderline but included for completeness.</li>
-</ul>
-
-<strong>Why now</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>LLMs can now reason over unstructured manufacturing docs (specs, supplier emails) — unlocks the "knowledge graph + agents" architecture.</li>
-<li>
-8VC frames this as a Palantir-style thesis: raw data isn't enough, you need to map how a business operates.
-</li>
-</ul>
-
-<strong>Bootstrap fit</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li><strong>Grader:</strong> Objective in principle (part tracking, launch status), but operational insight is judgment-heavy.</li>
-<li><strong>LLM deleted:</strong> 🔴 What's left is manufacturing domain knowledge — ontologies, BOM structures, compliance rules. A domain firm hires one dev.</li>
-<li><strong>Accumulates:</strong> Not reached — stopped at gate 2.</li>
-<li><strong>Week one:</strong> Not reached — but would also fail; needs live integrations into ERP, PLM, supplier systems.</li>
-<li><strong>Buyer:</strong> Not reached — enterprise procurement-gated.</li>
-</ul>
-<div style="background:#fff0f0; padding:6px; border-left:3px solid #c00; margin-top:4px;">
-<strong>Verdict: 🔴</strong> — Fails gate 2. Delete the LLM and you have manufacturing domain knowledge. Matches calibration: "AI manufacturing engineer for factories — wrapper + domain experts own it." Also fails gate 4 (cold start: needs ERP/PLM integrations and supplier data) and gate 5 (procurement-gated enterprise buyers).
-</div>
-</div>
-
-<!-- COMPANY 2: InQuery -->
-<div style="background:#fdfdfd; border:1px solid #ddd; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
-<strong>2. InQuery 🔴 — AI medical record review for legal & insurance (YC)</strong><br>
-<span style="color:#555; font-size:13px;">
-Medical-legal AI · New York · Founded 2023 · Pre-seed/Seed (~$3.1M) · ~7 people<br>
-<a href="https://www.inquery.ai" target="_blank">inquery.ai</a> · <a href="https://www.workatastartup.com/jobs/81052" target="_blank">job posting</a>
-</span>
-
-<br><strong>⚠️ Filter note:</strong> 
-Founded in 2023
- — fails the 2025/2026 founding-year filter. 
-YC-backed.
- Included for completeness since the shortlist has only four companies.
-
-<br><br><strong>What they do</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Uses OCR and NLP to extract dates, diagnoses, treatments, and provider info from medical records.
-</li>
-<li>
-Extracts key diagnoses, treatments, and timeline events, linked to source pages for defensibility.
-</li>
-<li>
-Every output includes source-linked citations and a human QA layer.
-</li>
-<li>
-Purpose-built for PI, med mal, and insurance defense with HIPAA-compliant processing.
-</li>
-</ul>
-
-<strong>The problem they solve</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>
-Law firms handling PI, med mal, mass torts are buried in PDFs and handwritten notes; manual review creates bottlenecks.
-</li>
-<li>Example: a PI paralegal with 2,000 pages of medical records across 8 providers — needs a chronology for a demand letter by Friday.</li>
-<li>
-Pricing in the space: $0.50–$2.00 per page for AI-assisted review; high-volume cases get expensive.
+Co-founder Jun Park was a research engineer at DeepMind; brings first-hand lab insight.
 </li>
 </ul>
 
 <strong>Money</strong>
-<ul style="margin:4px 0; padding-left:18px;">
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
 <li>
-Raised $3.1M from Y Combinator, General Catalyst, DRW Venture Capital, and others.
+Raised $500K from Y Combinator.
 </li>
-<li>Per-page or subscription pricing (typical for the category).</li>
-<li>
-7 employees as of mid-2026.
-</li>
+<li>Revenue model: contract data-supply deals with AI labs.</li>
 </ul>
 
 <strong>Why now</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>LLMs can now read messy clinical handwriting and multi-format EHR exports accurately enough for first-pass extraction.</li>
-<li>
-Source-linking — every fact clickable to a Bates-stamped page — is what makes AI output defensible at deposition.
-</li>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>Labs racing to improve reasoning need expert-grade math data that commodity annotation can't produce.</li>
 </ul>
 
 <strong>Bootstrap fit</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li><strong>Grader:</strong> Extraction is mostly objective (dates, codes, providers). Passes gate 1.</li>
-<li><strong>LLM deleted:</strong> 🔴 What's left is medical-legal domain knowledge — understanding what matters in a PI chronology, which billing codes signal upcoding, what adjusters need. A law firm or TPA hires one dev.</li>
-<li><strong>Accumulates:</strong> Not reached.</li>
-<li><strong>Week one:</strong> Not reached — but would pass (customer uploads PDFs, gets chronology).</li>
-<li><strong>Buyer:</strong> Not reached — but reachable (paralegals, adjusters, midsize firms).</li>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li><strong>Grader:</strong> Verifiability is real — math proofs are checkable.</li>
+<li><strong>LLM deleted:</strong> Left with a mathematician recruiting network + QA pipeline. Technical, passes.</li>
+<li><strong>Accumulates:</strong> Vetted problem sets and annotator network accumulate.</li>
+<li><strong>Week one:</strong> Need to recruit mathematicians and build problem sets before selling — feasible but slow.</li>
+<li><strong>Buyer:</strong> ~5–10 frontier labs globally. Relationship-gated; procurement-driven. 🔴</li>
 </ul>
-<div style="background:#fff0f0; padding:6px; border-left:3px solid #c00; margin-top:4px;">
-<strong>Verdict: 🔴</strong> — Fails year filter (2023) and is YC-backed. On the rubric, fails gate 2: delete the LLM and the value is medical-legal domain expertise (what to extract, how to structure a chronology for litigation). Strong traction signal — Stanford CS founders with real customers — but that same "domain expert hires one engineer" pattern. Also overlaps calibration: "Insurance-defense litigation intelligence — needs a case corpus."
+<div style="background: #fff0f0; border-left: 3px solid #e55; padding: 4px 8px; margin-top: 4px; font-size: 13px;">
+<strong>Verdict: 🔴</strong> — Fails Gate 5. The buyer pool is a handful of labs; each deal is a bespoke contract requiring warm intros. Strong traction signal for <em>them</em> (DeepMind alum + YC), terrible competitive position for a bootstrapper cold-emailing OpenAI.
 </div>
 
 <strong>Crowding</strong>
-<ul style="margin:4px 0; padding-left:18px;">
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
 <li>
-Wisedocs focuses on insurance carriers and TPAs with high-volume intake processing.
+Scale AI, Surge AI, Mercor, Turing, and Centific all added RL environments.
 </li>
 <li>
-DigitalOwl offers a self-serve pricing tier for smaller volumes.
- Also xCures (just raised $46M Series B), plus several smaller players.</li>
-<li>
-InQuery has 156 active competitors per Tracxn.
+Environment-native startups include Mechanize, Fleet AI, HUD, and others.
 </li>
 </ul>
 </div>
 
-<!-- COMPANY 3: Loop AI -->
-<div style="background:#fdfdfd; border:1px solid #ddd; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
-<strong>3. Loop AI 🔴 — Delivery intelligence for restaurant back offices</strong><br>
-<span style="color:#555; font-size:13px;">
-Restaurant tech · New York / San Francisco · Founded 2022 · Series A (~$20M total) · ~30+ people<br>
-<a href="https://www.loopai.com" target="_blank">loopai.com</a> · <a href="https://jobs.lever.co/Loop%20AI/3673457f-961d-43f2-a2fe-1c10fb80db0e" target="_blank">job posting</a>
+<!-- COMPANY 2: Ooak Data -->
+<div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #fafafa; border: 1px solid #ddd; padding: 8px; margin-bottom: 12px; border-radius: 4px;">
+<strong style="font-size: 15px;">2. Ooak Data 🔴 — Turns company data into RL environments for AI agents</strong><br>
+<span style="font-size: 13px; color: #555;">
+AI infrastructure · Paris · Founded 2024 · Pre-seed (~YC S26) · ~5 people
+<br><a href="https://ooakdata.com/" target="_blank">ooakdata.com</a> · <a href="https://www.ycombinator.com/companies/ooak-data" target="_blank">YC page</a> — <em>YC S26, flagged per policy</em>
+<br>⚠️ Founded 2024, not 2025/2026 as required.
 </span>
 
-<br><strong>⚠️ Filter failures:</strong> 
-Founded in 2022
- — fails the 2025/2026 year filter. 
-Raised $14M in a Series A
- (
-$20M total
-) — fails the pre-seed/seed and under-$10M filters. Dropped on filters alone; rubric applied for completeness.
-
-<br><br><strong>What they do</strong>
-<ul style="margin:4px 0; padding-left:18px;">
+<br><strong>What they do</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
 <li>
-Automates financial reconciliation for 3rd-party delivery — files journal entries for revenue automatically.
+Data infrastructure for frontier AI — transforms real company data into RL environments.
 </li>
 <li>
-AI scans customer reviews and feedback for errors; generates summaries for operators.
+Creates digital twins of companies via an anonymization pipeline.
 </li>
 <li>
-Provides financial intelligence and operational levers to reduce chargebacks and increase uptime.
+Builds multi-step, multi-tool environments that test whether an agent can complete a workflow.
 </li>
 </ul>
 
 <strong>The problem they solve</strong>
-<ul style="margin:4px 0; padding-left:18px;">
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
 <li>
-Many customers see 30–40% of revenue from 3PD delivery, but fees are a blackbox and reconciliation takes hours per location.
+AI agents still can't perform in complex, real-world business environments.
 </li>
-<li>Example: a 50-location burger chain reconciling DoorDash, UberEats, and Grubhub payouts against POS — currently done in spreadsheets.</li>
+<li>Example: a lab wants to train a CRM agent on realistic Salesforce data without touching a live org.</li>
+<li>
+Signed contracts with the two largest AI labs; also partnerships with smaller labs.
+</li>
 </ul>
 
 <strong>Money</strong>
-<ul style="margin:4px 0; padding-left:18px;">
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
 <li>
-Launched 2024; supports 300+ brands and thousands of locations. Raised $6M seed in March 2024.
+Backed by Y Combinator (S26).
 </li>
+<li>Revenue: contract deals with AI labs for data and environments.</li>
 <li>
-Business increased sixfold since 2024. Clients include Little Caesars, McDonald's, Whataburger.
+Goal: acquire and anonymize 300+ company data ecosystems in 6 months.
 </li>
 </ul>
 
 <strong>Why now</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>3PD delivery volume exploded post-COVID; restaurants now have 3–4 delivery platforms to reconcile.</li>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>Labs shifting from synthetic benchmarks to real-world business data for agent training.</li>
 </ul>
 
 <strong>Bootstrap fit</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li><strong>Grader:</strong> Financial reconciliation is objective (numbers match or don't). Passes.</li>
-<li><strong>LLM deleted:</strong> What's left is a reconciliation engine + delivery-platform integrations. Technical, not domain-knowledge.</li>
-<li><strong>Accumulates:</strong> Integration connectors and reconciliation rules accumulate. Passes in theory.</li>
-<li><strong>Week one:</strong> 🔴 Needs live integrations into POS, 3PD platforms (DoorDash, UberEats), and bank/ERP data. Cold start — useless without connected data feeds.</li>
-<li><strong>Buyer:</strong> Multi-unit restaurant operators. Reachable but relationship-heavy at the enterprise tier they target.</li>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li><strong>Grader:</strong> Task-completion in simulated environments — mechanically verifiable. Passes.</li>
+<li><strong>LLM deleted:</strong> Left with anonymization pipeline + curated enterprise datasets. Technical system. Passes.</li>
+<li><strong>Accumulates:</strong> Each company dataset acquired is a permanent asset. Passes.</li>
+<li><strong>Week one:</strong> Customer #1 needs enterprise data that doesn't exist yet. Must acquire, anonymize, and curate company ecosystems before first sale. 🔴</li>
+<li><strong>Buyer:</strong> Frontier labs — a handful of buyers, relationship-gated. Also 🔴.</li>
 </ul>
-<div style="background:#fff0f0; padding:6px; border-left:3px solid #c00; margin-top:4px;">
-<strong>Verdict: 🔴</strong> — Fails multiple entry filters (founded 2022, Series A, $20M raised). On the rubric, fails gate 4: value requires live integrations into POS and delivery platforms. Also, at 300+ brands and enterprise clients like McDonald's, this is far past bootstrappable competitive range.
-</div>
+<div style="background: #fff0f0; border-left: 3px solid #e55; padding: 4px 8px; margin-top: 4px; font-size: 13px;">
+<strong>Verdict: 🔴</strong> — Fails Gate 4. The entire product requires acquiring real company data (BD-heavy) before customer #1 sees value. A solo founder can't cold-start a 300-company data acquisition pipeline. Also fails Gate 5 — same handful-of-labs buyer problem as hillclimb.
 </div>
 
-<!-- COMPANY 4: PathPilot -->
-<div style="background:#fdfdfd; border:1px solid #ddd; padding:8px; margin-bottom:12px; font-family:sans-serif; font-size:14px;">
-<strong>4. PathPilot 🔴 — AI career coaching for job seekers</strong><br>
-<span style="color:#555; font-size:13px;">
-EdTech / Career · Toronto · Founded ~2024 · Non-dilutive funding (7 figures) · 1–10 people<br>
-<a href="https://pathpilot.ai" target="_blank">pathpilot.ai</a> · <a href="https://wellfound.com/jobs/3257531-founding-engineer-ai" target="_blank">job posting</a>
+<strong>Crowding</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Crowded: Scale AI, Surge AI, Mechanize, Fleet AI all compete.
+</li>
+<li>
+Market moves fast — companies raise, pivot, and get acquired within weeks.
+</li>
+</ul>
+</div>
+
+<!-- COMPANY 3: Vortexify -->
+<div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #fafafa; border: 1px solid #ddd; padding: 8px; margin-bottom: 12px; border-radius: 4px;">
+<strong style="font-size: 15px;">3. Vortexify 🔴 — AI app builder for internal business apps</strong><br>
+<span style="font-size: 13px; color: #555;">
+B2B AI tools · New York City · Founded 2024 · Pre-seed (~YC F24) · ~2 people
+<br><a href="https://www.vortexify.ai/" target="_blank">vortexify.ai</a> · <a href="https://www.ycombinator.com/companies/vortexify" target="_blank">YC page</a> — <em>YC F24, flagged per policy</em>
+<br>⚠️ Founded 2024, not 2025/2026 as required.
 </span>
 
-<br><strong>⚠️ Filter failures:</strong> Consumer/prosumer app targeting job seekers — fails sector exclusion (consumer apps). Not B2B AI / vertical applied AI.
-
-<br><strong>Note:</strong> There is a <em>different</em> PathPilot on YC (<a href="https://www.getpathpilot.com" target="_blank">getpathpilot.com</a>) that does 
-AI agents for lending operations — onboarding, servicing, and collections.
- That is a separate company. The Toronto job posting maps to the career-coaching PathPilot.
-
-<br><br><strong>What they do</strong>
-<ul style="margin:4px 0; padding-left:18px;">
+<br><strong>What they do</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
 <li>
-AI assistant that acts as coach, strategist, resume writer, and accountability partner.
+AI app builder for full-stack, internal business apps.
 </li>
 <li>
-Powered by LLMs, vector databases, and fine-tuned models for job discovery, interview prep, and upskilling.
+Reads live schema from connected data sources and maps relationships automatically.
 </li>
 <li>
-Free AI career coaching for job seekers; scalable career services for organizations.
+Native support for databases, scheduled tasks, optimization solvers, ML models, data pipelines.
 </li>
 </ul>
 
 <strong>The problem they solve</strong>
-<ul style="margin:4px 0; padding-left:18px;">
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
 <li>
-AI is displacing roles while creating new ones; career tools are outdated, generic, and not built for rapid skill shifts.
+Operations teams in manufacturing, hospitals, logistics need scheduling, forecasting, root-cause analysis apps.
 </li>
-<li>Example: a mid-career marketing manager wondering whether to reskill into AI product management — gets a "career pathway" and interview prep.</li>
+<li>Example: a plant manager describes a downtime-tracking app in plain English; Vortexify generates working code, UI, and data pipelines.</li>
 </ul>
 
 <strong>Money</strong>
-<ul style="margin:4px 0; padding-left:18px;">
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
 <li>
-Secured 7 figures in non-dilutive funding; partnerships across workforce innovation and education.
+Per-builder + per-operator pricing. Free tier available.
 </li>
 <li>
-Free for individual job seekers; paid tier for organizations scaling career services.
+2 employees, YC-backed.
 </li>
 </ul>
 
 <strong>Why now</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li>LLMs make personalized career advice cheaper to generate at scale.</li>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>LLMs can now generate and iterate on full-stack code reliably enough for production internal tools.</li>
 </ul>
 
 <strong>Bootstrap fit</strong>
-<ul style="margin:4px 0; padding-left:18px;">
-<li><strong>Grader:</strong> 🔴 Career coaching is inherently subjective — "what should I do with my career" is pure taste/judgment.</li>
-<li><strong>LLM deleted:</strong> Not reached.</li>
-<li><strong>Accumulates:</strong> Not reached.</li>
-<li><strong>Week one:</strong> Not reached.</li>
-<li><strong>Buyer:</strong> Not reached — but would also fail (job seekers = freemium, indie-dev race to the bottom).</li>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li><strong>Grader:</strong> App correctness is testable (code runs or doesn't). Passes.</li>
+<li><strong>LLM deleted:</strong> Left with a managed runtime and deployment layer — thin. Borderline.</li>
+<li><strong>Accumulates:</strong> Nothing. Prompt-to-code is a commodity. Retool, Lovable, Cursor + hosting, and dozens more do this. 🔴</li>
+<li><strong>Week one:</strong> Connect data source, describe app, get working app. Feasible.</li>
+<li><strong>Buyer:</strong> Ops teams at SMBs — reachable.</li>
 </ul>
-<div style="background:#fff0f0; padding:6px; border-left:3px solid #c00; margin-top:4px;">
-<strong>Verdict: 🔴</strong> — Fails sector filter (consumer app). On the rubric, fails gate 1 (career coaching is subjective judgment) and gate 5 (job seekers = freemium, saturated with indie devs). Exact match to calibration: "Job-search automation for seekers — freemium, indie-dev race to the bottom."
+<div style="background: #fff0f0; border-left: 3px solid #e55; padding: 4px 8px; margin-top: 4px; font-size: 13px;">
+<strong>Verdict: 🔴</strong> — Fails Gate 3. "Describe app → get code" is a feature every AI code tool ships. Nothing accumulates. The managed runtime is a thin layer any platform absorbs. Extremely crowded space with well-funded players.
 </div>
+
+<strong>Crowding</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>Retool (AI features), Budibase, Appsmith, Lovable, Bolt, and every LLM-powered code-gen tool.</li>
+<li>This is one of the most crowded AI product categories in 2026.</li>
+</ul>
+</div>
+
+<!-- COMPANY 4: MorphoAI -->
+<div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #fafafa; border: 1px solid #ddd; padding: 8px; margin-bottom: 12px; border-radius: 4px;">
+<strong style="font-size: 15px;">4. MorphoAI 🔴 — AI-powered CAD for robotics and machine engineering</strong><br>
+<span style="font-size: 13px; color: #555;">
+Vertical AI (hardware engineering) · Cambridge, MA · Founded 2024 · Pre-seed (~$620K) · ~9 people
+<br><a href="https://www.ycombinator.com/companies/morphoai" target="_blank">YC page</a> — <em>YC, flagged per policy</em>
+<br>⚠️ Founded 2024. Borderline "hardware" exclusion — it's software for hardware design.
+</span>
+
+<br><strong>What they do</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Engineers input task requirements, parts, and constraints; platform generates hundreds of validated, optimized machine designs with simulations.
+</li>
+<li>
+Output: a ready-to-manufacture machine design, programmable motions, and BOM — in minutes.
+</li>
+<li>
+Commercializing 10+ years of MIT/Harvard research on applying GenAI to robot composition.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Reduces R&D cycles by over 50%, accelerating time-to-market.
+</li>
+<li>Example: a robotics team designing end-of-arm tooling describes the task; MorphoAI generates mechanically valid gripper designs with simulated performance.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Raised $620K. Investors include YC, The Engine, ARIA, AIR Capital.
+</li>
+<li>
+Targets both SMB and enterprise customers.
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>GenAI + GPU simulation now fast enough to iterate on physical designs computationally.</li>
+</ul>
+
+<strong>Bootstrap fit</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li><strong>Grader:</strong> Physics simulation is objective. Passes.</li>
+<li><strong>LLM deleted:</strong> Left with optimization solvers, simulation engines, CUDA kernels, computational design algorithms — 10+ years of MIT/Harvard research. This is pure domain expertise. Founders <em>are</em> the domain experts hiring engineers. 🔴</li>
+<li><strong>Accumulates:</strong> N/A — stopped at Gate 2.</li>
+<li><strong>Week one:</strong> N/A.</li>
+<li><strong>Buyer:</strong> N/A.</li>
+</ul>
+<div style="background: #fff0f0; border-left: 3px solid #e55; padding: 4px 8px; margin-top: 4px; font-size: 13px;">
+<strong>Verdict: 🔴</strong> — Fails Gate 2. The value is a decade of computational design research from MIT/Harvard. The founders are the domain experts hiring their first engineers — strong traction signal for them, 🔴 for me. I cannot replicate this domain depth.
+</div>
+
+<strong>Crowding</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>Traditional CAD (SolidWorks, Onshape, Fusion 360) adding AI features.</li>
+<li>Stealth startups in "AI copilot for hardware design" also emerging.</li>
+</ul>
+</div>
+
+<!-- COMPANY 5: Hera -->
+<div style="font-family: 'Helvetica Neue', Arial, sans-serif; background: #fafafa; border: 1px solid #ddd; padding: 8px; margin-bottom: 12px; border-radius: 4px;">
+<strong style="font-size: 15px;">5. Hera 🔴 — AI motion designer for video teams</strong><br>
+<span style="font-size: 13px; color: #555;">
+Creative AI tools · Berlin · Founded 2025 · Pre-seed (~YC S25) · ~5 people
+<br><a href="https://www.ycombinator.com/companies/hera-video" target="_blank">YC page</a> — <em>YC S25, flagged per policy</em>
+</span>
+
+<br><strong>What they do</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Creates professional animations through conversation; generates code-based animations that are fully editable.
+</li>
+<li>
+Unlike video-gen tools, outputs remain editable code — control of After Effects, simplicity of AI.
+</li>
+<li>
+Users created 200,000+ animations in first two weeks after launch.
+</li>
+</ul>
+
+<strong>The problem they solve</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+95% of motion design time is manual button-clicking, not creative work. Hera automates the tedious parts.
+</li>
+<li>Example: a marketing team needs an animated explainer; instead of 8 hours in After Effects, they describe it in chat and get editable motion graphics.</li>
+</ul>
+
+<strong>Money</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>
+Reached 6-figure ARR in under 10 days after public launch.
+</li>
+<li>
+100K waitlist signups in 8 weeks; doubling revenue monthly.
+</li>
+</ul>
+
+<strong>Why now</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>LLMs can now generate structured animation code (not just video pixels) reliably.</li>
+</ul>
+
+<strong>Bootstrap fit</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li><strong>Grader:</strong> Animation quality is taste/design judgment. "Professional" is subjective. 🔴</li>
+<li><strong>LLM deleted:</strong> N/A — stopped at Gate 1.</li>
+<li><strong>Accumulates:</strong> N/A.</li>
+<li><strong>Week one:</strong> N/A.</li>
+<li><strong>Buyer:</strong> N/A.</li>
+</ul>
+<div style="background: #fff0f0; border-left: 3px solid #e55; padding: 4px 8px; margin-top: 4px; font-size: 13px;">
+<strong>Verdict: 🔴</strong> — Fails Gate 1. The output is design content. "Professional animation quality" is inherently taste-driven — what makes an easing curve feel right, what visual hierarchy works, what style fits a brand. Strong business for them (great traction), but this is the subjective-output pattern.
+</div>
+
+<strong>Crowding</strong>
+<ul style="margin: 4px 0; padding-left: 18px; font-size: 13px;">
+<li>Runway, Pika, Kling for video gen; Jitter, Fable for motion design; After Effects + plugins.</li>
+<li>Code-based animation differentiates, but the space is filling fast.</li>
+</ul>
 </div>

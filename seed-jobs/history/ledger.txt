@@ -81,3 +81,8 @@ Fabrion
 InQuery
 Loop AI
 PathPilot
+hillclimb
+Ooak Data
+Vortexify
+MorphoAI
+Hera
