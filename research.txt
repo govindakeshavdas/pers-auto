@@ -1,0 +1,163 @@
+#INTERESTING 
+https://frenos.io/ - Very interesting --- probably not too complex 
+Sits at an intersection of hosted / stuff that needs humans to be present - or at least physical prescense in the US - 
+Some SW development also probably needed . 
+Penetration testing for operational technology 
+
+
+#INTERESTING 
+
+## Interesting 
+RefortifAI 🟡 — DRM and IP protection for distributed AI models
+
+=== PageMind — AI product-page content for e-commerce, optimized for AI search engines === 
+
+
+=== BrandRank.AI — Measures and optimizes brand trust inside AI search engines === 
+Brand ranking is default no effort task that can be done easily --- 
+improving the ranking is the much harder task . 
+
+
+
+=== [ not big enough ]  Zerolook   🟡   Predictive flight-shopping API for AI-scale search === 
+not big enough 
+=== Fabraix  — AI red-teaming agent that hacks customer-facing AI agents===
+- Strategy is to land using these agents / open source something
+    - Maybe the entire methodology of getting access . 
+    - Need to come up with some strategy of land and expand --- into something else --- not just from the outside
+- P/C 
+    + early days for something like this . 
+    - Some QQ around what exactly the strategy should be here i.e. on the immediate next steps 
+
+
+===[__NO__][But pivot to fabraix ] StrongestLayer — AI-native email security  ==== 
+
+They tried to build a detection layer - for suspicious emails . 
+They later prevented to reasoning of why an email is risky . 
+Because microsoft and larger players control the classification / data around larger attacks and so on . 
+
+So ... There isnt really a product around explainability. This will probably fail .  
+
+So instead the right product in this space is still what is not controlled i.e. agent harm / risk . 
+Email is just one vector for this . 
+But releasing some benchmarks around this type of agent harm means that OSS benchmark can be run by them . 
+And then after that --- their actual policy benchmarks can also be run ( land with risk , expand into policy / quality ... ? )
+In both cases there will be AI-judge concepts in place . 
+
+
+
+=== 4   Zerolook   🟡   Predictive flight-shopping API for AI-scale search ==== 
+
+
+
+
+====== Interesting === 
+3. Forge 🟢 — Recovers unclaimed duty drawback refunds for importers
+forgehq.com · San Francisco · YC-backed (pre-seed stage)
+What they do
+Sell to US importers who later export or scrap goods.
+File duty drawback claims with CBP. AI extracts data from customs entries.
+White-glove service: customer does near-zero work.
+The problem they solve
+~$6B+ in eligible refunds go unclaimed yearly. 80% of companies never file.
+Process is cumbersome: matching import entries to exports across years.
+Post-tariff chaos (IEEPA, Section 122) made the dollar amount much bigger.
+Fit
+Objective: Refund amount is a number. CBP approves or rejects the claim.
+Start: Import/export records are public via ACE. Build matching engine alone.
+Moat: Entry-to-export matching dataset across HTS codes. Compounds per client.
+US slot: Dutypay, Comstock exist but old-line brokers. No AI-native startup funded.
+Verdict: 🟢 Sells the outcome (the refund check). Takes a cut, not a subscription.
+Crowding
+Alliance International, Dutypay are legacy customs brokers doing drawback.
+No venture-backed AI-native competitor doing this for SMB importers.
+
+
+
+======= Euphonia ====== 
+ - There was a company called namecoach which had a bunch of phonemes i.e. the way things were pronounced - for name pronunciation for exameple 
+ - they are selling that as a hosted service for companies to tap into ... 
+ -i.e. LLM -> phoneme hosted service ( insrted in flow ) -> TTS 
+
+- There maybe a variant of this that is useful ( What we can do )
+    - In future all providers may use such phonemes automatically 
+    - This euophinai will always have to be a hosted service 
+    - Ther may be technical terms and drug names and so on --- that need to be validated for phoneme pronunciation 
+    - Is it possible to launch a service that takes text before TTS -> Runs on different TTS providers -> sees where there are mismatches -> flags them ( possibly asks for correct phoneme ). This also handles model provider drift / mismatch ... 
+    - Highlights which of them are closest to the bussiness that the user is interested in --- so that they can make phonemes for them --- can routinely check dashboard --etc ... 
+
+
+
+Euphonia
+
+                       ┌─────────────────────┐
+                       │  THEIR DICTIONARY   │  ← locked, hosted
+                       │  (the whole moat)   │     never leaves
+                       └──────────┬──────────┘
+                                  │
+                          network hop, per call
+                                  │
+   LLM ──────▶ [ their API ] ─────┴─────▶ TTS ──▶ audio
+                    ▲
+                    │
+            you can never remove this
+            stop paying → pronunciation breaks
+
+   Customer owns: nothing.
+Us
+
+   ═══════════ OFFLINE LOOP (our product) ═══════════
+
+   customer's real traffic / term list
+        │
+        ▼
+   ┌─────────────────────────────────────┐
+   │  FAN OUT → ASR → COMPARE            │
+   │   TTS A /zɛl.dʒænz/  ┐              │
+   │   TTS B /ksɛl.jants/ ├─ differ → FLAG
+   │   TTS C /zɛl.dʒænz/  │              │
+   │   TTS D /zɛl.jɑnz/   ┘              │
+   └──────────────┬──────────────────────┘
+                  ▼
+           rank by traffic impact
+                  ▼
+           fix (LLM / customer / majority)
+                  ▼
+   ┌─────────────────────────────────────┐
+   │  THEIR LEXICON                      │
+   │  their SKUs, their drugs, their     │
+   │  clinicians — verified per provider │
+   └──────────────┬──────────────────────┘
+                  │
+                  │  we EXPORT it. it's theirs.
+                  │  SSML · provider lexicon file · JSON
+                  ▼
+   ═══════════ THEIR LIVE FLOW (we're not in it) ═══════
+
+   LLM ──────▶ [ their own lookup ] ──────▶ TTS ──▶ audio
+                      ▲
+                      │
+              file sits in their repo
+              zero latency · zero per-call fee
+              works if we disappear
+
+======[__NO__] Relu  AI-automated design for dental lab cases== 
+The valuable part (crowns, surgical guides) is still beta after 7 years; what ships (night guards, models, trays, ditching) is procedural mesh geometry, not defensible AI.
+Segmentation — their original edge — is now commoditized by public data (Teeth3DS, ToothFairy) + nnU-Net.
+Price is racing to zero: 3Shape Automate is $1.99/crown, offshore CAD houses are $5–20/unit, and 3Shape/exocad own the CAD desktop and can bundle it free.
+Pay-per-case at ~$2 with no lock-in means ~$1–3M ARR on 1M cases — consistent with only ~€5M raised in 7 years.
+Going direct-to-lab puts them against their own OEM partners (Planmeca, Medialab) who are their real distribution.
+Nothing was actually unlocked recently by AI per se . 
+=== [__NO__] Prolo — AI procurement for SME construction contractors=== 
+
+Context — Prolo (UK, £4.2M seed) is a WhatsApp buying desk for small contractors: AI + humans source materials from 185 suppliers and lend up to 90 days.
+
+Problem it claims — SME contractors buy manually, pay retail-ish prices, and wait 60–90 days to get paid while suppliers want net 30.
+
+Why the US version is hard — the basket is horizontal but distribution isn't; Home Depot/SRS, QXO/Beacon and ABC Supply just spent ~$35B consolidating and are chasing "Complex Pro" themselves.
+
+Why it may not be a good idea — it's a distributor wearing an AI coat: ~5–15% gross margin, balance-sheet credit risk into a sector that is ~17% of UK insolvencies, and the sourcing half is already commoditised by Kojo/StructShare while the credit half is already owned by Billd.
+
+
+=== [__NO__] halluminate.ai · San Francisco, CA · YC S25 (pre-seed ) === 
+They seem to have pivotted already to env for benchmarking agents / models against financial services tasks . 
