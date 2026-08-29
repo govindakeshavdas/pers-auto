@@ -1,27 +1,10 @@
-#INTERESTING 
-https://frenos.io/ - Very interesting --- probably not too complex 
-Sits at an intersection of hosted / stuff that needs humans to be present - or at least physical prescense in the US - 
-Some SW development also probably needed . 
-Penetration testing for operational technology 
 
 
-#INTERESTING 
-
-## Interesting 
-RefortifAI 🟡 — DRM and IP protection for distributed AI models
-
-=== PageMind — AI product-page content for e-commerce, optimized for AI search engines === 
-
-
-=== BrandRank.AI — Measures and optimizes brand trust inside AI search engines === 
-Brand ranking is default no effort task that can be done easily --- 
-improving the ranking is the much harder task . 
+===  [ WIP ] Zerolook    Predictive flight-shopping API for AI-scale search ==== 
 
 
 
-=== [ not big enough ]  Zerolook   🟡   Predictive flight-shopping API for AI-scale search === 
-not big enough 
-=== Fabraix  — AI red-teaming agent that hacks customer-facing AI agents===
+=== [ WIP ] Fabraix  — AI red-teaming agent that hacks customer-facing AI agents===
 - Strategy is to land using these agents / open source something
     - Maybe the entire methodology of getting access . 
     - Need to come up with some strategy of land and expand --- into something else --- not just from the outside
@@ -30,51 +13,122 @@ not big enough
     - Some QQ around what exactly the strategy should be here i.e. on the immediate next steps 
 
 
-===[__NO__][But pivot to fabraix ] StrongestLayer — AI-native email security  ==== 
 
-They tried to build a detection layer - for suspicious emails . 
-They later prevented to reasoning of why an email is risky . 
-Because microsoft and larger players control the classification / data around larger attacks and so on . 
-
-So ... There isnt really a product around explainability. This will probably fail .  
-
-So instead the right product in this space is still what is not controlled i.e. agent harm / risk . 
-Email is just one vector for this . 
-But releasing some benchmarks around this type of agent harm means that OSS benchmark can be run by them . 
-And then after that --- their actual policy benchmarks can also be run ( land with risk , expand into policy / quality ... ? )
-In both cases there will be AI-judge concepts in place . 
+== [ TODO ] https://frenos.io/  === 
+Sits at an intersection of hosted / stuff that needs humans to be present - or at least physical prescense in the US - 
+Some SW development also probably needed . 
+Penetration testing for operational technology 
 
 
 
-=== 4   Zerolook   🟡   Predictive flight-shopping API for AI-scale search ==== 
+===[ Maybe ] BrandRank.AI — Measures and optimizes brand trust inside AI search engines === 
+Brand ranking is default no effort task that can be done easily --- 
+improving the ranking is the much harder task . 
+
+The larger category is AEO or monitoring AEO . 
+
+QQ - How much of AEO is similar to SEO where link information becomes super important 
+QQ -- When 1B vaulation was made for profound / bluefish  what was the assumption ? 
+There isnt really a moat here . Its just to get in the marketing funnel / bussiness of large companies 
+
+QQ - Is there compounding value in the other parts of AEO ( practically )
+- Not really 
+
+QQ --- How big is the prompt database value -- 
+Not really - its not a big moat . 
+
+QQ -- What are the competitors in the space and how do they seperate 
+profound --- 
+Bluefish --- sells the solution - 60m valuation 
+evertune - direct api access 
+Scrunch - Sits in front of website and serves content to bots 
+Peec AI - Citation source visibility / non US language 
+
+QQ --- How does the muckrack bussiness model work - for AEO . 
+- Press Ranger, Presscloud, PressPitch AI, JournoFinder — all exist, all cheap, none big --- but this could itself be a valid side bussiness ... 
+- There may be a scope for making a side bussiness here - with the outline being MCP / API based instead of a complex UI . 
+
+
+QQ -- What are the effective tactics that new AEO agencies are pursuing ? 
+    - Audit , then expand 
+      - offer this free --- 
+    - Offsite signals ( reddit , listicles , PR )
+    - Niches ( home services , real estate , law and so on --- each probably have some tricks )
+
+
+QQ Specific to remidiation what are people doing : 
+- bluefish - semi agency 
+- daydeam -- autonomous agent on page AEO changes 
+- yext - data errors acrross publishers - offsite - but for errors - specific niche 
+- Site improve - PE owned - 
+
+QQ - what do we know about artchitecture i.e. where these models are headed - in terms of being cited and so on . 
+- Most of the queries dont even involve search ( 60% from model retraining ) 
+    - We could figure out htis score quite easily --- by owning a model and search for some abstract thing - see how often it changes --- or a set of domains like this . 
+- The search subqueries --- come from model training itself - so if "product-to-be-searched" is not in the training data - not great - wont create search queriies with product name . 
+- AEO A/B testing loop is probably weaker than SEO . 
 
 
 
 
-====== Interesting === 
-3. Forge 🟢 — Recovers unclaimed duty drawback refunds for importers
-forgehq.com · San Francisco · YC-backed (pre-seed stage)
-What they do
-Sell to US importers who later export or scrap goods.
-File duty drawback claims with CBP. AI extracts data from customs entries.
-White-glove service: customer does near-zero work.
-The problem they solve
-~$6B+ in eligible refunds go unclaimed yearly. 80% of companies never file.
-Process is cumbersome: matching import entries to exports across years.
-Post-tariff chaos (IEEPA, Section 122) made the dollar amount much bigger.
-Fit
-Objective: Refund amount is a number. CBP approves or rejects the claim.
-Start: Import/export records are public via ACE. Build matching engine alone.
-Moat: Entry-to-export matching dataset across HTS codes. Compounds per client.
-US slot: Dutypay, Comstock exist but old-line brokers. No AI-native startup funded.
-Verdict: 🟢 Sells the outcome (the refund check). Takes a cut, not a subscription.
-Crowding
-Alliance International, Dutypay are legacy customs brokers doing drawback.
-No venture-backed AI-native competitor doing this for SMB importers.
+=== [__MAYBE__] Forge — Recovers unclaimed duty drawback refunds for importers === 
+Doesnt need to be the same idea --- but something similar : 
+
+SHARED CORE: "Engine A"
+  Product description -> 10-digit HTS code.
+  Retrieve-then-rank over the HTS tree, GRI rules in order,
+  Section/Chapter Notes as hard filters, CBP CROSS rulings as
+  ground truth and citation.
+  Data is free: USITC (US), TARIC (EU), HMRC (UK), CROSS.
+
+
+1 - INBOUND PARCEL CLASSIFICATION
+  Business:     HTS code on every incoming parcel, real time.
+  Buyer:        Carriers, postal operators, consolidators, 3PLs.
+  Context:      De minimis ended Aug 2025. Every parcel now needs
+                a 10-digit code and a formal entry.
+  Competitors:  None aimed at this buyer.
+  Build:        Engine A + envelope: infer attributes from junk
+                input, 100% recall, sub-cent, sub-second,
+                confidence scoring, human escalation lane
+2 - CLASSIFICATION API
+  Business:     Sell the HTS code as an API, with rationale.
+  Buyer:        Compliance teams at importers.
+  Competitors:  GingerControl ($2.1M seed), Freehand.
+  Build:        Engine A + API wrapper
+4 - PSC REFUND AUDIT
+  Business:     Scan past entries, find wrong codes, file a Post
+                Summary Correction, take a cut of the refund.
+  Buyer:        Importers with entry history.
+  Competitors:  Tarifflo (YC S2026). Flexport offers the same
+                audit free to new customers.
+  Build:        Engine A + PSC filing workflow. Declared code acts
+                as a prior; low-confidence items can be skipped.
+6 - SOFTWARE FOR BROKERS
+  Business:     Tooling for the ~1,000 small customs brokerages.
+  Buyer:        Customs brokers, freight forwarders.
+  Competitors:  KlearNow ($66M), Gaia Dynamics.
+  Build:        Mostly not Engine A. ACE/ABI filing integration,
+                document management, PGA filings, entry workflow,
+                billing. Engine A is one feature inside it.
+RELATIONSHIPS
+  Engine A once
+    -> 2 and 4 are the same engine, different invoice
+    -> 1 is the same engine hardened (cheap, fast, junk-tolerant,
+       never skips)
+    -> 6 is a separate product with Engine A inside
+EVALUATION
+  Hold out CROSS rulings. Score at 6, 8, 10 digits.
+  Also track duty-rate-equivalent accuracy - whether the code you
+  picked carries the same duty rate. That is what costs money.
+
+
+== [TODO ] RefortifAI — DRM and IP protection for distributed AI models === 
 
 
 
-======= Euphonia ====== 
+
+======= [ Maybe ] Euphonia ====== 
  - There was a company called namecoach which had a bunch of phonemes i.e. the way things were pronounced - for name pronunciation for exameple 
  - they are selling that as a hosted service for companies to tap into ... 
  -i.e. LLM -> phoneme hosted service ( insrted in flow ) -> TTS 
@@ -140,6 +194,23 @@ Us
               file sits in their repo
               zero latency · zero per-call fee
               works if we disappear
+
+
+===[__NO__][But pivot to fabraix ] StrongestLayer — AI-native email security  ==== 
+
+They tried to build a detection layer - for suspicious emails . 
+They later prevented to reasoning of why an email is risky . 
+Because microsoft and larger players control the classification / data around larger attacks and so on . 
+
+So ... There isnt really a product around explainability. This will probably fail .  
+
+So instead the right product in this space is still what is not controlled i.e. agent harm / risk . 
+Email is just one vector for this . 
+But releasing some benchmarks around this type of agent harm means that OSS benchmark can be run by them . 
+And then after that --- their actual policy benchmarks can also be run ( land with risk , expand into policy / quality ... ? )
+In both cases there will be AI-judge concepts in place . 
+
+
 
 ======[__NO__] Relu  AI-automated design for dental lab cases== 
 The valuable part (crowns, surgical guides) is still beta after 7 years; what ships (night guards, models, trays, ditching) is procedural mesh geometry, not defensible AI.

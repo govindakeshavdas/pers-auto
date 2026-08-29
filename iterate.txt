@@ -1,4 +1,16 @@
 
+==0814 Seed == 
+6. Touchmark 🟡 — Prices AI by output quality, not tokens
+Figuring out more ... 
+
+
+7. Khotan 🟡 — Three-way match for procurement: invoice, PO, receipt across ERPs
+- Lots of invoice procurement related stuff ... 
+
+
+
+
+
 == 0812 == 
 
 - Tenakara : 
