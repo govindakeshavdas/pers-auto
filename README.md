@@ -4,7 +4,7 @@ Personal automation scripts, mostly run on a schedule via GitHub Actions.
 
 ## Scripts
 
-- [meetups/](meetups/) — weekly meetup finder, emailed via cron.
+- [meetups/](meetups/) — monthly meetup finder, emailed via cron.
 - [recent-seed-funding/](recent-seed-funding/) — weekly seed funding roundup, emailed via cron.
 
 ## Required secrets

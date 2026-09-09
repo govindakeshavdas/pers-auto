@@ -2,8 +2,8 @@ name: meetups
 
 on:
   schedule:
-    # Sunday 6pm PT = Monday 01:00 UTC (PDT; 02:00 UTC during PST)
-    - cron: "0 1 * * 1"
+    # 1st of each month, 01:00 UTC (Sunday-evening-ish PT the day before)
+    - cron: "0 1 1 * *"
   workflow_dispatch:
 
 jobs:
@@ -35,7 +35,7 @@ jobs:
           jq -n \
             --arg from "$MAIL_FROM" \
             --arg to "$MAIL_TO" \
-            --arg subject "Bay Area events this week" \
+            --arg subject "Bay Area events this month" \
             --arg html "$body" \
             '{from:$from, to:[$to], subject:$subject, html:$html}' \
           | curl -sS -X POST https://api.resend.com/emails \
